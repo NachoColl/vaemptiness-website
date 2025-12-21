@@ -1,0 +1,140 @@
+---
+layout: base.njk
+pagination:
+  data: projects_en.projects
+  size: 1
+  alias: project
+permalink: /en/project/{{ project.slug }}/
+bodyClass: project-page-v2
+lang: en
+---
+
+<main class="renegada-project" data-project-slug="{{ project.slug }}" {% if project.bgGif %}style="--project-bg-gif: url('{{ project.bgGif | url }}');"{% endif %}>
+
+  {# Background video (for projects with bgVideo instead of bgGif) #}
+  {% if project.bgVideo %}
+  <video class="project-bg-video" autoplay muted loop playsinline>
+    <source src="{{ project.bgVideo | url }}" type="video/mp4">
+  </video>
+  {% endif %}
+
+  {# 0. Landing Section - Title with full opacity GIF background #}
+  <section class="renegada-landing">
+    <h1 class="renegada-landing-title">{{ project.title | upper }}</h1>
+  </section>
+
+  {# 1. Hero Section - Black background with video frame and fade-in animation #}
+  <section class="renegada-hero">
+    <div class="renegada-hero-frame scroll-reveal">
+      {% if project.vimeoId %}
+        <iframe
+          src="https://player.vimeo.com/video/{{ project.vimeoId }}{% if project.vimeoHash %}?h={{ project.vimeoHash }}&{% else %}?{% endif %}title=0&byline=0&portrait=0&rel=0"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="{{ project.title }}">
+        </iframe>
+      {% endif %}
+    </div>
+  </section>
+
+  {# 2. Description Section - Black background, white text #}
+  {% if project.description %}
+  <section class="renegada-description">
+    <p class="scroll-reveal">{{ project.description | safe }}</p>
+  </section>
+  {% endif %}
+
+  {# 3. Gallery Section - Alternating positioned images #}
+  {% if project.gallery and project.gallery.length > 0 %}
+  <section class="renegada-gallery">
+    {% for item in project.gallery %}
+      {% if item.type == 'image' %}
+        <div class="renegada-gallery-item renegada-pos-{{ item.position | default('center') }} scroll-reveal">
+          <img src="{{ item.src | url }}" alt="{{ item.alt | default(project.title) }}">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+  {% endif %}
+
+
+  {# 5. Footer Section - Red background with next project link #}
+  {% set currentIndex = 0 %}
+  {% for p in projects_en.projects %}
+    {% if p.slug == project.slug %}
+      {% set currentIndex = loop.index0 %}
+    {% endif %}
+  {% endfor %}
+  {% set nextIndex = (currentIndex + 1) % projects_en.projects.length %}
+  {% set nextProject = projects_en.projects[nextIndex] %}
+
+  <section class="renegada-footer">
+    <div class="renegada-back-section">
+      <span class="renegada-back-label">Next Up</span>
+      <a href="{{ ('/en/project/' + nextProject.slug + '/') | url }}" class="renegada-back-link">{{ nextProject.title }}</a>
+    </div>
+  </section>
+
+  {# 7. Bottom Footer - Black with copyright #}
+  <footer class="renegada-bottom-footer">
+    <span class="copyright">&copy; 2025 Mateo Coll - Editor</span>
+    <span class="location">Barcelona, Spain</span>
+  </footer>
+
+</main>
+
+<script>
+  // Control GIF opacity based on scroll position
+  (function() {
+    const project = document.querySelector('.renegada-project');
+    const landing = document.querySelector('.renegada-landing');
+
+    if (!project || !landing) return;
+
+    const maxOpacity = 1;
+    const minOpacity = 0.25;
+
+    function updateOpacity() {
+      const landingHeight = landing.offsetHeight;
+      const scrollY = window.scrollY;
+
+      // Calculate opacity: starts at max, decreases to min as we scroll through landing
+      let opacity;
+      if (scrollY <= 0) {
+        opacity = maxOpacity;
+      } else if (scrollY >= landingHeight) {
+        opacity = minOpacity;
+      } else {
+        // Linear interpolation from max to min
+        const progress = scrollY / landingHeight;
+        opacity = maxOpacity - (progress * (maxOpacity - minOpacity));
+      }
+
+      project.style.setProperty('--gif-opacity', opacity);
+    }
+
+    window.addEventListener('scroll', updateOpacity);
+    updateOpacity(); // Initial call
+  })();
+
+  // Scroll reveal animations
+  (function() {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target); // Only animate once
+        }
+      });
+    }, {
+      threshold: 0.15, // Trigger when 15% of element is visible
+      rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters viewport
+    });
+
+    revealElements.forEach(el => observer.observe(el));
+  })();
+
+</script>

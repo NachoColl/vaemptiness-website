@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Encuentra respuestas a tus dudas sobre vaemptîness"
+  },
+  "categories": [
+    {
+      "id": "practica",
+      "name": "Sobre la Práctica",
+      "description": "Lo básico para comenzar",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "¿Y si no consigo ver mis pensamientos?",
+          "answer": "Es normal. No estás fallando, solo estás empezando a ver cosas muy sutiles. Al principio no verás 'pensamientos', verás: sensaciones, mini impulsos, tensiones, pequeños movimientos internos. Eso ya es ver. Si ves algo, aunque no sepas qué es, estás observando."
+        },
+        {
+          "id": "q5",
+          "question": "¿Necesito estar calmado para practicar?",
+          "answer": "No. Esa es una confusión muy común. Puedes practicar cuando estés: nervioso, enojado, triste, cansado, ansioso. De hecho, esos son los mejores momentos para entrenar. vaemptîness no requiere calma previa: genera calma. La calma aparece cuando creas espacio interno, no como requisito para empezar."
+        },
+        {
+          "id": "q10",
+          "question": "¿Qué hago si no tengo tiempo?",
+          "answer": "vaemptîness no requiere tiempo extra. Se hace dentro de tu vida: mientras te lavas los dientes, antes de enviar un mensaje, al estacionar el coche, al cambiar de habitación, al caminar, al esperar. Tres segundos bastan. No necesitas sentarte en silencio. Puedes observar en movimiento, en medio del ruido, mientras vives."
+        },
+        {
+          "id": "q11",
+          "question": "¿Y si lo estoy haciendo mal?",
+          "answer": "No existe 'hacerlo mal'. Si estás observando, estás practicando. Si notas un patrón, estás practicando. Si te das cuenta de que te distrajiste, estás practicando. Si vuelves al cuerpo, estás practicando. vaemptîness no es perfección. Es conciencia. Cada vez que te das cuenta de algo, aunque sea 'me olvidé de practicar', eso ya es práctica."
+        }
+      ]
+    },
+    {
+      "id": "desafios",
+      "name": "Desafíos Comunes",
+      "description": "Obstáculos y cómo superarlos",
+      "questions": [
+        {
+          "id": "q3",
+          "question": "¿Y si me engancho otra vez?",
+          "answer": "También es normal. La mente funciona por hábito. Pero ahora tienes herramientas para: ver el inicio, ver la construcción, ver el patrón, soltar antes de que se enganche del todo, crear espacio, activar las virtudes, volver al cuerpo. No se trata de no engancharte nunca, sino de darte cuenta más rápido y saber cómo salir."
+        },
+        {
+          "id": "q6",
+          "question": "¿Qué hago si me vienen emociones muy intensas?",
+          "answer": "Nómbrala: ira, miedo, tristeza, vergüenza. Ubícala en tu cuerpo: ¿pecho?, ¿estómago?, ¿garganta? Permanece ahí 20–30 segundos, sin intentar cambiar nada. Las emociones son movimiento. El dolor viene de la resistencia. Si dejas que se muevan, se disuelven. El espacio interno las desactiva naturalmente."
+        },
+        {
+          "id": "q7",
+          "question": "¿Y si me da miedo observar mis pensamientos?",
+          "answer": "El pensamiento no puede hacerte daño. El daño viene de creer que el pensamiento eres tú. Cuando lo ves desde fuera, pierde poder. Observar no significa atacar. Significa ver con claridad, sin juicio. El miedo disminuye cuando comprendes que tú no eres el pensamiento, sino el espacio donde el pensamiento aparece."
+        },
+        {
+          "id": "q8",
+          "question": "¿Es normal tener resistencia a practicar?",
+          "answer": "Sí. La mente resiste todo aquello que la cambia. La resistencia es una señal de que estás tocando algo importante. No esperes tener ganas. Practica igualmente. No necesitas perfección. Tres minutos bastan. La resistencia no desaparece de inmediato, pero con el tiempo pierdes el miedo a ella."
+        },
+        {
+          "id": "q12",
+          "question": "¿Puedo practicar vaemptîness si estoy profundamente triste?",
+          "answer": "Sí. De hecho, es un momento propicio. La tristeza baja la velocidad interna. Hace más lentos a los pensamientos. Y cuando la mente va más despacio, puedes ver cosas que antes eran invisibles. La tristeza puede convertirse en una puerta de entrada para un reconocimiento profundo de ti mismo."
+        },
+        {
+          "id": "q15",
+          "question": "¿Es normal que a veces no me apetezca practicar?",
+          "answer": "Sí. Somos humanos. Lo importante no es 'querer hacerlo'. Lo importante es recordar que puedes hacerlo. Algunos días te apetecerá. Otros no. Eso es normal. No eres una máquina. Eres una persona que fluctúa según el contexto. Lo que marca la diferencia es la continuidad, no la perfección."
+        }
+      ]
+    },
+    {
+      "id": "metodo",
+      "name": "Comprendiendo el Método",
+      "description": "Cómo funciona y qué esperar",
+      "questions": [
+        {
+          "id": "q2",
+          "question": "¿Por qué mis pensamientos siguen volviendo?",
+          "answer": "Porque los pensamientos no desaparecen: se transforman. La mente está diseñada para proteger, anticipar, recordar y procesar. vaemptîness no elimina pensamientos; elimina la identificación con ellos. La rumiación disminuye no porque los pensamientos desaparezcan, sino porque dejas de engancharte a ellos."
+        },
+        {
+          "id": "q4",
+          "question": "¿Cuánto tiempo tarda en funcionar el método?",
+          "answer": "Depende de cada persona, pero hay patrones generales: En pocos días: notas que te enganchas menos. En 1–2 semanas: mayor claridad mental, menos ruido de fondo. En 1–2 meses: reducción visible de la rumiación. A largo plazo: transformación profunda en tu relación con la mente. vaemptîness se basa en entrenamiento mental, no en magia. Si practicas con constancia, verás cambios."
+        },
+        {
+          "id": "q13",
+          "question": "¿Por qué siento tanta claridad después de las prácticas?",
+          "answer": "Porque estás: reduciendo el ruido mental, observando los pensamientos en lugar de identificarte con ellos, soltando tensión corporal, reconectando con tu cuerpo, activando las virtudes, desactivando las distorsiones. La claridad no es algo que añadas. La claridad aparece cuando quitas lo que la tapa."
+        }
+      ]
+    },
+    {
+      "id": "integracion",
+      "name": "Integración y Transformación",
+      "description": "Resultados a largo plazo",
+      "questions": [
+        {
+          "id": "q9",
+          "question": "¿Puedo hacer vaemptîness si estoy en terapia?",
+          "answer": "Sí. vaemptîness no compite con ninguna terapia. La complementa. Si estás en terapia psicológica, psiquiátrica o de cualquier tipo, informa a tu terapeuta de que estás practicando un método de observación y desarrollo de la conciencia. vaemptîness puede potenciar el trabajo terapéutico al darte más claridad sobre tus patrones mentales."
+        },
+        {
+          "id": "q14",
+          "question": "¿Puedo combinar este método con meditación tradicional?",
+          "answer": "Sí. vaemptîness es totalmente compatible con: mindfulness, meditación tibetana, meditación zen, respiración consciente, yoga, terapia cognitiva, terapia somática. No sustituye nada. Ofrece una estructura de base que puede potenciar cualquier otra práctica. Puedes combinar sin conflicto."
+        },
+        {
+          "id": "q16",
+          "question": "¿Es posible vivir casi sin rumiación?",
+          "answer": "Sí. De hecho, es más natural de lo que imaginas. La rumiación es un hábito aprendido. La claridad es tu estado natural. vaemptîness te ayuda a recuperar eso. Con la práctica: la frecuencia de la rumiación disminuye, la intensidad baja, la duración se acorta, la distancia aumenta. No desaparece para siempre, pero pierde fuerza."
+        },
+        {
+          "id": "q17",
+          "question": "¿De verdad puedo cambiar?",
+          "answer": "Sí. Puedes. No eres tu rumiación. Eres el espacio claro debajo de ella. La rumiación es un patrón que se instaló. Pero tú no eres el patrón. Eres la conciencia que puede verlo. vaemptîness solo te enseña a volver a casa. Y cuando regresas, todo cambia."
+        }
+      ]
+    }
+  ]
+}

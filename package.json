@@ -1,0 +1,27 @@
+{
+  "name": "vaemptiness-website",
+  "version": "1.0.0",
+  "description": "vaemptîness - Entrenamiento Mental",
+  "scripts": {
+    "dev": "eleventy --serve --port=8080",
+    "build": "eleventy",
+    "preview": "eleventy && npx http-server _site -p 8080 -c-1",
+    "test:visual": "playwright test tests/visual/comparison.spec.ts",
+    "test:visual:update": "playwright test --update-snapshots",
+    "capture-refs": "npx ts-node tests/visual/capture-references.ts",
+    "worktree:create": "node scripts/worktree/create-worktree.mjs",
+    "worktree:list": "node scripts/worktree/list-worktrees.mjs",
+    "worktree:merge": "node scripts/worktree/merge-worktree.mjs",
+    "worktree:remove": "node scripts/worktree/remove-worktree.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "sass": "^1.69.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

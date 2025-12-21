@@ -1,0 +1,97 @@
+---
+layout: base.njk
+bodyClass: about-page
+title: Sobre nosotros - vaemptîness
+permalink: /sobre-nosotros/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">{{ about.hero.title }}</h1>
+    <p class="page-subtitle">{{ about.hero.subtitle }}</p>
+  </div>
+</section>
+
+<section class="about-intro">
+  <div class="container">
+    <div class="content-section centered">
+      <h2>{{ about.intro.title }}</h2>
+      <p>{{ about.intro.paragraphs[0] }}</p>
+      <p>{{ about.intro.paragraphs[1] }}</p>
+      <p class="quote-large">"No se trata de pensar más, sino mejor"</p>
+      <p>{{ about.intro.paragraphs[2] }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-brand-philosophy">
+  <div class="container">
+    <div class="content-section centered">
+      <h2>{{ about.brandPhilosophy.title }}</h2>
+      <p>{{ about.brandPhilosophy.content }}</p>
+      <blockquote class="philosophy-quote">
+        <p>"{{ about.brandPhilosophy.quote }}"</p>
+        <cite>— {{ about.brandPhilosophy.author }}</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="about-mission">
+  <div class="container">
+    <div class="content-section centered">
+      <h2>{{ about.mission.title }}</h2>
+      <p>{{ about.mission.content }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-services">
+  <div class="container">
+    <h2 class="section-title centered">{{ about.services.title }}</h2>
+    <ul class="services-grid-list">
+      {% for service in about.services.items %}
+      <li class="service-grid-item">{{ service }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="about-team">
+  <div class="container">
+    <div class="content-section centered">
+      <h2>{{ team.title }}</h2>
+      <p class="team-description">{{ team.description }}</p>
+    </div>
+
+    <div class="team-founder">
+      <div class="founder-card">
+        <div class="founder-image">
+          <img src="{{ team.founder.image | url }}" alt="{{ team.founder.name }}">
+        </div>
+        <div class="founder-info">
+          <h3 class="founder-name">{{ team.founder.name }}</h3>
+          <p class="founder-role">{{ team.founder.role }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-members">
+      {% for member in team.members %}
+      <div class="member-card">
+        <div class="member-image">
+          <img src="{{ member.image | url }}" alt="{{ member.name }}">
+        </div>
+        <div class="member-info">
+          <h4 class="member-name">{{ member.name }}</h4>
+          <p class="member-role">{{ member.role }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="content-section centered">
+      <p class="team-purpose">{{ team.purpose }}</p>
+    </div>
+  </div>
+</section>

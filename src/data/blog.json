@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "slug": "filosofia-budista-vaemptiness",
+    "title": "Filosofía Budista en vaemptîness",
+    "author": "Rosa Cano",
+    "date": "2025-12-15",
+    "excerpt": "Cómo la filosofía budista se integra en el enfoque terapéutico de vaemptîness, transformando el vacío de problema a posibilidad.",
+    "featured": true,
+    "image": "/assets/images/blog/filosofia-budista.jpg",
+    "content": {
+      "introduction": "La filosofía budista ofrece un marco profundo para entender la mente humana y sus patrones. En vaemptîness, integramos estos principios milenarios con técnicas modernas de regulación cognitiva.",
+      "sections": [
+        {
+          "title": "Reconceptualizar el Vacío",
+          "content": "El budismo ve el vacío como 'un espacio fértil' en lugar de trauma, transformándolo de problema a posibilidad. Esta perspectiva nos permite abordar el espacio mental no como algo que temer, sino como un recurso valioso."
+        },
+        {
+          "title": "Herramientas Prácticas",
+          "content": "El mindfulness, la ecuanimidad y la compasión actúan como puentes entre el dolor y la transformación. Estas prácticas no buscan eliminar experiencias difíciles, sino cambiar nuestra relación con ellas."
+        },
+        {
+          "title": "Conceptos Budistas Centrales",
+          "content": "El no-yo (anatta) facilita la flexibilidad cognitiva, permitiéndonos ver que nuestros pensamientos no nos definen. La impermanencia (anicca) ayuda a romper patrones de estancamiento, recordándonos que todo cambia, incluyendo nuestros estados mentales."
+        },
+        {
+          "title": "Dimensión Existencial",
+          "content": "El enfoque va más allá del alivio de síntomas, conectando procesos personales con un significado más profundo. La ética interna enfatiza la no violencia hacia uno mismo, cultivando una relación más compasiva con nuestra experiencia interior."
+        }
+      ],
+      "conclusion": "La integración de la filosofía budista en vaemptîness no es una adopción superficial, sino una comprensión profunda de cómo estos principios pueden informar un enfoque moderno de salud mental y bienestar cognitivo.",
+      "cta": "Cuestiónate y encuentra calma."
+    },
+    "tags": ["filosofía", "budismo", "mindfulness", "práctica"]
+  }
+]

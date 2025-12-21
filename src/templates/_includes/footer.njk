@@ -1,0 +1,68 @@
+<footer class="site-footer">
+  <div class="container">
+    <!-- Desktop Footer -->
+    <div class="footer-content footer-desktop">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="{{ '/assets/images/logo.png' | url }}" alt="{{ site.title }} - {{ site.tagline }}" class="footer-logo-image">
+        </div>
+        <p class="footer-description">{{ site.description }}</p>
+      </div>
+
+      <div class="footer-links">
+        <nav class="footer-nav">
+          <h3>Programas</h3>
+          <ul>
+            <li><a href="{{ '/vaemptiness-program/' | url }}">vaemptîness program</a></li>
+            <li><a href="{{ '/vaemptiness-equipos/' | url }}">vaemptîness equipos</a></li>
+            <li><a href="{{ '/vaemptiness-teen/' | url }}">vaemptîness teen</a></li>
+            <li><a href="{{ '/vaemptiness-kids/' | url }}">vaemptîness kids</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav">
+          <h3>Información</h3>
+          <ul>
+            <li><a href="{{ '/sobre-nosotros/' | url }}">Sobre nosotros</a></li>
+            <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+            <li><a href="{{ '/faq/' | url }}">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="{{ '/contacto/' | url }}">Formulario</a></li>
+            <li><a href="mailto:program@vaemptiness.com">program@vaemptiness.com</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom footer-desktop">
+      <p class="copyright">© {% year %} vaemptîness. Todos los derechos reservados.</p>
+      <nav class="footer-legal">
+        <ul>
+          {% for link in site.footer.links %}
+          <li><a href="{{ link.url | url }}">{{ link.text }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile Footer -->
+    <div class="footer-mobile">
+      <div class="footer-mobile-brand">
+        <img src="{{ '/assets/images/logo.png' | url }}" alt="{{ site.title }}" class="footer-mobile-logo">
+        <p class="footer-mobile-tagline">{{ site.tagline }}</p>
+      </div>
+      <nav class="footer-mobile-links">
+        <ul>
+          <li><a href="{{ '/politica-privacidad/' | url }}">Política de privacidad</a></li>
+          <li><a href="{{ '/terminos-condiciones/' | url }}">Términos y condiciones</a></li>
+          <li><a href="{{ '/contacto/' | url }}">Contacta con nosotros</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>

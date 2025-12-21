@@ -1,0 +1,87 @@
+---
+layout: base.njk
+bodyClass: program-page
+pagination:
+  data: programs
+  size: 1
+  alias: program
+permalink: /{{ program.slug }}/
+title: "{{ program.name }} - vaemptîness"
+---
+
+<section class="program-hero">
+  <div class="container">
+    <div class="program-hero-content">
+      <h1 class="program-hero-title">{{ program.hero.title }}</h1>
+      <p class="program-hero-subtitle">{{ program.hero.subtitle }}</p>
+      <p class="program-hero-description">{{ program.hero.description }}</p>
+    </div>
+  </div>
+</section>
+
+{% if program.pillars %}
+<section class="program-pillars">
+  <div class="container">
+    <h2 class="section-title">Pilares del Programa</h2>
+    <div class="pillars-grid">
+      {% for pillar in program.pillars %}
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg class="icon-{{ pillar.icon }}" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 class="pillar-title">{{ pillar.title }}</h3>
+        <p class="pillar-description">{{ pillar.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if program.sessionStructure %}
+<section class="program-session">
+  <div class="container">
+    <h2>{{ program.sessionStructure.title }}</h2>
+    <div class="session-grid">
+      <div class="session-details">
+        <p class="session-duration"><strong>Duración:</strong> {{ program.sessionStructure.duration }}</p>
+        <ul class="session-activities">
+          {% for activity in program.sessionStructure.activities %}
+          <li>{{ activity }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% if program.philosophy %}
+      <div class="session-philosophy">
+        <p class="quote-medium">{{ program.philosophy }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if program.outcomes %}
+<section class="program-outcomes">
+  <div class="container">
+    <h2>{{ program.outcomes.title }}</h2>
+    <ul class="outcomes-list">
+      {% for outcome in program.outcomes.items %}
+      <li class="outcome-item">{{ outcome }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">¿Interesado en este programa?</h2>
+      <p class="cta-description">Contacta con nosotros para más información</p>
+      <a href="{{ '/contacto/' | url }}" class="button button-primary">Contáctanos</a>
+    </div>
+  </div>
+</section>

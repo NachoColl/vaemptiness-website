@@ -1,0 +1,130 @@
+---
+layout: base.njk
+bodyClass: home-page
+title: vaemptîness - brain training
+---
+
+<section class="hero">
+  <!-- Circle stroke animation decoration -->
+  <svg class="hero-circle-animation" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle
+      cx="100"
+      cy="100"
+      r="95"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+  </svg>
+
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-brand">{{ hero.title }}</span>
+        <span class="hero-tagline">{{ hero.tagline }}</span>
+      </h1>
+      <p class="hero-subtitle">Crea espacio mental,<br class="mobile-break"> libérate del ruido.</p>
+    </div>
+
+    <div class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-text">Descubre más</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L12 20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="learning-intro-section">
+  <div class="container">
+    <div class="learning-intro">
+      <p class="intro-text">Un enfoque que fusiona teoría y práctica en cada experiencia, donde el aprendizaje sucede mientras lo vives.</p>
+      <p class="quote-large">"No memorizas conceptos, <br class="desktop-break">los experimentas"</p>
+      <a href="{{ '/aprendizaje-y-metodologia/' | url }}" class="button button-primary">Conocer más</a>
+    </div>
+  </div>
+</section>
+
+<section class="principles-section">
+  <div class="container">
+    <div class="principles-grid">
+      {% for principle in hero.principles %}
+      <div class="principle-card">
+        <!-- Progressive circle indicator -->
+        <svg class="principle-circle" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle
+            cx="30"
+            cy="30"
+            r="26"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            {% if loop.index == 1 %}
+            stroke-dasharray="163.4"
+            stroke-dashoffset="98"
+            {% elif loop.index == 2 %}
+            stroke-dasharray="163.4"
+            stroke-dashoffset="49"
+            {% else %}
+            stroke-dasharray="163.4"
+            stroke-dashoffset="0"
+            {% endif %}
+          />
+        </svg>
+
+        <h2 class="principle-title">{{ principle.title }}</h2>
+        <p class="principle-description">{{ principle.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="philosophy-section">
+  <div class="container">
+    <div class="philosophy-content">
+      <p class="quote-emphasis">{{ hero.philosophy }}</p>
+      <a href="{{ '/reset/' | url }}" class="button button-primary">Haz reset</a>
+    </div>
+  </div>
+</section>
+
+<section class="programs-section">
+  <div class="container">
+    <h2 class="section-title">Nuestros Programas</h2>
+
+    <div class="programs-grid">
+      {% for program in programs %}
+      {% if program.featured %}
+      <article class="program-card" data-aos="fade-up">
+        <a href="{{ ('/' + program.slug + '/') | url }}">
+          <div class="program-card-image">
+            <img src="/assets/images/programs/{{ program.id }}-card.jpg" alt="{{ program.name }}" loading="lazy">
+            <div class="program-card-overlay">
+              <span class="program-age-range">{{ program.ageRange }}</span>
+            </div>
+          </div>
+          <div class="program-card-content">
+            <h3 class="program-card-title">{{ program.name }}</h3>
+            <p class="program-card-description">{{ program.shortDescription }}</p>
+            <span class="program-card-link">Conocer más →</span>
+          </div>
+        </a>
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">¿Listo para crear espacio mental?</h2>
+      <p class="cta-description">Contacta con nosotros para comenzar tu entrenamiento mental</p>
+      <a href="{{ '/contacto/' | url }}" class="button button-primary">Contáctanos</a>
+    </div>
+  </div>
+</section>

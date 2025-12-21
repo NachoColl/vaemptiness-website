@@ -1,0 +1,22 @@
+{
+  "title": "vaemptîness",
+  "tagline": "brain training",
+  "description": "Crea espacio mental, libérate del ruido",
+  "email": "program@vaemptiness.com",
+  "language": "es",
+  "url": "https://vaemptiness.com",
+  "author": "Rosa Cano",
+  "footer": {
+    "copyright": "© 2025 vaemptîness. Todos los derechos reservados.",
+    "links": [
+      {
+        "text": "Política de privacidad",
+        "url": "/politica-privacidad"
+      },
+      {
+        "text": "Términos y condiciones",
+        "url": "/terminos-condiciones"
+      }
+    ]
+  }
+}

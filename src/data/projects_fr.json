@@ -1,0 +1,75 @@
+{
+  "projects": [
+    {
+      "slug": "duelo",
+      "title": "Sintético",
+      "description": "<span class=\"desc-label\">Rôle :</span> <span class=\"desc-value\">Monteur, concepteur sonore, réalisateur</span>",
+      "thumbnail": "/assets/images/projects/duelo.jpg",
+      "heroImage": "/assets/images/projects/duelo.jpg",
+      "previewVideo": "/assets/images/projects/sintetico-bg.mp4",
+      "bgVideo": "/assets/images/projects/sintetico-bg.mp4",
+      "vimeoId": "1139671566",
+      "category": "courts-metrages",
+      "gallery": [
+        {
+          "type": "image",
+          "src": "/assets/images/projects/duelo-gallery-1.jpg",
+          "position": "right"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/projects/duelo-gallery-3.jpg",
+          "position": "left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/projects/duelo-gallery-2.jpg",
+          "position": "right"
+        }
+      ],
+      "fullWidthImage": "/assets/images/projects/duelo-fullwidth.jpg",
+      "creditsImage": "/assets/images/projects/duelo-credits.png",
+      "metadata": [
+        { "label": "Rôle", "value": "Monteur, réalisateur" }
+      ]
+    },
+    {
+      "slug": "wstf",
+      "title": "Cawdor",
+      "description": "<span class=\"desc-label\">Rôle :</span> <span class=\"desc-value\">Monteur, concepteur sonore</span>",
+      "thumbnail": "/assets/images/projects/wstf.png",
+      "heroImage": "/assets/images/projects/wstf.png",
+      "previewVideo": "/assets/images/projects/cawdor-bg.mp4",
+      "bgVideo": "/assets/images/projects/cawdor-bg.mp4",
+      "vimeoId": "1142509112",
+      "category": "courts-metrages",
+      "gallery": [
+        {
+          "type": "image",
+          "src": "/assets/images/projects/cawdor-gallery-1.jpg",
+          "position": "right"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/projects/cawdor-gallery-2.jpg",
+          "position": "left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/projects/cawdor-gallery-3.jpg",
+          "position": "right"
+        }
+      ],
+      "metadata": [
+        { "label": "Rôle", "value": "Monteur" },
+        { "label": "Réalisateur", "value": "Collaboration" },
+        { "label": "Année", "value": "2024" }
+      ]
+    }
+  ],
+  "filters": {
+    "all": "Tous",
+    "shortFilms": "Courts-métrages"
+  },
+  "next": "Suivant"
+}

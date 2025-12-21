@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="container">
+    <a href="{{ '/en/' | url }}" class="logo">{{ site.name }}</a>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="{{ '/en/' | url }}" {% if page.url == "/en/" %}class="active"{% endif %}>Work</a></li>
+        <li><a href="{{ '/en/contact/' | url }}" {% if page.url == "/en/contact/" %}class="active"{% endif %}>Contact</a></li>
+        <li class="lang-switcher-nav">
+          <a href="{{ (page.url | replace('/en/', '/') | replace('/en', '/')) | url }}" class="lang-link">ESP</a>
+          <span class="lang-separator">/</span>
+          <a href="{{ ('/fr' + (page.url | replace('/en/', '/') | replace('/en', '/'))) | url }}" class="lang-link">FR</a>
+          <span class="lang-separator">/</span>
+          <a href="{{ page.url | url }}" class="lang-link active">EN</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

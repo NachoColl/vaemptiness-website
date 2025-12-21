@@ -1,0 +1,27 @@
+# Worktree-specific files (added by bws-ai-coding-template)
+.env.worktree
+.worktree-info.json
+docker-compose.worktree.yml
+CLAUDE_INSTRUCTIONS.md
+.worktrees
+test/.env.worktree
+test/.worktree-info.json
+test/docker-compose.worktree.yml
+
+# Ignore the entire .trees/ directory (contains all worktrees)
+.trees/
+
+# Dependencies
+node_modules/
+
+# Build output
+_site/
+
+# Testing
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Logs
+*.log
+npm-debug.log*

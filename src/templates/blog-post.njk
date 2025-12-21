@@ -1,0 +1,92 @@
+---
+layout: base.njk
+bodyClass: blog-post-page
+pagination:
+  data: blog
+  size: 1
+  alias: post
+permalink: /blog/{{ post.slug }}/
+title: "{{ post.title }} - Blog vaemptîness"
+---
+
+<article class="blog-post">
+  <section class="post-hero">
+    <div class="container">
+      <div class="post-meta">
+        <span class="post-author">{{ post.author }}</span>
+        <span class="post-separator">•</span>
+        <span class="post-date">{{ post.date }}</span>
+      </div>
+      <h1 class="post-title">{{ post.title }}</h1>
+      <p class="post-excerpt">{{ post.excerpt }}</p>
+
+      {% if post.tags %}
+      <div class="post-tags">
+        {% for tag in post.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="post-intro">
+    <div class="container">
+      <div class="content-section centered">
+        {% if post.content.introduction %}
+        <p class="post-introduction">{{ post.content.introduction }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {% if post.content.sections %}
+  <section class="post-body">
+    <div class="container">
+      <div class="content-section centered">
+        {% for section in post.content.sections %}
+        <div class="post-section">
+          <h2>{{ section.title }}</h2>
+          <p>{{ section.content }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if post.content.conclusion %}
+  <section class="post-conclusion-section">
+    <div class="container">
+      <div class="content-section centered">
+        <p>{{ post.content.conclusion }}</p>
+        {% if post.content.cta %}
+        <p class="quote-large">"{{ post.content.cta }}"</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="post-footer-section">
+    <div class="container">
+      <div class="content-section centered">
+        <div class="post-author-card">
+          <p class="author-label">Escrito por</p>
+          <p class="author-name">{{ post.author }}</p>
+          <p class="author-role">Fundadora de vaemptîness</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">¿Listo para crear espacio mental?</h2>
+      <p class="cta-description">Contacta con nosotros para comenzar tu entrenamiento mental</p>
+      <a href="{{ '/contacto/' | url }}" class="button button-primary">Contáctanos</a>
+    </div>
+  </div>
+</section>
