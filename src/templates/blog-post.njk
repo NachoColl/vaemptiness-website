@@ -55,11 +55,13 @@ title: "{{ post.title }} - Blog vaemptîness"
   </section>
   {% endif %}
 
-  {% if post.content.conclusion %}
+  {% if post.content.conclusion or post.content.cta %}
   <section class="post-conclusion-section">
     <div class="container">
       <div class="content-section centered">
+        {% if post.content.conclusion %}
         <p>{{ post.content.conclusion }}</p>
+        {% endif %}
         {% if post.content.cta %}
         <p class="quote-large">"{{ post.content.cta }}"</p>
         {% endif %}

@@ -16,27 +16,35 @@
       "ogType": "article"
     },
     "content": {
-      "introduction": "La filosofía budista ofrece un marco profundo para entender la mente humana y sus patrones. En vaemptîness, integramos estos principios milenarios con técnicas modernas de regulación cognitiva.",
+      "introduction": "El budismo no entiende el vacío como una carencia traumática, sino como una naturaleza abierta, un espacio fértil donde no hay fijaciones.",
       "sections": [
         {
-          "title": "Reconceptualizar el Vacío",
-          "content": "El budismo ve el vacío como 'un espacio fértil' en lugar de trauma, transformándolo de problema a posibilidad. Esta perspectiva nos permite abordar el espacio mental no como algo que temer, sino como un recurso valioso."
+          "title": "Reconceptualiza el vacío",
+          "content": "\"El budismo no entiende el vacío como una carencia traumática, sino como una naturaleza abierta, un espacio fértil donde no hay fijaciones.\" En vaemptîness, permite dejar de temer el vacío, tratarlo como lugar de posibilidad, y desactivar la narrativa de \"algo roto dentro de mí\"."
         },
         {
-          "title": "Herramientas Prácticas",
-          "content": "El mindfulness, la ecuanimidad y la compasión actúan como puentes entre el dolor y la transformación. Estas prácticas no buscan eliminar experiencias difíciles, sino cambiar nuestra relación con ellas."
+          "title": "Aporta herramientas para relacionarse con la experiencia",
+          "content": "Ofrece prácticas como mindfulness para observar el vacío, ecuanimidad para sostener emociones, y compasión para acompañar sin juicio."
         },
         {
-          "title": "Conceptos Budistas Centrales",
-          "content": "El no-yo (anatta) facilita la flexibilidad cognitiva, permitiéndonos ver que nuestros pensamientos no nos definen. La impermanencia (anicca) ayuda a romper patrones de estancamiento, recordándonos que todo cambia, incluyendo nuestros estados mentales."
+          "title": "Desidentificación del yo",
+          "content": "Introduce anatta (no-yo): no eres tu vacío, tus heridas, ni tu narrativa de carencia. Facilita flexibilidad cognitiva y emocional."
         },
         {
-          "title": "Dimensión Existencial",
-          "content": "El enfoque va más allá del alivio de síntomas, conectando procesos personales con un significado más profundo. La ética interna enfatiza la no violencia hacia uno mismo, cultivando una relación más compasiva con nuestra experiencia interior."
+          "title": "Impermanencia y proceso",
+          "content": "Enseña anicca (todo cambia), rompiendo estancamiento y permitiendo aceptar procesos graduales."
+        },
+        {
+          "title": "Ética del trato interno",
+          "content": "Inspira no violencia hacia uno mismo, veracidad sin crueldad, y paciencia con los ritmos del corazón."
+        },
+        {
+          "title": "Dimensión existencial",
+          "content": "Permite convivir con incertidumbre y conecta el proceso personal con algo mayor."
         }
       ],
-      "conclusion": "La integración de la filosofía budista en vaemptîness no es una adopción superficial, sino una comprensión profunda de cómo estos principios pueden informar un enfoque moderno de salud mental y bienestar cognitivo.",
-      "cta": "Cuestiónate y encuentra calma."
+      "conclusion": "",
+      "cta": "Mi propuesta para hoy…cuestiónate y calma."
     },
     "tags": ["filosofía", "budismo", "mindfulness", "práctica"]
   }
