@@ -8,6 +8,13 @@
     "excerpt": "Cómo la filosofía budista se integra en el enfoque terapéutico de vaemptîness, transformando el vacío de problema a posibilidad.",
     "featured": true,
     "image": "/assets/images/blog/filosofia-budista.jpg",
+    "seo": {
+      "title": "Filosofía Budista en vaemptîness | Blog vaemptîness",
+      "description": "Cómo la filosofía budista se integra en el enfoque terapéutico de vaemptîness, transformando el vacío de problema a posibilidad.",
+      "keywords": "filosofía, budismo, mindfulness, práctica",
+      "ogImage": "/assets/images/blog/filosofia-budista.jpg",
+      "ogType": "article"
+    },
     "content": {
       "introduction": "La filosofía budista ofrece un marco profundo para entender la mente humana y sus patrones. En vaemptîness, integramos estos principios milenarios con técnicas modernas de regulación cognitiva.",
       "sections": [

@@ -6,31 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- SEO Meta Tags -->
-  <title>{% if seo.title %}{{ seo.title }}{% else %}{{ title }}{{ seo.titleSuffix | default(' | vaemptîness') }}{% endif %}</title>
-  <meta name="description" content="{% if seo.description %}{{ seo.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if seo.keywords %}<meta name="keywords" content="{{ seo.keywords }}">{% endif %}
+  {% if program.seo %}
+    {% set pageSeo = program.seo %}
+  {% elif post.seo %}
+    {% set pageSeo = post.seo %}
+  {% elif seo %}
+    {% set pageSeo = seo %}
+  {% else %}
+    {% set pageSeo = {} %}
+  {% endif %}
+  <title>{% if pageSeo.title %}{{ pageSeo.title }}{% else %}{{ title }}{{ pageSeo.titleSuffix | default(' | vaemptîness') }}{% endif %}</title>
+  <meta name="description" content="{% if pageSeo.description %}{{ pageSeo.description }}{% else %}{{ site.description }}{% endif %}">
+  {% if pageSeo.keywords %}<meta name="keywords" content="{{ pageSeo.keywords }}">{% endif %}
   <meta name="author" content="{{ site.author }}">
   <meta name="language" content="{{ lang | default('es') }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="{% if seo.ogType %}{{ seo.ogType }}{% else %}website{% endif %}">
+  <meta property="og:type" content="{% if pageSeo.ogType %}{{ pageSeo.ogType }}{% else %}website{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:title" content="{% if seo.title %}{{ seo.title }}{% else %}{{ title }}{{ seo.titleSuffix | default(' | vaemptîness') }}{% endif %}">
-  <meta property="og:description" content="{% if seo.description %}{{ seo.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="{{ site.url }}{% if seo.ogImage %}{{ seo.ogImage }}{% else %}{{ seo.defaultOgImage | default('/assets/images/og-default.jpg') }}{% endif %}">
+  <meta property="og:title" content="{% if pageSeo.title %}{{ pageSeo.title }}{% else %}{{ title }}{{ pageSeo.titleSuffix | default(' | vaemptîness') }}{% endif %}">
+  <meta property="og:description" content="{% if pageSeo.description %}{{ pageSeo.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="{{ site.url }}{% if pageSeo.ogImage %}{{ pageSeo.ogImage }}{% else %}{{ pageSeo.defaultOgImage | default('/assets/images/og-default.jpg') }}{% endif %}">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="vaemptîness">
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="{{ seo.twitterCard | default('summary_large_image') }}">
+  <meta property="twitter:card" content="{{ pageSeo.twitterCard | default('summary_large_image') }}">
   <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="twitter:title" content="{% if seo.title %}{{ seo.title }}{% else %}{{ title }}{{ seo.titleSuffix | default(' | vaemptîness') }}{% endif %}">
-  <meta property="twitter:description" content="{% if seo.description %}{{ seo.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="twitter:image" content="{{ site.url }}{% if seo.twitterImage %}{{ seo.twitterImage }}{% else %}{{ seo.defaultTwitterImage | default('/assets/images/twitter-card-default.jpg') }}{% endif %}">
+  <meta property="twitter:title" content="{% if pageSeo.title %}{{ pageSeo.title }}{% else %}{{ title }}{{ pageSeo.titleSuffix | default(' | vaemptîness') }}{% endif %}">
+  <meta property="twitter:description" content="{% if pageSeo.description %}{{ pageSeo.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="twitter:image" content="{{ site.url }}{% if pageSeo.twitterImage %}{{ pageSeo.twitterImage }}{% else %}{{ pageSeo.defaultTwitterImage | default('/assets/images/twitter-card-default.jpg') }}{% endif %}">
 
   <!-- Additional SEO -->
-  <meta name="robots" content="{% if seo.robots %}{{ seo.robots }}{% else %}index, follow{% endif %}">
+  <meta name="robots" content="{% if pageSeo.robots %}{{ pageSeo.robots }}{% else %}index, follow{% endif %}">
   <meta name="googlebot" content="index, follow">
   <meta name="theme-color" content="#b85c4f">
 

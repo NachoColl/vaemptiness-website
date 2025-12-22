@@ -9,6 +9,7 @@
     "test:visual": "playwright test tests/visual/comparison.spec.ts",
     "test:visual:update": "playwright test --update-snapshots",
     "capture-refs": "npx ts-node tests/visual/capture-references.ts",
+    "generate:og-images": "node scripts/generate-og-images.mjs",
     "worktree:create": "node scripts/worktree/create-worktree.mjs",
     "worktree:list": "node scripts/worktree/list-worktrees.mjs",
     "worktree:merge": "node scripts/worktree/merge-worktree.mjs",
