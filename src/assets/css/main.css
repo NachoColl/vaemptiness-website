@@ -724,9 +724,9 @@ main {
 }
 
 .button-primary:hover {
-  background: var(--color-primary-text);
+  background: #636363;
   color: var(--color-primary-bg);
-  border-color: var(--color-primary-text);
+  border-color: #636363;
 }
 
 .button-secondary {
@@ -736,8 +736,9 @@ main {
 }
 
 .button-secondary:hover {
-  background: var(--color-primary-text);
+  background: #636363;
   color: var(--color-primary-bg);
+  border-color: #636363;
 }
 
 /* Hero Section
