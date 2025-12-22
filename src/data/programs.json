@@ -6,6 +6,12 @@
     "slug": "vaemptiness-program",
     "shortDescription": "Entrenamiento mental para adultos buscando mejor concentración y enfoque",
     "featured": true,
+    "seoKeywords": "entrenamiento mental adultos Barcelona, mindfulness adultos, reducir rumiación, mejorar concentración, claridad cognitiva",
+    "audience": {
+      "type": "PeopleAudience",
+      "minAge": 18,
+      "label": "Adultos"
+    },
     "hero": {
       "title": "vaemptîness program",
       "subtitle": "Programa para adultos",
@@ -63,6 +69,11 @@
     "slug": "vaemptiness-equipos",
     "shortDescription": "Entrenamiento mental para equipos de trabajo buscando mejor rendimiento y colaboración",
     "featured": true,
+    "seoKeywords": "mindfulness empresas Barcelona, entrenamiento mental equipos, reducir estrés laboral, bienestar corporativo, formación mindfulness",
+    "audience": {
+      "type": "PeopleAudience",
+      "label": "Equipos de trabajo"
+    },
     "hero": {
       "title": "vaemptîness equipos",
       "subtitle": "Programa para equipos de trabajo",
@@ -120,6 +131,13 @@
     "slug": "vaemptiness-teen",
     "shortDescription": "Programa enfocado en adolescentes para desarrollar claridad mental y regulación emocional",
     "featured": true,
+    "seoKeywords": "mindfulness adolescentes Barcelona, ansiedad adolescentes, gestión emocional teens, programa jóvenes mindfulness",
+    "audience": {
+      "type": "PeopleAudience",
+      "minAge": 12,
+      "maxAge": 17,
+      "label": "Adolescentes"
+    },
     "hero": {
       "title": "vaemptîness teen",
       "subtitle": "Pre-adolescencia a adolescencia",
@@ -177,6 +195,13 @@
     "slug": "vaemptiness-kids",
     "shortDescription": "Entrenamiento emocional y mental a través del juego",
     "featured": true,
+    "seoKeywords": "mindfulness niños Barcelona, meditación niños, atención plena infantil, actividades mindfulness niños",
+    "audience": {
+      "type": "PeopleAudience",
+      "minAge": 5,
+      "maxAge": 8,
+      "label": "Niños"
+    },
     "hero": {
       "title": "vaemptîness kids",
       "subtitle": "Edades 5-8 años",

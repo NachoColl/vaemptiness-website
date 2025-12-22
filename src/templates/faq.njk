@@ -3,6 +3,11 @@ layout: base.njk
 bodyClass: faq-page
 title: Preguntas Frecuentes - vaemptîness
 permalink: /faq/
+seo:
+  title: "Preguntas Frecuentes | vaemptîness Entrenamiento Mental Barcelona"
+  description: "Respuestas a preguntas frecuentes sobre nuestros programas de entrenamiento mental, mindfulness y filosofía budista en Barcelona."
+  keywords: "preguntas mindfulness, FAQ entrenamiento mental, dudas meditación, información programas"
+  ogImage: "/assets/images/og-faq.jpg"
 ---
 
 <section class="page-hero">
@@ -54,3 +59,7 @@ permalink: /faq/
 </section>
 
 <script src="{{ '/assets/js/faq-accordion.js' | url }}"></script>
+
+{% block schema %}
+  {% include "schemas/faq-page.njk" %}
+{% endblock %}

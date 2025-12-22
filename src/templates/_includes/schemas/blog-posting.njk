@@ -1,0 +1,32 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ post.title }}",
+  "alternativeHeadline": "{{ post.excerpt }}",
+  "image": "{{ site.url }}{{ post.image }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ post.author | default(site.author) }}",
+    "url": "{{ site.url }}/sobre-nosotros/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "vaemptîness",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/logo.png"
+    }
+  },
+  "datePublished": "{{ post.date }}",
+  "dateModified": "{{ post.dateModified | default(post.date) }}",
+  "description": "{{ post.excerpt }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}/blog/{{ post.slug }}/"
+  },
+  "keywords": [{% for tag in post.tags %}"{{ tag }}"{% if not loop.last %},{% endif %}{% endfor %}],
+  "articleSection": "{{ post.tags[0] | default('Mindfulness') }}",
+  "inLanguage": "es-ES"
+}
+</script>

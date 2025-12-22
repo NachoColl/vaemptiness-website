@@ -3,6 +3,11 @@ layout: base.njk
 bodyClass: about-page
 title: Sobre nosotros - vaemptîness
 permalink: /sobre-nosotros/
+seo:
+  title: "Sobre Nosotros | vaemptîness - Psicología Budista Barcelona"
+  description: "Conoce al equipo de vaemptîness. Combinamos psicología occidental y filosofía budista para ofrecer entrenamiento mental efectivo en Barcelona."
+  keywords: "psicología budista Barcelona, equipo mindfulness, filosofía budista práctica, entrenadores mentales"
+  ogImage: "/assets/images/og-about.jpg"
 ---
 
 <section class="page-hero">
@@ -95,3 +100,7 @@ permalink: /sobre-nosotros/
     </div>
   </div>
 </section>
+
+{% block schema %}
+  {% include "schemas/person.njk" %}
+{% endblock %}

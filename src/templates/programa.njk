@@ -7,6 +7,13 @@ pagination:
   alias: program
 permalink: /{{ program.slug }}/
 title: "{{ program.name }} - vaemptîness"
+eleventyComputed:
+  seo:
+    title: "{{ program.hero.title }} | vaemptîness"
+    description: "{{ program.hero.description }}"
+    keywords: "{{ program.seoKeywords }}"
+    ogImage: "/assets/images/programs/{{ program.id }}-program.jpg"
+    ogType: "article"
 ---
 
 <section class="program-hero">
@@ -85,3 +92,7 @@ title: "{{ program.name }} - vaemptîness"
     </div>
   </div>
 </section>
+
+{% block schema %}
+  {% include "schemas/psychological-treatment.njk" %}
+{% endblock %}

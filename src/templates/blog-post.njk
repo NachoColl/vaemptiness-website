@@ -7,6 +7,13 @@ pagination:
   alias: post
 permalink: /blog/{{ post.slug }}/
 title: "{{ post.title }} - Blog vaemptîness"
+eleventyComputed:
+  seo:
+    title: "{{ post.title }} | Blog vaemptîness"
+    description: "{{ post.excerpt }}"
+    keywords: "{{ post.tags | join(', ') }}"
+    ogImage: "{{ post.image }}"
+    ogType: "article"
 ---
 
 <article class="blog-post">
@@ -90,3 +97,7 @@ title: "{{ post.title }} - Blog vaemptîness"
     </div>
   </div>
 </section>
+
+{% block schema %}
+  {% include "schemas/blog-posting.njk" %}
+{% endblock %}

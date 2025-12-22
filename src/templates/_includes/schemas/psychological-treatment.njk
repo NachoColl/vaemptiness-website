@@ -1,0 +1,25 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PsychologicalTreatment",
+  "name": "{{ program.name }}",
+  "description": "{{ program.shortDescription }}",
+  "url": "{{ site.url }}/{{ program.slug }}/",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "vaemptîness",
+    "url": "{{ site.url }}"
+  },
+  "relevantSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": "Psychology"
+  }{% if program.audience %},
+  "audience": {
+    "@type": "{{ program.audience.type | default('PeopleAudience') }}",
+    {% if program.audience.minAge %}"suggestedMinAge": {{ program.audience.minAge }},{% endif %}
+    {% if program.audience.maxAge %}"suggestedMaxAge": {{ program.audience.maxAge }},{% endif %}
+    "audienceType": "{{ program.audience.label }}"
+  }{% endif %},
+  "duration": "PT60M"
+}
+</script>
