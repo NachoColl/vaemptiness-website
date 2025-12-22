@@ -2072,10 +2072,16 @@ main {
 }
 
 .post-intro,
-.post-body,
-.post-conclusion-section,
 .post-footer-section {
   padding: var(--section-spacing) 0;
+}
+
+.post-body {
+  padding: var(--space-2xl) 0 var(--section-spacing) 0;
+}
+
+.post-conclusion-section {
+  padding: var(--space-lg) 0 var(--section-spacing) 0;
 }
 
 .post-introduction {
@@ -2119,6 +2125,10 @@ main {
 
 .blog-list-items li:last-child {
   margin-bottom: 0;
+}
+
+.post-conclusion-section .quote-large {
+  margin: var(--space-md) 0;
 }
 
 .post-author-card {
