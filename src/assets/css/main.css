@@ -806,7 +806,7 @@ main {
   transform: translateX(-50%);
   width: 200px;
   height: 200px;
-  color: var(--color-accent-rust);
+  color: var(--color-primary-text);
   opacity: 0.6;
   z-index: 0;
   pointer-events: none;
