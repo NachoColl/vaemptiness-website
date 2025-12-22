@@ -1402,8 +1402,8 @@ main {
 .cta-description {
   color: var(--color-hover);
   margin-bottom: var(--space-xl);
-  font-size: var(--text-h3);
-  line-height: 1.6;
+  font-size: var(--text-body);
+  line-height: 1.8;
 }
 
 /* Page Hero
