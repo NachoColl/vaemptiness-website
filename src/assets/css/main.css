@@ -887,6 +887,48 @@ main {
   }
 }
 
+/* Shorter desktop screens - reduce circle top spacing */
+@media (min-width: 769px) and (max-height: 900px) {
+  .hero-circle-animation {
+    top: 7%;
+  }
+}
+
+@media (min-width: 769px) and (max-height: 715px) {
+  .hero-circle-animation {
+    top: 5%;
+  }
+}
+
+@media (min-width: 769px) and (max-height: 650px) {
+  .hero-circle-animation {
+    top: 3%;
+  }
+}
+
+/* Shorter mobile screens - reduce circle top spacing */
+@media (max-width: 768px) and (max-height: 800px) {
+  .hero-circle-animation {
+    top: 4%;
+  }
+
+  .hero-content {
+    margin-top: -4rem;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 600px) {
+  .hero-circle-animation {
+    top: 2%;
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-content {
+    margin-top: -5rem;
+  }
+}
+
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
