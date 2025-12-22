@@ -1,0 +1,44 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site.url }}/#organization",
+  "name": "vaemptîness",
+  "alternateName": "vaemptiness Barcelona",
+  "description": "Entrenamiento mental y mindfulness basado en filosofía budista. Programas para adultos, equipos, adolescentes y niños en Barcelona.",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/assets/images/logo.png",
+  "image": "{{ site.url }}/assets/images/logo.png",
+  "telephone": "+34-XXX-XXX-XXX",
+  "email": "{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Barcelona",
+    "addressRegion": "Cataluña",
+    "addressCountry": "ES"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Barcelona"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.3851",
+    "longitude": "2.1734"
+  },
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  ]{% if site.socialMedia.facebook or site.socialMedia.instagram or site.socialMedia.linkedin %},
+  "sameAs": [
+    {% if site.socialMedia.facebook %}"{{ site.socialMedia.facebook }}"{% if site.socialMedia.instagram or site.socialMedia.linkedin %},{% endif %}{% endif %}
+    {% if site.socialMedia.instagram %}"{{ site.socialMedia.instagram }}"{% if site.socialMedia.linkedin %},{% endif %}{% endif %}
+    {% if site.socialMedia.linkedin %}"{{ site.socialMedia.linkedin }}"{% endif %}
+  ]{% endif %}
+}
+</script>

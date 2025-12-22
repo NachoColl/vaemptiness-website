@@ -1,0 +1,39 @@
+{
+  "defaultTitle": "vaemptîness | Entrenamiento Mental y Mindfulness Barcelona",
+  "titleSuffix": " | vaemptîness",
+  "defaultDescription": "Crea espacio mental. Entrenamiento cerebral basado en mindfulness y filosofía budista en Barcelona.",
+  "defaultKeywords": "entrenamiento mental Barcelona, mindfulness Barcelona, meditación, psicología budista",
+  "ogImage": "/assets/images/og-default.jpg",
+  "twitterCard": "summary_large_image",
+  "twitterImage": "/assets/images/twitter-card-default.jpg",
+  "organization": {
+    "name": "vaemptîness",
+    "alternateName": "vaemptiness Barcelona",
+    "description": "Entrenamiento mental y mindfulness basado en filosofía budista. Programas para adultos, equipos, adolescentes y niños en Barcelona.",
+    "logo": "/assets/images/logo.png",
+    "email": "program@vaemptiness.es",
+    "telephone": "+34-XXX-XXX-XXX",
+    "address": {
+      "locality": "Barcelona",
+      "region": "Cataluña",
+      "country": "ES"
+    },
+    "geo": {
+      "latitude": "41.3851",
+      "longitude": "2.1734"
+    },
+    "priceRange": "€€",
+    "openingHours": [
+      {
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    ],
+    "socialMedia": {
+      "facebook": "",
+      "instagram": "",
+      "linkedin": ""
+    }
+  }
+}
