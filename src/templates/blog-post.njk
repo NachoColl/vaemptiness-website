@@ -34,7 +34,7 @@ title: "{{ post.title }} - Blog vaemptîness"
     <div class="container">
       <div class="content-section centered">
         {% if post.content.introduction %}
-        <p class="post-introduction">{{ post.content.introduction }}</p>
+        <p class="post-introduction">{{ post.content.introduction | safe }}</p>
         {% endif %}
       </div>
     </div>
@@ -47,7 +47,22 @@ title: "{{ post.title }} - Blog vaemptîness"
         {% for section in post.content.sections %}
         <div class="post-section">
           <h2>{{ section.title }}</h2>
-          <p>{{ section.content }}</p>
+          {% if section.intro %}
+          <p>{{ section.intro | safe }}</p>
+          {% endif %}
+          {% if section.items %}
+          <ul class="session-activities">
+            {% for item in section.items %}
+            <li>{{ item | safe }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if section.closing %}
+          <p>{{ section.closing | safe }}</p>
+          {% endif %}
+          {% if section.content %}
+          <p>{{ section.content | safe }}</p>
+          {% endif %}
         </div>
         {% endfor %}
       </div>
@@ -60,10 +75,10 @@ title: "{{ post.title }} - Blog vaemptîness"
     <div class="container">
       <div class="content-section centered">
         {% if post.content.conclusion %}
-        <p>{{ post.content.conclusion }}</p>
+        <p>{{ post.content.conclusion | safe }}</p>
         {% endif %}
         {% if post.content.cta %}
-        <p class="quote-large">"{{ post.content.cta }}"</p>
+        <p class="quote-large">{{ post.content.cta | safe }}</p>
         {% endif %}
       </div>
     </div>
