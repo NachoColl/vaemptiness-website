@@ -23,5 +23,9 @@
     "sass": "^1.69.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "docx": "^9.5.1",
+    "pdf-lib": "^1.17.1"
   }
 }
