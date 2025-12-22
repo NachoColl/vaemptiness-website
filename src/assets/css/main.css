@@ -710,30 +710,28 @@ main {
   font-size: var(--text-body);
   font-weight: 500;
   text-align: center;
-  border: 2px solid var(--color-primary-text);
-  border-radius: var(--radius-full);
+  border: none;
+  border-radius: 0.33rem;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
   min-height: 44px;
 }
 
 .button-primary {
   background: var(--color-primary-text);
   color: var(--color-primary-bg);
-  border-color: var(--color-primary-text);
 }
 
 .button-primary:hover {
-  background: var(--color-accent-rust);
-  border-color: var(--color-accent-rust);
+  background: #636363;
   color: var(--color-primary-bg);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .button-secondary {
   background: transparent;
   color: var(--color-primary-text);
+  border: 1px solid currentColor;
+  padding: calc(0.875rem - 1px) calc(2rem - 1px);
 }
 
 .button-secondary:hover {
