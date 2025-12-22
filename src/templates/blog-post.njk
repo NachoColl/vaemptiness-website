@@ -51,7 +51,7 @@ title: "{{ post.title }} - Blog vaemptîness"
           <p>{{ section.intro | safe }}</p>
           {% endif %}
           {% if section.items %}
-          <ul class="session-activities">
+          <ul class="blog-list-items">
             {% for item in section.items %}
             <li>{{ item | safe }}</li>
             {% endfor %}

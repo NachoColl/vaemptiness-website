@@ -2102,6 +2102,25 @@ main {
   line-height: 1.8;
 }
 
+.blog-list-items {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-lg) 0;
+}
+
+.blog-list-items li {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-accent-cream);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  color: var(--color-hover);
+  line-height: 1.7;
+}
+
+.blog-list-items li:last-child {
+  margin-bottom: 0;
+}
+
 .post-author-card {
   padding: var(--space-2xl);
   background: var(--color-accent-cream);
