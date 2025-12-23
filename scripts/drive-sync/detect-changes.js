@@ -25,6 +25,10 @@ async function getDriveFiles() {
 
     for (const item of items) {
       if (item.mimeType === 'application/vnd.google-apps.folder') {
+        // Skip metadata folders
+        if (item.name.startsWith('.')) {
+          continue;
+        }
         // Recursively scan subfolders
         const subPath = basePath ? `${basePath}/${item.name}` : item.name;
         await scanFolder(item.id, subPath);
