@@ -1,19 +1,12 @@
 ---
 layout: base.njk
-permalink: /contacto/
-bodyClass: contact-page
-title: Contacto - vaemptîness
-seo:
-  title: "Contacto | Reserva tu Sesión de Entrenamiento Mental Barcelona"
-  description: "Contacta con vaemptîness. Envíanos tus preguntas o reserva tu primera sesión de entrenamiento mental en Barcelona. Online o presencial."
-  keywords: "contactar vaemptiness, reservar sesión mindfulness Barcelona, consulta entrenamiento mental"
-  ogImage: "/assets/images/og-contact.jpg"
 ---
+{% set pageData = pages.contacto.content %}
 
 <section class="page-hero">
   <div class="container">
-    <h1 class="page-title">{{ contact.hero.title }}</h1>
-    <p class="page-subtitle">{{ contact.hero.subtitle }}</p>
+    <h1 class="page-title">{{ pageData.hero.title }}</h1>
+    <p class="page-subtitle">{{ pageData.hero.subtitle }}</p>
   </div>
 </section>
 
@@ -21,12 +14,12 @@ seo:
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info">
-        <p class="contact-description">{{ contact.description }}</p>
+        <p class="contact-description">{{ pageData.description }}</p>
       </div>
 
       <div class="contact-form-wrapper">
         <h2>Envíanos un mensaje</h2>
-        <form action="{{ contact.form.getformEndpoint }}" method="POST" class="contact-form" id="contact-form">
+        <form action="{{ pageData.form.getformEndpoint }}" method="POST" class="contact-form" id="contact-form">
           <div class="form-group">
             <label for="name">Nombre <span class="required">*</span></label>
             <input type="text" name="name" id="name" required>
@@ -46,7 +39,7 @@ seo:
             <label for="topic">Tema <span class="required">*</span></label>
             <select name="topic" id="topic" required>
               <option value="" disabled selected>Selecciona un tema</option>
-              {% for topic in contact.form.topics %}
+              {% for topic in pageData.form.topics %}
               <option value="{{ topic }}">{{ topic }}</option>
               {% endfor %}
             </select>

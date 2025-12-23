@@ -1,25 +1,18 @@
 ---
 layout: base.njk
-bodyClass: faq-page
-title: Preguntas Frecuentes - vaemptîness
-permalink: /faq/
-seo:
-  title: "Preguntas Frecuentes | vaemptîness Entrenamiento Mental Barcelona"
-  description: "Respuestas a preguntas frecuentes sobre nuestros programas de entrenamiento mental, mindfulness y filosofía budista en Barcelona."
-  keywords: "preguntas mindfulness, FAQ entrenamiento mental, dudas meditación, información programas"
-  ogImage: "/assets/images/og-faq.jpg"
 ---
+{% set pageData = pages.faq.content %}
 
 <section class="page-hero">
   <div class="container">
-    <h1 class="page-title">{{ faq.hero.title }}</h1>
-    <p class="page-subtitle">{{ faq.hero.subtitle }}</p>
+    <h1 class="page-title">{{ pageData.hero.title }}</h1>
+    <p class="page-subtitle">{{ pageData.hero.subtitle }}</p>
   </div>
 </section>
 
 <section class="faq-section">
   <div class="container">
-    {% for category in faq.categories %}
+    {% for category in pageData.categories %}
     <div class="faq-category" data-category-id="{{ category.id }}">
       <div class="faq-category-header">
         <h2 class="faq-category-title">{{ category.name }}</h2>

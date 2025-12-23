@@ -58,24 +58,24 @@ layout: base.njk
 <section class="about-team">
   <div class="container">
     <div class="content-section centered">
-      <h2>{{ team.title }}</h2>
-      <p class="team-description">{{ team.description }}</p>
+      <h2>{{ pageData.team.title }}</h2>
+      <p class="team-description">{{ pageData.team.description }}</p>
     </div>
 
     <div class="team-founder">
       <div class="founder-card">
         <div class="founder-image">
-          <img src="{{ team.founder.image | url }}" alt="{{ team.founder.name }}">
+          <img src="{{ pageData.team.founder.image | url }}" alt="{{ pageData.team.founder.name }}">
         </div>
         <div class="founder-info">
-          <h3 class="founder-name">{{ team.founder.name }}</h3>
-          <p class="founder-role">{{ team.founder.role }}</p>
+          <h3 class="founder-name">{{ pageData.team.founder.name }}</h3>
+          <p class="founder-role">{{ pageData.team.founder.role }}</p>
         </div>
       </div>
     </div>
 
     <div class="team-members">
-      {% for member in team.members %}
+      {% for member in pageData.team.members %}
       <div class="member-card">
         <div class="member-image">
           <img src="{{ member.image | url }}" alt="{{ member.name }}">
@@ -89,7 +89,7 @@ layout: base.njk
     </div>
 
     <div class="content-section centered">
-      <p class="team-purpose">{{ team.purpose }}</p>
+      <p class="team-purpose">{{ pageData.team.purpose }}</p>
     </div>
   </div>
 </section>
