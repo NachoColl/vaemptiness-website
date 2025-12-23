@@ -3,6 +3,7 @@
  */
 
 const fs = require('fs-extra');
+const minimatch = require('minimatch');
 const { detectChanges } = require('./detect-changes');
 const { downloadChanges } = require('./download-changes');
 const { validate } = require('./validate-json');
@@ -11,6 +12,56 @@ const githubClient = require('./github-client');
 const syncMetadata = require('./sync-metadata');
 const config = require('./config');
 const logger = require('./logger');
+
+/**
+ * Determine if PR should auto-merge
+ */
+async function autoMergeIfEligible(pr, result) {
+  // Check 1: Do we have conflicts?
+  if (result.hasConflicts) {
+    logger.info('Skipping auto-merge: conflicts detected', { prNumber: pr.number });
+    await githubClient.addLabel(pr.number, 'requires-review');
+    await githubClient.addLabel(pr.number, 'conflict');
+    return { merged: false, reason: 'conflicts' };
+  }
+
+  // Check 2: Is auto-merge enabled?
+  if (!config.sync.autoMergeNonConflicts) {
+    logger.info('Skipping auto-merge: feature disabled', { prNumber: pr.number });
+    return { merged: false, reason: 'disabled' };
+  }
+
+  // Check 3: Any files require manual review?
+  const requiresReview = result.applied.some(filePath => {
+    return config.sync.requireReview.some(pattern => {
+      return minimatch(filePath, pattern);
+    });
+  });
+
+  if (requiresReview) {
+    logger.info('Skipping auto-merge: critical files changed', { prNumber: pr.number });
+    await githubClient.addLabel(pr.number, 'requires-review');
+    await githubClient.addLabel(pr.number, 'critical-file');
+    return { merged: false, reason: 'critical-files' };
+  }
+
+  // All checks passed - auto-merge!
+  logger.info('Auto-merging PR', { prNumber: pr.number });
+
+  try {
+    const merged = await githubClient.mergePR(pr.number, {
+      merge_method: 'squash',
+      commit_title: `${pr.title} (#${pr.number})`,
+      commit_message: pr.body
+    });
+
+    return { merged: true, prNumber: pr.number, sha: merged.sha };
+  } catch (error) {
+    logger.error('Auto-merge failed', { prNumber: pr.number, error: error.message });
+    await githubClient.addLabel(pr.number, 'auto-merge-failed');
+    return { merged: false, reason: 'merge-error', error: error.message };
+  }
+}
 
 async function syncFromDrive() {
   logger.info('=== Starting Google Drive → GitHub sync ===');
@@ -78,7 +129,7 @@ ${result.applied.map(f => `- \`${f}\``).join('\\n')}
 **Sync timestamp:** ${new Date().toISOString()}
 
 ✅ Validation passed
-✅ No conflicts detected
+${result.hasConflicts ? '⚠️ Conflicts detected - manual review required' : '✅ No conflicts detected'}
 
 ---
 🤖 Generated with [Claude Code](https://claude.com/claude-code)`;
@@ -92,16 +143,33 @@ ${result.applied.map(f => `- \`${f}\``).join('\\n')}
 
       logger.info('Created/updated pull request', { prNumber: pr.number, url: pr.html_url });
 
+      // Auto-merge if eligible
+      const mergeResult = await autoMergeIfEligible(pr, result);
+
       // Add to sync history
       syncMetadata.addSyncHistory({
         direction: 'drive-to-github',
         filesChanged: result.applied,
         conflicts: result.conflicts.length,
         status: 'success',
-        prNumber: pr.number
+        prNumber: pr.number,
+        autoMerged: mergeResult.merged,
+        mergeReason: mergeResult.reason
       });
 
       await syncMetadata.save();
+
+      if (mergeResult.merged) {
+        logger.info('✅ PR auto-merged to master', {
+          prNumber: pr.number,
+          sha: mergeResult.sha
+        });
+      } else {
+        logger.info('⚠️ PR requires manual review', {
+          prNumber: pr.number,
+          reason: mergeResult.reason
+        });
+      }
     }
 
     logger.info('=== Sync complete ===', {

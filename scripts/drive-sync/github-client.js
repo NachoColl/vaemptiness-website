@@ -198,6 +198,63 @@ class GitHubClient {
       throw error;
     }
   }
+
+  /**
+   * Merge a pull request
+   */
+  async mergePR(prNumber, options = {}) {
+    this.initialize();
+
+    try {
+      const response = await this.octokit.pulls.merge({
+        owner: config.github.owner,
+        repo: config.github.repo,
+        pull_number: prNumber,
+        merge_method: options.merge_method || 'squash',
+        commit_title: options.commit_title,
+        commit_message: options.commit_message
+      });
+
+      logger.info('Merged PR', {
+        prNumber,
+        sha: response.data.sha,
+        merged: response.data.merged
+      });
+
+      return response.data;
+    } catch (error) {
+      logger.error('Failed to merge PR', {
+        prNumber,
+        error: error.message
+      });
+      throw error;
+    }
+  }
+
+  /**
+   * Add label to issue/PR
+   */
+  async addLabel(issueNumber, label) {
+    this.initialize();
+
+    try {
+      await this.octokit.issues.addLabels({
+        owner: config.github.owner,
+        repo: config.github.repo,
+        issue_number: issueNumber,
+        labels: [label]
+      });
+
+      logger.info('Added label', { issueNumber, label });
+    } catch (error) {
+      logger.error('Failed to add label', {
+        issueNumber,
+        label,
+        error: error.message
+      });
+      throw error;
+    }
+  }
 }
 
 module.exports = new GitHubClient();

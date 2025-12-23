@@ -53,23 +53,19 @@ module.exports = {
   // Sync configuration
   sync: {
     // Conflict resolution grace period (milliseconds)
-    // Changes within this window are considered simultaneous
+    // Changes within this window are considered simultaneous and auto-resolved
+    // Example: If Drive edit at 10:00 and GitHub commit at 10:02, use most recent
     conflictGracePeriod: 5 * 60 * 1000, // 5 minutes
 
     // Auto-merge non-conflicting changes
-    autoMergeNonConflicts: false, // Start conservative, can enable later
+    autoMergeNonConflicts: true, // ✨ ENABLED - auto-merge when no conflicts
 
-    // Files that always require manual review
-    requireReview: [
-      'pages/home.json',
-      'programs/vaemptiness-program.json'
-    ],
+    // Files that always require manual review (even if no conflict)
+    // Empty = all files can auto-merge if no conflict detected
+    requireReview: [],
 
-    // Files that can auto-merge (if autoMergeNonConflicts enabled)
-    autoApprove: [
-      'pages/faq.json',
-      'blog/*.json'
-    ]
+    // Email notifications for manual review
+    notifyEmail: process.env.NOTIFY_EMAIL || 'ignacio.coll@gmail.com'
   },
 
   // Validation rules
