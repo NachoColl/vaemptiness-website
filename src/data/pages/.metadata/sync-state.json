@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastSync": "2025-12-23T18:45:50.319Z",
+  "lastSync": "2025-12-23T19:42:01.124Z",
   "repository": {
     "owner": "NachoColl",
     "repo": "vaemptiness-website",
@@ -12,120 +12,139 @@
   },
   "files": {
     "aprendizaje-y-metodologia.json": {
-      "driveId": "1Vji_weGossQXD4Bcxjqe1MzFXVk7W1n9",
-      "driveModifiedTime": "2025-12-23T16:14:03.156Z",
+      "driveId": "1NLDPO8w2nYJCIQkyNnm0Wy_UQDlxSWbm",
+      "driveModifiedTime": "2025-12-23T19:41:47.014Z",
       "githubPath": "src/data/pages/aprendizaje-y-metodologia.json",
-      "lastSyncedTime": "2025-12-23T16:14:04.010Z",
+      "lastSyncedTime": "2025-12-23T19:41:47.756Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:04.011Z"
+      "lastUpdated": "2025-12-23T19:41:47.756Z"
     },
     "blog/filosofia-budista-vaemptiness.json": {
-      "driveId": "1ExUmuFBeRdq2cBIkza9tif3ZzmIJGC9O",
-      "driveModifiedTime": "2025-12-23T16:14:05.146Z",
+      "driveId": "1LuFC01jwRko0IXvRBDYugNfnFcl9iZX3",
+      "driveModifiedTime": "2025-12-23T19:41:48.123Z",
       "githubPath": "src/data/pages/blog/filosofia-budista-vaemptiness.json",
-      "lastSyncedTime": "2025-12-23T16:14:05.879Z",
+      "lastSyncedTime": "2025-12-23T19:41:48.871Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:05.879Z"
+      "lastUpdated": "2025-12-23T19:41:48.871Z"
     },
     "contacto.json": {
-      "driveId": "198wJcXJMJH6jkR4K123GANNVix8g1ysL",
-      "driveModifiedTime": "2025-12-23T16:14:05.997Z",
+      "driveId": "1d30bIOfuB3wwIs7rC__BoPPVoJNIeO-t",
+      "driveModifiedTime": "2025-12-23T19:41:49.063Z",
       "githubPath": "src/data/pages/contacto.json",
-      "lastSyncedTime": "2025-12-23T16:14:06.895Z",
+      "lastSyncedTime": "2025-12-23T19:41:49.952Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:06.895Z"
+      "lastUpdated": "2025-12-23T19:41:49.952Z"
     },
     "faq.json": {
-      "driveId": "1wPrHSZnCWqu6N-fGgQLNec_yd8g47uBy",
-      "driveModifiedTime": "2025-12-23T16:14:07.332Z",
+      "driveId": "10zXr95YkS_BMcAFsvYK1W4qGRR-RVyxN",
+      "driveModifiedTime": "2025-12-23T19:41:50.284Z",
       "githubPath": "src/data/pages/faq.json",
-      "lastSyncedTime": "2025-12-23T16:14:08.194Z",
+      "lastSyncedTime": "2025-12-23T19:41:51.172Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:08.194Z"
+      "lastUpdated": "2025-12-23T19:41:51.173Z"
     },
     "home.json": {
-      "driveId": "156rC5-ptO_fa_4ZX2Gkf0tdn5QOV-PbB",
-      "driveModifiedTime": "2025-12-23T18:36:34.712Z",
+      "driveId": "14Udx-76Uh53Xhbo64eEwyHiIXFWWI0Fq",
+      "driveModifiedTime": "2025-12-23T19:41:51.266Z",
       "githubPath": "src/data/pages/home.json",
-      "lastSyncedTime": "2025-12-23T18:45:43.756Z",
-      "syncDirection": "drive-to-github",
-      "lastUpdated": "2025-12-23T18:45:43.756Z",
+      "lastSyncedTime": "2025-12-23T19:41:52.162Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T19:41:52.162Z",
       "hasConflict": true
     },
     "politica-privacidad.json": {
-      "driveId": "12Z7mrNytz6yABV0pLpoIRhQ2x5GupdPR",
-      "driveModifiedTime": "2025-12-23T16:14:09.878Z",
+      "driveId": "12SkIq5OhzBF910_j9Wrr7GzsV6rWowRS",
+      "driveModifiedTime": "2025-12-23T19:41:53.111Z",
       "githubPath": "src/data/pages/politica-privacidad.json",
-      "lastSyncedTime": "2025-12-23T16:14:10.879Z",
+      "lastSyncedTime": "2025-12-23T19:41:53.932Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:10.879Z"
+      "lastUpdated": "2025-12-23T19:41:53.932Z"
     },
     "programs/vaemptiness-equipos.json": {
-      "driveId": "1T_Ec5ft2brvo6qn5gUQudIzpzKzm6IXr",
-      "driveModifiedTime": "2025-12-23T16:14:11.780Z",
+      "driveId": "18CTTAUIh4c5DujNmOKxB4aMrOPNP4tQp",
+      "driveModifiedTime": "2025-12-23T19:41:54.237Z",
       "githubPath": "src/data/pages/programs/vaemptiness-equipos.json",
-      "lastSyncedTime": "2025-12-23T16:14:12.728Z",
+      "lastSyncedTime": "2025-12-23T19:41:55.132Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:12.728Z"
+      "lastUpdated": "2025-12-23T19:41:55.132Z"
     },
     "programs/vaemptiness-kids.json": {
-      "driveId": "1rD509jxsIvEpnntDQJxJK4gfvkSOEbbY",
-      "driveModifiedTime": "2025-12-23T16:14:13.019Z",
+      "driveId": "1plK4lb_Mj4ugJUF4utUXqm3WSq2nrkW8",
+      "driveModifiedTime": "2025-12-23T19:41:55.273Z",
       "githubPath": "src/data/pages/programs/vaemptiness-kids.json",
-      "lastSyncedTime": "2025-12-23T16:14:14.007Z",
+      "lastSyncedTime": "2025-12-23T19:41:56.102Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:14.007Z"
+      "lastUpdated": "2025-12-23T19:41:56.102Z"
     },
     "programs/vaemptiness-program.json": {
-      "driveId": "1eob1XiiBMVrZAVsX-qUx7-COp5x__QQe",
-      "driveModifiedTime": "2025-12-23T16:14:14.293Z",
+      "driveId": "1DcLKMIP-qUItJtRz_b-mrZ7eTSv_S1o3",
+      "driveModifiedTime": "2025-12-23T19:41:56.146Z",
       "githubPath": "src/data/pages/programs/vaemptiness-program.json",
-      "lastSyncedTime": "2025-12-23T16:14:15.203Z",
+      "lastSyncedTime": "2025-12-23T19:41:56.998Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:15.203Z"
+      "lastUpdated": "2025-12-23T19:41:56.998Z"
     },
     "programs/vaemptiness-teen.json": {
-      "driveId": "11dIN3Dy9TbgyvM0xO2U48PgceSQEImNP",
-      "driveModifiedTime": "2025-12-23T16:14:15.474Z",
+      "driveId": "1ZQhSVDBy5D3OJufsm7-TzmsagiFpABNk",
+      "driveModifiedTime": "2025-12-23T19:41:57.058Z",
       "githubPath": "src/data/pages/programs/vaemptiness-teen.json",
-      "lastSyncedTime": "2025-12-23T16:14:16.340Z",
+      "lastSyncedTime": "2025-12-23T19:41:58.030Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:16.340Z"
+      "lastUpdated": "2025-12-23T19:41:58.030Z"
     },
     "reset.json": {
-      "driveId": "11Ga5LdWlj9yRopFY_JhUjiAa3_7mNukP",
-      "driveModifiedTime": "2025-12-23T16:14:16.357Z",
+      "driveId": "1nxsQ5e8CV58NnMrEqgt67ghGSqBETbwx",
+      "driveModifiedTime": "2025-12-23T19:41:58.016Z",
       "githubPath": "src/data/pages/reset.json",
-      "lastSyncedTime": "2025-12-23T16:14:18.046Z",
+      "lastSyncedTime": "2025-12-23T19:41:58.913Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:18.046Z"
+      "lastUpdated": "2025-12-23T19:41:58.913Z"
     },
     "sobre-nosotros.json": {
-      "driveId": "1eQKULroYXDSn-0AzhL2EOpHYptpIzBV8",
-      "driveModifiedTime": "2025-12-23T16:14:18.102Z",
+      "driveId": "1AOr0_SXAmpMA_G2tlstMEkv84tBlZ-r4",
+      "driveModifiedTime": "2025-12-23T19:41:58.878Z",
       "githubPath": "src/data/pages/sobre-nosotros.json",
-      "lastSyncedTime": "2025-12-23T16:14:19.107Z",
+      "lastSyncedTime": "2025-12-23T19:41:59.795Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:19.107Z"
+      "lastUpdated": "2025-12-23T19:41:59.795Z"
     },
     "terminos-condiciones.json": {
-      "driveId": "1fdke7Lgqhn4SL1t9ibe3WVjpKJ9pUZML",
-      "driveModifiedTime": "2025-12-23T16:14:19.119Z",
+      "driveId": "1wj7Gi_GnbshWc_sz7b9-JfBxWglsiCNd",
+      "driveModifiedTime": "2025-12-23T19:41:59.743Z",
       "githubPath": "src/data/pages/terminos-condiciones.json",
-      "lastSyncedTime": "2025-12-23T16:14:20.089Z",
+      "lastSyncedTime": "2025-12-23T19:42:00.830Z",
       "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:20.089Z"
+      "lastUpdated": "2025-12-23T19:42:00.830Z"
     },
     ".metadata/sync-state.json": {
-      "driveId": "1m_mc1RgXABsVEWT052Ls6cxxQ5cs1FLO",
-      "driveModifiedTime": "2025-12-23T18:26:17.152Z",
-      "lastSyncedTime": "2025-12-23T18:45:43.755Z",
-      "syncDirection": "drive-to-github",
+      "driveId": "1W4lRXwUeoC95puXa_HnMbgq1PXvf7EsJ",
+      "driveModifiedTime": "2025-12-23T19:41:45.940Z",
+      "lastSyncedTime": "2025-12-23T19:41:46.868Z",
+      "syncDirection": "github-to-drive",
       "hasConflict": false,
-      "lastUpdated": "2025-12-23T18:45:43.755Z"
+      "lastUpdated": "2025-12-23T19:41:46.869Z",
+      "githubPath": "src/data/pages/.metadata/sync-state.json"
+    },
+    "on-off.json": {
+      "driveId": "1_1H4GJuty1C_88bu2lZNjB3pn-t9v-iq",
+      "driveModifiedTime": "2025-12-23T19:41:52.240Z",
+      "githubPath": "src/data/pages/on-off.json",
+      "lastSyncedTime": "2025-12-23T19:41:53.014Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T19:41:53.014Z"
     }
   },
   "syncHistory": [
+    {
+      "timestamp": "2025-12-23T19:06:48.393Z",
+      "direction": "drive-to-github",
+      "filesChanged": [
+        ".metadata/sync-state.json"
+      ],
+      "status": "success",
+      "prNumber": 13,
+      "autoMerged": true
+    },
     {
       "timestamp": "2025-12-23T18:45:50.044Z",
       "direction": "drive-to-github",
