@@ -18,28 +18,11 @@
       "subtitle": "Desactiva el piloto automático"
     },
     "intro": {
-      "question": "¿Qué son los saboteadores mentales?",
-      "text": "[Contenido pendiente - proporcionar texto del preview]",
-      "quote": "\"[Cita pendiente]\""
-    },
-    "pathways": {
-      "title": "Identificar para Desactivar",
-      "items": [
-        {
-          "letter": "A",
-          "title": "[Título pendiente]",
-          "description": "[Descripción pendiente]"
-        },
-        {
-          "letter": "B",
-          "title": "[Título pendiente]",
-          "description": "[Descripción pendiente]"
-        },
-        {
-          "letter": "C",
-          "title": "[Título pendiente]",
-          "description": "[Descripción pendiente]"
-        }
+      "title": "¿Qué son los saboteadores mentales?",
+      "paragraphs": [
+        "[Párrafo 1 - Contenido pendiente]",
+        "[Párrafo 2 - Contenido pendiente]",
+        "[Párrafo 3 - Contenido pendiente]"
       ],
       "quote": "\"[Cita pendiente]\""
     },
