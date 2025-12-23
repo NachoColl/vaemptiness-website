@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastSync": "2025-12-23T16:28:43.977Z",
+  "lastSync": "2025-12-23T17:00:03.660Z",
   "repository": {
     "owner": "NachoColl",
     "repo": "vaemptiness-website",
@@ -45,11 +45,12 @@
     },
     "home.json": {
       "driveId": "156rC5-ptO_fa_4ZX2Gkf0tdn5QOV-PbB",
-      "driveModifiedTime": "2025-12-23T16:14:08.398Z",
+      "driveModifiedTime": "2025-12-23T16:47:13.104Z",
       "githubPath": "src/data/pages/home.json",
-      "lastSyncedTime": "2025-12-23T16:14:09.552Z",
-      "syncDirection": "github-to-drive",
-      "lastUpdated": "2025-12-23T16:14:09.552Z"
+      "lastSyncedTime": "2025-12-23T16:59:59.866Z",
+      "syncDirection": "drive-to-github",
+      "lastUpdated": "2025-12-23T16:59:59.866Z",
+      "hasConflict": true
     },
     "politica-privacidad.json": {
       "driveId": "12Z7mrNytz6yABV0pLpoIRhQ2x5GupdPR",
@@ -114,9 +115,53 @@
       "lastSyncedTime": "2025-12-23T16:14:20.089Z",
       "syncDirection": "github-to-drive",
       "lastUpdated": "2025-12-23T16:14:20.089Z"
+    },
+    ".metadata/sync-state.json": {
+      "driveId": "1m_mc1RgXABsVEWT052Ls6cxxQ5cs1FLO",
+      "driveModifiedTime": "2025-12-23T16:57:28.785Z",
+      "lastSyncedTime": "2025-12-23T16:59:59.865Z",
+      "syncDirection": "drive-to-github",
+      "lastUpdated": "2025-12-23T16:59:59.865Z",
+      "hasConflict": true
     }
   },
   "syncHistory": [
+    {
+      "timestamp": "2025-12-23T17:00:03.491Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "GitHub Actions is not permitted to create or approve pull requests. - https://docs.github.com/rest/pulls/pulls#create-a-pull-request"
+    },
+    {
+      "timestamp": "2025-12-23T16:57:27.991Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "Command failed: git push -u origin content-updates --force\nremote: Permission to NachoColl/vaemptiness-website.git denied to github-actions[bot].\nfatal: unable to access 'https://github.com/NachoColl/vaemptiness-website/': The requested URL returned error: 403\n"
+    },
+    {
+      "timestamp": "2025-12-23T16:56:04.823Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "Command failed: git commit -m \"content: update from Google Drive\n\nModified files:\n- .metadata/sync-state.json\\n- home.json\n\n🤖 Automated sync from Google Drive\"\nAuthor identity unknown\n\n*** Please tell me who you are.\n\nRun\n\n  git config --global user.email \"you@example.com\"\n  git config --global user.name \"Your Name\"\n\nto set your account's default identity.\nOmit --global to set the identity only in this repository.\n\nfatal: empty ident name (for <runner@runnervmh13bl.nh2apy4m4v0ufgemucnyvc4yzg.cx.internal.cloudapp.net>) not allowed\n"
+    },
+    {
+      "timestamp": "2025-12-23T16:55:06.292Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "Command failed: git commit -m \"content: update from Google Drive\n\nModified files:\n- .metadata/sync-state.json\\n- home.json\n\n🤖 Automated sync from Google Drive\"\nAuthor identity unknown\n\n*** Please tell me who you are.\n\nRun\n\n  git config --global user.email \"you@example.com\"\n  git config --global user.name \"Your Name\"\n\nto set your account's default identity.\nOmit --global to set the identity only in this repository.\n\nfatal: empty ident name (for <runner@runnervmh13bl.mdwwigey15hubdk4xsiuhudezb.dx.internal.cloudapp.net>) not allowed\n"
+    },
+    {
+      "timestamp": "2025-12-23T16:43:13.853Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "Command failed: git commit -m \"content: update from Google Drive\n\nModified files:\n- .metadata/sync-state.json\n\n🤖 Automated sync from Google Drive\"\nAuthor identity unknown\n\n*** Please tell me who you are.\n\nRun\n\n  git config --global user.email \"you@example.com\"\n  git config --global user.name \"Your Name\"\n\nto set your account's default identity.\nOmit --global to set the identity only in this repository.\n\nfatal: empty ident name (for <runner@runnervmh13bl.vnzbqorii12uxnajjf3x1lprce.gx.internal.cloudapp.net>) not allowed\n"
+    },
+    {
+      "timestamp": "2025-12-23T16:30:25.636Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "GitHub token not configured. Set GITHUB_TOKEN environment variable."
+    },
     {
       "timestamp": "2025-12-23T16:28:43.654Z",
       "direction": "drive-to-github",
