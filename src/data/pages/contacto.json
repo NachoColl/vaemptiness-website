@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "slug": "contacto",
+    "permalink": "/contacto/",
+    "layout": "base.njk",
+    "bodyClass": "contact-page",
+    "title": "Contacto - vaemptîness",
+    "seo": {
+      "title": "Contacto | Reserva tu Sesión de Entrenamiento Mental Barcelona",
+      "description": "Contacta con vaemptîness. Envíanos tus preguntas o reserva tu primera sesión de entrenamiento mental en Barcelona. Online o presencial.",
+      "keywords": "contactar vaemptiness, reservar sesión mindfulness Barcelona, consulta entrenamiento mental",
+      "ogImage": "/assets/images/og-contact.jpg"
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "Contacto",
+      "subtitle": "Estamos aquí para ayudarte en tu entrenamiento mental"
+    },
+    "email": "program@vaemptiness.es",
+    "description": "¿Tienes preguntas sobre nuestros programas? ¿Quieres comenzar tu entrenamiento mental? Contacta con nosotros y te responderemos lo antes posible.",
+    "form": {
+      "topics": [
+        "vaemptîness program",
+        "vaemptîness equipos",
+        "vaemptîness teen",
+        "vaemptîness kids",
+        "Consulta General"
+      ],
+      "getformEndpoint": "https://getform.io/f/bgdvpgpa"
+    }
+  }
+}

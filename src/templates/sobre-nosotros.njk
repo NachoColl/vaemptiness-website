@@ -1,30 +1,23 @@
 ---
 layout: base.njk
-bodyClass: about-page
-title: Sobre nosotros - vaemptîness
-permalink: /sobre-nosotros/
-seo:
-  title: "Sobre Nosotros | vaemptîness - Psicología Budista Barcelona"
-  description: "Conoce al equipo de vaemptîness. Combinamos psicología occidental y filosofía budista para ofrecer entrenamiento mental efectivo en Barcelona."
-  keywords: "psicología budista Barcelona, equipo mindfulness, filosofía budista práctica, entrenadores mentales"
-  ogImage: "/assets/images/og-about.jpg"
 ---
+{% set pageData = pages["sobre-nosotros"].content %}
 
 <section class="page-hero">
   <div class="container">
-    <h1 class="page-title">{{ about.hero.title }}</h1>
-    <p class="page-subtitle">{{ about.hero.subtitle }}</p>
+    <h1 class="page-title">{{ pageData.hero.title }}</h1>
+    <p class="page-subtitle">{{ pageData.hero.subtitle }}</p>
   </div>
 </section>
 
 <section class="about-intro">
   <div class="container">
     <div class="content-section centered">
-      <h2>{{ about.intro.title }}</h2>
-      <p>{{ about.intro.paragraphs[0] }}</p>
-      <p>{{ about.intro.paragraphs[1] }}</p>
+      <h2>{{ pageData.intro.title }}</h2>
+      <p>{{ pageData.intro.paragraphs[0] }}</p>
+      <p>{{ pageData.intro.paragraphs[1] }}</p>
       <p class="quote-large">"No se trata de pensar más, sino mejor"</p>
-      <p>{{ about.intro.paragraphs[2] }}</p>
+      <p>{{ pageData.intro.paragraphs[2] }}</p>
     </div>
   </div>
 </section>
@@ -32,11 +25,11 @@ seo:
 <section class="about-brand-philosophy">
   <div class="container">
     <div class="content-section centered">
-      <h2>{{ about.brandPhilosophy.title }}</h2>
-      <p>{{ about.brandPhilosophy.content }}</p>
+      <h2>{{ pageData.brandPhilosophy.title }}</h2>
+      <p>{{ pageData.brandPhilosophy.content }}</p>
       <blockquote class="philosophy-quote">
-        <p>"{{ about.brandPhilosophy.quote }}"</p>
-        <cite>— {{ about.brandPhilosophy.author }}</cite>
+        <p>"{{ pageData.brandPhilosophy.quote }}"</p>
+        <cite>— {{ pageData.brandPhilosophy.author }}</cite>
       </blockquote>
     </div>
   </div>
@@ -45,17 +38,17 @@ seo:
 <section class="about-mission">
   <div class="container">
     <div class="content-section centered">
-      <h2>{{ about.mission.title }}</h2>
-      <p>{{ about.mission.content }}</p>
+      <h2>{{ pageData.mission.title }}</h2>
+      <p>{{ pageData.mission.content }}</p>
     </div>
   </div>
 </section>
 
 <section class="about-services">
   <div class="container">
-    <h2 class="section-title centered">{{ about.services.title }}</h2>
+    <h2 class="section-title centered">{{ pageData.services.title }}</h2>
     <ul class="services-grid-list">
-      {% for service in about.services.items %}
+      {% for service in pageData.services.items %}
       <li class="service-grid-item">{{ service }}</li>
       {% endfor %}
     </ul>

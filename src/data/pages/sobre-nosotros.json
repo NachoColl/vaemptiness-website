@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "slug": "sobre-nosotros",
+    "permalink": "/sobre-nosotros/",
+    "layout": "base.njk",
+    "bodyClass": "about-page",
+    "title": "Sobre nosotros - vaemptîness",
+    "seo": {
+      "title": "Sobre Nosotros | vaemptîness - Psicología Budista Barcelona",
+      "description": "Conoce al equipo de vaemptîness. Combinamos psicología occidental y filosofía budista para ofrecer entrenamiento mental efectivo en Barcelona.",
+      "keywords": "psicología budista Barcelona, equipo mindfulness, filosofía budista práctica, entrenadores mentales",
+      "ogImage": "/assets/images/og-about.jpg"
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "Sobre Nosotros",
+      "subtitle": "Conoce nuestra visión y el equipo detrás del método"
+    },
+    "intro": {
+      "title": "Una forma distinta de entrenar la mente",
+      "paragraphs": [
+        "vaemptîness program da forma a un entrenamiento mental con dinámicas para recuperar equilibrio, claridad y presencia funcional. No buscamos silenciar la mente, sino enseñarla a organizarse, a liberar carga cognitiva y a encontrar estabilidad en medio del ruido.",
+        "Nuestro trabajo une método y aprendizaje para revertir patrones con mecanismos somáticos. Dando respuesta frente a emociones aflictivas, estrés o diferentes estímulos de dispersión.",
+        "Creemos que la mente puede ser un espacio más ligero, calmado y eficiente. Solo necesitamos comprender que los pensamientos automatizados, aunque en apariencia se agolpan y se solapan robándonos la calma con diálogos internos en bucle tienen su propia estructura. Conocerla, nos permite desactivarla."
+      ]
+    },
+    "vision": {
+      "title": "Nuestra visión",
+      "content": "Creemos que la mente puede ser un espacio más ligero, calmado y eficiente. Solo necesitamos comprender que:",
+      "highlight": "Los pensamientos automatizados, aunque en apariencia se agolpan y se solapan robándonos la calma con diálogos internos en bucle tienen su propia estructura. Conocerla, nos permite desactivarla.",
+      "quote": "No se trata de pensar más, sino mejor.",
+      "additional": "El programa se enfoca en acompañar por un recorrido gradual que permite reorganizar prioridades y fortalecer la capacidad de atención, con regulación cognitiva y emocional."
+    },
+    "mission": {
+      "title": "Nuestra misión",
+      "content": "Acompañar a personas y equipos a recuperar su espacio mental, optimizar su funcionamiento y desarrollar una forma de pensar más estable y consciente."
+    },
+    "services": {
+      "title": "Lo que hacemos",
+      "items": [
+        "Entrenamiento mental gradual",
+        "Reducción de ruido interno y carga cognitiva",
+        "Regulación emocional y atencional",
+        "Reorganización de prioridades mentales",
+        "Integración cuerpo–mente",
+        "Implementación del recorrido como hábito."
+      ]
+    },
+    "brandPhilosophy": {
+      "title": "¿Por qué vaemptîness?",
+      "content": "Porque el vacío no es ausencia o la nada, sino un espacio fértil habitable donde la mente descansa. Un espacio desde el que se puede observar mejor, decidir mejor y por extensión vivir mejor.",
+      "quote": "El vacío no es ausencia de pensamientos, sino estabilidad en medio de ellos",
+      "author": "S.E. Nyari Tritul Rimpoché"
+    },
+    "team": {
+      "title": "¿Quién está detrás?",
+      "description": "Rosa Cano, creadora de vaemptîness program. Con la colaboración de María Saiz, Lola Saavedra y Rosa Rodríguez. Un equipo de mujeres maravillosas que han contribuido al desarrollo de este método con años de estudio, investigación personal, práctica consciente y diseño de protocolos de regulación cognitiva.",
+      "purpose": "El propósito del programa, se traduce en adquirir herramientas simples, aplicables y transformadoras para optimizar el rendimiento de la mente.",
+      "founder": {
+        "name": "Rosa Cano",
+        "role": "creadora de vaemptîness program",
+        "image": "/assets/images/team/rosa-cano.jpg"
+      },
+      "members": [
+        {
+          "name": "María Saiz",
+          "role": "Colaboradora",
+          "image": "/assets/images/team/maria-saiz.jpg"
+        },
+        {
+          "name": "Lola Saavedra",
+          "role": "Colaboradora",
+          "image": "/assets/images/team/lola-saavedra.jpg"
+        },
+        {
+          "name": "Rosa Rodríguez",
+          "role": "Colaboradora",
+          "image": "/assets/images/team/rosa-rodriguez.jpg"
+        }
+      ]
+    }
+  }
+}
