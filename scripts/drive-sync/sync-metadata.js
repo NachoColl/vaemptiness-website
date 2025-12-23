@@ -4,7 +4,7 @@
  */
 
 const dayjs = require('dayjs');
-const driveClient = require('./drive-client');
+const driveClient = require('./drive-client-oauth');
 const config = require('./config');
 const logger = require('./logger');
 

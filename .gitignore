@@ -30,5 +30,9 @@ npm-debug.log*
 .env
 .env.local
 
+# OAuth2 credentials
+client_secret.json
+.drive-token.json
+
 # Drive sync temp directory
 .drive-sync-temp/

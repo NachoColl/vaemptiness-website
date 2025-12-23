@@ -3,7 +3,7 @@
  */
 
 const dayjs = require('dayjs');
-const driveClient = require('./drive-client');
+const driveClient = require('./drive-client-oauth');
 const githubClient = require('./github-client');
 const syncMetadata = require('./sync-metadata');
 const config = require('./config');

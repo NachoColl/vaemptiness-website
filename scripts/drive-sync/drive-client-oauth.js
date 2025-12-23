@@ -1,45 +1,91 @@
 /**
- * Google Drive API client
+ * Google Drive API client with OAuth2 support
  */
 
 const { google } = require('googleapis');
+const fs = require('fs-extra');
 const config = require('./config');
 const logger = require('./logger');
 
-class DriveClient {
+const TOKEN_PATH = '.drive-token.json';
+
+class DriveClientOAuth {
   constructor() {
     this.drive = null;
+    this.oauth2Client = null;
     this.initialized = false;
   }
 
   /**
-   * Initialize Google Drive API client
+   * Initialize Google Drive API client with OAuth2
    */
   async initialize() {
     if (this.initialized) return;
 
-    if (!config.drive.credentials) {
-      throw new Error('Google Drive credentials not configured. Set GOOGLE_DRIVE_CREDENTIALS environment variable.');
-    }
-
     try {
-      const auth = new google.auth.GoogleAuth({
-        credentials: config.drive.credentials,
-        scopes: ['https://www.googleapis.com/auth/drive']
+      // Check if we have OAuth2 tokens
+      let tokens;
+
+      if (config.drive.credentials && config.drive.credentials.refresh_token) {
+        // Tokens from environment variable (GitHub Actions)
+        tokens = config.drive.credentials;
+        logger.debug('Using OAuth2 tokens from environment');
+      } else if (await fs.pathExists(TOKEN_PATH)) {
+        // Tokens from local file
+        tokens = await fs.readJson(TOKEN_PATH);
+        logger.debug('Using OAuth2 tokens from file');
+      } else {
+        throw new Error('No OAuth2 tokens found. Run: npm run drive:authorize');
+      }
+
+      // Get client ID and secret
+      const clientId = process.env.GOOGLE_CLIENT_ID;
+      const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
+
+      if (!clientId || !clientSecret) {
+        throw new Error('GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET must be set');
+      }
+
+      // Create OAuth2 client
+      this.oauth2Client = new google.auth.OAuth2(
+        clientId,
+        clientSecret,
+        'http://localhost:3000/oauth2callback'
+      );
+
+      // Set credentials
+      this.oauth2Client.setCredentials(tokens);
+
+      // Auto-refresh tokens
+      this.oauth2Client.on('tokens', async (newTokens) => {
+        logger.info('OAuth2 tokens refreshed');
+
+        if (newTokens.refresh_token) {
+          tokens.refresh_token = newTokens.refresh_token;
+        }
+
+        tokens.access_token = newTokens.access_token;
+        tokens.expiry_date = newTokens.expiry_date;
+
+        // Save updated tokens
+        if (await fs.pathExists(TOKEN_PATH)) {
+          await fs.writeJson(TOKEN_PATH, tokens, { spaces: 2 });
+          logger.debug('Saved refreshed tokens to file');
+        }
       });
 
-      this.drive = google.drive({ version: 'v3', auth });
+      this.drive = google.drive({ version: 'v3', auth: this.oauth2Client });
       this.initialized = true;
-      logger.info('Google Drive client initialized');
+      logger.info('Google Drive client initialized with OAuth2');
     } catch (error) {
       logger.error('Failed to initialize Google Drive client', { error: error.message });
       throw error;
     }
   }
 
-  /**
-   * List files in a folder
-   */
+  // All other methods are identical to drive-client.js
+  // Copy-paste from drive-client.js:
+
   async listFiles(folderId, options = {}) {
     await this.initialize();
 
@@ -54,9 +100,7 @@ class DriveClient {
         q: query.join(' and '),
         fields: 'files(id, name, mimeType, modifiedTime, parents)',
         orderBy: 'name',
-        pageSize: 1000,
-        supportsAllDrives: true,
-        includeItemsFromAllDrives: true
+        pageSize: 1000
       });
 
       logger.debug(`Listed ${response.data.files.length} files in folder ${folderId}`);
@@ -67,17 +111,13 @@ class DriveClient {
     }
   }
 
-  /**
-   * Get file metadata
-   */
   async getFileMetadata(fileId) {
     await this.initialize();
 
     try {
       const response = await this.drive.files.get({
         fileId,
-        fields: 'id, name, mimeType, modifiedTime, parents, size',
-        supportsAllDrives: true
+        fields: 'id, name, mimeType, modifiedTime, parents, size'
       });
 
       return response.data;
@@ -91,9 +131,6 @@ class DriveClient {
     }
   }
 
-  /**
-   * Download file content
-   */
   async downloadFile(fileId) {
     await this.initialize();
 
@@ -103,7 +140,7 @@ class DriveClient {
     while (retries < maxRetries) {
       try {
         const response = await this.drive.files.get(
-          { fileId, alt: 'media', supportsAllDrives: true },
+          { fileId, alt: 'media' },
           { responseType: 'text' }
         );
 
@@ -111,7 +148,6 @@ class DriveClient {
         return response.data;
       } catch (error) {
         if (error.code === 429 && retries < maxRetries - 1) {
-          // Rate limit - exponential backoff
           const delay = Math.pow(2, retries) * 1000;
           logger.warn(`Rate limited, retrying in ${delay}ms`, { fileId });
           await new Promise(resolve => setTimeout(resolve, delay));
@@ -129,9 +165,6 @@ class DriveClient {
     throw new Error(`Failed to download file after ${maxRetries} retries`);
   }
 
-  /**
-   * Upload or update file
-   */
   async uploadFile(folderId, fileName, content, fileId = null) {
     await this.initialize();
 
@@ -142,17 +175,14 @@ class DriveClient {
 
     try {
       if (fileId) {
-        // Update existing file
         const response = await this.drive.files.update({
           fileId,
           media,
-          fields: 'id, name, modifiedTime',
-          supportsAllDrives: true
+          fields: 'id, name, modifiedTime'
         });
         logger.info('Updated file in Drive', { fileName, fileId });
         return response.data;
       } else {
-        // Create new file
         const fileMetadata = {
           name: fileName,
           parents: [folderId]
@@ -161,8 +191,7 @@ class DriveClient {
         const response = await this.drive.files.create({
           requestBody: fileMetadata,
           media,
-          fields: 'id, name, modifiedTime',
-          supportsAllDrives: true
+          fields: 'id, name, modifiedTime'
         });
         logger.info('Created file in Drive', { fileName, fileId: response.data.id });
         return response.data;
@@ -173,9 +202,6 @@ class DriveClient {
     }
   }
 
-  /**
-   * Create folder
-   */
   async createFolder(parentFolderId, folderName) {
     await this.initialize();
 
@@ -188,8 +214,7 @@ class DriveClient {
     try {
       const response = await this.drive.files.create({
         requestBody: fileMetadata,
-        fields: 'id, name',
-        supportsAllDrives: true
+        fields: 'id, name'
       });
 
       logger.info('Created folder in Drive', { folderName, folderId: response.data.id });
@@ -200,9 +225,6 @@ class DriveClient {
     }
   }
 
-  /**
-   * Find folder by name
-   */
   async findFolder(parentFolderId, folderName) {
     await this.initialize();
 
@@ -217,9 +239,7 @@ class DriveClient {
       const response = await this.drive.files.list({
         q: query.join(' and '),
         fields: 'files(id, name)',
-        pageSize: 1,
-        supportsAllDrives: true,
-        includeItemsFromAllDrives: true
+        pageSize: 1
       });
 
       return response.data.files[0] || null;
@@ -229,9 +249,6 @@ class DriveClient {
     }
   }
 
-  /**
-   * Get or create folder
-   */
   async getOrCreateFolder(parentFolderId, folderName) {
     const existing = await this.findFolder(parentFolderId, folderName);
     if (existing) {
@@ -242,4 +259,4 @@ class DriveClient {
   }
 }
 
-module.exports = new DriveClient();
+module.exports = new DriveClientOAuth();

@@ -10,10 +10,14 @@ module.exports = {
     // Main folder ID (from URL: https://drive.google.com/drive/folders/{FOLDER_ID})
     folderId: process.env.GOOGLE_DRIVE_FOLDER_ID || '18lNMWacTTf5_5EIFP_UUTLq3UBU3rfZY',
 
-    // Service account credentials (JSON string or path to file)
+    // Credentials (OAuth2 tokens or service account JSON)
     credentials: process.env.GOOGLE_DRIVE_CREDENTIALS
       ? JSON.parse(process.env.GOOGLE_DRIVE_CREDENTIALS)
       : null,
+
+    // OAuth2 client credentials (for authorization)
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
 
     // Folder structure in Drive (mirrors src/data structure)
     structure: {

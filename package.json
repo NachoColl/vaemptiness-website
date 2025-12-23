@@ -14,6 +14,7 @@
     "worktree:list": "node scripts/worktree/list-worktrees.mjs",
     "worktree:merge": "node scripts/worktree/merge-worktree.mjs",
     "worktree:remove": "node scripts/worktree/remove-worktree.mjs",
+    "drive:authorize": "node scripts/drive-sync/authorize-oauth.js",
     "drive:init": "node scripts/drive-sync/initial-upload.js",
     "drive:sync": "node scripts/drive-sync/sync-from-drive.js",
     "drive:upload": "node scripts/drive-sync/upload-to-drive.js",
@@ -37,6 +38,7 @@
     "@octokit/rest": "^20.0.2",
     "dayjs": "^1.11.10",
     "fs-extra": "^11.2.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "open": "^9.1.0"
   }
 }

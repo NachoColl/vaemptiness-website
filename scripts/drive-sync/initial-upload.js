@@ -5,7 +5,7 @@
 
 const fs = require('fs-extra');
 const path = require('path');
-const driveClient = require('./drive-client');
+const driveClient = require('./drive-client-oauth');
 const syncMetadata = require('./sync-metadata');
 const config = require('./config');
 const logger = require('./logger');
