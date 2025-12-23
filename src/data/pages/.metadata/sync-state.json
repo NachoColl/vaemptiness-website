@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastSync": "2025-12-23T20:24:45.553Z",
+  "lastSync": "2025-12-23T20:25:11.299Z",
   "repository": {
     "owner": "NachoColl",
     "repo": "vaemptiness-website",
@@ -118,11 +118,11 @@
     },
     ".metadata/sync-state.json": {
       "driveId": "1m_mc1RgXABsVEWT052Ls6cxxQ5cs1FLO",
-      "driveModifiedTime": "2025-12-23T20:24:29.767Z",
-      "lastSyncedTime": "2025-12-23T20:24:31.027Z",
-      "syncDirection": "github-to-drive",
+      "driveModifiedTime": "2025-12-23T20:24:45.599Z",
+      "lastSyncedTime": "2025-12-23T20:25:06.233Z",
+      "syncDirection": "drive-to-github",
       "hasConflict": false,
-      "lastUpdated": "2025-12-23T20:24:31.027Z",
+      "lastUpdated": "2025-12-23T20:25:06.233Z",
       "githubPath": "src/data/pages/.metadata/sync-state.json"
     },
     "on-off.json": {
@@ -135,6 +135,16 @@
     }
   },
   "syncHistory": [
+    {
+      "timestamp": "2025-12-23T20:25:11.130Z",
+      "direction": "drive-to-github",
+      "filesChanged": [
+        ".metadata/sync-state.json"
+      ],
+      "status": "success",
+      "prNumber": 16,
+      "autoMerged": true
+    },
     {
       "timestamp": "2025-12-23T20:07:20.561Z",
       "direction": "drive-to-github",
