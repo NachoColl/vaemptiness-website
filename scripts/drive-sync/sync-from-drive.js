@@ -120,16 +120,36 @@ async function syncFromDrive() {
     if (result.applied.length > 0) {
       const branch = config.github.branches.contentUpdates;
 
-      const prBody = `## Automated Content Sync from Google Drive
+      // Build PR body with conflict details
+      const cleanFiles = result.applied.filter(f => !result.conflicts.includes(f));
+      const conflictFiles = result.conflicts;
+
+      let prBody = `## Automated Content Sync from Google Drive
 
 **Files modified:** ${result.applied.length}
 
-${result.applied.map(f => `- \`${f}\``).join('\\n')}
+`;
 
-**Sync timestamp:** ${new Date().toISOString()}
+      if (cleanFiles.length > 0) {
+        prBody += `### ✅ Clean Changes (auto-mergeable)
+${cleanFiles.map(f => `- \`${f}\``).join('\\n')}
+
+`;
+      }
+
+      if (conflictFiles.length > 0) {
+        prBody += `### ⚠️ Conflicts (manual review required)
+${conflictFiles.map(f => `- \`${f}\` - Changed in both Drive and GitHub`).join('\\n')}
+
+**Note:** Drive version has been applied to this branch. Review changes and merge manually.
+
+`;
+      }
+
+      prBody += `**Sync timestamp:** ${new Date().toISOString()}
 
 ✅ Validation passed
-${result.hasConflicts ? '⚠️ Conflicts detected - manual review required' : '✅ No conflicts detected'}
+${result.hasConflicts ? '⚠️ Conflicts detected - requires manual review' : '✅ No conflicts detected - safe to auto-merge'}
 
 ---
 🤖 Generated with [Claude Code](https://claude.com/claude-code)`;

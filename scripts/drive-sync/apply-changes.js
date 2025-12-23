@@ -21,26 +21,28 @@ async function applyChanges(validationResult, downloadResult) {
     const metaPath = `${file.localPath}.meta`;
     const meta = await fs.readJson(metaPath);
 
+    // Copy file to src/data/pages (even if conflict - we apply Drive version)
+    const destPath = path.join(config.paths.pages, file.path);
+    await fs.ensureDir(path.dirname(destPath));
+    await fs.copy(file.localPath, destPath);
+
+    applied.push(file.path);
+
     if (meta.resolution === 'MANUAL_REVIEW') {
-      conflicts.push(file);
-      logger.warn('Conflict requires manual review', { path: file.path });
+      conflicts.push(file.path);
+      logger.warn('Conflict requires manual review - applied Drive version', { path: file.path });
     } else {
-      // Copy file to src/data/pages
-      const destPath = path.join(config.paths.pages, file.path);
-      await fs.ensureDir(path.dirname(destPath));
-      await fs.copy(file.localPath, destPath);
-
-      applied.push(file.path);
       logger.info('Applied file', { path: file.path });
-
-      // Update metadata
-      syncMetadata.setFile(file.path, {
-        driveId: meta.driveId,
-        driveModifiedTime: meta.driveModified,
-        lastSyncedTime: new Date().toISOString(),
-        syncDirection: 'drive-to-github'
-      });
     }
+
+    // Update metadata
+    syncMetadata.setFile(file.path, {
+      driveId: meta.driveId,
+      driveModifiedTime: meta.driveModified,
+      lastSyncedTime: new Date().toISOString(),
+      syncDirection: 'drive-to-github',
+      hasConflict: meta.resolution === 'MANUAL_REVIEW'
+    });
   }
 
   if (applied.length > 0) {
