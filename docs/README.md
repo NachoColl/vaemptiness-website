@@ -89,7 +89,7 @@ Once implementation begins, these documents will be added:
 → Read [Quickstart](CONTENT_WORKFLOW_QUICKSTART.md)
 
 **Start implementation**
-→ Read Architecture, then Main Plan Phase 1
+→ Read [Setup Guide](DRIVE_SYNC_SETUP.md) for step-by-step instructions
 
 **Show this to stakeholders**
 → Share Decision Guide + Quickstart

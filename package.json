@@ -13,7 +13,12 @@
     "worktree:create": "node scripts/worktree/create-worktree.mjs",
     "worktree:list": "node scripts/worktree/list-worktrees.mjs",
     "worktree:merge": "node scripts/worktree/merge-worktree.mjs",
-    "worktree:remove": "node scripts/worktree/remove-worktree.mjs"
+    "worktree:remove": "node scripts/worktree/remove-worktree.mjs",
+    "drive:init": "node scripts/drive-sync/initial-upload.js",
+    "drive:sync": "node scripts/drive-sync/sync-from-drive.js",
+    "drive:upload": "node scripts/drive-sync/upload-to-drive.js",
+    "drive:status": "node scripts/drive-sync/status.js",
+    "validate-json": "node scripts/drive-sync/validate-json.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -27,6 +32,11 @@
   },
   "dependencies": {
     "docx": "^9.5.1",
-    "pdf-lib": "^1.17.1"
+    "pdf-lib": "^1.17.1",
+    "googleapis": "^131.0.0",
+    "@octokit/rest": "^20.0.2",
+    "dayjs": "^1.11.10",
+    "fs-extra": "^11.2.0",
+    "dotenv": "^16.3.1"
   }
 }

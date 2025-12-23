@@ -25,3 +25,10 @@ playwright/.cache/
 # Logs
 *.log
 npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+
+# Drive sync temp directory
+.drive-sync-temp/
