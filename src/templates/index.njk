@@ -95,7 +95,7 @@ layout: base.njk
     <h2 class="section-title">{{ pages.home.content.programsSection.title }}</h2>
 
     <div class="programs-grid">
-      {% for program in collections.programsFromFiles %}
+      {% for program in pages.home.content.programsSection.programs %}
       {% if program.featured %}
       <article class="program-card" data-aos="fade-up">
         <a href="{{ ('/' + program.slug + '/') | url }}">
@@ -108,7 +108,7 @@ layout: base.njk
           <div class="program-card-content">
             <h3 class="program-card-title">{{ program.name }}</h3>
             <p class="program-card-description">{{ program.shortDescription }}</p>
-            <span class="program-card-link">Conocer más →</span>
+            <span class="program-card-link">{{ program.linkText }}</span>
           </div>
         </a>
       </article>
