@@ -40,8 +40,9 @@ function validateStructure(data, filePath) {
 
     if (data.meta) {
       if (!data.meta.slug) errors.push('Missing required field: meta.slug');
-      if (!data.meta.permalink) errors.push('Missing required field: meta.permalink');
+      // permalink is optional (home page doesn't have it)
       if (!data.meta.seo) errors.push('Missing required field: meta.seo');
+      if (!data.meta.bodyClass) errors.push('Missing required field: meta.bodyClass');
 
       if (data.meta.seo) {
         if (!data.meta.seo.title) errors.push('Missing required field: meta.seo.title');
@@ -129,15 +130,30 @@ async function validateDirectory(dir) {
     errors: []
   };
 
+  // Files to skip (metadata, temp files)
+  const skipFiles = ['sync-state.json', 'changes.json', 'download.json', 'validation.json'];
+
   for (const file of files) {
     const fullPath = path.join(dir, file.name);
 
     if (file.isDirectory()) {
+      // Skip .metadata directory
+      if (file.name === '.metadata') {
+        logger.debug('Skipping metadata directory');
+        continue;
+      }
+
       const subResults = await validateDirectory(fullPath);
       Object.assign(results.files, subResults.files);
       if (!subResults.valid) results.valid = false;
       results.errors.push(...subResults.errors);
     } else if (file.name.endsWith('.json') && !file.name.endsWith('.meta')) {
+      // Skip metadata/temp files
+      if (skipFiles.includes(file.name)) {
+        logger.debug('Skipping metadata file', { file: file.name });
+        continue;
+      }
+
       const result = await validateFile(fullPath);
       results.files[file.name] = result;
 
