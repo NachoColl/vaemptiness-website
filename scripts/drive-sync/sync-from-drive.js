@@ -16,6 +16,9 @@ async function syncFromDrive() {
   logger.info('=== Starting Google Drive → GitHub sync ===');
 
   try {
+    // Ensure temp directory exists
+    await fs.ensureDir(config.paths.temp);
+
     // 1. Detect changes
     logger.info('Step 1: Detecting changes');
     const changes = await detectChanges();
