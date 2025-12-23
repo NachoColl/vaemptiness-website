@@ -17,6 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch'
 
+    permissions:
+      contents: write       # Push commits and branches
+      pull-requests: write  # Create and update PRs
+      issues: write         # Add labels to PRs
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,8 +39,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config --global user.name "Drive Sync Bot"
-          git config --global user.email "drive-sync-bot@vaemptiness.com"
+          git config --global user.name "NachoColl"
+          git config --global user.email "ignacio.coll@gmail.com"
 
       - name: Run Drive → GitHub sync
         env:
