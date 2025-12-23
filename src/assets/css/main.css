@@ -982,6 +982,7 @@ main {
   height: 60px;
   margin: 0 auto var(--space-md);
   color: var(--color-accent-rust);
+  transform: rotate(-90deg); /* Start circle from top (12 o'clock position) */
 }
 
 .principle-circle circle {

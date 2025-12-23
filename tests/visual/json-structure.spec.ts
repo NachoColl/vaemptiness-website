@@ -24,8 +24,8 @@ test.describe('JSON Structure Tests', () => {
       'terminos-condiciones.njk': 'pages/terminos-condiciones.json',
       'programa.njk': 'pages/programs/', // Directory with multiple program files
       'blog-post.njk': 'pages/blog/', // Directory with blog post files
-      'contacto.njk': 'contact.json', // Root data file
-      'faq.njk': 'faq.json', // Root data file
+      'contacto.njk': 'pages/contacto.json',
+      'faq.njk': 'pages/faq.json',
       'blog.njk': null // Uses collections, no specific JSON file needed
     };
 
