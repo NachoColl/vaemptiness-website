@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "lastSync": "2025-12-23T16:28:43.977Z",
+  "repository": {
+    "owner": "NachoColl",
+    "repo": "vaemptiness-website",
+    "branch": "master"
+  },
+  "drive": {
+    "folderId": "18lNMWacTTf5_5EIFP_UUTLq3UBU3rfZY",
+    "folderUrl": "https://drive.google.com/drive/folders/18lNMWacTTf5_5EIFP_UUTLq3UBU3rfZY"
+  },
+  "files": {
+    "aprendizaje-y-metodologia.json": {
+      "driveId": "1Vji_weGossQXD4Bcxjqe1MzFXVk7W1n9",
+      "driveModifiedTime": "2025-12-23T16:14:03.156Z",
+      "githubPath": "src/data/pages/aprendizaje-y-metodologia.json",
+      "lastSyncedTime": "2025-12-23T16:14:04.010Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:04.011Z"
+    },
+    "blog/filosofia-budista-vaemptiness.json": {
+      "driveId": "1ExUmuFBeRdq2cBIkza9tif3ZzmIJGC9O",
+      "driveModifiedTime": "2025-12-23T16:14:05.146Z",
+      "githubPath": "src/data/pages/blog/filosofia-budista-vaemptiness.json",
+      "lastSyncedTime": "2025-12-23T16:14:05.879Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:05.879Z"
+    },
+    "contacto.json": {
+      "driveId": "198wJcXJMJH6jkR4K123GANNVix8g1ysL",
+      "driveModifiedTime": "2025-12-23T16:14:05.997Z",
+      "githubPath": "src/data/pages/contacto.json",
+      "lastSyncedTime": "2025-12-23T16:14:06.895Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:06.895Z"
+    },
+    "faq.json": {
+      "driveId": "1wPrHSZnCWqu6N-fGgQLNec_yd8g47uBy",
+      "driveModifiedTime": "2025-12-23T16:14:07.332Z",
+      "githubPath": "src/data/pages/faq.json",
+      "lastSyncedTime": "2025-12-23T16:14:08.194Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:08.194Z"
+    },
+    "home.json": {
+      "driveId": "156rC5-ptO_fa_4ZX2Gkf0tdn5QOV-PbB",
+      "driveModifiedTime": "2025-12-23T16:14:08.398Z",
+      "githubPath": "src/data/pages/home.json",
+      "lastSyncedTime": "2025-12-23T16:14:09.552Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:09.552Z"
+    },
+    "politica-privacidad.json": {
+      "driveId": "12Z7mrNytz6yABV0pLpoIRhQ2x5GupdPR",
+      "driveModifiedTime": "2025-12-23T16:14:09.878Z",
+      "githubPath": "src/data/pages/politica-privacidad.json",
+      "lastSyncedTime": "2025-12-23T16:14:10.879Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:10.879Z"
+    },
+    "programs/vaemptiness-equipos.json": {
+      "driveId": "1T_Ec5ft2brvo6qn5gUQudIzpzKzm6IXr",
+      "driveModifiedTime": "2025-12-23T16:14:11.780Z",
+      "githubPath": "src/data/pages/programs/vaemptiness-equipos.json",
+      "lastSyncedTime": "2025-12-23T16:14:12.728Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:12.728Z"
+    },
+    "programs/vaemptiness-kids.json": {
+      "driveId": "1rD509jxsIvEpnntDQJxJK4gfvkSOEbbY",
+      "driveModifiedTime": "2025-12-23T16:14:13.019Z",
+      "githubPath": "src/data/pages/programs/vaemptiness-kids.json",
+      "lastSyncedTime": "2025-12-23T16:14:14.007Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:14.007Z"
+    },
+    "programs/vaemptiness-program.json": {
+      "driveId": "1eob1XiiBMVrZAVsX-qUx7-COp5x__QQe",
+      "driveModifiedTime": "2025-12-23T16:14:14.293Z",
+      "githubPath": "src/data/pages/programs/vaemptiness-program.json",
+      "lastSyncedTime": "2025-12-23T16:14:15.203Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:15.203Z"
+    },
+    "programs/vaemptiness-teen.json": {
+      "driveId": "11dIN3Dy9TbgyvM0xO2U48PgceSQEImNP",
+      "driveModifiedTime": "2025-12-23T16:14:15.474Z",
+      "githubPath": "src/data/pages/programs/vaemptiness-teen.json",
+      "lastSyncedTime": "2025-12-23T16:14:16.340Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:16.340Z"
+    },
+    "reset.json": {
+      "driveId": "11Ga5LdWlj9yRopFY_JhUjiAa3_7mNukP",
+      "driveModifiedTime": "2025-12-23T16:14:16.357Z",
+      "githubPath": "src/data/pages/reset.json",
+      "lastSyncedTime": "2025-12-23T16:14:18.046Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:18.046Z"
+    },
+    "sobre-nosotros.json": {
+      "driveId": "1eQKULroYXDSn-0AzhL2EOpHYptpIzBV8",
+      "driveModifiedTime": "2025-12-23T16:14:18.102Z",
+      "githubPath": "src/data/pages/sobre-nosotros.json",
+      "lastSyncedTime": "2025-12-23T16:14:19.107Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:19.107Z"
+    },
+    "terminos-condiciones.json": {
+      "driveId": "1fdke7Lgqhn4SL1t9ibe3WVjpKJ9pUZML",
+      "driveModifiedTime": "2025-12-23T16:14:19.119Z",
+      "githubPath": "src/data/pages/terminos-condiciones.json",
+      "lastSyncedTime": "2025-12-23T16:14:20.089Z",
+      "syncDirection": "github-to-drive",
+      "lastUpdated": "2025-12-23T16:14:20.089Z"
+    }
+  },
+  "syncHistory": [
+    {
+      "timestamp": "2025-12-23T16:28:43.654Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "GitHub token not configured. Set GITHUB_TOKEN environment variable."
+    },
+    {
+      "timestamp": "2025-12-23T16:25:52.257Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "Resource not accessible by integration - https://docs.github.com/rest/issues/issues#create-an-issue"
+    },
+    {
+      "timestamp": "2025-12-23T16:20:22.558Z",
+      "direction": "drive-to-github",
+      "status": "failed",
+      "error": "ENOENT: no such file or directory, open '.drive-sync-temp/changes.json'"
+    }
+  ]
+}
