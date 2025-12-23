@@ -14,15 +14,27 @@
           {% for item in navigation.mainMenu %}
           {% if item.hasDropdown %}
           <li class="has-dropdown">
-            <a href="#" class="dropdown-toggle{% if item.dropdown | selectattr('matchUrl', 'in', page.url) | list | length > 0 %} active{% endif %}">{{ item.text }}</a>
+            {# Check if any dropdown item is active #}
+            {% set isDropdownActive = false %}
+            {% for subItem in item.dropdown %}
+              {% if page.url | startsWith(subItem.matchUrl) %}
+                {% set isDropdownActive = true %}
+              {% endif %}
+            {% endfor %}
+            <a href="#" class="dropdown-toggle{% if isDropdownActive %} active{% endif %}">{{ item.text }}</a>
             <ul class="dropdown-menu">
               {% for subItem in item.dropdown %}
-              <li><a href="{{ subItem.url | url }}" {% if subItem.matchUrl in page.url %}class="active"{% endif %}>{{ subItem.text }}</a></li>
+              <li><a href="{{ subItem.url | url }}" {% if page.url | startsWith(subItem.matchUrl) %}class="active"{% endif %}>{{ subItem.text }}</a></li>
               {% endfor %}
             </ul>
           </li>
           {% else %}
-          <li><a href="{{ item.url | url }}" {% if item.matchUrl in page.url %}class="active"{% endif %}>{{ item.text }}</a></li>
+          {# Special case for homepage - exact match only #}
+          {% if item.matchUrl == "/" %}
+          <li><a href="{{ item.url | url }}" {% if page.url == "/" %}class="active"{% endif %}>{{ item.text }}</a></li>
+          {% else %}
+          <li><a href="{{ item.url | url }}" {% if page.url | startsWith(item.matchUrl) %}class="active"{% endif %}>{{ item.text }}</a></li>
+          {% endif %}
           {% endif %}
           {% endfor %}
         </ul>

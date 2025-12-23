@@ -14,6 +14,12 @@ module.exports = function(eleventyConfig) {
   // Add current year shortcode for dynamic copyright
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Add custom filter for startsWith check
+  eleventyConfig.addFilter("startsWith", function(str, prefix) {
+    if (typeof str !== 'string' || typeof prefix !== 'string') return false;
+    return str.indexOf(prefix) === 0;
+  });
+
   // Note: Page data is loaded via src/data/pages.js instead of addGlobalData
 
   // Create programs collection from individual files (will be used later)
