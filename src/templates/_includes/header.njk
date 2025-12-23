@@ -2,29 +2,29 @@
   <div class="container">
     <div class="header-inner">
       <a href="{{ '/' | url }}" class="logo">
-        <img src="{{ '/assets/images/logo.png' | url }}" alt="{{ site.title }} - {{ site.tagline }}" class="logo-image">
+        <img src="{{ '/assets/images/logo.png' | url }}" alt="{{ navigation.logoAlt }}" class="logo-image">
       </a>
 
-      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="mobile-menu-toggle" aria-label="{{ navigation.mobileMenuLabel }}" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
 
       <nav class="main-nav" id="main-nav">
         <ul>
-          <li><a href="{{ '/' | url }}" {% if page.url == "/" %}class="active"{% endif %}>Inicio</a></li>
-          <li><a href="{{ '/sobre-nosotros/' | url }}" {% if '/sobre-nosotros/' in page.url %}class="active"{% endif %}>Sobre nosotros</a></li>
+          {% for item in navigation.mainMenu %}
+          {% if item.hasDropdown %}
           <li class="has-dropdown">
-            <a href="#" class="dropdown-toggle{% if '/vaemptiness-kids/' in page.url or '/vaemptiness-teen/' in page.url or '/vaemptiness-program/' in page.url or '/vaemptiness-equipos/' in page.url %} active{% endif %}">Programas</a>
+            <a href="#" class="dropdown-toggle{% if item.dropdown | selectattr('matchUrl', 'in', page.url) | list | length > 0 %} active{% endif %}">{{ item.text }}</a>
             <ul class="dropdown-menu">
-              <li><a href="{{ '/vaemptiness-program/' | url }}" {% if '/vaemptiness-program/' in page.url %}class="active"{% endif %}>vaemptîness program</a></li>
-              <li><a href="{{ '/vaemptiness-equipos/' | url }}" {% if '/vaemptiness-equipos/' in page.url %}class="active"{% endif %}>vaemptîness equipos</a></li>
-              <li><a href="{{ '/vaemptiness-teen/' | url }}" {% if '/vaemptiness-teen/' in page.url %}class="active"{% endif %}>vaemptîness teen</a></li>
-              <li><a href="{{ '/vaemptiness-kids/' | url }}" {% if '/vaemptiness-kids/' in page.url %}class="active"{% endif %}>vaemptîness kids</a></li>
+              {% for subItem in item.dropdown %}
+              <li><a href="{{ subItem.url | url }}" {% if subItem.matchUrl in page.url %}class="active"{% endif %}>{{ subItem.text }}</a></li>
+              {% endfor %}
             </ul>
           </li>
-          <li><a href="{{ '/blog/' | url }}" {% if '/blog/' in page.url %}class="active"{% endif %}>Blog</a></li>
-          <li><a href="{{ '/faq/' | url }}" {% if '/faq/' in page.url %}class="active"{% endif %}>FAQ</a></li>
-          <li><a href="{{ '/contacto/' | url }}" {% if '/contacto/' in page.url %}class="active"{% endif %}>Contacto</a></li>
+          {% else %}
+          <li><a href="{{ item.url | url }}" {% if item.matchUrl in page.url %}class="active"{% endif %}>{{ item.text }}</a></li>
+          {% endif %}
+          {% endfor %}
         </ul>
       </nav>
     </div>

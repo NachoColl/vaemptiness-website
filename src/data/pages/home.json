@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "slug": "home",
+    "layout": "base.njk",
+    "bodyClass": "home-page",
+    "seo": {
+      "title": "vaemptîness | Entrenamiento Mental y Mindfulness Barcelona",
+      "description": "Crea espacio mental. Entrenamiento cerebral basado en mindfulness y filosofía budista. Programas para adultos, equipos, adolescentes y niños en Barcelona.",
+      "keywords": "entrenamiento mental Barcelona, mindfulness Barcelona, meditación Barcelona, psicología budista, reducir ansiedad, claridad mental, rumiación mental",
+      "ogImage": "/assets/images/og-home.jpg",
+      "ogType": "website"
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "vaemptîness",
+      "tagline": "brain training",
+      "subtitle": "Crea espacio mental,<br class=\"mobile-break\"> libérate del ruido.",
+      "scrollText": "Descubre más",
+      "principles": [
+        {
+          "number": "01",
+          "title": "Fusiona",
+          "description": "Learning + metodología"
+        },
+        {
+          "number": "02",
+          "title": "Elimina",
+          "description": "Carga cognitiva"
+        },
+        {
+          "number": "03",
+          "title": "Identifica",
+          "description": "saboteadores mentales"
+        }
+      ],
+      "philosophy": "No se trata de pensar más, sino mejor"
+    },
+    "learningIntro": {
+      "text": "Un enfoque que fusiona teoría y práctica en cada experiencia, donde el aprendizaje sucede mientras lo vives.",
+      "quote": "\"No memorizas conceptos, <br class=\"desktop-break\">los experimentas\"",
+      "buttonText": "Conocer más",
+      "buttonUrl": "/aprendizaje-y-metodologia/"
+    },
+    "philosophy": {
+      "quote": "No se trata de pensar más, sino mejor",
+      "buttonText": "Haz reset",
+      "buttonUrl": "/reset/"
+    },
+    "programsSection": {
+      "title": "Nuestros Programas"
+    },
+    "cta": {
+      "title": "Únete al universo vaemptîness",
+      "description": "Pulsa para volver a tí.",
+      "buttonText": "Cuestiónate y calma",
+      "buttonUrl": "/contacto/"
+    }
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "vaemptîness",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/assets/images/logo.png",
+      "description": "Centro de entrenamiento mental y mindfulness basado en filosofía budista",
+      "medicalSpecialty": "Psychology",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Barcelona",
+        "addressRegion": "Cataluña",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34-XXX-XXX-XXX",
+      "email": "{{ site.email }}",
+      "serviceType": [
+        "Mental Training",
+        "Mindfulness",
+        "Meditation",
+        "Psychological Treatment"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "vaemptîness",
+      "alternateName": "vaemptiness Barcelona",
+      "url": "{{ site.url }}",
+      "description": "Entrenamiento mental y mindfulness basado en filosofía budista en Barcelona",
+      "inLanguage": "es-ES",
+      "publisher": {
+        "@type": "Organization",
+        "name": "vaemptîness",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/assets/images/logo.png"
+        }
+      }
+    }
+  ]
+}

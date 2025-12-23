@@ -1,28 +1,21 @@
 ---
 layout: base.njk
-permalink: /aprendizaje-y-metodologia/
-bodyClass: learning-page
-title: Aprendizaje y metodología - vaemptîness
-seo:
-  title: "Metodología | Cómo Funciona el Entrenamiento Mental vaemptîness"
-  description: "Descubre cómo funciona nuestro método de entrenamiento mental. Combinamos mindfulness, psicología occidental y filosofía budista."
-  keywords: "método mindfulness, aprendizaje meditación, cómo funciona mindfulness, metodología entrenamiento mental"
-  ogImage: "/assets/images/og-methodology.jpg"
 ---
+{% set pageData = pages["aprendizaje-y-metodologia"].content %}
 
 <section class="page-hero">
   <div class="container">
-    <h1 class="page-title">Aprendizaje y metodología</h1>
-    <p class="page-subtitle">Experimenta, no memorices</p>
+    <h1 class="page-title">{{ pageData.hero.title }}</h1>
+    <p class="page-subtitle">{{ pageData.hero.subtitle }}</p>
   </div>
 </section>
 
 <section class="learning-intro-section">
   <div class="container">
     <div class="learning-intro">
-      <h2 class="intro-question">¿Cómo fusiona vaemptîness el aprendizaje y la metodología?</h2>
-      <p class="intro-text">vaemptîness entrelaza aprendizaje y metodología de manera que cada experiencia sirve tanto como contenido y herramienta, como insight y proceso, sin separar la teoría de la técnica.</p>
-      <p class="quote-large">"Aprendes mientras practicas y <br class="desktop-break">practicas mientras te observas"</p>
+      <h2 class="intro-question">{{ pageData.intro.question }}</h2>
+      <p class="intro-text">{{ pageData.intro.text }}</p>
+      <p class="quote-large">{{ pageData.intro.quote | safe }}</p>
     </div>
   </div>
 </section>
@@ -30,31 +23,21 @@ seo:
 <section class="learning-pathways-section">
   <div class="container">
     <div class="learning-pathways">
-      <h2 class="section-title">Tres Caminos de Aprendizaje</h2>
+      <h2 class="section-title">{{ pageData.pathways.title }}</h2>
 
       <div class="pathway-grid">
+        {% for pathway in pageData.pathways.items %}
         <div class="pathway-card">
-          <div class="pathway-letter">A</div>
-          <h3>Aprendizaje Corporal</h3>
-          <p>El cuerpo se convierte en la fuente principal de información a través de: respiración, escaneo corporal, reconocimiento de tensión y conciencia espacial interna.</p>
+          <div class="pathway-letter">{{ pathway.letter }}</div>
+          <h3>{{ pathway.title }}</h3>
+          <p>{{ pathway.description }}</p>
         </div>
-
-        <div class="pathway-card">
-          <div class="pathway-letter">B</div>
-          <h3>Aprendizaje Mental</h3>
-          <p>Observar el funcionamiento de la mente, reconocer el surgimiento de pensamientos, identificar varios factores mentales y distorsiones.</p>
-        </div>
-
-        <div class="pathway-card">
-          <div class="pathway-letter">C</div>
-          <h3>Aprendizaje Perceptual</h3>
-          <p>Aprender a percibir el entorno y uno mismo desde una perspectiva ampliada, comprendiendo la interdependencia y las redes de causas y condiciones.</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
 
     <div class="learning-message">
-      <p class="quote-emphasis">"No memorizas conceptos, los experimentas"</p>
+      <p class="quote-emphasis">{{ pageData.pathways.quote | safe }}</p>
     </div>
   </div>
 </section>
@@ -62,9 +45,9 @@ seo:
 <section class="cta-section">
   <div class="container">
     <div class="cta-content">
-      <h2 class="cta-title">¿Listo para comenzar tu aprendizaje?</h2>
-      <p class="cta-description">Descubre cómo vaemptîness puede transformar tu forma de aprender</p>
-      <a href="{{ '/contacto/' | url }}" class="button button-primary">Contáctanos</a>
+      <h2 class="cta-title">{{ pageData.cta.title }}</h2>
+      <p class="cta-description">{{ pageData.cta.description }}</p>
+      <a href="{{ pageData.cta.buttonUrl | url }}" class="button button-primary">{{ pageData.cta.buttonText }}</a>
     </div>
   </div>
 </section>

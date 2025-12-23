@@ -1,0 +1,71 @@
+{
+  "id": "teen",
+  "name": "vaemptîness teen",
+  "ageRange": "Pre-adolescencia a adolescencia",
+  "slug": "vaemptiness-teen",
+  "shortDescription": "Programa enfocado en adolescentes para desarrollar claridad mental y regulación emocional",
+  "featured": true,
+  "seoKeywords": "mindfulness adolescentes Barcelona, ansiedad adolescentes, gestión emocional teens, programa jóvenes mindfulness",
+  "seo": {
+    "title": "vaemptîness teen | vaemptîness",
+    "description": "Herramientas de entrenamiento mental diseñadas específicamente para la etapa de desarrollo adolescente.",
+    "keywords": "mindfulness adolescentes Barcelona, ansiedad adolescentes, gestión emocional teens, programa jóvenes mindfulness",
+    "ogImage": "/assets/images/programs/teen-program.jpg",
+    "ogType": "article"
+  },
+  "audience": {
+    "type": "PeopleAudience",
+    "minAge": 12,
+    "maxAge": 17,
+    "label": "Adolescentes"
+  },
+  "hero": {
+    "title": "vaemptîness teen",
+    "subtitle": "Pre-adolescencia a adolescencia",
+    "description": "Herramientas de entrenamiento mental diseñadas específicamente para la etapa de desarrollo adolescente."
+  },
+  "pillars": [
+    {
+      "title": "Autoconciencia",
+      "description": "Desarrollar la capacidad de observar pensamientos y emociones sin juicio.",
+      "icon": "awareness"
+    },
+    {
+      "title": "Regulación Emocional",
+      "description": "Técnicas para gestionar emociones intensas típicas de la adolescencia.",
+      "icon": "regulation"
+    },
+    {
+      "title": "Enfoque y Atención",
+      "description": "Mejorar la concentración en un mundo lleno de distracciones digitales.",
+      "icon": "focus"
+    },
+    {
+      "title": "Relaciones Conscientes",
+      "description": "Desarrollar habilidades para relacionarse de forma más auténtica y empática.",
+      "icon": "relationships"
+    }
+  ],
+  "sessionStructure": {
+    "title": "Estructura de las Sesiones",
+    "duration": "45-60 minutos",
+    "activities": [
+      "Circle time: compartir estado emocional del día",
+      "Práctica de respiración y regulación emocional",
+      "Ejercicio de enfoque y atención",
+      "Actividad de relaciones conscientes (role-playing o discusión)",
+      "Cierre con reflexión personal y establecimiento de intenciones"
+    ]
+  },
+  "outcomes": {
+    "title": "Beneficios",
+    "items": [
+      "Mayor claridad mental",
+      "Mejor gestión del estrés académico",
+      "Relaciones más saludables",
+      "Reducción de la ansiedad",
+      "Desarrollo de resiliencia emocional"
+    ]
+  },
+  "philosophy": "Acompañando a los adolescentes en el desarrollo de herramientas que les permitan navegar esta etapa de cambio con mayor equilibrio y conciencia."
+}

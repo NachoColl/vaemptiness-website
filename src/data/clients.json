@@ -1,6 +1,0 @@
-{
-  "clients": [
-    { "name": "Universidad del Cine", "logo": "/assets/images/clients/client-1.svg" },
-    { "name": "Proyecto Estudiantil", "logo": "/assets/images/clients/client-2.svg" }
-  ]
-}

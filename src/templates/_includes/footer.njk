@@ -10,40 +10,24 @@
       </div>
 
       <div class="footer-links">
+        {% for section in site.footer.sections %}
         <nav class="footer-nav">
-          <h3>Programas</h3>
+          <h3>{{ section.title }}</h3>
           <ul>
-            <li><a href="{{ '/vaemptiness-program/' | url }}">vaemptîness program</a></li>
-            <li><a href="{{ '/vaemptiness-equipos/' | url }}">vaemptîness equipos</a></li>
-            <li><a href="{{ '/vaemptiness-teen/' | url }}">vaemptîness teen</a></li>
-            <li><a href="{{ '/vaemptiness-kids/' | url }}">vaemptîness kids</a></li>
+            {% for link in section.links %}
+            <li><a href="{{ link.url | url }}">{{ link.text }}</a></li>
+            {% endfor %}
           </ul>
         </nav>
-
-        <nav class="footer-nav">
-          <h3>Información</h3>
-          <ul>
-            <li><a href="{{ '/sobre-nosotros/' | url }}">Sobre nosotros</a></li>
-            <li><a href="{{ '/blog/' | url }}">Blog</a></li>
-            <li><a href="{{ '/faq/' | url }}">FAQ</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-nav">
-          <h3>Contacto</h3>
-          <ul>
-            <li><a href="{{ '/contacto/' | url }}">Formulario</a></li>
-            <li><a href="mailto:program@vaemptiness.es">program@vaemptiness.es</a></li>
-          </ul>
-        </nav>
+        {% endfor %}
       </div>
     </div>
 
     <div class="footer-bottom footer-desktop">
-      <p class="copyright">© {% year %} vaemptîness. Todos los derechos reservados.</p>
+      <p class="copyright">{{ site.footer.copyright }}</p>
       <nav class="footer-legal">
         <ul>
-          {% for link in site.footer.links %}
+          {% for link in site.footer.legalLinks %}
           <li><a href="{{ link.url | url }}">{{ link.text }}</a></li>
           {% endfor %}
         </ul>
@@ -58,9 +42,9 @@
       </div>
       <nav class="footer-mobile-links">
         <ul>
-          <li><a href="{{ '/politica-privacidad/' | url }}">Política de privacidad</a></li>
-          <li><a href="{{ '/terminos-condiciones/' | url }}">Términos y condiciones</a></li>
-          <li><a href="{{ '/contacto/' | url }}">Contacta con nosotros</a></li>
+          {% for link in site.footer.mobile.links %}
+          <li><a href="{{ link.url | url }}">{{ link.text }}</a></li>
+          {% endfor %}
         </ul>
       </nav>
     </div>

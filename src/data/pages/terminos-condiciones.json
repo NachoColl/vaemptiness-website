@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "slug": "terminos-condiciones",
+    "permalink": "/terminos-condiciones/",
+    "layout": "base.njk",
+    "bodyClass": "legal-page",
+    "title": "Términos y Condiciones - vaemptîness",
+    "seo": {
+      "title": "Términos y Condiciones | vaemptîness",
+      "description": "Términos y condiciones de uso de los servicios de vaemptîness.",
+      "robots": "noindex, follow"
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "Términos y Condiciones"
+    },
+    "sections": [
+      {
+        "title": "1. Aceptación y Descripción de los Servicios",
+        "content": "<p>Al utilizar los servicios de vaemptîness, aceptas estos Términos y Condiciones junto con nuestra Política de Privacidad.</p><p>Ofrecemos programas de entrenamiento mental y cognitivo: <strong>vaemptîness kids</strong> (5-8 años), <strong>vaemptîness teen</strong> (preadolescentes y adolescentes), y <strong>vaemptîness adultos</strong> (adultos y equipos de trabajo). Estos programas constituyen un servicio de desarrollo personal y <strong>no sustituyen tratamiento médico, psiquiátrico o psicológico profesional</strong>. Si estás bajo tratamiento médico o psicológico, debes informar a tu profesional de la salud antes de participar.</p>"
+      },
+      {
+        "title": "2. Participación y Responsabilidades",
+        "content": "<p><strong>Elegibilidad:</strong> Debes tener 18+ años para contratar por ti mismo. Los programas infantiles y adolescentes requieren consentimiento de padres o tutores legales. Debes proporcionar información veraz y actualizada.</p><p><strong>Evaluación inicial:</strong> Realizamos una evaluación para determinar si nuestros servicios son apropiados. Nos reservamos el derecho de rechazar o discontinuar servicios si consideras que necesitas atención médica especializada, existe riesgo para el bienestar, o no cumples con los compromisos del programa.</p><p><strong>Tu compromiso:</strong> Para obtener resultados, debes participar activamente en sesiones, realizar prácticas recomendadas, comunicar dificultades o inquietudes, e informar sobre cambios en tu estado de salud. Debes informarnos si estás bajo tratamiento médico/psicológico, tomas medicación que afecte tu estado mental, tienes diagnósticos previos de salud mental, o experimentas crisis emocionales.</p><p><strong>Nuestro compromiso:</strong> Proporcionamos servicios profesionales y éticos, mantenemos confidencialidad según nuestra Política de Privacidad, respetamos límites profesionales, y actualizamos nuestros métodos. No garantizamos resultados específicos, curación completa de síntomas, ni que nuestros servicios sean apropiados para todas las personas.</p>"
+      },
+      {
+        "title": "3. Tarifas, Pagos y Reembolsos",
+        "content": "<p>Los precios se comunican antes de la contratación y varían según tipo de programa, duración, frecuencia y modalidad. El pago debe realizarse antes o al inicio del programa según lo acordado.</p><p><strong>Política de reembolsos:</strong> Reembolso completo si cancelas con 7+ días de antelación antes del inicio. Durante el programa, reembolso proporcional de sesiones no realizadas previa solicitud justificada. Sesiones individuales perdidas no son reembolsables, pero pueden reprogramarse con 24 horas de antelación.</p><p><strong>Cancelaciones:</strong> Puedes cancelar o reprogramar sesiones con 24+ horas de antelación sin cargo. Cancelaciones con menos de 24 horas se consideran sesiones utilizadas. Evaluamos emergencias individualmente. Nos reservamos el derecho de cancelar por enfermedad, circunstancias imprevistas o fuerza mayor, informando con la mayor antelación posible y reprogramando sin cargo.</p>"
+      },
+      {
+        "title": "4. Confidencialidad y Ética Profesional",
+        "content": "<p>Toda información compartida en sesiones se trata con absoluta confidencialidad según nuestra Política de Privacidad y normativas profesionales. La confidencialidad puede limitarse por riesgo grave e inminente para ti o terceros, sospechas de maltrato o abuso, o requerimientos legales/judiciales.</p><p>Mantenemos relaciones estrictamente profesionales. No se permiten relaciones duales que comprometan objetividad o bienestar del cliente.</p><p><strong>Menores de edad:</strong> Los programas infantiles requieren consentimiento informado de padres/tutores, sesión informativa previa, y comunicación regular sobre progreso. Respetamos la privacidad de menores dentro de límites apropiados, manteniendo informados a padres/tutores sobre aspectos generales sin comprometer la confianza del menor.</p>"
+      },
+      {
+        "title": "5. Propiedad Intelectual y Limitación de Responsabilidad",
+        "content": "<p>Todos los materiales, metodologías y contenidos proporcionados son de nuestra propiedad o estamos autorizados para su uso. No está permitido reproducir, distribuir o comercializar materiales sin autorización, grabar sesiones sin consentimiento expreso, o utilizar nuestra marca para fines comerciales propios.</p><p><strong>Exclusión de garantías:</strong> Nuestros servicios se proporcionan \"tal cual\". No garantizamos resultados específicos, ya que dependen de factores individuales y del compromiso del participante. Nuestra responsabilidad se limita al importe pagado. No somos responsables de daños indirectos, pérdida de oportunidades, o decisiones tomadas fuera de las sesiones.</p><p><strong>Emergencias:</strong> En caso de crisis emocional o emergencia médica, contacta inmediatamente con servicios de emergencia (112 en España). Nuestros servicios no están diseñados para intervención en crisis.</p>"
+      },
+      {
+        "title": "6. Modificaciones y Terminación del Servicio",
+        "content": "<p>Nos reservamos el derecho de modificar estos Términos en cualquier momento. Los cambios significativos se comunicarán con 30+ días de antelación. El uso continuado tras la notificación constituye aceptación.</p><p><strong>Terminación por tu parte:</strong> Puedes finalizar tu participación en cualquier momento, comunicándolo por escrito con 7+ días de antelación.</p><p><strong>Terminación por nuestra parte:</strong> Podemos finalizar el servicio si incumples estos términos significativamente, consideras que necesitas atención especializada que no podemos proporcionar, existe comportamiento inapropiado o falta de respeto, o no realizas los pagos acordados.</p>"
+      },
+      {
+        "title": "7. Resolución de Conflictos",
+        "content": "<p>Ante cualquier desacuerdo, te animamos a comunicarlo directamente. Nos comprometemos a resolver de buena fe. Si no se alcanza resolución directa, ambas partes acuerdan intentar mediación antes de acciones legales.</p><p>Estos Términos se rigen por la legislación española. Para resolución de controversias, las partes se someten a los juzgados y tribunales competentes en España.</p>"
+      },
+      {
+        "title": "8. Disposiciones Generales",
+        "content": "<p>Estos Términos y Condiciones, junto con nuestra Política de Privacidad, constituyen el acuerdo completo entre vaemptîness y el cliente. Si alguna disposición se considera inválida, las demás permanecerán en vigor. La falta de ejercicio de cualquier derecho no constituye renuncia al mismo.</p>"
+      },
+      {
+        "title": "9. Contacto",
+        "content": "<p>Para preguntas sobre estos Términos y Condiciones, <a href=\"/contacto/\">visita nuestra página de contacto</a>.</p>"
+      }
+    ],
+    "footer": "<p><em>Al utilizar los servicios de vaemptîness, confirmas que has leído, entendido y aceptado estos Términos y Condiciones.</em></p>",
+    "cta": {
+      "title": "¿Listo para comenzar?",
+      "description": "Contacta con nosotros para más información sobre nuestros programas",
+      "buttonText": "Contáctanos",
+      "buttonUrl": "/contacto/"
+    }
+  }
+}

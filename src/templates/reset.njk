@@ -1,61 +1,46 @@
 ---
 layout: base.njk
-permalink: /reset/
-bodyClass: reset-page
-title: reset - vaemptîness
-seo:
-  title: "Reset | Programa de Reinicio Mental vaemptîness"
-  description: "Descubre cómo resetear tu mente y crear espacio mental duradero con nuestro programa especializado."
-  keywords: "reset mental, reinicio mental, limpiar mente, reducir ruido mental"
-  ogImage: "/assets/images/og-reset.jpg"
 ---
+{% set pageData = pages.reset.content %}
 
 <section class="page-hero">
   <div class="container">
-    <h1 class="page-title">reset</h1>
-    <p class="page-subtitle">Interrumpe el ciclo, limpia el ruido mental</p>
+    <h1 class="page-title">{{ pageData.hero.title }}</h1>
+    <p class="page-subtitle">{{ pageData.hero.subtitle }}</p>
   </div>
 </section>
 
 <section class="reset-content">
   <div class="container">
     <div class="content-section centered">
-      <h2>vaemptîness program</h2>
-      <p>Antes de que aparezca una idea, una duda o una preocupación, ya se ha activado una micro sensación, un nudo, una presión, una tensión, que la mente interpreta como peligro. En ese momento, se llena de ruido: rumiación, anticipación, control y autoexigencia.</p>
-      <p class="quote-large">"El reset limpia. El restart reordena."</p>
-      <p>El método <strong>vaemptîness</strong> interrumpe este ciclo y enseña como volver al cuerpo para regular la respiración y soltar el exceso mental. Es entonces cuando el sistema nervioso se calma y la mente abandona el modo automático.</p>
+      <h2>{{ pageData.intro.title }}</h2>
+      {% for paragraph in pageData.intro.paragraphs %}
+      <p>{{ paragraph | safe }}</p>
+      {% endfor %}
+      <p class="quote-large">{{ pageData.intro.quote | safe }}</p>
     </div>
 
+    {% for section in pageData.resetSections %}
     <div class="reset-section">
       <div class="reset-image">
-        <img src="/assets/images/reset-1.jpg" alt="RESET - Limpia la mente" loading="lazy">
+        <img src="{{ section.image }}" alt="{{ section.imageAlt }}" loading="lazy">
       </div>
       <div class="reset-text">
-        <h2>CTRL + X</h2>
-        <p class="reset-description">Despeja la mente y abre un espacio de claridad donde se responde sin reactividad.</p>
-        <p class="reset-action"><strong>RESET vaemptîness</strong> — Corta y despeja para eliminar interferencias.</p>
+        <h2>{{ section.title }}</h2>
+        <p class="reset-description">{{ section.description }}</p>
+        <p class="reset-action">{{ section.action | safe }}</p>
       </div>
     </div>
-
-    <div class="reset-section">
-      <div class="reset-image">
-        <img src="/assets/images/reset-2.jpg" alt="RESTART - Reordena los pensamientos" loading="lazy">
-      </div>
-      <div class="reset-text">
-        <h2>CTRL + Z</h2>
-        <p class="reset-description">Reinicia nuestro sistema operativo. Vuelve a activarse y empieza a comprender la estructura real del pensamiento.</p>
-        <p class="reset-action"><strong>RESTART vaemptîness</strong> — La mente arranca de nuevo desde un estado más claro y coherente.</p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section class="cta-section">
   <div class="container">
     <div class="cta-content">
-      <h2 class="cta-title">¿Listo para comenzar?</h2>
-      <p class="cta-description">Descubre cómo el método vaemptîness puede ayudarte</p>
-      <a href="{{ '/contacto/' | url }}" class="button button-primary">Contáctanos</a>
+      <h2 class="cta-title">{{ pageData.cta.title }}</h2>
+      <p class="cta-description">{{ pageData.cta.description }}</p>
+      <a href="{{ pageData.cta.buttonUrl | url }}" class="button button-primary">{{ pageData.cta.buttonText }}</a>
     </div>
   </div>
 </section>

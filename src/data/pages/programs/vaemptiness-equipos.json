@@ -1,0 +1,69 @@
+{
+  "id": "teams",
+  "name": "vaemptîness equipos",
+  "ageRange": "Equipos de trabajo",
+  "slug": "vaemptiness-equipos",
+  "shortDescription": "Entrenamiento mental para equipos de trabajo buscando mejor rendimiento y colaboración",
+  "featured": true,
+  "seoKeywords": "mindfulness empresas Barcelona, entrenamiento mental equipos, reducir estrés laboral, bienestar corporativo, formación mindfulness",
+  "seo": {
+    "title": "vaemptîness equipos | vaemptîness",
+    "description": "Método de entrenamiento cerebral diseñado para crear claridad mental reduciendo la carga cognitiva y eliminando patrones de pensamiento automático en entornos de trabajo colaborativo.",
+    "keywords": "mindfulness empresas Barcelona, entrenamiento mental equipos, reducir estrés laboral, bienestar corporativo, formación mindfulness",
+    "ogImage": "/assets/images/programs/teams-program.jpg",
+    "ogType": "article"
+  },
+  "audience": {
+    "type": "PeopleAudience",
+    "label": "Equipos de trabajo"
+  },
+  "hero": {
+    "title": "vaemptîness equipos",
+    "subtitle": "Programa para equipos de trabajo",
+    "description": "Método de entrenamiento cerebral diseñado para crear claridad mental reduciendo la carga cognitiva y eliminando patrones de pensamiento automático en entornos de trabajo colaborativo."
+  },
+  "pillars": [
+    {
+      "title": "Comunicación Consciente",
+      "description": "Desarrollar la capacidad de escuchar y expresarse sin reactividad emocional automática en dinámicas de equipo.",
+      "icon": "communication"
+    },
+    {
+      "title": "Claridad Colectiva",
+      "description": "Reducir el ruido mental individual que afecta la toma de decisiones y el rendimiento grupal.",
+      "icon": "collective"
+    },
+    {
+      "title": "Gestión de Conflicto Cognitivo",
+      "description": "Reconocer y desactivar patrones de pensamiento que generan tensión y malentendidos en el equipo.",
+      "icon": "conflict"
+    },
+    {
+      "title": "Cohesión a través de la Presencia",
+      "description": "Crear espacios de trabajo donde la atención compartida mejora el rendimiento y la colaboración.",
+      "icon": "cohesion"
+    }
+  ],
+  "sessionStructure": {
+    "title": "Estructura de las Sesiones",
+    "duration": "75-90 minutos",
+    "activities": [
+      "Check-in grupal de estado mental",
+      "Práctica de comunicación consciente en parejas",
+      "Ejercicio de observación de patrones de pensamiento colectivos",
+      "Dinámica de resolución de conflicto cognitivo",
+      "Integración y establecimiento de compromisos de equipo"
+    ]
+  },
+  "outcomes": {
+    "title": "Beneficios",
+    "items": [
+      "Mejor comunicación entre miembros del equipo",
+      "Reducción de conflictos derivados de malentendidos",
+      "Mayor eficiencia en reuniones y toma de decisiones",
+      "Ambiente de trabajo más equilibrado",
+      "Capacidad de regulación emocional colectiva"
+    ]
+  },
+  "philosophy": "Un equipo que piensa con claridad, colabora con eficacia. El entrenamiento mental colectivo transforma la dinámica grupal desde la conciencia individual hacia el rendimiento compartido."
+}

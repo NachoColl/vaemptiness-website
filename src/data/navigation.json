@@ -1,0 +1,57 @@
+{
+  "logoAlt": "vaemptîness - brain training",
+  "mobileMenuLabel": "Menú",
+  "mainMenu": [
+    {
+      "text": "Inicio",
+      "url": "/",
+      "matchUrl": "/"
+    },
+    {
+      "text": "Sobre nosotros",
+      "url": "/sobre-nosotros/",
+      "matchUrl": "/sobre-nosotros/"
+    },
+    {
+      "text": "Programas",
+      "hasDropdown": true,
+      "dropdown": [
+        {
+          "text": "vaemptîness program",
+          "url": "/vaemptiness-program/",
+          "matchUrl": "/vaemptiness-program/"
+        },
+        {
+          "text": "vaemptîness equipos",
+          "url": "/vaemptiness-equipos/",
+          "matchUrl": "/vaemptiness-equipos/"
+        },
+        {
+          "text": "vaemptîness teen",
+          "url": "/vaemptiness-teen/",
+          "matchUrl": "/vaemptiness-teen/"
+        },
+        {
+          "text": "vaemptîness kids",
+          "url": "/vaemptiness-kids/",
+          "matchUrl": "/vaemptiness-kids/"
+        }
+      ]
+    },
+    {
+      "text": "Blog",
+      "url": "/blog/",
+      "matchUrl": "/blog/"
+    },
+    {
+      "text": "FAQ",
+      "url": "/faq/",
+      "matchUrl": "/faq/"
+    },
+    {
+      "text": "Contacto",
+      "url": "/contacto/",
+      "matchUrl": "/contacto/"
+    }
+  ]
+}

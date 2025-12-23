@@ -8,15 +8,84 @@
   "author": "Rosa Cano",
   "footer": {
     "copyright": "© 2025 vaemptîness. Todos los derechos reservados.",
-    "links": [
+    "sections": [
+      {
+        "title": "Programas",
+        "links": [
+          {
+            "text": "vaemptîness program",
+            "url": "/vaemptiness-program/"
+          },
+          {
+            "text": "vaemptîness equipos",
+            "url": "/vaemptiness-equipos/"
+          },
+          {
+            "text": "vaemptîness teen",
+            "url": "/vaemptiness-teen/"
+          },
+          {
+            "text": "vaemptîness kids",
+            "url": "/vaemptiness-kids/"
+          }
+        ]
+      },
+      {
+        "title": "Información",
+        "links": [
+          {
+            "text": "Sobre nosotros",
+            "url": "/sobre-nosotros/"
+          },
+          {
+            "text": "Blog",
+            "url": "/blog/"
+          },
+          {
+            "text": "FAQ",
+            "url": "/faq/"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "text": "Formulario",
+            "url": "/contacto/"
+          },
+          {
+            "text": "program@vaemptiness.es",
+            "url": "mailto:program@vaemptiness.es"
+          }
+        ]
+      }
+    ],
+    "legalLinks": [
       {
         "text": "Política de privacidad",
-        "url": "/politica-privacidad"
+        "url": "/politica-privacidad/"
       },
       {
         "text": "Términos y condiciones",
-        "url": "/terminos-condiciones"
+        "url": "/terminos-condiciones/"
       }
-    ]
+    ],
+    "mobile": {
+      "links": [
+        {
+          "text": "Política de privacidad",
+          "url": "/politica-privacidad/"
+        },
+        {
+          "text": "Términos y condiciones",
+          "url": "/terminos-condiciones/"
+        },
+        {
+          "text": "Contacta con nosotros",
+          "url": "/contacto/"
+        }
+      ]
+    }
   }
 }

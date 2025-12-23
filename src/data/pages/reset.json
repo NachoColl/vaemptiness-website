@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "slug": "reset",
+    "permalink": "/reset/",
+    "layout": "base.njk",
+    "bodyClass": "reset-page",
+    "title": "reset - vaemptîness",
+    "seo": {
+      "title": "Reset | Programa de Reinicio Mental vaemptîness",
+      "description": "Descubre cómo resetear tu mente y crear espacio mental duradero con nuestro programa especializado.",
+      "keywords": "reset mental, reinicio mental, limpiar mente, reducir ruido mental",
+      "ogImage": "/assets/images/og-reset.jpg"
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "reset",
+      "subtitle": "Interrumpe el ciclo, limpia el ruido mental"
+    },
+    "intro": {
+      "title": "vaemptîness program",
+      "paragraphs": [
+        "Antes de que aparezca una idea, una duda o una preocupación, ya se ha activado una micro sensación, un nudo, una presión, una tensión, que la mente interpreta como peligro. En ese momento, se llena de ruido: rumiación, anticipación, control y autoexigencia.",
+        "El método <strong>vaemptîness</strong> interrumpe este ciclo y enseña como volver al cuerpo para regular la respiración y soltar el exceso mental. Es entonces cuando el sistema nervioso se calma y la mente abandona el modo automático."
+      ],
+      "quote": "\"El reset limpia. El restart reordena.\""
+    },
+    "resetSections": [
+      {
+        "image": "/assets/images/reset-1.jpg",
+        "imageAlt": "RESET - Limpia la mente",
+        "title": "CTRL + X",
+        "description": "Despeja la mente y abre un espacio de claridad donde se responde sin reactividad.",
+        "action": "<strong>RESET vaemptîness</strong> — Corta y despeja para eliminar interferencias."
+      },
+      {
+        "image": "/assets/images/reset-2.jpg",
+        "imageAlt": "RESTART - Reordena los pensamientos",
+        "title": "CTRL + Z",
+        "description": "Reinicia nuestro sistema operativo. Vuelve a activarse y empieza a comprender la estructura real del pensamiento.",
+        "action": "<strong>RESTART vaemptîness</strong> — La mente arranca de nuevo desde un estado más claro y coherente."
+      }
+    ],
+    "cta": {
+      "title": "¿Listo para comenzar?",
+      "description": "Descubre cómo el método vaemptîness puede ayudarte",
+      "buttonText": "Contáctanos",
+      "buttonUrl": "/contacto/"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "kids",
+  "name": "vaemptîness kids",
+  "ageRange": "5-8 años",
+  "slug": "vaemptiness-kids",
+  "shortDescription": "Entrenamiento emocional y mental a través del juego",
+  "featured": true,
+  "seoKeywords": "mindfulness niños Barcelona, meditación niños, atención plena infantil, actividades mindfulness niños",
+  "seo": {
+    "title": "vaemptîness kids | vaemptîness",
+    "description": "Introduciendo conciencia emocional y mindfulness a través del juego en lugar de la meditación tradicional.",
+    "keywords": "mindfulness niños Barcelona, meditación niños, atención plena infantil, actividades mindfulness niños",
+    "ogImage": "/assets/images/programs/kids-program.jpg",
+    "ogType": "article"
+  },
+  "audience": {
+    "type": "PeopleAudience",
+    "minAge": 5,
+    "maxAge": 8,
+    "label": "Niños"
+  },
+  "hero": {
+    "title": "vaemptîness kids",
+    "subtitle": "Edades 5-8 años",
+    "description": "Introduciendo conciencia emocional y mindfulness a través del juego en lugar de la meditación tradicional."
+  },
+  "pillars": [
+    {
+      "title": "Cuerpo Tranquilo",
+      "description": "Ejercicios de respiración y movimiento ayudando a los niños a reconocer estados de tensión y cansancio.",
+      "icon": "body"
+    },
+    {
+      "title": "Mente Tranquila",
+      "description": "Prácticas breves de atención como observar 'como un búho' o 'escuchar como un koala' desarrollando enfoque a corto plazo.",
+      "icon": "mind"
+    },
+    {
+      "title": "Emociones con Nombre",
+      "description": "Historias e ilustraciones conectando sentimientos con personajes: ira como un dragón que respira fuego, tristeza como una nube lluviosa, miedo como un ratón tembloroso.",
+      "icon": "emotions"
+    },
+    {
+      "title": "Espacio Interior",
+      "description": "Introduce el concepto de un 'lugar tranquilo' interno al que los niños pueden acceder mentalmente para descansar.",
+      "icon": "space"
+    },
+    {
+      "title": "Amabilidad y Conexión",
+      "description": "Juegos cooperativos y rituales de gratitud enseñando empatía y reparación de conflictos.",
+      "icon": "kindness"
+    }
+  ],
+  "sessionStructure": {
+    "title": "Estructura de las Sesiones",
+    "duration": "20-30 minutos",
+    "activities": [
+      "Narración breve con personajes emocionales",
+      "Técnicas de respiración simples",
+      "Movimiento consciente",
+      "20-40 segundos de silencio guiado",
+      "Actividades creativas (colorear, dibujar, pegatinas)",
+      "Cierre enfocado en la amabilidad"
+    ]
+  },
+  "outcomes": {
+    "title": "Beneficios",
+    "items": [
+      "Reconocimiento de emociones",
+      "Liberación de tensión",
+      "Mejor concentración en clase",
+      "Relaciones basadas en la calma",
+      "Autoconciencia emocional temprana"
+    ]
+  },
+  "philosophy": "El programa prioriza comprender las experiencias internas orgánicamente en lugar del cumplimiento conductual, plantando 'semillas de autocuidado' para un impacto de por vida."
+}

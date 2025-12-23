@@ -1,0 +1,90 @@
+{
+  "id": 1,
+  "slug": "filosofia-budista-vaemptiness",
+  "title": "Filosofía Budista en vaemptîness",
+  "author": "Rosa Cano",
+  "date": "2025-12-15",
+  "excerpt": "Cómo la filosofía budista se integra en el enfoque terapéutico de vaemptîness, transformando el vacío en un lugar de posibilidades.",
+  "featured": true,
+  "image": "/assets/images/blog/filosofia-budista.jpg",
+  "seo": {
+    "title": "Filosofía Budista en vaemptîness | Blog vaemptîness",
+    "description": "Cómo la filosofía budista se integra en el enfoque terapéutico de vaemptîness, transformando el vacío en un lugar de posibilidades.",
+    "keywords": "filosofía, budismo, mindfulness, práctica",
+    "ogImage": "/assets/images/blog/filosofia-budista.jpg",
+    "ogType": "article"
+  },
+  "content": {
+    "introduction": "El budismo no entiende el vacío como una carencia traumática, sino como una <strong>naturaleza abierta</strong>, un espacio fértil donde no hay fijaciones.",
+    "sections": [
+      {
+        "title": "Reconceptualiza el vacío",
+        "intro": "El budismo no entiende el vacío como una carencia traumática, sino como una <strong>naturaleza abierta</strong>, un espacio fértil donde no hay fijaciones.\n\nEn <strong>vaemptîness</strong>, esta mirada permite:",
+        "items": [
+          "Dejar de temer el vacío.",
+          "Tratarlo como un lugar de posibilidad.",
+          "Desactivar la narrativa de \"algo roto dentro de mí\"."
+        ],
+        "closing": "El vacío se vuelve un <strong>espacio a habitar</strong>, no un problema a eliminar."
+      },
+      {
+        "title": "Aporta herramientas para relacionarse con la experiencia",
+        "intro": "La filosofía budista ofrece prácticas y actitudes que se integran de forma natural en <strong>vaemptîness</strong>.",
+        "items": [
+          "<strong>Mindfulness</strong> para observar el vacío sin luchar contra él.",
+          "<strong>Ecuanimidad</strong> para sostener emociones intensas.",
+          "<strong>Compasión</strong> para acompañar partes heridas sin juicio."
+        ],
+        "closing": "Estas dimensiones actúan como <strong>puentes</strong> entre el dolor y la transformación."
+      },
+      {
+        "title": "Desidentificación del yo",
+        "intro": "Una de las ideas budistas más potentes es <strong>anatta</strong> (no-yo).\n\nEn <strong>vaemptîness</strong>, esto se traduce así:",
+        "items": [
+          "No eres tu vacío.",
+          "No eres tus heridas.",
+          "No eres tu narrativa de carencia."
+        ],
+        "closing": "Esta reflexión, facilita la flexibilidad cognitiva y emocional y abre espacio para un <strong>yo</strong> más amplio y dinámico."
+      },
+      {
+        "title": "Impermanencia y proceso",
+        "intro": "El budismo enseña <strong>anicca</strong>: todo cambia. <strong>vaemptîness</strong> incorpora esta idea para:",
+        "items": [
+          "Romper la sensación de estancamiento.",
+          "Facilitar la aceptación de procesos graduales.",
+          "Entender que el vacío puede transformarse como una emoción, no como una identidad fija."
+        ],
+        "closing": "El cambio deja de ser una lucha y se convierte en un <strong>fluir acompañado</strong>."
+      },
+      {
+        "title": "Ética del trato interno",
+        "intro": "La filosofía budista inspira una ética interna de:",
+        "items": [
+          "No violencia hacia uno mismo.",
+          "Veracidad sin crueldad.",
+          "Paciencia con los ritmos del corazón."
+        ],
+        "closing": "Este marco hace que la terapia sea <strong>más segura</strong>, más suave y más honesta."
+      },
+      {
+        "title": "Dimensión existencial",
+        "intro": "<strong>Vaemptîness</strong> no solo alivia síntomas: busca sentido.\n\nEl budismo aporta a este método, una visión existencial que:",
+        "items": [
+          "Permite convivir con la incertidumbre.",
+          "Ofrece un contexto más amplio para el sufrimiento y sus causas.",
+          "Conecta el proceso personal con algo mayor o más profundo. La verdad que se revela, va más allá de lo convencional."
+        ],
+        "closing": ""
+      }
+    ],
+    "conclusion": "",
+    "cta": "Mi propuesta para hoy…<strong><em>cuestiónate y calma.</em></strong>"
+  },
+  "tags": [
+    "filosofía",
+    "budismo",
+    "mindfulness",
+    "práctica"
+  ]
+}

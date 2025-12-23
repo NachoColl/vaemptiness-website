@@ -1,13 +1,5 @@
 ---
 layout: base.njk
-bodyClass: home-page
-title: vaemptîness - brain training
-seo:
-  title: "vaemptîness | Entrenamiento Mental y Mindfulness Barcelona"
-  description: "Crea espacio mental. Entrenamiento cerebral basado en mindfulness y filosofía budista. Programas para adultos, equipos, adolescentes y niños en Barcelona."
-  keywords: "entrenamiento mental Barcelona, mindfulness Barcelona, meditación Barcelona, psicología budista, reducir ansiedad, claridad mental, rumiación mental"
-  ogImage: "/assets/images/og-home.jpg"
-  ogType: "website"
 ---
 
 <section class="hero">
@@ -27,14 +19,14 @@ seo:
   <div class="container">
     <div class="hero-content">
       <h1 class="hero-title">
-        <span class="hero-brand">{{ hero.title }}</span>
-        <span class="hero-tagline">{{ hero.tagline }}</span>
+        <span class="hero-brand">{{ pages.home.content.hero.title }}</span>
+        <span class="hero-tagline">{{ pages.home.content.hero.tagline }}</span>
       </h1>
-      <p class="hero-subtitle">Crea espacio mental,<br class="mobile-break"> libérate del ruido.</p>
+      <p class="hero-subtitle">{{ pages.home.content.hero.subtitle | safe }}</p>
     </div>
 
     <div class="scroll-indicator" aria-label="Scroll down">
-      <span class="scroll-text">Descubre más</span>
+      <span class="scroll-text">{{ pages.home.content.hero.scrollText }}</span>
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 4L12 20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -45,9 +37,9 @@ seo:
 <section class="learning-intro-section">
   <div class="container">
     <div class="learning-intro">
-      <p class="intro-text">Un enfoque que fusiona teoría y práctica en cada experiencia, donde el aprendizaje sucede mientras lo vives.</p>
-      <p class="quote-large">"No memorizas conceptos, <br class="desktop-break">los experimentas"</p>
-      <a href="{{ '/aprendizaje-y-metodologia/' | url }}" class="button button-primary">Conocer más</a>
+      <p class="intro-text">{{ pages.home.content.learningIntro.text }}</p>
+      <p class="quote-large">{{ pages.home.content.learningIntro.quote | safe }}</p>
+      <a href="{{ pages.home.content.learningIntro.buttonUrl | url }}" class="button button-primary">{{ pages.home.content.learningIntro.buttonText }}</a>
     </div>
   </div>
 </section>
@@ -55,7 +47,7 @@ seo:
 <section class="principles-section">
   <div class="container">
     <div class="principles-grid">
-      {% for principle in hero.principles %}
+      {% for principle in pages.home.content.hero.principles %}
       <div class="principle-card">
         <!-- Progressive circle indicator -->
         <svg class="principle-circle" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -91,18 +83,18 @@ seo:
 <section class="philosophy-section">
   <div class="container">
     <div class="philosophy-content">
-      <p class="quote-emphasis">{{ hero.philosophy }}</p>
-      <a href="{{ '/reset/' | url }}" class="button button-primary">Haz reset</a>
+      <p class="quote-emphasis">{{ pages.home.content.philosophy.quote }}</p>
+      <a href="{{ pages.home.content.philosophy.buttonUrl | url }}" class="button button-primary">{{ pages.home.content.philosophy.buttonText }}</a>
     </div>
   </div>
 </section>
 
 <section class="programs-section">
   <div class="container">
-    <h2 class="section-title">Nuestros Programas</h2>
+    <h2 class="section-title">{{ pages.home.content.programsSection.title }}</h2>
 
     <div class="programs-grid">
-      {% for program in programs %}
+      {% for program in collections.programsFromFiles %}
       {% if program.featured %}
       <article class="program-card" data-aos="fade-up">
         <a href="{{ ('/' + program.slug + '/') | url }}">
@@ -128,58 +120,17 @@ seo:
 <section class="cta-section">
   <div class="container">
     <div class="cta-content">
-      <h2 class="cta-title">Únete al universo vaemptîness</h2>
-      <p class="cta-description">Pulsa para volver a tí.</p>
-      <a href="{{ '/contacto/' | url }}" class="button button-primary">Cuestiónate y calma</a>
+      <h2 class="cta-title">{{ pages.home.content.cta.title }}</h2>
+      <p class="cta-description">{{ pages.home.content.cta.description }}</p>
+      <a href="{{ pages.home.content.cta.buttonUrl | url }}" class="button button-primary">{{ pages.home.content.cta.buttonText }}</a>
     </div>
   </div>
 </section>
 
 {% block schema %}
+{% for schemaItem in pages.home.schema %}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "vaemptîness",
-  "url": "{{ site.url }}",
-  "logo": "{{ site.url }}/assets/images/logo.png",
-  "description": "Centro de entrenamiento mental y mindfulness basado en filosofía budista",
-  "medicalSpecialty": "Psychology",
-  "priceRange": "€€",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Barcelona",
-    "addressRegion": "Cataluña",
-    "addressCountry": "ES"
-  },
-  "telephone": "+34-XXX-XXX-XXX",
-  "email": "{{ site.email }}",
-  "serviceType": [
-    "Mental Training",
-    "Mindfulness",
-    "Meditation",
-    "Psychological Treatment"
-  ]
-}
+{{ schemaItem | dump | safe }}
 </script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "vaemptîness",
-  "alternateName": "vaemptiness Barcelona",
-  "url": "{{ site.url }}",
-  "description": "Entrenamiento mental y mindfulness basado en filosofía budista en Barcelona",
-  "inLanguage": "es-ES",
-  "publisher": {
-    "@type": "Organization",
-    "name": "vaemptîness",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ site.url }}/assets/images/logo.png"
-    }
-  }
-}
-</script>
+{% endfor %}
 {% endblock %}
