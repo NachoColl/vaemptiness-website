@@ -1,0 +1,53 @@
+---
+layout: base.njk
+---
+{% set pageData = pages["on-off"].content %}
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">{{ pageData.hero.title }}</h1>
+    <p class="page-subtitle">{{ pageData.hero.subtitle }}</p>
+  </div>
+</section>
+
+<section class="learning-intro-section">
+  <div class="container">
+    <div class="learning-intro">
+      <h2 class="intro-question">{{ pageData.intro.question }}</h2>
+      <p class="intro-text">{{ pageData.intro.text }}</p>
+      <p class="quote-large">{{ pageData.intro.quote | safe }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="learning-pathways-section">
+  <div class="container">
+    <div class="learning-pathways">
+      <h2 class="section-title">{{ pageData.pathways.title }}</h2>
+
+      <div class="pathway-grid">
+        {% for pathway in pageData.pathways.items %}
+        <div class="pathway-card">
+          <div class="pathway-letter">{{ pathway.letter }}</div>
+          <h3>{{ pathway.title }}</h3>
+          <p>{{ pathway.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="learning-message">
+      <p class="quote-emphasis">{{ pageData.pathways.quote | safe }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">{{ pageData.cta.title }}</h2>
+      <p class="cta-description">{{ pageData.cta.description }}</p>
+      <a href="{{ pageData.cta.buttonUrl | url }}" class="button button-primary">{{ pageData.cta.buttonText }}</a>
+    </div>
+  </div>
+</section>

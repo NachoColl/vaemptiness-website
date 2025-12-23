@@ -19,21 +19,26 @@
       "scrollText": "Descubre más",
       "principles": [
         {
-          "number": "01",
+          "icon": "fa-solid fa-layer-group",
           "title": "Fusiona",
           "description": "Learning + metodología"
         },
         {
-          "number": "02",
+          "icon": "fa-solid fa-filter",
           "title": "Elimina",
           "description": "Carga cognitiva"
         },
         {
-          "number": "03",
+          "icon": "fa-solid fa-crosshairs",
           "title": "Identifica",
           "description": "saboteadores mentales"
         }
       ],
+      "principlesAction": {
+        "text": "Aprende a reconocer los patrones automáticos que sabotean tu claridad mental.",
+        "buttonText": "on-off",
+        "buttonUrl": "/on-off/"
+      },
       "philosophy": "No se trata de pensar más, sino mejor"
     },
     "learningIntro": {

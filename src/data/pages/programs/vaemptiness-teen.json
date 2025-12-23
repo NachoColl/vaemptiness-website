@@ -28,22 +28,22 @@
     {
       "title": "Autoconciencia",
       "description": "Desarrollar la capacidad de observar pensamientos y emociones sin juicio.",
-      "icon": "awareness"
+      "icon": "fa-solid fa-brain"
     },
     {
       "title": "Regulación Emocional",
       "description": "Técnicas para gestionar emociones intensas típicas de la adolescencia.",
-      "icon": "regulation"
+      "icon": "fa-solid fa-sliders"
     },
     {
       "title": "Enfoque y Atención",
       "description": "Mejorar la concentración en un mundo lleno de distracciones digitales.",
-      "icon": "focus"
+      "icon": "fa-solid fa-bullseye"
     },
     {
       "title": "Relaciones Conscientes",
       "description": "Desarrollar habilidades para relacionarse de forma más auténtica y empática.",
-      "icon": "relationships"
+      "icon": "fa-solid fa-users"
     }
   ],
   "sessionStructure": {

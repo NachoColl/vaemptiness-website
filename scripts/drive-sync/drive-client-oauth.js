@@ -257,6 +257,21 @@ class DriveClientOAuth {
     }
     return await this.createFolder(parentFolderId, folderName);
   }
+
+  async deleteFile(fileId) {
+    await this.initialize();
+
+    try {
+      await this.drive.files.delete({
+        fileId
+      });
+      logger.debug('Deleted file', { fileId });
+      return true;
+    } catch (error) {
+      logger.error('Failed to delete file', { fileId, error: error.message });
+      throw error;
+    }
+  }
 }
 
 module.exports = new DriveClientOAuth();

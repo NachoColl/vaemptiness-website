@@ -26,22 +26,22 @@
     {
       "title": "Comunicación Consciente",
       "description": "Desarrollar la capacidad de escuchar y expresarse sin reactividad emocional automática en dinámicas de equipo.",
-      "icon": "communication"
+      "icon": "fa-solid fa-comments"
     },
     {
       "title": "Claridad Colectiva",
       "description": "Reducir el ruido mental individual que afecta la toma de decisiones y el rendimiento grupal.",
-      "icon": "collective"
+      "icon": "fa-solid fa-people-group"
     },
     {
       "title": "Gestión de Conflicto Cognitivo",
       "description": "Reconocer y desactivar patrones de pensamiento que generan tensión y malentendidos en el equipo.",
-      "icon": "conflict"
+      "icon": "fa-solid fa-handshake"
     },
     {
       "title": "Cohesión a través de la Presencia",
       "description": "Crear espacios de trabajo donde la atención compartida mejora el rendimiento y la colaboración.",
-      "icon": "cohesion"
+      "icon": "fa-solid fa-link"
     }
   ],
   "sessionStructure": {

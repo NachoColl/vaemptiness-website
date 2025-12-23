@@ -157,7 +157,11 @@ function findDriveOverrides(gitObj, driveObj, overrideList, path) {
         findDriveOverrides(gitValue, driveValue, overrideList, currentPath);
       } else if (JSON.stringify(gitValue) !== JSON.stringify(driveValue)) {
         // Values are different - Drive overrode Git
-        overrideList.push(currentPath);
+        overrideList.push({
+          path: currentPath,
+          oldValue: gitValue,
+          newValue: driveValue
+        });
       }
     }
   }

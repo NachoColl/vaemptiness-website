@@ -14,9 +14,17 @@ async function uploadFile(folderId, filePath, relativePath) {
   const content = await fs.readFile(filePath, 'utf-8');
   const fileName = path.basename(filePath);
 
-  const result = await driveClient.uploadFile(folderId, fileName, content);
+  // Check if file already exists in metadata
+  const existingFile = syncMetadata.getFile(relativePath);
+  const fileId = existingFile?.driveId || null;
 
-  logger.info('Uploaded file', { fileName, relativePath });
+  const result = await driveClient.uploadFile(folderId, fileName, content, fileId);
+
+  if (fileId) {
+    logger.info('Updated file', { fileName, relativePath, fileId });
+  } else {
+    logger.info('Uploaded file', { fileName, relativePath });
+  }
 
   return {
     driveId: result.id,

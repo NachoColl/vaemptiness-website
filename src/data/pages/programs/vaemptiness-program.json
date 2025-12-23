@@ -27,22 +27,22 @@
     {
       "title": "Observación de Pensamientos",
       "description": "Aprender a ver los pensamientos como eventos mentales en lugar de realidades absolutas.",
-      "icon": "observe"
+      "icon": "fa-solid fa-eye"
     },
     {
       "title": "Reducción de Rumiación",
       "description": "Eliminar patrones de pensamiento repetitivo que no aportan soluciones.",
-      "icon": "reduce"
+      "icon": "fa-solid fa-compress"
     },
     {
       "title": "Claridad Cognitiva",
       "description": "Mejorar la capacidad de tomar decisiones y priorizar efectivamente.",
-      "icon": "clarity"
+      "icon": "fa-solid fa-lightbulb"
     },
     {
       "title": "Integración Somática",
       "description": "Conectar mente y cuerpo para una regulación emocional más efectiva.",
-      "icon": "somatic"
+      "icon": "fa-solid fa-person"
     }
   ],
   "sessionStructure": {

@@ -28,27 +28,27 @@
     {
       "title": "Cuerpo Tranquilo",
       "description": "Ejercicios de respiración y movimiento ayudando a los niños a reconocer estados de tensión y cansancio.",
-      "icon": "body"
+      "icon": "fa-solid fa-child"
     },
     {
       "title": "Mente Tranquila",
       "description": "Prácticas breves de atención como observar 'como un búho' o 'escuchar como un koala' desarrollando enfoque a corto plazo.",
-      "icon": "mind"
+      "icon": "fa-solid fa-brain"
     },
     {
       "title": "Emociones con Nombre",
       "description": "Historias e ilustraciones conectando sentimientos con personajes: ira como un dragón que respira fuego, tristeza como una nube lluviosa, miedo como un ratón tembloroso.",
-      "icon": "emotions"
+      "icon": "fa-solid fa-heart"
     },
     {
       "title": "Espacio Interior",
       "description": "Introduce el concepto de un 'lugar tranquilo' interno al que los niños pueden acceder mentalmente para descansar.",
-      "icon": "space"
+      "icon": "fa-solid fa-expand"
     },
     {
       "title": "Amabilidad y Conexión",
       "description": "Juegos cooperativos y rituales de gratitud enseñando empatía y reparación de conflictos.",
-      "icon": "kindness"
+      "icon": "fa-solid fa-hands-holding"
     }
   ],
   "sessionStructure": {

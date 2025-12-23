@@ -99,14 +99,27 @@ async function syncFromDrive() {
 `;
 
       for (const mergeInfo of result.mergeDetails) {
-        prBody += `- \`${mergeInfo.path}\`\n`;
+        prBody += `\n#### \`${mergeInfo.path}\`\n`;
 
         if (mergeInfo.driveOverride.length > 0) {
-          prBody += `  - Drive updates: ${mergeInfo.driveOverride.join(', ')}\n`;
+          prBody += `\n**Drive updates:**\n`;
+          for (const change of mergeInfo.driveOverride) {
+            const oldValueStr = typeof change.oldValue === 'string'
+              ? `"${change.oldValue}"`
+              : JSON.stringify(change.oldValue);
+            const newValueStr = typeof change.newValue === 'string'
+              ? `"${change.newValue}"`
+              : JSON.stringify(change.newValue);
+
+            prBody += `- \`${change.path}\`\n`;
+            prBody += `  - **Old:** ${oldValueStr}\n`;
+            prBody += `  - **New:** ${newValueStr}\n`;
+          }
         }
 
         if (mergeInfo.gitOnly.length > 0) {
-          prBody += `  - Git-only preserved: ${mergeInfo.gitOnly.join(', ')}\n`;
+          prBody += `\n**Git-only properties preserved:**\n`;
+          prBody += mergeInfo.gitOnly.map(p => `- \`${p}\``).join('\n') + '\n';
         }
       }
 

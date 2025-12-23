@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "slug": "on-off",
+    "permalink": "/on-off/",
+    "layout": "base.njk",
+    "bodyClass": "onoff-page",
+    "title": "ON/OFF - vaemptîness",
+    "seo": {
+      "title": "ON/OFF | Desactiva el Piloto Automático - vaemptîness",
+      "description": "Aprende a identificar y desactivar los saboteadores mentales que interrumpen tu calma mental.",
+      "keywords": "piloto automático, saboteadores mentales, patrones automáticos, mindfulness",
+      "ogImage": "/assets/images/og-onoff.jpg"
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "ON/OFF",
+      "subtitle": "Desactiva el piloto automático"
+    },
+    "intro": {
+      "question": "¿Qué son los saboteadores mentales?",
+      "text": "[Contenido pendiente - proporcionar texto del preview]",
+      "quote": "\"[Cita pendiente]\""
+    },
+    "pathways": {
+      "title": "Identificar para Desactivar",
+      "items": [
+        {
+          "letter": "A",
+          "title": "[Título pendiente]",
+          "description": "[Descripción pendiente]"
+        },
+        {
+          "letter": "B",
+          "title": "[Título pendiente]",
+          "description": "[Descripción pendiente]"
+        },
+        {
+          "letter": "C",
+          "title": "[Título pendiente]",
+          "description": "[Descripción pendiente]"
+        }
+      ],
+      "quote": "\"[Cita pendiente]\""
+    },
+    "cta": {
+      "title": "¿Listo para desactivar el piloto automático?",
+      "description": "Descubre cómo vaemptîness puede ayudarte a identificar tus saboteadores",
+      "buttonText": "Contáctanos",
+      "buttonUrl": "/contacto/"
+    }
+  }
+}

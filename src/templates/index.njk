@@ -72,11 +72,15 @@ layout: base.njk
           />
         </svg>
 
-        <span class="principle-number">{{ principle.number }}</span>
         <h2 class="principle-title">{{ principle.title }}</h2>
         <p class="principle-description">{{ principle.description }}</p>
       </div>
       {% endfor %}
+    </div>
+
+    <div class="principles-action">
+      <p class="principles-action-text">{{ pages.home.content.hero.principlesAction.text }}</p>
+      <a href="{{ pages.home.content.hero.principlesAction.buttonUrl | url }}" class="button button-primary">{{ pages.home.content.hero.principlesAction.buttonText }}</a>
     </div>
   </div>
 </section>

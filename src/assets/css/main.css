@@ -967,14 +967,6 @@ main {
   padding: var(--space-xl);
 }
 
-.principle-number {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: var(--text-h2);
-  color: var(--color-accent-rust);
-  margin-bottom: var(--space-md);
-}
-
 /* Progressive circle indicators */
 .principle-circle {
   display: block;
@@ -982,7 +974,7 @@ main {
   height: 60px;
   margin: 0 auto var(--space-md);
   color: var(--color-accent-rust);
-  transform: rotate(-90deg); /* Start circle from top (12 o'clock position) */
+  transform: rotate(-90deg);
 }
 
 .principle-circle circle {
@@ -997,6 +989,21 @@ main {
 .principle-description {
   color: var(--color-hover);
   margin-bottom: 0;
+}
+
+.principles-action {
+  text-align: center;
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+}
+
+.principles-action-text {
+  font-size: var(--text-body-lg);
+  color: var(--color-primary-text);
+  margin-bottom: var(--space-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Philosophy Section
@@ -1779,6 +1786,11 @@ main {
 .pillar-icon {
   margin-bottom: var(--space-md);
   color: var(--color-accent-rust);
+  font-size: 3rem;
+}
+
+.pillar-icon i {
+  display: block;
 }
 
 .pillar-title {
