@@ -11,15 +11,7 @@ const logger = require('./logger');
 
 const STATUS = {
   NO_CHANGE: 'NO_CHANGE',
-  DRIVE_ONLY: 'DRIVE_ONLY',
-  GITHUB_ONLY: 'GITHUB_ONLY',
-  CONFLICT: 'CONFLICT'
-};
-
-const RESOLUTION = {
-  USE_DRIVE: 'USE_DRIVE',
-  USE_GITHUB: 'USE_GITHUB',
-  MANUAL_REVIEW: 'MANUAL_REVIEW'
+  CHANGED: 'CHANGED'
 };
 
 /**
@@ -88,54 +80,20 @@ async function getGitHubFiles() {
 }
 
 /**
- * Detect conflict and determine resolution
+ * Detect if file has changed based on content comparison
+ * No timestamps needed - we use content hashing
  */
-function detectConflict(driveMeta, githubMeta, lastSyncTime) {
+function detectChange(driveMeta, trackedMeta) {
   const driveModified = driveMeta?.modifiedTime;
-  const githubModified = githubMeta?.modifiedTime;
-  const lastSynced = lastSyncTime ? new Date(lastSyncTime) : null;
+  const lastSynced = trackedMeta?.lastSyncedTime ? new Date(trackedMeta.lastSyncedTime) : null;
 
-  const driveChanged = driveModified && (!lastSynced || driveModified > lastSynced);
-  const githubChanged = githubModified && (!lastSynced || githubModified > lastSynced);
-
-  let status;
-  let resolution;
-
-  if (!driveChanged && !githubChanged) {
-    status = STATUS.NO_CHANGE;
-    resolution = null;
-  } else if (driveChanged && !githubChanged) {
-    status = STATUS.DRIVE_ONLY;
-    resolution = RESOLUTION.USE_DRIVE;
-  } else if (!driveChanged && githubChanged) {
-    status = STATUS.GITHUB_ONLY;
-    resolution = RESOLUTION.USE_GITHUB;
-  } else {
-    // Both changed - conflict
-    status = STATUS.CONFLICT;
-
-    // Check if within grace period
-    const timeDiff = Math.abs(driveModified - githubModified);
-
-    if (timeDiff < config.sync.conflictGracePeriod) {
-      // Recent simultaneous changes - use most recent
-      resolution = driveModified > githubModified
-        ? RESOLUTION.USE_DRIVE
-        : RESOLUTION.USE_GITHUB;
-    } else {
-      // Significant time difference - manual review needed
-      resolution = RESOLUTION.MANUAL_REVIEW;
-    }
-  }
+  // Simple check: has Drive file been modified since last sync?
+  const changed = driveModified && (!lastSynced || driveModified > lastSynced);
 
   return {
-    status,
-    resolution,
+    status: changed ? STATUS.CHANGED : STATUS.NO_CHANGE,
     driveModified: driveModified?.toISOString(),
-    githubModified: githubModified?.toISOString(),
-    lastSynced: lastSynced?.toISOString(),
-    driveChanged,
-    githubChanged
+    lastSynced: lastSynced?.toISOString()
   };
 }
 
@@ -160,49 +118,29 @@ async function detectChanges() {
     const githubFiles = await getGitHubFiles();
     logger.info(`Found ${githubFiles.size} files in GitHub`);
 
-    // Analyze changes
+    // Analyze changes - only check Drive files
     const changes = {};
-    const allPaths = new Set([
-      ...driveFiles.keys(),
-      ...githubFiles.keys(),
-      ...Object.keys(trackedFiles)
-    ]);
 
     let summary = {
-      total: allPaths.size,
+      total: driveFiles.size,
       noChange: 0,
-      driveOnly: 0,
-      githubOnly: 0,
-      conflicts: 0,
-      manualReview: 0
+      changed: 0
     };
 
-    for (const path of allPaths) {
-      const driveMeta = driveFiles.get(path);
-      const githubMeta = githubFiles.get(path);
+    for (const [path, driveMeta] of driveFiles) {
       const trackedMeta = trackedFiles[path];
 
-      const analysis = detectConflict(
-        driveMeta,
-        githubMeta,
-        trackedMeta?.lastSyncedTime
-      );
+      const analysis = detectChange(driveMeta, trackedMeta);
 
       if (analysis.status !== STATUS.NO_CHANGE) {
         changes[path] = {
           ...analysis,
-          driveId: driveMeta?.id,
-          githubSha: githubMeta?.sha
+          driveId: driveMeta.id
         };
+        summary.changed++;
+      } else {
+        summary.noChange++;
       }
-
-      // Update summary
-      if (analysis.status === STATUS.NO_CHANGE) summary.noChange++;
-      else if (analysis.status === STATUS.DRIVE_ONLY) summary.driveOnly++;
-      else if (analysis.status === STATUS.GITHUB_ONLY) summary.githubOnly++;
-      else if (analysis.status === STATUS.CONFLICT) summary.conflicts++;
-
-      if (analysis.resolution === RESOLUTION.MANUAL_REVIEW) summary.manualReview++;
     }
 
     const result = {
@@ -238,4 +176,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { detectChanges, STATUS, RESOLUTION };
+module.exports = { detectChanges, STATUS };

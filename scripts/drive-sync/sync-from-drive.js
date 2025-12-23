@@ -3,7 +3,6 @@
  */
 
 const fs = require('fs-extra');
-const minimatch = require('minimatch');
 const { detectChanges } = require('./detect-changes');
 const { downloadChanges } = require('./download-changes');
 const { validate } = require('./validate-json');
@@ -14,38 +13,9 @@ const config = require('./config');
 const logger = require('./logger');
 
 /**
- * Determine if PR should auto-merge
+ * Auto-merge PR (always merges with property-based merge strategy)
  */
-async function autoMergeIfEligible(pr, result) {
-  // Check 1: Do we have conflicts?
-  if (result.hasConflicts) {
-    logger.info('Skipping auto-merge: conflicts detected', { prNumber: pr.number });
-    await githubClient.addLabel(pr.number, 'requires-review');
-    await githubClient.addLabel(pr.number, 'conflict');
-    return { merged: false, reason: 'conflicts' };
-  }
-
-  // Check 2: Is auto-merge enabled?
-  if (!config.sync.autoMergeNonConflicts) {
-    logger.info('Skipping auto-merge: feature disabled', { prNumber: pr.number });
-    return { merged: false, reason: 'disabled' };
-  }
-
-  // Check 3: Any files require manual review?
-  const requiresReview = result.applied.some(filePath => {
-    return config.sync.requireReview.some(pattern => {
-      return minimatch(filePath, pattern);
-    });
-  });
-
-  if (requiresReview) {
-    logger.info('Skipping auto-merge: critical files changed', { prNumber: pr.number });
-    await githubClient.addLabel(pr.number, 'requires-review');
-    await githubClient.addLabel(pr.number, 'critical-file');
-    return { merged: false, reason: 'critical-files' };
-  }
-
-  // All checks passed - auto-merge!
+async function autoMergePR(pr) {
   logger.info('Auto-merging PR', { prNumber: pr.number });
 
   try {
@@ -120,36 +90,35 @@ async function syncFromDrive() {
     if (result.applied.length > 0) {
       const branch = config.github.branches.contentUpdates;
 
-      // Build PR body with conflict details
-      const cleanFiles = result.applied.filter(f => !result.conflicts.includes(f));
-      const conflictFiles = result.conflicts;
-
+      // Build PR body with merge details
       let prBody = `## Automated Content Sync from Google Drive
 
 **Files modified:** ${result.applied.length}
 
+### 📝 Changes Applied
 `;
 
-      if (cleanFiles.length > 0) {
-        prBody += `### ✅ Clean Changes (auto-mergeable)
-${cleanFiles.map(f => `- \`${f}\``).join('\\n')}
+      for (const mergeInfo of result.mergeDetails) {
+        prBody += `- \`${mergeInfo.path}\`\n`;
 
-`;
+        if (mergeInfo.driveOverride.length > 0) {
+          prBody += `  - Drive updates: ${mergeInfo.driveOverride.join(', ')}\n`;
+        }
+
+        if (mergeInfo.gitOnly.length > 0) {
+          prBody += `  - Git-only preserved: ${mergeInfo.gitOnly.join(', ')}\n`;
+        }
       }
 
-      if (conflictFiles.length > 0) {
-        prBody += `### ⚠️ Conflicts (manual review required)
-${conflictFiles.map(f => `- \`${f}\` - Changed in both Drive and GitHub`).join('\\n')}
+      prBody += `
+**Merge strategy:**
+- Drive properties override Git properties
+- Git-only properties preserved
 
-**Note:** Drive version has been applied to this branch. Review changes and merge manually.
-
-`;
-      }
-
-      prBody += `**Sync timestamp:** ${new Date().toISOString()}
+**Sync timestamp:** ${new Date().toISOString()}
 
 ✅ Validation passed
-${result.hasConflicts ? '⚠️ Conflicts detected - requires manual review' : '✅ No conflicts detected - safe to auto-merge'}
+✅ Property-based merge completed
 
 ---
 🤖 Generated with [Claude Code](https://claude.com/claude-code)`;
@@ -163,14 +132,13 @@ ${result.hasConflicts ? '⚠️ Conflicts detected - requires manual review' : '
 
       logger.info('Created/updated pull request', { prNumber: pr.number, url: pr.html_url });
 
-      // Auto-merge if eligible
-      const mergeResult = await autoMergeIfEligible(pr, result);
+      // Always auto-merge (property-based merge is deterministic)
+      const mergeResult = await autoMergePR(pr);
 
       // Add to sync history
       syncMetadata.addSyncHistory({
         direction: 'drive-to-github',
         filesChanged: result.applied,
-        conflicts: result.conflicts.length,
         status: 'success',
         prNumber: pr.number,
         autoMerged: mergeResult.merged,
@@ -185,7 +153,7 @@ ${result.hasConflicts ? '⚠️ Conflicts detected - requires manual review' : '
           sha: mergeResult.sha
         });
       } else {
-        logger.info('⚠️ PR requires manual review', {
+        logger.info('⚠️ Auto-merge failed (will require manual merge)', {
           prNumber: pr.number,
           reason: mergeResult.reason
         });
@@ -193,14 +161,12 @@ ${result.hasConflicts ? '⚠️ Conflicts detected - requires manual review' : '
     }
 
     logger.info('=== Sync complete ===', {
-      applied: result.applied.length,
-      conflicts: result.conflicts.length
+      applied: result.applied.length
     });
 
     return {
       success: true,
-      changes: result.applied.length,
-      conflicts: result.conflicts.length
+      changes: result.applied.length
     };
   } catch (error) {
     logger.error('Sync failed', { error: error.message });

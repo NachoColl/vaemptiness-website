@@ -7,6 +7,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 const githubClient = require('./github-client');
 const syncMetadata = require('./sync-metadata');
+const { mergeJSON } = require('./merge-json');
 const config = require('./config');
 const logger = require('./logger');
 
@@ -14,34 +15,67 @@ async function applyChanges(validationResult, downloadResult) {
   logger.info('Applying changes to repository');
 
   const changes = downloadResult.downloaded;
-  const conflicts = [];
   const applied = [];
+  const mergeDetails = [];
 
   for (const file of changes) {
     const metaPath = `${file.localPath}.meta`;
     const meta = await fs.readJson(metaPath);
 
-    // Copy file to src/data/pages (even if conflict - we apply Drive version)
+    // Load Drive version (just downloaded)
+    const driveContent = await fs.readJson(file.localPath);
+
+    // Load current Git version (if exists)
     const destPath = path.join(config.paths.pages, file.path);
+    let gitContent = null;
+
+    try {
+      if (await fs.pathExists(destPath)) {
+        gitContent = await fs.readJson(destPath);
+      }
+    } catch (error) {
+      logger.warn('Could not load Git version', { path: file.path, error: error.message });
+    }
+
+    // Merge: Drive properties override, Git-only properties preserved
+    let finalContent;
+    let mergeInfo = {
+      path: file.path,
+      gitOnly: [],
+      driveOverride: []
+    };
+
+    if (gitContent) {
+      const mergeResult = mergeJSON(gitContent, driveContent);
+      finalContent = mergeResult.merged;
+      mergeInfo.gitOnly = mergeResult.gitOnly;
+      mergeInfo.driveOverride = mergeResult.driveOverride;
+
+      if (mergeResult.gitOnly.length > 0) {
+        logger.info('Merged with Git-only properties preserved', {
+          path: file.path,
+          gitOnlyProps: mergeResult.gitOnly
+        });
+      }
+    } else {
+      // No Git version - use Drive version entirely
+      finalContent = driveContent;
+      logger.info('New file from Drive', { path: file.path });
+    }
+
+    // Write merged content
     await fs.ensureDir(path.dirname(destPath));
-    await fs.copy(file.localPath, destPath);
+    await fs.writeJson(destPath, finalContent, { spaces: 2 });
 
     applied.push(file.path);
-
-    if (meta.resolution === 'MANUAL_REVIEW') {
-      conflicts.push(file.path);
-      logger.warn('Conflict requires manual review - applied Drive version', { path: file.path });
-    } else {
-      logger.info('Applied file', { path: file.path });
-    }
+    mergeDetails.push(mergeInfo);
 
     // Update metadata
     syncMetadata.setFile(file.path, {
       driveId: meta.driveId,
       driveModifiedTime: meta.driveModified,
       lastSyncedTime: new Date().toISOString(),
-      syncDirection: 'drive-to-github',
-      hasConflict: meta.resolution === 'MANUAL_REVIEW'
+      syncDirection: 'drive-to-github'
     });
   }
 
@@ -75,13 +109,12 @@ ${applied.map(f => `- ${f}`).join('\\n')}
 
   const result = {
     applied,
-    conflicts,
-    hasConflicts: conflicts.length > 0
+    mergeDetails
   };
 
   // Output for GitHub Actions
   console.log('::set-output name=applied::' + JSON.stringify(applied));
-  console.log('::set-output name=has-conflicts::' + (conflicts.length > 0));
+  console.log('::set-output name=merge-details::' + JSON.stringify(mergeDetails));
 
   return result;
 }
