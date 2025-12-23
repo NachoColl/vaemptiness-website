@@ -39,8 +39,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config --global user.name "NachoColl"
-          git config --global user.email "ignacio.coll@gmail.com"
+          git config --global user.name "Drive Sync Bot"
+          git config --global user.email "drive-sync-bot@noreply.vaemptiness.com"
 
       - name: Run Drive → GitHub sync
         env:
