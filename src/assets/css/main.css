@@ -1398,11 +1398,6 @@ main {
   text-align: center;
 }
 
-/* Override CTA background on program pages to maintain alternation */
-.program-page .cta-section {
-  background: white;
-}
-
 .cta-content {
   max-width: 600px;
   margin: 0 auto;
