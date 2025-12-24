@@ -30,6 +30,7 @@
       "vaemptîness preadolescencia (8–12 años) y la adolescencia, responden a un momento vital clave: el paso de la infancia a la construcción de la identidad.",
       "Esta etapa es un puente entre la infancia y la adolescencia. Los niños ya pueden reflexionar, pero aún necesitan el cuerpo, el juego y lo visual para aprender. La adolescencia es una etapa de intensidad emocional, búsqueda de identidad y conflicto interno."
     ],
+    "quote1": "No se trata de controlar lo que sienten. Se trata de aprender a habitarlo sin que los domine.",
     "helps": {
       "title": "¿Qué trabaja el programa?",
       "items": [
@@ -39,6 +40,7 @@
         "Pensamientos repetitivos y autocríticos"
       ]
     },
+    "quote2": "Entre el impulso y la reacción existe un espacio. En ese espacio está tu poder.",
     "trainingItems": [
       "Lenguaje claro, no infantilizado",
       "Ejercicios breves de observación y respiración",
@@ -81,7 +83,7 @@
     }
   ],
   "sessionStructure": {
-    "title": "¿Cómo se trabaja?",
+    "title": "¿Cómo son las sesiones?",
     "duration": "60 minutos",
     "activities": [
       "Prácticas de observación guiada",
