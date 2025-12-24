@@ -1000,7 +1000,8 @@ main {
 .principles-action-title {
   font-size: var(--text-h3);
   margin-bottom: var(--space-md);
-  color: var(--color-primary-text);
+  color: var(--color-accent-rust);
+  font-weight: 700;
 }
 
 .principles-action-text {
