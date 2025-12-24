@@ -1714,6 +1714,21 @@ main {
   text-align: center;
 }
 
+.program-outcomes .quote-medium {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.outcomes-intro {
+  font-size: var(--text-body-lg);
+  text-align: center;
+  max-width: 900px;
+  margin: var(--space-lg) auto var(--space-2xl) auto;
+  line-height: 1.6;
+}
+
 .session-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
