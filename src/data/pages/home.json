@@ -46,7 +46,7 @@
       "icon": "fa-solid fa-toolbox",
       "title": "Implementa herramientas",
       "text": "Identifica a los \"<strong>saboteadores</strong>\" que distorsionan la calma mental.",
-      "highlight": "apaga el piloto automático.",
+      "highlight": "Apaga el piloto automático.",
       "buttonText": "on-off",
       "buttonUrl": "/on-off/"
     },
