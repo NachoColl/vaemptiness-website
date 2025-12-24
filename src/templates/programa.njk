@@ -45,21 +45,6 @@ title: "{{ program.name }} - vaemptîness"
       </div>
 
       <p class="quote-large">{{ program.whatIs.quote2 }}</p>
-
-      <div class="what-is-section">
-        <h3>{{ program.whatIs.training.title }}</h3>
-        <div class="card-items-grid">
-          {% for item in program.whatIs.training.items %}
-          <div class="card-item">
-            <p>{{ item }}</p>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-
-      <p class="quote-medium">{{ program.whatIs.quote3 }}</p>
-
-      <p class="what-is-adaptation">{{ program.whatIs.adaptation }}</p>
     </div>
   </div>
 </section>
@@ -110,6 +95,14 @@ title: "{{ program.name }} - vaemptîness"
 {% if program.outcomes %}
 <section class="program-outcomes">
   <div class="container">
+    {% if program.outcomes.quote %}
+    <p class="quote-medium">{{ program.outcomes.quote }}</p>
+    {% endif %}
+
+    {% if program.outcomes.intro %}
+    <p class="outcomes-intro">{{ program.outcomes.intro }}</p>
+    {% endif %}
+
     <h2>{{ program.outcomes.title }}</h2>
     <ul class="outcomes-list">
       {% for outcome in program.outcomes.items %}

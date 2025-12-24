@@ -56,6 +56,8 @@
     ]
   },
   "outcomes": {
+    "quote": "Menos interferencias internas. Más impacto colectivo.",
+    "intro": "vaemptîness se adapta a entornos corporativos y de liderazgo donde el tiempo es limitado y la exigencia es alta.",
     "title": "Beneficios",
     "items": [
       "Equipos más enfocados",
@@ -82,18 +84,6 @@
         "Detectar los patrones de pensamiento automático que dificultan la evolución colectiva."
       ]
     },
-    "quote2": "Cuando hay espacio interno, aparece la precisión. El alto rendimiento sostenible no nace de la tensión constante, sino de habitar el momento presente.",
-    "training": {
-      "title": "vaemptîness entrena a los equipos para:",
-      "items": [
-        "Habitar el momento con mayor concentración y calma",
-        "Regular el estrés laboral en tiempo real",
-        "Comunicar con más empatía y menos fricción",
-        "Tomar decisiones alineadas, incluso en contextos complejos",
-        "Ambiente de trabajo más equilibrado."
-      ]
-    },
-    "quote3": "Menos interferencias internas. Más impacto colectivo.",
-    "adaptation": "vaemptîness se adapta a entornos corporativos y de liderazgo donde el tiempo es limitado y la exigencia es alta."
+    "quote2": "Cuando hay espacio interno, aparece la precisión. El alto rendimiento sostenible no nace de la tensión constante, sino de habitar el momento presente."
   }
 }
