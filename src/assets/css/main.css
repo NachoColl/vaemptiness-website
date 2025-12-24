@@ -1276,8 +1276,27 @@ main {
   flex-direction: column;
 }
 
-.learning-intro .intro-text {
+.learning-intro .intro-title {
   order: 1;
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-md);
+  color: var(--color-primary-text);
+}
+
+.learning-intro .intro-text {
+  order: 2;
+  font-size: var(--text-body-lg);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.learning-intro .intro-highlight {
+  order: 3;
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--color-accent-rust);
+  font-style: italic;
+  margin-bottom: var(--space-xl);
 }
 
 .learning-intro .intro-quote {
@@ -1285,7 +1304,7 @@ main {
 }
 
 .learning-intro .button {
-  order: 3;
+  order: 4;
   align-self: center;
 }
 

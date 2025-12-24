@@ -37,8 +37,9 @@ layout: base.njk
 <section class="learning-intro-section">
   <div class="container">
     <div class="learning-intro">
+      <h3 class="intro-title">{{ pages.home.content.learningIntro.title }}</h3>
       <p class="intro-text">{{ pages.home.content.learningIntro.text }}</p>
-      <p class="quote-large">{{ pages.home.content.learningIntro.quote | safe }}</p>
+      <p class="intro-highlight">{{ pages.home.content.learningIntro.highlight }}</p>
       <a href="{{ pages.home.content.learningIntro.buttonUrl | url }}" class="button button-primary">{{ pages.home.content.learningIntro.buttonText }}</a>
     </div>
   </div>

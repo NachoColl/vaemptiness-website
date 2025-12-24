@@ -42,8 +42,9 @@
       "philosophy": "No se trata de pensar más, sino mejor"
     },
     "learningIntro": {
-      "text": "Un enfoque que fusiona teoría y práctica en cada experiencia, donde el aprendizaje sucede mientras lo vives.",
-      "quote": "\"Aprende a reconocer los patrones automáticos que sabotean tu claridad mental.\"",
+      "title": "Implementa herramientas",
+      "text": "identifica a los \"saboteadores\" que distorsionan la calma mental",
+      "highlight": "apaga el piloto automático.",
       "buttonText": "on-off",
       "buttonUrl": "/on-off/"
     },
