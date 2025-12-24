@@ -1027,29 +1027,22 @@ main {
   flex-direction: column;
 }
 
-.philosophy-icon {
-  order: 0;
-  margin-bottom: var(--space-md);
-  color: var(--color-accent-rust);
-  font-size: 3rem;
-}
-
 .philosophy-title {
-  order: 1;
+  order: 0;
   font-size: var(--text-h3);
   margin-bottom: var(--space-md);
   color: var(--color-primary-text);
 }
 
 .philosophy-text {
-  order: 2;
+  order: 1;
   font-size: var(--text-body-lg);
   line-height: 1.6;
   margin-bottom: var(--space-md);
 }
 
 .philosophy-highlight {
-  order: 3;
+  order: 2;
   font-size: var(--text-h4);
   font-weight: 600;
   color: var(--color-accent-rust);
@@ -1058,7 +1051,7 @@ main {
 }
 
 .philosophy-content .button {
-  order: 4;
+  order: 3;
   align-self: center;
   margin-top: var(--space-md);
   opacity: 0;
