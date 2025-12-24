@@ -64,6 +64,7 @@
     ]
   },
   "outcomes": {
+    "intro": "vaemptîness Kids les enseña de manera lúdica, visual y corporal como si fueran exploradores/as descubriendo un superpoder que siempre estuvo dentro de ellos/as.",
     "title": "¿Qué aprenden los niños/as?",
     "items": [
       "Reconocer sus emociones sin asustarse",
@@ -97,7 +98,6 @@
         "Regular la energía del cuerpo",
         "Relacionarse con otros desde la calma"
       ]
-    },
-    "conclusion": "vaemptîness Kids les enseña de manera lúdica, visual y corporal como si fueran exploradores/as descubriendo un superpoder que siempre estuvo dentro de ellos/as."
+    }
   }
 }
