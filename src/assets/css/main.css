@@ -1890,6 +1890,43 @@ main {
   }
 }
 
+/* Why It Works Section
+   ========================================================================== */
+.why-it-works {
+  padding: var(--space-3xl) 0;
+  text-align: center;
+}
+
+.why-intro {
+  font-size: var(--text-body-lg);
+  margin: var(--space-lg) 0;
+  font-weight: 500;
+}
+
+.why-approach {
+  font-size: var(--text-h3);
+  color: var(--color-accent-rust);
+  font-style: italic;
+  margin: var(--space-md) 0;
+}
+
+.why-conclusion {
+  font-size: var(--text-body-lg);
+  max-width: 900px;
+  margin: var(--space-xl) auto;
+  line-height: 1.6;
+}
+
+.why-impact {
+  font-size: var(--text-body-lg);
+  font-style: italic;
+  color: var(--color-accent-rust);
+  margin-top: var(--space-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Program What Is Section
    ========================================================================== */
 .program-what-is {

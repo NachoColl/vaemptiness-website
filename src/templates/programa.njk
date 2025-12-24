@@ -136,6 +136,18 @@ title: "{{ program.name }} - vaemptîness"
 </section>
 {% endif %}
 
+{% if program.whyItWorks %}
+<section class="why-it-works">
+  <div class="container">
+    <h2 class="section-title">{{ program.whyItWorks.title }}</h2>
+    <p class="why-intro">{{ program.whyItWorks.intro }}</p>
+    <p class="why-approach">{{ program.whyItWorks.approach }}</p>
+    <p class="why-conclusion">{{ program.whyItWorks.conclusion }}</p>
+    <p class="why-impact">{{ program.whyItWorks.impact }}</p>
+  </div>
+</section>
+{% endif %}
+
 <section class="cta-section">
   <div class="container">
     <div class="cta-content">

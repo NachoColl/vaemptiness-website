@@ -26,54 +26,62 @@
   },
   "pillars": [
     {
-      "title": "Cuerpo Tranquilo",
-      "description": "Ejercicios de respiración y movimiento ayudando a los niños a reconocer estados de tensión y cansancio.",
+      "title": "Calma en el cuerpo",
+      "description": "Ejercicios de respiración y movimiento que ayudan al niño/a a notar cuando está tenso/a, inquieto/a o cansado/a.",
       "icon": "fa-solid fa-child"
     },
     {
-      "title": "Mente Tranquila",
-      "description": "Prácticas breves de atención como observar 'como un búho' o 'escuchar como un koala' desarrollando enfoque a corto plazo.",
+      "title": "Calma en la mente",
+      "description": "Prácticas de atención: \"Mirar como un búho\", \"Escuchar como un koala\", \"Sentir como un gatito\". El niño/a aprende que puede concentrarse por momentos breves y que eso le hace sentir bien.",
       "icon": "fa-solid fa-brain"
     },
     {
-      "title": "Emociones con Nombre",
-      "description": "Historias e ilustraciones conectando sentimientos con personajes: ira como un dragón que respira fuego, tristeza como una nube lluviosa, miedo como un ratón tembloroso.",
+      "title": "Emociones con nombre",
+      "description": "Historias cortas y dibujos para identificar emociones: La rabia como un dragón que escupe fuego, la tristeza como una nube de tormenta, el miedo como un ratoncito que tiembla. El objetivo es reconocer sin temor lo que aparece.",
       "icon": "fa-solid fa-heart"
     },
     {
-      "title": "Espacio Interior",
-      "description": "Introduce el concepto de un 'lugar tranquilo' interno al que los niños pueden acceder mentalmente para descansar.",
-      "icon": "fa-solid fa-expand"
+      "title": "El espacio interior",
+      "description": "\"Dentro de ti hay un lugar tranquilo donde puedes descansar por un momento, como si fuera una casita secreta.\" El núcleo de vaemptîness kids explicado a su nivel.",
+      "icon": "fa-solid fa-home"
     },
     {
-      "title": "Amabilidad y Conexión",
-      "description": "Juegos cooperativos y rituales de gratitud enseñando empatía y reparación de conflictos.",
+      "title": "Amabilidad y conexión",
+      "description": "Juegos cooperativos y pequeños rituales de gratitud. Aprenden a notar cuando hacen daño sin querer, a pedir perdón, a compartir y reparar.",
       "icon": "fa-solid fa-hands-holding"
     }
   ],
   "sessionStructure": {
-    "title": "Estructura de las Sesiones",
+    "title": "¿Cómo son las sesiones?",
     "duration": "20-30 minutos",
     "activities": [
-      "Narración breve con personajes emocionales",
-      "Técnicas de respiración simples",
-      "Movimiento consciente",
-      "20-40 segundos de silencio guiado",
-      "Actividades creativas (colorear, dibujar, pegatinas)",
-      "Cierre enfocado en la amabilidad"
+      "Un cuento breve con personajes que sienten y aprenden",
+      "Ejercicios de respiración sencilla (3 soplidos, soplar burbujas, inflar un globo imaginario, etc.)",
+      "Movimiento consciente (caminar despacio, sacudir tensiones)",
+      "Silencio guiado de 20–40 segundos",
+      "Actividad creativa (colorear emociones, pegar stickers, dibujar \"la casita tranquila\")",
+      "Cierre con un gesto de amabilidad hacia sí mismos/as o hacia un compañero/a"
     ]
   },
   "outcomes": {
-    "title": "Beneficios",
+    "title": "¿Qué aprenden los niños/as?",
     "items": [
-      "Reconocimiento de emociones",
-      "Liberación de tensión",
-      "Mejor concentración en clase",
-      "Relaciones basadas en la calma",
-      "Autoconciencia emocional temprana"
+      "Reconocer sus emociones sin asustarse",
+      "Soltar tensiones del cuerpo",
+      "Calmar la mente cuando se acelera",
+      "Mejorar la concentración en clase",
+      "Relacionarse desde la calma y la amabilidad",
+      "Desarrollar autoconciencia emocional desde edades tempranas"
     ]
   },
-  "philosophy": "El programa prioriza comprender las experiencias internas orgánicamente en lugar del cumplimiento conductual, plantando 'semillas de autocuidado' para un impacto de por vida.",
+  "philosophy": "vaemptîness Kids no busca que los niños/as \"sean buenos/as\" o \"se porten bien\": busca que entiendan su mundo interior y lo gestionen con herramientas simples y orgánicas, desde la naturalidad.",
+  "whyItWorks": {
+    "title": "¿Por qué funciona?",
+    "intro": "El cerebro infantil responde mejor a:",
+    "approach": "El juego, la imaginación, el movimiento y las historias.",
+    "conclusion": "Desde estos canales el niño/a experimenta calma, no como una obligación, sino como refugio. Los acompañamos para que experimenten seguridad en sí mismos, a reconocer lo que sienten y a relacionarse desde la empatía.",
+    "impact": "Una semilla de autocuidado que se planta ahora…y acompañará al niño/a toda su vida."
+  },
   "whatIs": {
     "title": "El poder de la calma jugando",
     "intro": [
