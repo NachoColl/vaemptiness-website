@@ -31,10 +31,15 @@ title: "{{ program.name }} - vaemptîness"
         {% endfor %}
       </div>
 
+      {% if program.whatIs.quote1 %}
       <p class="quote-large">{{ program.whatIs.quote1 }}</p>
+      {% endif %}
 
       <div class="what-is-section">
         <h3>{{ program.whatIs.helps.title }}</h3>
+        {% if program.whatIs.helps.subtitle %}
+        <p class="what-is-subtitle">{{ program.whatIs.helps.subtitle }}</p>
+        {% endif %}
         <div class="card-items-grid">
           {% for item in program.whatIs.helps.items %}
           <div class="card-item">
@@ -44,7 +49,9 @@ title: "{{ program.name }} - vaemptîness"
         </div>
       </div>
 
+      {% if program.whatIs.quote2 %}
       <p class="quote-large">{{ program.whatIs.quote2 }}</p>
+      {% endif %}
 
       {% if program.whatIs.trainingItems %}
       <div class="what-is-section">
@@ -56,6 +63,10 @@ title: "{{ program.name }} - vaemptîness"
           {% endfor %}
         </div>
       </div>
+      {% endif %}
+
+      {% if program.whatIs.conclusion %}
+      <p class="what-is-conclusion">{{ program.whatIs.conclusion }}</p>
       {% endif %}
     </div>
   </div>
