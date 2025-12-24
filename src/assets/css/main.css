@@ -997,6 +997,12 @@ main {
   padding-top: var(--space-xl);
 }
 
+.principles-action-title {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-md);
+  color: var(--color-primary-text);
+}
+
 .principles-action-text {
   font-size: var(--text-body-lg);
   color: var(--color-primary-text);
