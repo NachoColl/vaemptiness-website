@@ -1398,6 +1398,11 @@ main {
   text-align: center;
 }
 
+/* Override CTA background on program pages to use gray */
+.program-page .cta-section {
+  background: var(--color-primary-bg);
+}
+
 .cta-content {
   max-width: 600px;
   margin: 0 auto;
