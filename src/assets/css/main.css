@@ -1013,6 +1013,11 @@ main {
   margin-right: auto;
 }
 
+.principles-action .button {
+  opacity: 0;
+  animation: fadeInUpSlow 2s ease-out 0.8s forwards;
+}
+
 /* Philosophy Section
    ========================================================================== */
 .philosophy-section {
@@ -1340,6 +1345,8 @@ main {
 .learning-intro .button {
   order: 4;
   align-self: center;
+  opacity: 0;
+  animation: fadeInUpSlow 2s ease-out 0.8s forwards;
 }
 
 .intro-question {
