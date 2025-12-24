@@ -1698,7 +1698,8 @@ main {
   padding: var(--section-spacing) 0;
 }
 
-.program-session {
+.program-pillars,
+.program-outcomes {
   background: var(--color-accent-cream);
 }
 
@@ -1870,7 +1871,6 @@ main {
    ========================================================================== */
 .program-what-is {
   padding: var(--space-3xl) 0;
-  background: var(--color-accent-cream);
 }
 
 @media (max-width: 768px) {
@@ -1908,28 +1908,22 @@ main {
 }
 
 .card-item {
-  background: white;
-  padding: var(--space-xl);
-  border-radius: 50%;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--color-accent-cream);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
   text-align: center;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: transform var(--transition-base);
 }
 
 .card-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .card-item p {
   margin: 0;
   font-size: var(--text-body);
   line-height: 1.6;
-  padding: var(--space-sm);
 }
 
 .what-is-adaptation {
@@ -1942,12 +1936,6 @@ main {
 @media (max-width: 768px) {
   .card-items-grid {
     grid-template-columns: 1fr;
-  }
-
-  .card-item {
-    border-radius: var(--radius-lg);
-    aspect-ratio: auto;
-    padding: var(--space-lg);
   }
 }
 
