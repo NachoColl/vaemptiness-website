@@ -1398,6 +1398,11 @@ main {
   text-align: center;
 }
 
+/* Override CTA background on program pages to maintain alternation */
+.program-page .cta-section {
+  background: white;
+}
+
 .cta-content {
   max-width: 600px;
   margin: 0 auto;
@@ -1775,7 +1780,7 @@ main {
 .pillar-card {
   text-align: center;
   padding: var(--space-xl);
-  background: var(--color-accent-cream);
+  background: white;
   border-radius: var(--radius-lg);
   transition: transform var(--transition-base);
 }
@@ -1839,7 +1844,7 @@ main {
 
 .outcome-item {
   padding: var(--space-lg);
-  background: var(--color-accent-cream);
+  background: white;
   border-radius: var(--radius-md);
   text-align: center;
   font-weight: 500;
