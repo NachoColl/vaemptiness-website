@@ -21,91 +21,87 @@
   },
   "hero": {
     "title": "vaemptîness teen",
-    "subtitle": "Pre-adolescencia y Adolescencia",
+    "subtitle": "Pre-adolescencia y Adolescencia (8-17 años)",
     "description": "No se trata de \"meditar\" en silencio ni de imponer calma, sino de enseñar a observar, pausar y responder con más claridad en medio de emociones intensas, cambios corporales y presión social."
   },
   "whatIs": {
     "title": "vaemptîness Pre-adolescencia y Adolescencia",
     "intro": [
       "vaemptîness preadolescencia (8–12 años) y la adolescencia, responden a un momento vital clave: el paso de la infancia a la construcción de la identidad.",
-      "No se trata de \"meditar\" en silencio ni de imponer calma, sino de enseñar a observar, pausar y responder con más claridad en medio de emociones intensas, cambios corporales y presión social."
-    ]
-  },
-  "preTeen": {
-    "title": "vaemptîness Pre-Teen (8–12 años)",
-    "intro": "Esta etapa es un puente entre la infancia y la adolescencia. Los niños ya pueden reflexionar, pero aún necesitan el cuerpo, el juego y lo visual para aprender.",
-    "addresses": {
-      "title": "¿Qué trabaja esta versión?",
+      "Esta etapa es un puente entre la infancia y la adolescencia. Los niños ya pueden reflexionar, pero aún necesitan el cuerpo, el juego y lo visual para aprender. La adolescencia es una etapa de intensidad emocional, búsqueda de identidad y conflicto interno."
+    ],
+    "helps": {
+      "title": "¿Qué trabaja el programa?",
       "items": [
         "Mayor conciencia del cuerpo y las emociones",
         "Regulación del enfado, la ansiedad y la frustración",
-        "Primer contacto con pensamientos repetitivos",
-        "Desarrollo de la pausa antes de reaccionar",
-        "Autoestima y sentido de seguridad interna",
-        "Inicio de la responsabilidad emocional en las relaciones"
-      ]
-    },
-    "approach": {
-      "title": "¿Cómo es el enfoque?",
-      "items": [
-        "Lenguaje claro, no infantilizado",
-        "Ejercicios breves de observación y respiración",
-        "Dinámicas corporales conscientes",
-        "Metáforas comprensibles (olas, nubes, semáforos internos)",
-        "Espacios cortos de silencio guiado",
-        "Reflexión sencilla, sin sobreintelectualizar"
-      ]
-    },
-    "outcomes": {
-      "title": "¿Qué aprenden los preadolescentes?",
-      "items": [
-        "Que no son \"sus emociones\"",
-        "Que pueden parar antes de explotar o cerrarse",
-        "Que los pensamientos vienen y van",
-        "Que la calma no es obediencia, sino autocuidado",
-        "Que sus reacciones tienen impacto en otros"
-      ]
-    }
-  },
-  "teen": {
-    "title": "vaemptîness Adolescentes",
-    "intro": "La adolescencia es una etapa de intensidad emocional, búsqueda de identidad y conflicto interno. El programa vaemptîness teen se vuelve más introspectivo, sin perder el anclaje corporal.",
-    "addresses": {
-      "title": "¿Qué aborda esta versión?",
-      "items": [
         "Ansiedad, estrés y sobreestimulación mental",
-        "Pensamientos repetitivos y autocríticos",
-        "Cambios emocionales bruscos",
-        "Dificultad para regular impulsos",
-        "Conflictos relacionales",
-        "Desconexión corporal",
-        "Sensación de vacío o confusión interna"
+        "Pensamientos repetitivos y autocríticos"
       ]
     },
-    "sessionStructure": {
-      "title": "¿Cómo se trabaja?",
-      "duration": "60 minutos",
-      "activities": [
-        "Prácticas de observación guiada",
-        "Respiración consciente como regulación real, no \"técnica\"",
-        "Exploración del espacio entre pensamientos",
-        "Reconocimiento de patrones mentales reactivos",
-        "Integración del cuerpo como base de estabilidad",
-        "Espacios de reflexión personal (no moralizante)"
-      ]
-    },
-    "note": "El adolescente no es tratado como un niño ni como un adulto pequeño, sino como alguien que está aprendiendo a habitar su mente."
+    "trainingItems": [
+      "Lenguaje claro, no infantilizado",
+      "Ejercicios breves de observación y respiración",
+      "Dinámicas corporales conscientes",
+      "Metáforas comprensibles (olas, nubes, semáforos internos)",
+      "Exploración del espacio entre pensamientos",
+      "Integración del cuerpo como base de estabilidad"
+    ]
   },
-  "core": {
-    "title": "El núcleo terapéutico en ambas etapas",
-    "subtitle": "Tanto en preadolescencia como en adolescencia, vaemptîness enseña que:",
-    "principles": [
-      "Las emociones no son enemigas",
-      "Los pensamientos no son órdenes",
-      "El cuerpo es una brújula",
-      "La pausa es una elección posible",
-      "La presencia genera claridad",
-      "La calma no es pasividad, es poder interno"
+  "pillars": [
+    {
+      "title": "Las emociones no son enemigas",
+      "description": "Aprender a reconocer y habitar las emociones con presencia, sin controlarlas ni reprimirlas.",
+      "icon": "fa-solid fa-heart"
+    },
+    {
+      "title": "Los pensamientos no son órdenes",
+      "description": "Que no son \"sus emociones\", que pueden parar antes de explotar o cerrarse, que los pensamientos vienen y van.",
+      "icon": "fa-solid fa-brain"
+    },
+    {
+      "title": "El cuerpo es una brújula",
+      "description": "El cuerpo como base de estabilidad y regulación real, no solo \"técnica\".",
+      "icon": "fa-solid fa-child"
+    },
+    {
+      "title": "La pausa es una elección posible",
+      "description": "Desarrollo de la pausa antes de reaccionar. La calma no es obediencia, sino autocuidado.",
+      "icon": "fa-solid fa-hand"
+    },
+    {
+      "title": "La presencia genera claridad",
+      "description": "Espacios de reflexión personal y reconocimiento de patrones mentales reactivos.",
+      "icon": "fa-solid fa-eye"
+    },
+    {
+      "title": "La calma no es pasividad, es poder interno",
+      "description": "Autoestima, sentido de seguridad interna y responsabilidad emocional en las relaciones.",
+      "icon": "fa-solid fa-bolt"
+    }
+  ],
+  "sessionStructure": {
+    "title": "¿Cómo se trabaja?",
+    "duration": "60 minutos",
+    "activities": [
+      "Prácticas de observación guiada",
+      "Respiración consciente como regulación real, no \"técnica\"",
+      "Exploración del espacio entre pensamientos",
+      "Reconocimiento de patrones mentales reactivos",
+      "Integración del cuerpo como base de estabilidad",
+      "Espacios de reflexión personal (no moralizante)"
+    ]
+  },
+  "outcomes": {
+    "intro": "El adolescente no es tratado como un niño ni como un adulto pequeño, sino como alguien que está aprendiendo a habitar su mente.",
+    "title": "¿Qué aprenden?",
+    "items": [
+      "Que no son \"sus emociones\"",
+      "Que pueden parar antes de explotar o cerrarse",
+      "Que los pensamientos vienen y van",
+      "Que la calma no es obediencia, sino autocuidado",
+      "Que sus reacciones tienen impacto en otros",
+      "A entenderse, regularse y responder con más claridad"
     ]
   },
   "philosophy": "vaemptîness ofrece a preadolescentes y adolescentes herramientas reales para entenderse, regularse y responder con más claridad en una etapa vital compleja. No busca controlar la emoción, sino enseñar a habitarla con presencia. Una base sólida de autoconciencia ahora, es una salud emocional más estable en la adultez."
