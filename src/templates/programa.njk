@@ -73,6 +73,88 @@ title: "{{ program.name }} - vaemptîness"
 </section>
 {% endif %}
 
+{% if program.preTeen %}
+<section class="pre-teen-section">
+  <div class="container">
+    <h2 class="section-title">{{ program.preTeen.title }}</h2>
+    <p class="pre-teen-intro">{{ program.preTeen.intro }}</p>
+
+    <div class="teen-content-block">
+      <h3>{{ program.preTeen.addresses.title }}</h3>
+      <ul class="teen-list">
+        {% for item in program.preTeen.addresses.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="teen-content-block">
+      <h3>{{ program.preTeen.approach.title }}</h3>
+      <ul class="teen-list">
+        {% for item in program.preTeen.approach.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="teen-content-block">
+      <h3>{{ program.preTeen.outcomes.title }}</h3>
+      <ul class="teen-list">
+        {% for item in program.preTeen.outcomes.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if program.teen %}
+<section class="teen-section">
+  <div class="container">
+    <h2 class="section-title">{{ program.teen.title }}</h2>
+    <p class="teen-intro">{{ program.teen.intro }}</p>
+
+    <div class="teen-content-block">
+      <h3>{{ program.teen.addresses.title }}</h3>
+      <ul class="teen-list">
+        {% for item in program.teen.addresses.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="teen-content-block">
+      <h3>{{ program.teen.sessionStructure.title }}</h3>
+      <p class="teen-duration">Duración: {{ program.teen.sessionStructure.duration }}</p>
+      <ul class="teen-list">
+        {% for activity in program.teen.sessionStructure.activities %}
+        <li>{{ activity }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% if program.teen.note %}
+    <p class="teen-note">{{ program.teen.note }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if program.core %}
+<section class="core-section">
+  <div class="container">
+    <h2 class="section-title">{{ program.core.title }}</h2>
+    <p class="core-subtitle">{{ program.core.subtitle }}</p>
+    <ul class="core-principles">
+      {% for principle in program.core.principles %}
+      <li class="core-principle">{{ principle }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
 {% if program.pillars %}
 <section class="program-pillars">
   <div class="container">
