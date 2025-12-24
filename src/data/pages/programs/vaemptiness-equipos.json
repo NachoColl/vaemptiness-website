@@ -65,7 +65,7 @@
   "pillars": [
     {
       "title": "Comunicación Consciente",
-      "description": "Desarrollar la capacidad de escuchar y expresarse sin reactividad emocional automática en dinámicas de equipo.",
+      "description": "Desarrollar la capacidad de escuchar y expresarse sin reactividad emocional en dinámicas de equipo.",
       "icon": "fa-solid fa-comments"
     },
     {
@@ -75,12 +75,12 @@
     },
     {
       "title": "Gestión de Conflicto Cognitivo",
-      "description": "Reconocer y desactivar patrones de pensamiento que generan tensión y malentendidos en el equipo.",
+      "description": "Reconocer y desactivar patrones de pensamiento que generan tensión y desvían del objetivo colectivo.",
       "icon": "fa-solid fa-handshake"
     },
     {
       "title": "Cohesión a través de la Presencia",
-      "description": "Crear espacios de trabajo donde la atención compartida mejora el rendimiento y la colaboración.",
+      "description": "Crear espacios de trabajo donde la atención compartida mejora la colaboración.",
       "icon": "fa-solid fa-link"
     }
   ],
@@ -88,21 +88,21 @@
     "title": "Estructura de las Sesiones",
     "duration": "75-90 minutos",
     "activities": [
-      "Check-in grupal de estado mental",
-      "Práctica de comunicación consciente en parejas",
-      "Ejercicio de observación de patrones de pensamiento colectivos",
-      "Dinámica de resolución de conflicto cognitivo",
-      "Integración y establecimiento de compromisos de equipo"
+      "Check-in grupal. Ver las necesidades del equipo",
+      "Ejercicio colectivo de observación de patrones de pensamiento",
+      "Practica guiada mindfulness",
+      "Tarea semanal. Dinámica de resolución de conflicto a través de ejercicios individuales",
+      "Integración de compromisos de equipo"
     ]
   },
   "outcomes": {
     "title": "Beneficios",
     "items": [
+      "Equipos más enfocados",
+      "Decisiones más claras",
       "Mejor comunicación entre miembros del equipo",
-      "Reducción de conflictos derivados de malentendidos",
-      "Mayor eficiencia en reuniones y toma de decisiones",
-      "Ambiente de trabajo más equilibrado",
-      "Capacidad de regulación emocional colectiva"
+      "Colaboraciones más conscientes",
+      "Mayor eficiencia en reuniones y toma de decisiones"
     ]
   },
   "philosophy": "Un equipo que piensa con claridad, colabora con eficacia. El entrenamiento mental colectivo transforma la dinámica grupal desde la conciencia individual hacia el rendimiento compartido."
