@@ -1869,12 +1869,12 @@ main {
   justify-content: center;
 }
 
-/* Center last 2 items when there are 5 total (3 on first row, 2 centered on second row) */
-.outcome-item:nth-child(4) {
+/* Center last 2 items ONLY when there are exactly 5 total (3 on first row, 2 centered on second row) */
+.outcome-item:nth-child(4):nth-last-child(2) {
   grid-column: 2 / 4;
 }
 
-.outcome-item:nth-child(5) {
+.outcome-item:nth-child(5):nth-last-child(1) {
   grid-column: 4 / 6;
 }
 
