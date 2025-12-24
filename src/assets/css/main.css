@@ -1020,20 +1020,46 @@ main {
 }
 
 .philosophy-content {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-icon {
+  order: 0;
+  margin-bottom: var(--space-md);
+  color: var(--color-accent-rust);
+  font-size: 3rem;
+}
+
+.philosophy-title {
+  order: 1;
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-md);
+  color: var(--color-primary-text);
 }
 
 .philosophy-text {
-  font-family: var(--font-heading);
-  font-size: var(--text-h2);
+  order: 2;
+  font-size: var(--text-body-lg);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.philosophy-highlight {
+  order: 3;
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--color-accent-rust);
   font-style: italic;
-  line-height: 1.5;
   margin-bottom: var(--space-xl);
 }
 
 .philosophy-content .button {
+  order: 4;
+  align-self: center;
   margin-top: var(--space-md);
   opacity: 0;
   animation: fadeInUpSlow 2s ease-out 0.8s forwards;
@@ -1283,10 +1309,18 @@ main {
 }
 
 .learning-intro .intro-title {
-  order: 1;
+  order: 0;
   font-size: var(--text-h3);
   margin-bottom: var(--space-md);
-  color: var(--color-primary-text);
+  color: var(--color-accent-rust);
+  font-weight: 700;
+}
+
+.learning-intro .intro-icon {
+  order: 1;
+  margin-bottom: var(--space-md);
+  color: var(--color-accent-rust);
+  font-size: 3rem;
 }
 
 .learning-intro .intro-text {

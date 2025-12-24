@@ -37,6 +37,9 @@ layout: base.njk
 <section class="learning-intro-section">
   <div class="container">
     <div class="learning-intro">
+      <div class="intro-icon">
+        <i class="{{ pages.home.content.learningIntro.icon }}" aria-hidden="true"></i>
+      </div>
       <h3 class="intro-title">{{ pages.home.content.learningIntro.title }}</h3>
       <p class="intro-text">{{ pages.home.content.learningIntro.text }}</p>
       <p class="intro-highlight">{{ pages.home.content.learningIntro.highlight }}</p>
@@ -90,7 +93,12 @@ layout: base.njk
 <section class="philosophy-section">
   <div class="container">
     <div class="philosophy-content">
-      <p class="quote-emphasis">{{ pages.home.content.philosophy.quote }}</p>
+      <div class="philosophy-icon">
+        <i class="{{ pages.home.content.philosophy.icon }}" aria-hidden="true"></i>
+      </div>
+      <h3 class="philosophy-title">{{ pages.home.content.philosophy.title }}</h3>
+      <p class="philosophy-text">{{ pages.home.content.philosophy.text }}</p>
+      <p class="philosophy-highlight">{{ pages.home.content.philosophy.highlight }}</p>
       <a href="{{ pages.home.content.philosophy.buttonUrl | url }}" class="button button-primary">{{ pages.home.content.philosophy.buttonText }}</a>
     </div>
   </div>

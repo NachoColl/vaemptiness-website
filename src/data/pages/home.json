@@ -43,6 +43,7 @@
       "philosophy": "No se trata de pensar más, sino mejor"
     },
     "learningIntro": {
+      "icon": "fa-solid fa-toolbox",
       "title": "Implementa herramientas",
       "text": "identifica a los \"saboteadores\" que distorsionan la calma mental",
       "highlight": "apaga el piloto automático.",
@@ -50,7 +51,10 @@
       "buttonUrl": "/on-off/"
     },
     "philosophy": {
-      "quote": "texto reset - hola",
+      "icon": "fa-solid fa-power-off",
+      "title": "Interrumpe el ciclo",
+      "text": "limpia el ruido mental y despeja la mente para abrir un espacio de claridad",
+      "highlight": "El reset limpia. El restart reordena.",
       "buttonText": "Haz reset",
       "buttonUrl": "/reset/"
     },
