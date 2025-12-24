@@ -45,6 +45,18 @@ title: "{{ program.name }} - vaemptîness"
       </div>
 
       <p class="quote-large">{{ program.whatIs.quote2 }}</p>
+
+      {% if program.whatIs.trainingItems %}
+      <div class="what-is-section">
+        <div class="card-items-grid">
+          {% for item in program.whatIs.trainingItems %}
+          <div class="card-item">
+            <p>{{ item }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>
