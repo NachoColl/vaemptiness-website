@@ -14,13 +14,35 @@ layout: base.njk
   <div class="container">
     <div class="content-section centered">
       <h2>{{ pageData.intro.title }}</h2>
-      {% for paragraph in pageData.intro.paragraphs %}
+
+      {% for paragraph in pageData.intro.firstParagraphs %}
       <p>{{ paragraph | safe }}</p>
       {% endfor %}
+
       <p class="quote-large">{{ pageData.intro.quote | safe }}</p>
+
+      {% for paragraph in pageData.intro.lastParagraphs %}
+      <p>{{ paragraph | safe }}</p>
+      {% endfor %}
     </div>
   </div>
 </section>
+
+{% if pageData.highlights %}
+<section class="onoff-highlights">
+  <div class="container">
+    <h2 class="section-title">{{ pageData.highlights.title }}</h2>
+    <div class="highlights-grid">
+      {% for item in pageData.highlights.items %}
+      <div class="highlight-card">
+        <h3 class="highlight-title">{{ item.title }}</h3>
+        <p class="highlight-description">{{ item.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <section class="cta-section">
   <div class="container">
