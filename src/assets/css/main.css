@@ -1038,6 +1038,7 @@ main {
   font-size: var(--text-h3);
   margin-bottom: var(--space-md);
   color: var(--color-primary-text);
+  font-weight: 700;
 }
 
 .philosophy-text {
