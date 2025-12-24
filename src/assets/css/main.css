@@ -1866,6 +1866,91 @@ main {
   }
 }
 
+/* Program What Is Section
+   ========================================================================== */
+.program-what-is {
+  padding: var(--space-3xl) 0;
+  background: var(--color-accent-cream);
+}
+
+@media (max-width: 768px) {
+  .program-what-is {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+.what-is-content.centered {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.what-is-intro p {
+  font-size: var(--text-body-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-lg);
+}
+
+.what-is-section {
+  margin: var(--space-3xl) 0;
+}
+
+.what-is-section h3 {
+  margin-bottom: var(--space-xl);
+  font-size: var(--text-h3);
+}
+
+.card-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.card-item {
+  background: white;
+  padding: var(--space-xl);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-item p {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: 1.6;
+  padding: var(--space-sm);
+}
+
+.what-is-adaptation {
+  font-size: var(--text-body-lg);
+  font-style: italic;
+  margin-top: var(--space-xl);
+  color: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+  .card-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-item {
+    border-radius: var(--radius-lg);
+    aspect-ratio: auto;
+    padding: var(--space-lg);
+  }
+}
+
 /* FAQ Page
    ========================================================================== */
 .faq-section {

@@ -22,47 +22,44 @@ title: "{{ program.name }} - vaemptîness"
 {% if program.whatIs %}
 <section class="program-what-is">
   <div class="container">
-    <h2 class="section-title">{{ program.whatIs.title }}</h2>
+    <div class="what-is-content centered">
+      <h2 class="section-title">{{ program.whatIs.title }}</h2>
 
-    <div class="what-is-intro">
-      {% for paragraph in program.whatIs.intro %}
-      <p>{{ paragraph }}</p>
-      {% endfor %}
-    </div>
-
-    <p class="quote-large">{{ program.whatIs.quote1 }}</p>
-
-    <div class="what-is-helps">
-      <h3>{{ program.whatIs.helps.title }}</h3>
-      <ul>
-        {% for item in program.whatIs.helps.items %}
-        <li>{{ item }}</li>
+      <div class="what-is-intro">
+        {% for paragraph in program.whatIs.intro %}
+        <p>{{ paragraph }}</p>
         {% endfor %}
-      </ul>
-    </div>
+      </div>
 
-    <p class="quote-large">{{ program.whatIs.quote2 }}</p>
+      <p class="quote-large">{{ program.whatIs.quote1 }}</p>
 
-    <div class="what-is-training">
-      <h3>{{ program.whatIs.training.title }}</h3>
-      <ul>
-        {% for item in program.whatIs.training.items %}
-        <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-    </div>
+      <div class="what-is-section">
+        <h3>{{ program.whatIs.helps.title }}</h3>
+        <div class="card-items-grid">
+          {% for item in program.whatIs.helps.items %}
+          <div class="card-item">
+            <p>{{ item }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
 
-    <p class="quote-medium">{{ program.whatIs.quote3 }}</p>
+      <p class="quote-large">{{ program.whatIs.quote2 }}</p>
 
-    <p class="what-is-adaptation">{{ program.whatIs.adaptation }}</p>
+      <div class="what-is-section">
+        <h3>{{ program.whatIs.training.title }}</h3>
+        <div class="card-items-grid">
+          {% for item in program.whatIs.training.items %}
+          <div class="card-item">
+            <p>{{ item }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
 
-    <div class="what-is-impact">
-      <h3>{{ program.whatIs.impact.title }}</h3>
-      <ul>
-        {% for item in program.whatIs.impact.items %}
-        <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
+      <p class="quote-medium">{{ program.whatIs.quote3 }}</p>
+
+      <p class="what-is-adaptation">{{ program.whatIs.adaptation }}</p>
     </div>
   </div>
 </section>
