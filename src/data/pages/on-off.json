@@ -33,18 +33,22 @@
       "title": "Ideas clave",
       "items": [
         {
+          "icon": "fa-solid fa-arrows-spin",
           "title": "Reacciones antiguas en situaciones nuevas",
           "description": "El cerebro convierte ideas repetidas en programas automáticos que obedecemos sin analizar."
         },
         {
+          "icon": "fa-solid fa-user-secret",
           "title": "Saboteadores sin supervisión",
           "description": "Hábitos emocionales y patrones conductuales que hemos alimentado sin darnos cuenta."
         },
         {
+          "icon": "fa-solid fa-toggle-off",
           "title": "Desactivar, no luchar",
           "description": "Al identificarlos, recuperamos la capacidad de elegir qué voz interna dejamos encendida."
         },
         {
+          "icon": "fa-solid fa-spa",
           "title": "Calma independiente del entorno",
           "description": "La claridad ya no depende de estímulos externos, sino de nuestra habilidad para desactivar patrones."
         }

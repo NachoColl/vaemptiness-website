@@ -32,11 +32,14 @@ layout: base.njk
 <section class="onoff-highlights">
   <div class="container">
     <h2 class="section-title">{{ pageData.highlights.title }}</h2>
-    <div class="highlights-grid">
+    <div class="pillars-grid">
       {% for item in pageData.highlights.items %}
-      <div class="highlight-card">
-        <h3 class="highlight-title">{{ item.title }}</h3>
-        <p class="highlight-description">{{ item.description }}</p>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <i class="{{ item.icon }}" aria-hidden="true"></i>
+        </div>
+        <h3 class="pillar-title">{{ item.title }}</h3>
+        <p class="pillar-description">{{ item.description }}</p>
       </div>
       {% endfor %}
     </div>

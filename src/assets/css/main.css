@@ -1403,6 +1403,11 @@ main {
   background: var(--color-primary-bg);
 }
 
+/* Override CTA background on on-off page to use gray for proper alternation */
+.onoff-page .cta-section {
+  background: var(--color-primary-bg);
+}
+
 .cta-content {
   max-width: 600px;
   margin: 0 auto;
@@ -2030,41 +2035,6 @@ main {
 .onoff-highlights {
   padding: var(--space-3xl) 0;
   background: var(--color-accent-cream);
-}
-
-.highlights-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-lg);
-}
-
-@media (min-width: 768px) {
-  .highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.highlight-card {
-  background: white;
-  padding: var(--space-xl);
-  border-radius: var(--radius-lg);
-  transition: transform var(--transition-base);
-}
-
-.highlight-card:hover {
-  transform: translateY(-4px);
-}
-
-.highlight-title {
-  font-size: var(--text-h4);
-  margin-bottom: var(--space-md);
-  color: var(--color-accent-rust);
-}
-
-.highlight-description {
-  font-size: var(--text-body);
-  line-height: 1.6;
-  margin: 0;
 }
 
 /* FAQ Page
