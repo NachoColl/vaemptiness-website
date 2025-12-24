@@ -35,17 +35,17 @@
         }
       ],
       "principlesAction": {
-        "text": "Aprende a reconocer los patrones automáticos que sabotean tu claridad mental.",
-        "buttonText": "on-off",
-        "buttonUrl": "/on-off/"
+        "text": "Implementa herramientas, identifica a los \"saboteadores\" que distorsionan la calma mental… apaga el piloto automático.",
+        "buttonText": "Conocer más",
+        "buttonUrl": "/aprendizaje-y-metodologia/"
       },
       "philosophy": "No se trata de pensar más, sino mejor"
     },
     "learningIntro": {
       "text": "Un enfoque que fusiona teoría y práctica en cada experiencia, donde el aprendizaje sucede mientras lo vives.",
-      "quote": "\"No memorizas conceptos, <br class=\"desktop-break\">los experimentas\"",
-      "buttonText": "Conocer más",
-      "buttonUrl": "/aprendizaje-y-metodologia/"
+      "quote": "\"Aprende a reconocer los patrones automáticos que sabotean tu claridad mental.\"",
+      "buttonText": "on-off",
+      "buttonUrl": "/on-off/"
     },
     "philosophy": {
       "quote": "texto reset - hola",
