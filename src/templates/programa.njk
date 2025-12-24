@@ -19,6 +19,55 @@ title: "{{ program.name }} - vaemptîness"
   </div>
 </section>
 
+{% if program.whatIs %}
+<section class="program-what-is">
+  <div class="container">
+    <h2 class="section-title">{{ program.whatIs.title }}</h2>
+
+    <div class="what-is-intro">
+      {% for paragraph in program.whatIs.intro %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+
+    <p class="quote-large">{{ program.whatIs.quote1 }}</p>
+
+    <div class="what-is-helps">
+      <h3>{{ program.whatIs.helps.title }}</h3>
+      <ul>
+        {% for item in program.whatIs.helps.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <p class="quote-large">{{ program.whatIs.quote2 }}</p>
+
+    <div class="what-is-training">
+      <h3>{{ program.whatIs.training.title }}</h3>
+      <ul>
+        {% for item in program.whatIs.training.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <p class="quote-medium">{{ program.whatIs.quote3 }}</p>
+
+    <p class="what-is-adaptation">{{ program.whatIs.adaptation }}</p>
+
+    <div class="what-is-impact">
+      <h3>{{ program.whatIs.impact.title }}</h3>
+      <ul>
+        {% for item in program.whatIs.impact.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if program.pillars %}
 <section class="program-pillars">
   <div class="container">

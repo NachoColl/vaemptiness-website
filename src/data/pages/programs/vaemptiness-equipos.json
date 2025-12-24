@@ -22,6 +22,46 @@
     "subtitle": "Programa para equipos de trabajo",
     "description": "En entornos de alta exigencia, no siempre falta talento. Sobra ruido."
   },
+  "whatIs": {
+    "title": "¿Que es vaemptîness equipos?",
+    "intro": [
+      "Es un entrenamiento mental, aplicado a equipos de trabajo que buscan claridad mental, concentración y foco sostenido para la productividad.",
+      "Transforma la dinámica grupal desde la conciencia individual hacia el rendimiento compartido."
+    ],
+    "quote1": "No se trata de hacer más. Se trata de crear espacio para la creatividad y el bienestar colectivo.",
+    "helps": {
+      "title": "Ayuda a los equipos a:",
+      "items": [
+        "Reducir la sobrecarga mental y el estrés crónico laboral, (Burnout)",
+        "Mejorar la concentración y la calidad de la atención",
+        "Responder con asertividad, no desde la reactividad",
+        "Detectar los patrones de pensamiento automático que dificultan la evolución colectiva."
+      ]
+    },
+    "quote2": "Cuando hay espacio interno, aparece la precisión. El alto rendimiento sostenible no nace de la tensión constante, sino de habitar el momento presente.",
+    "training": {
+      "title": "vaemptîness entrena a los equipos para:",
+      "items": [
+        "Habitar el momento con mayor concentración y calma",
+        "Regular el estrés laboral en tiempo real",
+        "Comunicar con más empatía y menos fricción",
+        "Tomar decisiones alineadas, incluso en contextos complejos",
+        "Ambiente de trabajo más equilibrado."
+      ]
+    },
+    "quote3": "Menos interferencias internas. Más impacto colectivo.",
+    "adaptation": "vaemptîness se adapta a entornos corporativos y de liderazgo donde el tiempo es limitado y la exigencia es alta.",
+    "impact": {
+      "title": "El impacto (beneficios)",
+      "items": [
+        "Equipos más enfocados.",
+        "Decisiones más claras.",
+        "Mejor comunicación entre miembros del equipo.",
+        "Colaboraciones más conscientes.",
+        "Mayor eficiencia en reuniones y toma de decisiones."
+      ]
+    }
+  },
   "pillars": [
     {
       "title": "Comunicación Consciente",
