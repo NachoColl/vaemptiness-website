@@ -20,7 +20,7 @@
     "intro": {
       "title": "Patrones automáticos",
       "firstParagraphs": [
-        "Muchos de nuestros pensamientos no pesan por lo que dicen, sino por el tiempo que llevan circulando sin supervisión. Cuando una idea se repite durante años, el cerebro la convierte en un programa automático: deja de analizarla y empieza simplemente a obedecerla. Así, terminamos viviendo reacciones antiguas en situaciones nuevas.",
+        "Muchos de nuestros pensamientos no pesan por lo que dicen, sino por el tiempo que llevan circulando sin supervisión. Cuando una idea se repite durante años, la mente la convierte en un programa automático: deja de analizarla y empieza simplemente a obedecerla. Así, terminamos viviendo reacciones antiguas en situaciones nuevas.",
         "Estos 'saboteadores' mentales actúan como filtros distorsionados: exageran amenazas, reducen nuestra calma y activan un piloto automático que no siempre juega a nuestro favor. No son pensamientos conscientes, sino hábitos emocionales y patrones conductuales que hemos alimentado sin darnos cuenta."
       ],
       "quote": "\"No se trata de luchar contra la mente, sino de reprogramar su inercia\"",
@@ -35,7 +35,7 @@
         {
           "icon": "fa-solid fa-arrows-spin",
           "title": "Reacciones antiguas en situaciones nuevas",
-          "description": "El cerebro convierte ideas repetidas en programas automáticos que obedecemos sin analizar."
+          "description": "La mente convierte ideas repetidas en programas automáticos que obedecemos sin analizar."
         },
         {
           "icon": "fa-solid fa-user-secret",
@@ -50,7 +50,7 @@
         {
           "icon": "fa-solid fa-spa",
           "title": "Calma independiente del entorno",
-          "description": "La claridad ya no depende de estímulos externos, sino de nuestra habilidad para desactivar patrones."
+          "description": "La claridad ya no depende de ningún estímulo, sino de nuestra habilidad para desactivar patrones."
         }
       ]
     },
