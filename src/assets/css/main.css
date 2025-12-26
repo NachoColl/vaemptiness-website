@@ -2317,23 +2317,16 @@ main {
   font-weight: 500;
 }
 
-.post-intro,
 .post-footer-section {
   padding: var(--section-spacing) 0;
 }
 
 .post-body {
-  padding: var(--space-2xl) 0 var(--section-spacing) 0;
+  padding: var(--section-spacing) 0;
 }
 
 .post-conclusion-section {
   padding: var(--space-lg) 0 var(--section-spacing) 0;
-}
-
-.post-introduction {
-  font-size: var(--text-body-lg);
-  color: var(--color-hover);
-  line-height: 1.8;
 }
 
 .post-section {
