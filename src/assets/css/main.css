@@ -2234,11 +2234,13 @@ main {
 
 .post-card-content {
   padding: var(--space-lg);
+  text-align: left;
 }
 
-.post-meta {
+.post-card .post-meta {
   display: flex;
   gap: var(--space-md);
+  justify-content: flex-start;
   font-size: var(--text-small);
   color: var(--color-hover);
   margin-bottom: var(--space-md);
