@@ -30,16 +30,6 @@ title: "{{ post.title }} - Blog vaemptîness"
     </div>
   </section>
 
-  <section class="post-intro">
-    <div class="container">
-      <div class="content-section centered">
-        {% if post.content.introduction %}
-        <p class="post-introduction">{{ post.content.introduction | safe }}</p>
-        {% endif %}
-      </div>
-    </div>
-  </section>
-
   {% if post.content.sections %}
   <section class="post-body">
     <div class="container">
