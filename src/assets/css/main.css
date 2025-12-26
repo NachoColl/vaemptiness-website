@@ -768,8 +768,16 @@ main {
 .hero-brand {
   display: block;
   font-size: var(--text-hero);
-  font-weight: 700;
   margin-bottom: var(--space-sm);
+  font-family: var(--font-body);
+}
+
+.hero-brand-va {
+  font-weight: 700;
+}
+
+.hero-brand-emptiness {
+  font-weight: 300;
 }
 
 .hero-tagline {
