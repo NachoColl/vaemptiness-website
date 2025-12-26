@@ -2264,7 +2264,7 @@ main {
    ========================================================================== */
 .post-hero {
   padding: calc(4rem + var(--space-3xl)) 0 var(--space-2xl);
-  text-align: center;
+  text-align: left;
   background: var(--color-accent-cream);
 }
 
@@ -2275,7 +2275,7 @@ main {
 .post-meta {
   display: flex;
   gap: var(--space-sm);
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: var(--space-sm);
   font-size: var(--text-small);
@@ -2296,14 +2296,14 @@ main {
   font-size: var(--text-body-lg);
   color: var(--color-hover);
   max-width: 700px;
-  margin: 0 auto var(--space-lg);
+  margin: 0 0 var(--space-lg) 0;
 }
 
 .post-tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: var(--space-lg);
 }
 
