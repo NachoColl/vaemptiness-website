@@ -1789,6 +1789,16 @@ main {
   background: var(--color-accent-cream);
 }
 
+/* Pillars section subtitle styling */
+.program-pillars .section-title {
+  margin-bottom: var(--space-md); /* Reduce margin when subtitle follows */
+}
+
+.program-pillars .program-hero-subtitle {
+  text-align: center;
+  margin-bottom: var(--space-2xl); /* Space before pillars grid */
+}
+
 .program-session h2,
 .program-outcomes h2 {
   margin-bottom: var(--space-xl);
