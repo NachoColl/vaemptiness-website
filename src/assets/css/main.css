@@ -761,8 +761,17 @@ main {
   z-index: 1;
 }
 
-.hero-title {
+/* Brand block groups circle and title together */
+.hero-brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl); /* 4rem / 64px consistent spacing between circle and text */
   margin-bottom: var(--space-xl);
+}
+
+.hero-title {
+  margin-bottom: 0; /* Spacing handled by hero-brand-block gap */
 }
 
 .hero-brand {
@@ -773,6 +782,7 @@ main {
 }
 
 .hero-brand-va {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
 
@@ -809,16 +819,12 @@ main {
 
 /* Hero circle animation decoration */
 .hero-circle-animation {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
   width: 200px;
   height: 200px;
   color: var(--color-primary-text);
   opacity: 0.6;
-  z-index: 0;
   pointer-events: none;
+  flex-shrink: 0; /* Prevent circle from shrinking */
 }
 
 .hero-circle-animation circle {
@@ -885,55 +891,56 @@ main {
   .hero-circle-animation {
     width: 150px;
     height: 150px;
-    top: 10%;
     opacity: 0.4;
   }
 
-  /* Bring hero content closer to circle on mobile */
-  .hero-content {
-    margin-top: -3rem;
+  /* Reduce gap between circle and text on mobile */
+  .hero-brand-block {
+    gap: var(--space-lg); /* 2rem / 32px on mobile */
   }
 }
 
-/* Shorter desktop screens - reduce circle top spacing */
+/* Shorter desktop screens - adjust brand block top spacing */
 @media (min-width: 769px) and (max-height: 900px) {
-  .hero-circle-animation {
-    top: 7%;
+  .hero-brand-block {
+    margin-top: -2rem;
   }
 }
 
 @media (min-width: 769px) and (max-height: 715px) {
-  .hero-circle-animation {
-    top: 5%;
+  .hero-brand-block {
+    margin-top: -4rem;
   }
 }
 
 @media (min-width: 769px) and (max-height: 650px) {
-  .hero-circle-animation {
-    top: 3%;
+  .hero-brand-block {
+    margin-top: -6rem;
   }
 }
 
-/* Shorter mobile screens - reduce circle top spacing */
+/* Shorter mobile screens - adjust brand block top spacing */
 @media (max-width: 768px) and (max-height: 800px) {
-  .hero-circle-animation {
-    top: 4%;
+  .hero-brand-block {
+    margin-top: -2rem;
   }
+}
 
-  .hero-content {
-    margin-top: -4rem;
+@media (max-width: 768px) and (max-height: 700px) {
+  .hero-brand-block {
+    margin-top: -3rem;
   }
 }
 
 @media (max-width: 768px) and (max-height: 600px) {
   .hero-circle-animation {
-    top: 2%;
     width: 120px;
     height: 120px;
   }
 
-  .hero-content {
-    margin-top: -5rem;
+  .hero-brand-block {
+    margin-top: -4rem;
+    gap: var(--space-md); /* 1.5rem / 24px on very small screens */
   }
 }
 

@@ -3,25 +3,29 @@ layout: base.njk
 ---
 
 <section class="hero">
-  <!-- Circle stroke animation decoration -->
-  <svg class="hero-circle-animation" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle
-      cx="100"
-      cy="100"
-      r="95"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-    />
-  </svg>
-
   <div class="container">
     <div class="hero-content">
-      <h1 class="hero-title">
-        <span class="hero-brand"><span class="hero-brand-va">va</span><span class="hero-brand-emptiness">emptîness</span></span>
-        <span class="hero-tagline">{{ pages.home.content.hero.tagline }}</span>
-      </h1>
+      <!-- Circle and brand grouped together -->
+      <div class="hero-brand-block">
+        <!-- Circle stroke animation decoration -->
+        <svg class="hero-circle-animation" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle
+            cx="100"
+            cy="100"
+            r="95"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+
+        <h1 class="hero-title">
+          <span class="hero-brand"><span class="hero-brand-va">va</span><span class="hero-brand-emptiness">emptîness</span></span>
+          <span class="hero-tagline">{{ pages.home.content.hero.tagline }}</span>
+        </h1>
+      </div>
+
       <p class="hero-subtitle">{{ pages.home.content.hero.subtitle | safe }}</p>
     </div>
 

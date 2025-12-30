@@ -52,7 +52,7 @@
     },
     "philosophy": {
       "title": "Interrumpe el ciclo",
-      "text": "Limpia el ruido mental y despeja la mente para abrir un espacio de claridad.",
+      "text": "Limpia el ruido mental. Despeja y abre espacio para optimizar el contenido.",
       "highlight": "El reset limpia. El restart reordena.",
       "buttonText": "Haz reset",
       "buttonUrl": "/reset/"
