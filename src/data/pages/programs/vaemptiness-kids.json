@@ -100,5 +100,11 @@
         "Relacionarse con otros desde la calma"
       ]
     }
-  }
+  },
+  "testimonials": [
+    {
+      "quote": "Nuestro hijo tenía muchas dificultades para regularse emocionalmente.\n\nEn vaemptîness no se le pidió que se \"portara bien\", sino que aprendiera a reconocer lo que sentía.\n\nHemos visto más calma, más conciencia corporal y una forma más amable de relacionarse con sus emociones.",
+      "author": "Padres, versión Kids"
+    }
+  ]
 }

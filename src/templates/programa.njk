@@ -151,6 +151,36 @@ title: "{{ program.name }} - vaemptîness"
 </section>
 {% endif %}
 
+{% if program.testimonials %}
+<section class="program-testimonials">
+  <div class="container">
+    <div class="testimonials-carousel">
+      <div class="testimonials-track">
+        {% for testimonial in program.testimonials %}
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <i class="fa-solid fa-quote-left testimonial-quote-icon" aria-hidden="true"></i>
+            <blockquote class="testimonial-quote">
+              <p>{{ testimonial.quote | safe | replace('\n', '</p><p>') }}</p>
+            </blockquote>
+            <cite class="testimonial-author">— {{ testimonial.author }}</cite>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      {% if program.testimonials.length > 1 %}
+      <div class="carousel-dots">
+        {% for testimonial in program.testimonials %}
+        <button class="carousel-dot {% if loop.index == 1 %}active{% endif %}" aria-label="Go to testimonial {{ loop.index }}" data-slide="{{ loop.index - 1 }}"></button>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="cta-section">
   <div class="container">
     <div class="cta-content">

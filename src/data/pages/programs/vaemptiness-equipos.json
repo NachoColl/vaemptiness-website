@@ -92,5 +92,17 @@
       "Tomar decisiones alineadas, incluso en contextos complejos",
       "Ambiente de trabajo más equilibrado."
     ]
-  }
+  },
+  "testimonials": [
+    {
+      "title": "En equipos creativos, la exigencia y la reactividad afectan directamente a la calidad del trabajo.\nvaemptîness ofrece un entrenamiento mental que favorece la atención y la colaboración del equipo en pro a una productividad que no añade carga.",
+      "quote": "vaemptîness no propone técnicas de motivación ni control mental.\nEntrena la capacidad de observar y crear espacio para la concentración, la calma mental y la antención plena.\n\nEse cambio ha tenido un impacto directo en la claridad, la toma de decisiones, la creatividad y la gestión de la presión y el estrés permanente en el trabajo.\n\nEs un proceso riguroso, silencioso y sostenido.",
+      "author": "Directivo, sector creativo"
+    },
+    {
+      "title": "Para entornos de alta exigencia vaemptîness se implementa en contextos donde la claridad, la calidad de respuesta y la estabilidad mental son factores estratégicos.\nEl programa se integra sin interferir en los procesos existentes de la organización, aportando profundidad sin ruido.",
+      "quote": "vaemptîness ofrece un marco de entrenamiento mental sólido y coherente con entornos de alta exigencia.\n\nEl programa aporta claridad, estabilidad y una mejora tangible en la calidad de la respuesta grupal, ahora el equipo rema en la misma dirección y sostiene un mismo objetivo. Menos ficción, menos conflicto, mayor foco",
+      "author": "Dirección ejecutiva"
+    }
+  ]
 }
