@@ -120,4 +120,162 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Testimonials Carousel
+  const carousel = document.querySelector('.testimonials-carousel');
+  if (carousel) {
+    const track = carousel.querySelector('.testimonials-track');
+    const slides = carousel.querySelectorAll('.testimonial-slide');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    function updateCarousel() {
+      // Move track
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      // Update dots
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateCarousel();
+      });
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swiped left
+          currentSlide = (currentSlide + 1) % totalSlides;
+        } else {
+          // Swiped right
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        }
+        updateCarousel();
+      }
+    }
+  }
 });
+
+// Blog Filters
+const filterLinks = document.querySelectorAll('.filter-link');
+
+if (filterLinks.length > 0) {
+  const postCards = document.querySelectorAll('.post-card');
+  const noResults = document.getElementById('no-results');
+
+  let selectedYear = '';
+  let selectedMonth = '';
+
+  function filterPosts() {
+    let visibleCount = 0;
+
+    postCards.forEach(card => {
+      const postDate = card.getAttribute('data-date');
+
+      if (!postDate) {
+        card.classList.add('hidden');
+        return;
+      }
+
+      const [year, month] = postDate.split('-');
+      let showCard = true;
+
+      // Filter by year
+      if (selectedYear && year !== selectedYear) {
+        showCard = false;
+      }
+
+      // Filter by month
+      if (selectedMonth && month !== selectedMonth) {
+        showCard = false;
+      }
+
+      if (showCard) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    // Show/hide no results message
+    if (visibleCount === 0) {
+      noResults.style.display = 'block';
+    } else {
+      noResults.style.display = 'none';
+    }
+  }
+
+  // Add event listeners to filter links
+  filterLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const filterType = link.getAttribute('data-filter-type');
+      const filterValue = link.getAttribute('data-filter-value');
+
+      // Handle "all" filter - clear all filters
+      if (filterType === 'all') {
+        selectedYear = '';
+        selectedMonth = '';
+
+        // Remove active from all filter links
+        filterLinks.forEach(l => l.classList.remove('active'));
+
+        // Add active only to "Todos"
+        link.classList.add('active');
+      } else {
+        // Remove active class from siblings in same row
+        const siblings = link.parentElement.querySelectorAll('.filter-link');
+        siblings.forEach(sibling => sibling.classList.remove('active'));
+
+        // Remove active from "Todos" link
+        const todosLink = document.querySelector('.filter-all');
+        if (todosLink) {
+          todosLink.classList.remove('active');
+        }
+
+        // Add active class to clicked link
+        link.classList.add('active');
+
+        // Update selected filters
+        if (filterType === 'year') {
+          selectedYear = filterValue;
+        } else if (filterType === 'month') {
+          selectedMonth = filterValue;
+        }
+      }
+
+      // Apply filters
+      filterPosts();
+    });
+  });
+}

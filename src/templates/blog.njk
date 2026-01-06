@@ -14,14 +14,39 @@ seo:
   <div class="container">
     <h1 class="page-title">Blog</h1>
     <p class="page-subtitle">Artículos sobre filosofía, práctica y entrenamiento mental</p>
+
+    <div class="blog-filters">
+      <div class="filter-row">
+        <a href="#" class="filter-link filter-all active" data-filter-type="all" data-filter-value="">Todos</a>
+      </div>
+      <div class="filter-row">
+        <a href="#" class="filter-link" data-filter-type="year" data-filter-value="2026">2026</a>
+        <a href="#" class="filter-link" data-filter-type="year" data-filter-value="2025">2025</a>
+      </div>
+      <div class="filter-row">
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="01">Enero</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="02">Febrero</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="03">Marzo</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="04">Abril</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="05">Mayo</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="06">Junio</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="07">Julio</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="08">Agosto</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="09">Septiembre</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="10">Octubre</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="11">Noviembre</a>
+        <a href="#" class="filter-link" data-filter-type="month" data-filter-value="12">Diciembre</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="blog-posts">
   <div class="container">
+
     <div class="posts-grid">
       {% for post in collections.blogFromFiles %}
-      <article class="post-card {% if post.featured %}featured{% endif %}">
+      <article class="post-card {% if post.featured %}featured{% endif %}" data-date="{{ post.date }}">
         <a href="{{ ('/blog/' + post.slug + '/') | url }}">
           <div class="post-card-image">
             <img src="{{ post.image | url }}" alt="{{ post.title }}" loading="lazy">
@@ -38,6 +63,10 @@ seo:
         </a>
       </article>
       {% endfor %}
+    </div>
+
+    <div id="no-results" class="no-results" style="display: none;">
+      <p>No se encontraron entradas para los filtros seleccionados.</p>
     </div>
   </div>
 </section>

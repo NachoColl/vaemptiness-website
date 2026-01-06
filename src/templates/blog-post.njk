@@ -40,7 +40,7 @@ title: "{{ post.title }} - Blog vaemptîness"
           {% if section.intro %}
           <p>{{ section.intro | safe }}</p>
           {% endif %}
-          {% if section.items %}
+          {% if section.items and section.items.length > 0 %}
           <ul class="blog-list-items">
             {% for item in section.items %}
             <li>{{ item | safe }}</li>

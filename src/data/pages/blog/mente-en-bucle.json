@@ -1,0 +1,117 @@
+{
+  "id": 3,
+  "slug": "mente-en-bucle",
+  "title": "Qué hacer cuando la mente entra en bucle",
+  "author": "Rosa Cano",
+  "date": "2025-10-25",
+  "excerpt": "Cuando la mente entra en bucle, intentar controlarla suele alimentar el problema. Descubre cómo crear espacio en lugar de luchar contra los pensamientos.",
+  "featured": false,
+  "image": "/assets/images/blog/mente-en-bucle.jpg",
+  "seo": {
+    "title": "Qué hacer cuando la mente entra en bucle | Blog vaemptîness",
+    "description": "Cuando la mente entra en bucle, intentar controlarla suele alimentar el problema. Descubre cómo crear espacio en lugar de luchar contra los pensamientos.",
+    "keywords": "bucle mental, pensamientos repetitivos, rumiación mental, entrenamiento mental, observación",
+    "ogImage": "/assets/images/blog/mente-en-bucle.jpg",
+    "ogType": "article"
+  },
+  "content": {
+    "sections": [
+      {
+        "title": "",
+        "intro": "Cuando la mente entra en bucle, muchas personas sienten que <strong>no pueden dejar de pensar</strong>. Los mismos pensamientos aparecen una y otra vez, generando cansancio, ansiedad y una sensación de bloqueo mental.\n\nEste fenómeno suele estar relacionado con la <strong>rumiación mental</strong>, un patrón de pensamientos repetitivos que no conduce a una solución, pero sí aumenta el malestar.\n\nLa pregunta habitual es:\n¿qué puedo hacer cuando mi mente no para?",
+        "items": [],
+        "closing": ""
+      },
+      {
+        "title": "Por qué intentar \"parar la mente\" no funciona",
+        "intro": "El primer impulso suele ser intentar controlar los pensamientos:",
+        "items": [
+          "distraerse,",
+          "pensar en otra cosa,",
+          "forzarse a \"pensar en positivo\",",
+          "analizar aún más el problema."
+        ],
+        "closing": "El problema es que estos intentos suelen <strong>alimentar el bucle</strong>.\n\nCuanto más intentas que la mente se calle, más presente se vuelve el pensamiento. No porque estés haciendo algo mal, sino porque <strong>la mente interpreta el control como una señal de amenaza</strong>."
+      },
+      {
+        "title": "La mente no necesita ser controlada, necesita espacio",
+        "intro": "Cuando la mente entra en bucle, el problema no es el contenido de los pensamientos, sino la falta de espacio entre tú y lo que aparece en la mente.\n\nSin espacio:",
+        "items": [
+          "todo se siente urgente,",
+          "todo parece importante,",
+          "todo pesa más."
+        ],
+        "closing": "Crear espacio no significa eliminar pensamientos.\nSignifica <strong>cambiar la relación con ellos</strong>."
+      },
+      {
+        "title": "Primer paso: reconocer el bucle",
+        "intro": "El primer gesto útil no es cambiar nada, sino reconocer que estás rumiando.\n\nAlgunas señales claras:",
+        "items": [
+          "el pensamiento se repite sin aportar nada nuevo,",
+          "revisas mentalmente la misma situación una y otra vez,",
+          "sientes tensión corporal o cansancio mental."
+        ],
+        "closing": "<strong>Reconocer el bucle</strong> ya introduce una pequeña distancia.\nNo es una solución, pero es el inicio del entrenamiento."
+      },
+      {
+        "title": "Segundo paso: observar sin intervenir",
+        "intro": "Cuando notes que la mente entra en bucle, prueba a observar el pensamiento como un evento mental, no como un problema que tienes que resolver en ese momento.\n\nNo se trata de:",
+        "items": [
+          "discutir con el pensamiento,",
+          "analizarlo,",
+          "buscar una respuesta mejor."
+        ],
+        "closing": "Se trata de <strong>mirarlo sin empujarlo</strong>.\n\nEse gesto, aunque parezca simple, reduce la fusión con la mente."
+      },
+      {
+        "title": "Tercer paso: llevar la atención al cuerpo",
+        "intro": "La rumiación no ocurre solo en la cabeza.\nTambién se sostiene en el cuerpo.\n\nCuando la mente repite:",
+        "items": [
+          "el cuerpo suele estar tenso,",
+          "la respiración se vuelve superficial,",
+          "la atención se estrecha."
+        ],
+        "closing": "Llevar la atención a sensaciones corporales simples —como el contacto de los pies con el suelo o el ritmo de la respiración— ayuda a <strong>ampliar el campo de atención</strong>.\n\nNo es una técnica de relajación, es una <strong>forma de salir del bucle mental</strong>."
+      },
+      {
+        "title": "Pensar menos no es la solución",
+        "intro": "Muchas personas buscan dejar de pensar.\nPero el objetivo no es pensar menos, sino no quedar atrapado en el pensamiento.\n\nCuando hay observación:",
+        "items": [
+          "los pensamientos siguen apareciendo,",
+          "pero pierden peso,",
+          "ya no arrastran de la misma manera."
+        ],
+        "closing": "Ahí empieza a cambiar la experiencia."
+      },
+      {
+        "title": "El entrenamiento mental empieza en lo cotidiano",
+        "intro": "Salir del bucle no es algo que se logre una vez y ya está.\nEs una capacidad que se entrena.\n\nCada vez que:",
+        "items": [
+          "notas que estás rumiando,",
+          "observas sin intervenir,",
+          "creas un poco de espacio,"
+        ],
+        "closing": "estás entrenando la relación con tu mente.\n\nNo hace falta hacerlo perfecto.\nHace falta hacerlo de forma repetida."
+      },
+      {
+        "title": "Menos ruido, más espacio",
+        "intro": "Cuando la mente entra en bucle, no necesitas una respuesta mejor.\nNecesitas más espacio.\n\nEl entrenamiento mental no consiste en ganar una batalla contra los pensamientos, sino en dejar de luchar con ellos.\n\nEn ese espacio:",
+        "items": [
+          "el ruido disminuye,",
+          "la claridad aparece,",
+          "la mente se ordena sola."
+        ],
+        "closing": ""
+      }
+    ],
+    "conclusion": "",
+    "cta": ""
+  },
+  "tags": [
+    "bucle mental",
+    "pensamientos repetitivos",
+    "rumiación",
+    "entrenamiento mental",
+    "observación"
+  ]
+}
