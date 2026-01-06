@@ -2356,6 +2356,10 @@ main {
   margin-bottom: var(--space-xs);
 }
 
+.filter-row-months {
+  display: none;
+}
+
 .filter-link {
   font-size: var(--text-small);
   color: var(--color-hover);
