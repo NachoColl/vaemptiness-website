@@ -2358,6 +2358,13 @@ main {
 
 .filter-row-months {
   display: none;
+  gap: var(--space-xs);
+  margin-bottom: 0;
+}
+
+.filter-row-months .filter-link {
+  line-height: 1;
+  padding: var(--space-xs);
 }
 
 .filter-link {
