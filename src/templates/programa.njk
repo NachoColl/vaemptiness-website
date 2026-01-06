@@ -169,7 +169,7 @@ title: "{{ program.name }} - vaemptîness"
         {% endfor %}
       </div>
 
-      {% if program.testimonials.length > 1 %}
+      {% if program.testimonials | length > 1 %}
       <div class="carousel-dots">
         {% for testimonial in program.testimonials %}
         <button class="carousel-dot {% if loop.index == 1 %}active{% endif %}" aria-label="Go to testimonial {{ loop.index }}" data-slide="{{ loop.index - 1 }}"></button>
