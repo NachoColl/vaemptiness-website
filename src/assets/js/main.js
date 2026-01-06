@@ -190,6 +190,7 @@ const filterLinks = document.querySelectorAll('.filter-link');
 if (filterLinks.length > 0) {
   const postCards = document.querySelectorAll('.post-card');
   const noResults = document.getElementById('no-results');
+  const monthsRow = document.querySelector('.filter-row-months');
 
   let selectedYear = '';
   let selectedMonth = '';
@@ -247,6 +248,11 @@ if (filterLinks.length > 0) {
         selectedYear = '';
         selectedMonth = '';
 
+        // Hide months row
+        if (monthsRow) {
+          monthsRow.style.display = 'none';
+        }
+
         // Remove active from all filter links
         filterLinks.forEach(l => l.classList.remove('active'));
 
@@ -269,6 +275,16 @@ if (filterLinks.length > 0) {
         // Update selected filters
         if (filterType === 'year') {
           selectedYear = filterValue;
+          selectedMonth = ''; // Clear month selection when year changes
+
+          // Show months row
+          if (monthsRow) {
+            monthsRow.style.display = 'flex';
+          }
+
+          // Remove active from all month links
+          const monthLinks = monthsRow ? monthsRow.querySelectorAll('.filter-link') : [];
+          monthLinks.forEach(ml => ml.classList.remove('active'));
         } else if (filterType === 'month') {
           selectedMonth = filterValue;
         }
