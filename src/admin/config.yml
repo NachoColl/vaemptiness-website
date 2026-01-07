@@ -199,3 +199,397 @@ collections:
                   - {label: "Name", name: "name", widget: "string"}
                   - {label: "Role", name: "role", widget: "string"}
                   - {label: "Photo", name: "image", widget: "image"}
+
+      # Contact Page
+      - label: "Contacto (Contact)"
+        name: "contacto"
+        file: "src/data/pages/contacto.json"
+        preview_path: "/contacto/"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Slug", name: "slug", widget: "string", default: "contacto"}
+              - {label: "Permalink", name: "permalink", widget: "string", default: "/contacto/"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "contact-page"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Keywords", name: "keywords", widget: "string"}
+                  - {label: "OG Image", name: "ogImage", widget: "image"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Form"
+                name: "form"
+                widget: "object"
+                fields:
+                  - label: "Topics"
+                    name: "topics"
+                    widget: "list"
+                    field: {label: "Topic", name: "topic", widget: "string"}
+                  - {label: "Getform Endpoint", name: "getformEndpoint", widget: "string"}
+
+      # FAQ Page
+      - label: "FAQ (Preguntas Frecuentes)"
+        name: "faq"
+        file: "src/data/pages/faq.json"
+        preview_path: "/faq/"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Slug", name: "slug", widget: "string", default: "faq"}
+              - {label: "Permalink", name: "permalink", widget: "string", default: "/faq/"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "faq-page"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Keywords", name: "keywords", widget: "string"}
+                  - {label: "OG Image", name: "ogImage", widget: "image"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - label: "Categories"
+                name: "categories"
+                widget: "list"
+                fields:
+                  - {label: "ID", name: "id", widget: "string"}
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+                  - label: "Questions"
+                    name: "questions"
+                    widget: "list"
+                    fields:
+                      - {label: "ID", name: "id", widget: "string"}
+                      - {label: "Question", name: "question", widget: "text"}
+                      - {label: "Answer", name: "answer", widget: "text"}
+
+      # Aprendizaje y Metodología Page
+      - label: "Aprendizaje y Metodología (Learning)"
+        name: "aprendizaje-y-metodologia"
+        file: "src/data/pages/aprendizaje-y-metodologia.json"
+        preview_path: "/aprendizaje-y-metodologia/"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Slug", name: "slug", widget: "string", default: "aprendizaje-y-metodologia"}
+              - {label: "Permalink", name: "permalink", widget: "string", default: "/aprendizaje-y-metodologia/"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "learning-page"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Keywords", name: "keywords", widget: "string"}
+                  - {label: "OG Image", name: "ogImage", widget: "image"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - label: "Intro"
+                name: "intro"
+                widget: "object"
+                fields:
+                  - {label: "Question", name: "question", widget: "string"}
+                  - {label: "Text", name: "text", widget: "text"}
+                  - {label: "Quote", name: "quote", widget: "string"}
+              - label: "Pathways"
+                name: "pathways"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - {label: "Letter", name: "letter", widget: "string"}
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Quote", name: "quote", widget: "string"}
+              - label: "CTA"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
+
+      # ON/OFF Page
+      - label: "ON/OFF (Piloto Automático)"
+        name: "on-off"
+        file: "src/data/pages/on-off.json"
+        preview_path: "/on-off/"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Slug", name: "slug", widget: "string", default: "on-off"}
+              - {label: "Permalink", name: "permalink", widget: "string", default: "/on-off/"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "onoff-page"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Keywords", name: "keywords", widget: "string"}
+                  - {label: "OG Image", name: "ogImage", widget: "image"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - label: "Intro"
+                name: "intro"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "First Paragraphs"
+                    name: "firstParagraphs"
+                    widget: "list"
+                    field: {label: "Paragraph", name: "paragraph", widget: "text"}
+                  - {label: "Quote", name: "quote", widget: "string"}
+                  - label: "Last Paragraphs"
+                    name: "lastParagraphs"
+                    widget: "list"
+                    field: {label: "Paragraph", name: "paragraph", widget: "text"}
+              - label: "Highlights"
+                name: "highlights"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - {label: "Icon", name: "icon", widget: "string", hint: "Font Awesome class (e.g., fa-solid fa-spa)"}
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Description", name: "description", widget: "text"}
+              - label: "CTA"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
+
+      # Reset Page
+      - label: "Reset (Reinicio Mental)"
+        name: "reset"
+        file: "src/data/pages/reset.json"
+        preview_path: "/reset/"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Slug", name: "slug", widget: "string", default: "reset"}
+              - {label: "Permalink", name: "permalink", widget: "string", default: "/reset/"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "reset-page"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Keywords", name: "keywords", widget: "string"}
+                  - {label: "OG Image", name: "ogImage", widget: "image"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - label: "Intro"
+                name: "intro"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Paragraphs"
+                    name: "paragraphs"
+                    widget: "list"
+                    field: {label: "Paragraph", name: "paragraph", widget: "text"}
+                  - {label: "Quote", name: "quote", widget: "string"}
+              - label: "Reset Sections"
+                name: "resetSections"
+                widget: "list"
+                fields:
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Image Alt", name: "imageAlt", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Action", name: "action", widget: "string"}
+              - label: "CTA"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
+
+      # Privacy Policy Page
+      - label: "Política de Privacidad (Privacy)"
+        name: "politica-privacidad"
+        file: "src/data/pages/politica-privacidad.json"
+        preview_path: "/politica-privacidad/"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Slug", name: "slug", widget: "string", default: "politica-privacidad"}
+              - {label: "Permalink", name: "permalink", widget: "string", default: "/politica-privacidad/"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "legal-page"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Robots", name: "robots", widget: "string", default: "noindex, follow"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Content", name: "content", widget: "text", hint: "HTML allowed"}
+              - {label: "Footer", name: "footer", widget: "text", required: false, hint: "HTML allowed"}
+              - label: "CTA"
+                name: "cta"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
+
+      # Terms and Conditions Page
+      - label: "Términos y Condiciones (Terms)"
+        name: "terminos-condiciones"
+        file: "src/data/pages/terminos-condiciones.json"
+        preview_path: "/terminos-condiciones/"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Slug", name: "slug", widget: "string", default: "terminos-condiciones"}
+              - {label: "Permalink", name: "permalink", widget: "string", default: "/terminos-condiciones/"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "legal-page"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Robots", name: "robots", widget: "string", default: "noindex, follow"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Content", name: "content", widget: "text", hint: "HTML allowed"}
+              - {label: "Footer", name: "footer", widget: "text", required: false, hint: "HTML allowed"}
+              - label: "CTA"
+                name: "cta"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
