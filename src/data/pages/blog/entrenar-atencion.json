@@ -1,19 +1,17 @@
 {
-  "id": 5,
-  "slug": "entrenar-atencion",
-  "title": "Entrenar la atención: por qué es clave en un mundo de ruido",
-  "author": "Rosa Cano",
-  "date": "2025-11-20",
   "excerpt": "En un mundo de estímulos constantes, entrenar la atención se ha convertido en una necesidad fundamental para reducir el ruido mental y responder con claridad.",
+  "author": "Rosa Cano",
+  "slug": "entrenar-atencion",
   "featured": false,
-  "image": "/assets/images/blog/entrenar-atencion.jpg",
-  "seo": {
-    "title": "Entrenar la atención: por qué es clave en un mundo de ruido | Blog vaemptîness",
-    "description": "En un mundo de estímulos constantes, entrenar la atención se ha convertido en una necesidad fundamental para reducir el ruido mental y responder con claridad.",
-    "keywords": "atención, concentración, ruido mental, dispersión, entrenamiento mental",
-    "ogImage": "/assets/images/blog/entrenar-atencion.jpg",
-    "ogType": "article"
-  },
+  "date": "2025-11-20",
+  "title": "Entrenar la atención: por qué es clave en un mundo de ruido",
+  "tags": [
+    "atención",
+    "concentración",
+    "ruido mental",
+    "dispersión",
+    "entrenamiento mental"
+  ],
   "content": {
     "sections": [
       {
@@ -106,11 +104,13 @@
     "conclusion": "",
     "cta": ""
   },
-  "tags": [
-    "atención",
-    "concentración",
-    "ruido mental",
-    "dispersión",
-    "entrenamiento mental"
-  ]
+  "id": 5,
+  "image": "/assets/images/entrenar-la-atencion.jpeg",
+  "seo": {
+    "title": "Entrenar la atención: por qué es clave en un mundo de ruido | Blog vaemptîness",
+    "description": "En un mundo de estímulos constantes, entrenar la atención se ha convertido en una necesidad fundamental para reducir el ruido mental y responder con claridad.",
+    "keywords": "atención, concentración, ruido mental, dispersión, entrenamiento mental",
+    "ogImage": "/assets/images/blog/entrenar-atencion.jpg",
+    "ogType": "article"
+  }
 }
