@@ -56,6 +56,9 @@
 
   {% block head %}{% endblock %}
 
+  <!-- Netlify Identity Widget - Required for CMS authentication -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   <!-- Schema.org Markup -->
   {% include "schemas/local-business.njk" %}
   {% block schema %}{% endblock %}
@@ -72,5 +75,18 @@
   <!-- Scripts -->
   <script src="{{ '/assets/js/main.js' | url }}"></script>
   {% block scripts %}{% endblock %}
+
+  <!-- Netlify Identity: Redirect to admin after login -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
