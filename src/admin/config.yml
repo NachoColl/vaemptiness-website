@@ -149,9 +149,10 @@ collections:
     label_singular: "Page"
     files:
       # Homepage
-      - label: "Homepage"
+      - label: "Página de Inicio (Home)"
         name: "home"
         file: "src/data/pages/home.json"
+        preview_path: "/"
         fields:
           - label: "Hero Section"
             name: "hero"
@@ -172,9 +173,10 @@ collections:
               - {label: "Highlight Quote", name: "highlight", widget: "text"}
 
       # About Us Page
-      - label: "About Us"
+      - label: "Sobre Nosotros (About)"
         name: "sobre-nosotros"
         file: "src/data/pages/sobre-nosotros.json"
+        preview_path: "/sobre-nosotros/"
         fields:
           - label: "Hero"
             name: "hero"
