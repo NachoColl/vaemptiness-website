@@ -1,0 +1,199 @@
+# Decap CMS Configuration
+# See full documentation: https://decapcms.org/docs/configuration-options/
+
+# Backend configuration
+backend:
+  name: git-gateway  # Uses Netlify Identity + Git Gateway
+  branch: master
+
+# Media files configuration
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+# Publish mode - enables drafts/review/publish workflow
+publish_mode: editorial_workflow
+
+# Locale
+locale: 'es'
+
+# Collections - define your content types
+collections:
+  # ============================================
+  # BLOG POSTS
+  # ============================================
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "src/data/pages/blog"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "blog/{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "number", hint: "Unique numeric ID for this post"}
+      - {label: "Slug", name: "slug", widget: "string", hint: "URL-friendly version of title (e.g., 'entrenamiento-mental')"}
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Author", name: "author", widget: "string", default: "Rosa Cano"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", picker_utc: false, required: true}
+      - {label: "Excerpt", name: "excerpt", widget: "text", required: true, hint: "Short summary shown in blog listing"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Show prominently on blog page"}
+      - {label: "Featured Image", name: "image", widget: "image", required: true, hint: "Main image for blog post"}
+
+      - label: "SEO Metadata"
+        name: "seo"
+        widget: "object"
+        collapsed: false
+        fields:
+          - {label: "Page Title", name: "title", widget: "string", required: true, hint: "Title shown in browser tab and search results"}
+          - {label: "Meta Description", name: "description", widget: "text", required: true, hint: "Description for search engines (150-160 characters)"}
+          - {label: "Keywords", name: "keywords", widget: "string", required: true, hint: "Comma-separated keywords"}
+          - {label: "OG Image", name: "ogImage", widget: "image", required: true, hint: "Image for social media sharing"}
+          - {label: "OG Type", name: "ogType", widget: "hidden", default: "article"}
+
+      - label: "Content"
+        name: "content"
+        widget: "object"
+        fields:
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            hint: "Add multiple sections to structure your blog post"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string", required: false, hint: "Leave empty for intro section"}
+              - {label: "Introduction Text", name: "intro", widget: "markdown", required: false, hint: "Main text for this section (supports **bold** and formatting)"}
+              - label: "Bullet Points"
+                name: "items"
+                widget: "list"
+                required: false
+                hint: "Optional list of items"
+                field: {label: "Item", name: "item", widget: "string"}
+              - {label: "Closing Text", name: "closing", widget: "markdown", required: false, hint: "Concluding paragraph for section"}
+
+          - {label: "Conclusion", name: "conclusion", widget: "markdown", required: false, hint: "Final concluding remarks"}
+          - {label: "Call to Action", name: "cta", widget: "string", required: false, hint: "Optional CTA text at end"}
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "Add tags for categorization"
+        field: {label: "Tag", name: "tag", widget: "string"}
+
+  # ============================================
+  # PROGRAMS
+  # ============================================
+  - name: "programs"
+    label: "Programs"
+    label_singular: "Program"
+    folder: "src/data/pages/programs"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    preview_path: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Slug", name: "slug", widget: "string", hint: "URL path (e.g., 'vaemptiness-program')"}
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Short Description", name: "shortDescription", widget: "text", required: true, hint: "Brief description for program card"}
+      - {label: "Display Order", name: "order", widget: "number", default: 1, hint: "Order on programs page (1 = first)"}
+      - {label: "Card Image", name: "image", widget: "image", required: true, hint: "Image shown on programs grid"}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: true, hint: "Large image at top of program page"}
+      - {label: "CTA Button Text", name: "ctaButtonText", widget: "string", default: "Más información"}
+
+      - label: "SEO Metadata"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "Title", name: "title", widget: "string", required: true}
+          - {label: "Description", name: "description", widget: "text", required: true}
+          - {label: "Keywords", name: "keywords", widget: "string", required: true}
+          - {label: "OG Image", name: "ogImage", widget: "image", required: true}
+
+      - label: "Hero Section"
+        name: "hero"
+        widget: "object"
+        fields:
+          - {label: "Title", name: "title", widget: "string", required: true}
+          - {label: "Subtitle", name: "subtitle", widget: "text", required: true}
+
+      - label: "What Is It"
+        name: "whatIsIt"
+        widget: "object"
+        required: false
+        collapsed: true
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
+
+      - label: "Testimonials"
+        name: "testimonials"
+        widget: "list"
+        required: false
+        collapsed: true
+        hint: "Client testimonials for this program"
+        fields:
+          - {label: "Quote", name: "quote", widget: "text", required: true}
+          - {label: "Author", name: "author", widget: "string", required: true}
+          - {label: "Title/Context", name: "title", widget: "string", required: false}
+
+      - {label: "Philosophy Quote", name: "philosophy", widget: "text", required: false, hint: "Closing philosophical statement"}
+
+  # ============================================
+  # PAGES (Homepage, About, etc.)
+  # ============================================
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    files:
+      # Homepage
+      - label: "Homepage"
+        name: "home"
+        file: "src/data/pages/home.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", required: true}
+              - {label: "Subtitle", name: "subtitle", widget: "text", required: true}
+              - {label: "CTA Button Text", name: "ctaText", widget: "string"}
+              - {label: "CTA Button Link", name: "ctaLink", widget: "string"}
+
+          - label: "Philosophy Section"
+            name: "philosophy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Content", name: "content", widget: "markdown"}
+              - {label: "Highlight Quote", name: "highlight", widget: "text"}
+
+      # About Us Page
+      - label: "About Us"
+        name: "sobre-nosotros"
+        file: "src/data/pages/sobre-nosotros.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+
+          - label: "Team Section"
+            name: "team"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Team Members"
+                name: "members"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Role", name: "role", widget: "string"}
+                  - {label: "Photo", name: "image", widget: "image"}
