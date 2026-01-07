@@ -1,19 +1,17 @@
 {
-  "id": 6,
-  "slug": "espacio-estimulo-respuesta",
-  "title": "Crear espacio entre estímulo y respuesta",
-  "author": "Rosa Cano",
-  "date": "2025-12-03",
   "excerpt": "Entre lo que ocurre y lo que hacemos existe un instante breve. Ese espacio es donde se abre la posibilidad de elegir. Crear ese espacio es una capacidad central del entrenamiento mental.",
+  "author": "Rosa Cano",
+  "slug": "espacio-estimulo-respuesta",
   "featured": false,
-  "image": "/assets/images/blog/espacio-estimulo-respuesta.jpg",
-  "seo": {
-    "title": "Crear espacio entre estímulo y respuesta | Blog vaemptîness",
-    "description": "Entre lo que ocurre y lo que hacemos existe un instante breve. Ese espacio es donde se abre la posibilidad de elegir. Crear ese espacio es una capacidad central del entrenamiento mental.",
-    "keywords": "estímulo y respuesta, observación, reacción automática, entrenamiento mental, espacio mental",
-    "ogImage": "/assets/images/blog/espacio-estimulo-respuesta.jpg",
-    "ogType": "article"
-  },
+  "date": "2025-12-03",
+  "title": "Crear espacio entre estímulo y respuesta",
+  "tags": [
+    "estímulo y respuesta",
+    "observación",
+    "reacción automática",
+    "entrenamiento mental",
+    "espacio mental"
+  ],
   "content": {
     "sections": [
       {
@@ -120,11 +118,13 @@
     "conclusion": "",
     "cta": ""
   },
-  "tags": [
-    "estímulo y respuesta",
-    "observación",
-    "reacción automática",
-    "entrenamiento mental",
-    "espacio mental"
-  ]
+  "id": 6,
+  "image": "/assets/images/crear-espacio.jpeg",
+  "seo": {
+    "title": "Crear espacio entre estímulo y respuesta | Blog vaemptîness",
+    "description": "Entre lo que ocurre y lo que hacemos existe un instante breve. Ese espacio es donde se abre la posibilidad de elegir. Crear ese espacio es una capacidad central del entrenamiento mental.",
+    "keywords": "estímulo y respuesta, observación, reacción automática, entrenamiento mental, espacio mental",
+    "ogImage": "/assets/images/blog/espacio-estimulo-respuesta.jpg",
+    "ogType": "article"
+  }
 }
