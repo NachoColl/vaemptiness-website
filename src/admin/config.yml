@@ -154,23 +154,111 @@ collections:
         file: "src/data/pages/home.json"
         preview_path: "/"
         fields:
-          - label: "Hero Section"
-            name: "hero"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string", required: true}
-              - {label: "Subtitle", name: "subtitle", widget: "text", required: true}
-              - {label: "CTA Button Text", name: "ctaText", widget: "string"}
-              - {label: "CTA Button Link", name: "ctaLink", widget: "string"}
-
-          - label: "Philosophy Section"
-            name: "philosophy"
+          - label: "Meta"
+            name: "meta"
             widget: "object"
             collapsed: true
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Content", name: "content", widget: "markdown"}
-              - {label: "Highlight Quote", name: "highlight", widget: "text"}
+              - {label: "Slug", name: "slug", widget: "string", default: "home"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "home-page"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Keywords", name: "keywords", widget: "string"}
+                  - {label: "OG Image", name: "ogImage", widget: "image"}
+                  - {label: "OG Type", name: "ogType", widget: "string", default: "website"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero Section"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string", required: true}
+                  - {label: "Tagline", name: "tagline", widget: "string"}
+                  - {label: "Subtitle", name: "subtitle", widget: "string", required: true, hint: "HTML allowed"}
+                  - {label: "Scroll Text", name: "scrollText", widget: "string"}
+                  - label: "Principles"
+                    name: "principles"
+                    widget: "list"
+                    fields:
+                      - {label: "Icon", name: "icon", widget: "string", hint: "Font Awesome class"}
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Description", name: "description", widget: "string"}
+                  - label: "Principles Action"
+                    name: "principlesAction"
+                    widget: "object"
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Text", name: "text", widget: "text"}
+                      - {label: "Button Text", name: "buttonText", widget: "string"}
+                      - {label: "Button URL", name: "buttonUrl", widget: "string"}
+                  - {label: "Philosophy Quote", name: "philosophy", widget: "string"}
+
+              - label: "Learning Intro"
+                name: "learningIntro"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Icon", name: "icon", widget: "string", hint: "Font Awesome class"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Text", name: "text", widget: "text", hint: "HTML allowed"}
+                  - {label: "Highlight", name: "highlight", widget: "string"}
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
+
+              - label: "Philosophy Section"
+                name: "philosophy"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Text", name: "text", widget: "text"}
+                  - {label: "Highlight", name: "highlight", widget: "string"}
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
+
+              - label: "Programs Section"
+                name: "programsSection"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Programs"
+                    name: "programs"
+                    widget: "list"
+                    fields:
+                      - {label: "ID", name: "id", widget: "string"}
+                      - {label: "Name", name: "name", widget: "string"}
+                      - {label: "Age Range", name: "ageRange", widget: "string"}
+                      - {label: "Short Description", name: "shortDescription", widget: "text"}
+                      - {label: "Slug", name: "slug", widget: "string"}
+                      - {label: "Featured", name: "featured", widget: "boolean", default: true}
+                      - {label: "Link Text", name: "linkText", widget: "string"}
+
+              - label: "CTA Section"
+                name: "cta"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
+
+          - label: "Schema (JSON-LD)"
+            name: "schema"
+            widget: "list"
+            required: false
+            collapsed: true
+            hint: "Structured data for SEO"
+            field: {label: "Schema Object", name: "schema", widget: "text", hint: "JSON format"}
 
       # About Us Page
       - label: "Sobre Nosotros (About)"
@@ -178,27 +266,109 @@ collections:
         file: "src/data/pages/sobre-nosotros.json"
         preview_path: "/sobre-nosotros/"
         fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-
-          - label: "Team Section"
-            name: "team"
+          - label: "Meta"
+            name: "meta"
             widget: "object"
             collapsed: true
             fields:
+              - {label: "Slug", name: "slug", widget: "string", default: "sobre-nosotros"}
+              - {label: "Permalink", name: "permalink", widget: "string", default: "/sobre-nosotros/"}
+              - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+              - {label: "Body Class", name: "bodyClass", widget: "string", default: "about-page"}
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - label: "Team Members"
-                name: "members"
-                widget: "list"
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
                 fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Role", name: "role", widget: "string"}
-                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Keywords", name: "keywords", widget: "string"}
+                  - {label: "OG Image", name: "ogImage", widget: "image"}
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Subtitle", name: "subtitle", widget: "string"}
+
+              - label: "Intro Section"
+                name: "intro"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Paragraphs"
+                    name: "paragraphs"
+                    widget: "list"
+                    field: {label: "Paragraph", name: "paragraph", widget: "text"}
+
+              - label: "Vision Section"
+                name: "vision"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Content", name: "content", widget: "text"}
+                  - {label: "Highlight", name: "highlight", widget: "text"}
+                  - {label: "Quote", name: "quote", widget: "string"}
+                  - {label: "Additional", name: "additional", widget: "text"}
+
+              - label: "Mission Section"
+                name: "mission"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Content", name: "content", widget: "text"}
+
+              - label: "Services Section"
+                name: "services"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Service", name: "service", widget: "string"}
+
+              - label: "Brand Philosophy Section"
+                name: "brandPhilosophy"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Content", name: "content", widget: "text"}
+                  - {label: "Quote", name: "quote", widget: "text"}
+                  - {label: "Author", name: "author", widget: "string"}
+
+              - label: "Team Section"
+                name: "team"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Purpose", name: "purpose", widget: "text"}
+                  - label: "Founder"
+                    name: "founder"
+                    widget: "object"
+                    fields:
+                      - {label: "Name", name: "name", widget: "string"}
+                      - {label: "Role", name: "role", widget: "string"}
+                      - {label: "Photo", name: "image", widget: "image"}
+                  - label: "Team Members"
+                    name: "members"
+                    widget: "list"
+                    fields:
+                      - {label: "Name", name: "name", widget: "string"}
+                      - {label: "Role", name: "role", widget: "string"}
+                      - {label: "Photo", name: "image", widget: "image"}
 
       # Contact Page
       - label: "Contacto (Contact)"
