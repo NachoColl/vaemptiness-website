@@ -34,8 +34,7 @@ collections:
     extension: "json"
     format: "json"
     fields:
-      - {label: "ID", name: "id", widget: "number", hint: "Unique numeric ID for this post"}
-      - {label: "Slug", name: "slug", widget: "string", hint: "URL-friendly version of title (e.g., 'entrenamiento-mental')"}
+      - {label: "Slug", name: "slug", widget: "string", hint: "URL-friendly version of title (e.g., 'entrenamiento-mental')", required: true}
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Author", name: "author", widget: "string", default: "Rosa Cano"}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", picker_utc: false, required: true}
