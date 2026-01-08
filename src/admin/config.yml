@@ -95,8 +95,8 @@ collections:
     slug: "{{slug}}"
     preview_path: "{{slug}}"
     fields:
-      - {label: "ID", name: "id", widget: "number"}
-      - {label: "Slug", name: "slug", widget: "string", hint: "URL path (e.g., 'vaemptiness-program')"}
+      - {label: "ID", name: "id", widget: "string", required: true, hint: "Used for image paths (e.g., 'adult', 'teams', 'kids', 'teen')"}
+      - {label: "Slug", name: "slug", widget: "string", hint: "URL path (e.g., 'vaemptiness-program')", required: true}
       - {label: "Name", name: "name", widget: "string", required: true}
       - {label: "Short Description", name: "shortDescription", widget: "text", required: true, hint: "Brief description for program card"}
       - {label: "Display Order", name: "order", widget: "number", default: 1, hint: "Order on programs page (1 = first)"}
