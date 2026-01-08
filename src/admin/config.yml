@@ -16,6 +16,9 @@ publish_mode: editorial_workflow
 # Locale
 locale: 'es'
 
+# Disable preview toggle (not useful without custom preview templates)
+show_preview_links: false
+
 # Collections - define your content types
 collections:
   # ============================================
