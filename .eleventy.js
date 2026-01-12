@@ -23,6 +23,69 @@ module.exports = function(eleventyConfig) {
     return str.indexOf(prefix) === 0;
   });
 
+  // Transform to automatically bold "vaemptîness" across all pages
+  eleventyConfig.addTransform("autoBoldVaemptiness", function(content, outputPath) {
+    // Only process HTML files
+    if (!outputPath || !outputPath.endsWith(".html")) {
+      return content;
+    }
+
+    let result = content;
+
+    // Step 1: Preserve blocks we don't want to modify
+    const preservedBlocks = [];
+    let blockIndex = 0;
+
+    // Preserve script tags
+    result = result.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, (match) => {
+      preservedBlocks.push(match);
+      return `<!--PRESERVED_BLOCK_${blockIndex++}-->`;
+    });
+
+    // Preserve style tags
+    result = result.replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, (match) => {
+      preservedBlocks.push(match);
+      return `<!--PRESERVED_BLOCK_${blockIndex++}-->`;
+    });
+
+    // Preserve code and pre tags
+    result = result.replace(/<(code|pre)\b[^>]*>[\s\S]*?<\/\1>/gi, (match) => {
+      preservedBlocks.push(match);
+      return `<!--PRESERVED_BLOCK_${blockIndex++}-->`;
+    });
+
+    // Preserve headings (titles and subtitles - h1, h2, h3, h4, h5, h6)
+    result = result.replace(/<(h[1-6])\b[^>]*>[\s\S]*?<\/\1>/gi, (match) => {
+      preservedBlocks.push(match);
+      return `<!--PRESERVED_BLOCK_${blockIndex++}-->`;
+    });
+
+    // Step 2: Temporarily replace already-bold instances with placeholder
+    const alreadyBoldInstances = [];
+    let boldIndex = 0;
+
+    result = result.replace(/<(strong|b)([^>]*)>(.*?vaempt[îi]ness.*?)<\/\1>/gi, (match) => {
+      alreadyBoldInstances.push(match);
+      return `<!--ALREADY_BOLD_${boldIndex++}-->`;
+    });
+
+    // Step 3: Bold all remaining instances of vaemptîness/vaemptiness
+    // Only match word boundaries to avoid partial matches
+    result = result.replace(/\b(vaempt[îi]ness)\b/gi, '<strong>$1</strong>');
+
+    // Step 4: Restore already-bold instances (prevent double-bolding)
+    alreadyBoldInstances.forEach((bold, index) => {
+      result = result.replace(`<!--ALREADY_BOLD_${index}-->`, bold);
+    });
+
+    // Step 5: Restore preserved blocks
+    preservedBlocks.forEach((block, index) => {
+      result = result.replace(`<!--PRESERVED_BLOCK_${index}-->`, block);
+    });
+
+    return result;
+  });
+
   // Note: Page data is loaded via src/data/pages.js instead of addGlobalData
 
   // Create programs collection from individual files (will be used later)
