@@ -1,63 +1,8 @@
 {
-  "id": "teams",
-  "name": "vaemptîness equipos",
-  "ageRange": "Equipos de trabajo",
-  "slug": "vaemptiness-equipos",
   "shortDescription": "Entrenamiento mental para equipos de trabajo buscando mejor rendimiento y colaboración",
-  "featured": true,
-  "seoKeywords": "mindfulness empresas Barcelona, entrenamiento mental equipos, reducir estrés laboral, bienestar corporativo, formación mindfulness",
-  "seo": {
-    "title": "vaemptîness equipos | vaemptîness",
-    "description": "Método de entrenamiento cerebral diseñado para crear claridad mental reduciendo la carga cognitiva y eliminando patrones de pensamiento automático en entornos de trabajo colaborativo.",
-    "keywords": "mindfulness empresas Barcelona, entrenamiento mental equipos, reducir estrés laboral, bienestar corporativo, formación mindfulness",
-    "ogImage": "/assets/images/programs/teams-program.jpg",
-    "ogType": "article"
-  },
-  "audience": {
-    "type": "PeopleAudience",
-    "label": "Equipos de trabajo"
-  },
-  "hero": {
-    "title": "vaemptîness equipos",
-    "subtitle": "Programa para equipos de trabajo",
-    "description": "En entornos de alta exigencia, no siempre falta talento. Sobra ruido."
-  },
-  "pillars": [
-    {
-      "title": "Comunicación Consciente",
-      "description": "Desarrollar la capacidad de escuchar y expresarse sin reactividad emocional en dinámicas de equipo.",
-      "icon": "fa-solid fa-comments"
-    },
-    {
-      "title": "Claridad Colectiva",
-      "description": "Reducir el ruido mental individual que afecta la toma de decisiones y el rendimiento grupal.",
-      "icon": "fa-solid fa-people-group"
-    },
-    {
-      "title": "Gestión de Conflicto Cognitivo",
-      "description": "Reconocer y desactivar patrones de pensamiento que generan tensión y desvían del objetivo colectivo.",
-      "icon": "fa-solid fa-handshake"
-    },
-    {
-      "title": "Cohesión a través de la Presencia",
-      "description": "Crear espacios de trabajo donde la atención compartida mejora la colaboración.",
-      "icon": "fa-solid fa-link"
-    }
-  ],
-  "sessionStructure": {
-    "title": "¿Cómo son las sesiones?",
-    "duration": "60 minutos",
-    "activities": [
-      "Check-in grupal. Ver las necesidades del equipo",
-      "Ejercicio colectivo de observación de patrones de pensamiento",
-      "Practica guiada mindfulness",
-      "Tarea semanal. Dinámica de resolución de conflicto a través de ejercicios individuales",
-      "Integración de compromisos de equipo"
-    ]
-  },
   "outcomes": {
     "quote": "Menos interferencias internas. Más impacto colectivo.",
-    "intro": "vaemptîness se adapta a entornos corporativos y de liderazgo donde el tiempo es limitado y la exigencia es alta.",
+    "intro": "vaemptîness se adapta a entornos corporativos y de liderazgo donde la exigencia es alta y el tiempo es limitado.",
     "title": "Beneficios",
     "items": [
       "Equipos más enfocados",
@@ -67,12 +12,41 @@
       "Mayor eficiencia en reuniones y toma de decisiones"
     ]
   },
-  "philosophy": "Un equipo que piensa con claridad, colabora con eficacia. El entrenamiento mental colectivo transforma la dinámica grupal desde la conciencia individual hacia el rendimiento compartido.",
+  "audience": {
+    "type": "PeopleAudience",
+    "label": "Equipos de trabajo"
+  },
+  "seoKeywords": "mindfulness empresas Barcelona, entrenamiento mental equipos, reducir estrés laboral, bienestar corporativo, formación mindfulness",
+  "pillars": [
+    {
+      "title": "Comunicación Consciente",
+      "description": "Desarrollar la capacidad de escuchar y expresarse sin reactividad emocional en dinámicas de equipo.",
+      "icon": "fa-solid fa-comments"
+    },
+    {
+      "title": "Claridad Colectiva",
+      "description": "Reducir el ruido mental individual, mejora la calidad de las decisiones y el rendimiento grupal.",
+      "icon": "fa-solid fa-people-group"
+    },
+    {
+      "title": "Gestión de Conflicto Cognitivo",
+      "description": "Detectar y desactivar ciclos repetidos de pensamiento que generan tensión y consumen tiempo sin aportar soluciones reales al objetivo colectivo.",
+      "icon": "fa-solid fa-handshake"
+    },
+    {
+      "title": "Cohesión a través de la Presencia",
+      "description": "Espacios de trabajo donde la atención compartida mejora la colaboración. Cuerpo y mente como ancla de presencia.",
+      "icon": "fa-solid fa-link"
+    }
+  ],
+  "name": "vaemptîness equipos",
+  "slug": "vaemptiness-equipos",
+  "featured": true,
   "whatIs": {
     "title": "¿Que es vaemptîness equipos?",
     "intro": [
-      "Es un entrenamiento mental, aplicado a equipos de trabajo que buscan claridad mental, concentración y foco sostenido para la productividad.",
-      "Transforma la dinámica grupal desde la conciencia individual hacia el rendimiento compartido."
+      "Entrenamiento mental para equipos de trabajo que buscan amplificar la concentración y el foco sostenido. ",
+      "vaemptîness transforma de forma gradual la dinámica grupal desde la conciencia individual hacia el rendimiento compartido, mejorando la productividad."
     ],
     "quote1": "No se trata de hacer más. Se trata de crear espacio para la creatividad y el bienestar colectivo.",
     "helps": {
@@ -86,13 +60,14 @@
     },
     "quote2": "Cuando hay espacio interno, aparece la precisión. El alto rendimiento sostenible no nace de la tensión constante, sino de habitar el momento presente.",
     "trainingItems": [
-      "Habitar el momento con mayor concentración y calma",
-      "Regular el estrés laboral en tiempo real",
+      "Habitar el momento con mayor concentración y calma (Equipos más enfocados)",
+      "Regular el estrés laboral en tiempo real (Menor ausentismo)",
       "Comunicar con más empatía y menos fricción",
-      "Tomar decisiones alineadas, incluso en contextos complejos",
-      "Ambiente de trabajo más equilibrado."
+      "Comunicar con más empatía (Menor fricción)",
+      "Ambiente de trabajo más equilibrado (Ecuanimidad)"
     ]
   },
+  "philosophy": "Un equipo que piensa con claridad, colabora con eficacia. El entrenamiento mental colectivo transforma la dinámica grupal desde la conciencia individual hacia el rendimiento compartido.",
   "testimonials": [
     {
       "title": "En equipos creativos, la exigencia y la reactividad afectan directamente a la calidad del trabajo.\nvaemptîness ofrece un entrenamiento mental que favorece la atención y la colaboración del equipo en pro a una productividad que no añade carga.",
@@ -104,5 +79,31 @@
       "quote": "vaemptîness ofrece un marco de entrenamiento mental sólido y coherente con entornos de alta exigencia.\n\nEl programa aporta claridad, estabilidad y una mejora tangible en la calidad de la respuesta grupal, ahora el equipo rema en la misma dirección y sostiene un mismo objetivo. Menos ficción, menos conflicto, mayor foco",
       "author": "Dirección ejecutiva"
     }
-  ]
+  ],
+  "hero": {
+    "title": "vaemptîness equipos",
+    "subtitle": "Programa para equipos de trabajo",
+    "description": "En entornos de alta exigencia, no siempre falta talento. Sobra ruido."
+  },
+  "id": "teams",
+  "seo": {
+    "title": "vaemptîness equipos | vaemptîness",
+    "description": "Método de entrenamiento cerebral diseñado para crear claridad mental reduciendo la carga cognitiva y eliminando patrones de pensamiento automático en entornos de trabajo colaborativo.",
+    "keywords": "mindfulness empresas Barcelona, entrenamiento mental equipos, reducir estrés laboral, bienestar corporativo, formación mindfulness",
+    "ogImage": "/assets/images/programs/teams-program.jpg",
+    "ogType": "article"
+  },
+  "sessionStructure": {
+    "title": "¿Cómo son las sesiones?",
+    "duration": "60 minutos",
+    "activities": [
+      "Check-in grupal (Apertura)",
+      "Técnicas de respiración como ancla al presente (mindfulness)",
+      "Ejercicio colectivo de cognición (Integración factores mentales)",
+      "Práctica de observación (mental & body scan)",
+      "Síntesis de aprendizaje (integración final reflexiva)",
+      "Tarea semanal con ejercicios individuales (cierre)"
+    ]
+  },
+  "ageRange": "Equipos de trabajo"
 }
