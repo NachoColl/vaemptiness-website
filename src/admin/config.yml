@@ -34,52 +34,52 @@ collections:
     extension: "json"
     format: "json"
     fields:
-      - {label: "Slug", name: "slug", widget: "string", hint: "URL-friendly version of title (e.g., 'entrenamiento-mental')", required: true}
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Author", name: "author", widget: "string", default: "Rosa Cano"}
-      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", picker_utc: false, required: true}
-      - {label: "Excerpt", name: "excerpt", widget: "text", required: true, hint: "Short summary shown in blog listing"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Show prominently on blog page"}
-      - {label: "Featured Image", name: "image", widget: "image", required: true, hint: "Main image for blog post"}
+      - {label: "Slug", name: "slug", widget: "string", hint: "NOT VISIBLE - Used in URL only (e.g., 'entrenamiento-mental' → /blog/entrenamiento-mental/)", required: true}
+      - {label: "Title", name: "title", widget: "string", required: true, hint: "VISIBLE - Main heading shown at top of blog post"}
+      - {label: "Author", name: "author", widget: "string", default: "Rosa Cano", hint: "VISIBLE - Shown at bottom of post"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", picker_utc: false, required: true, hint: "VISIBLE - Publication date shown in blog listing and post"}
+      - {label: "Excerpt", name: "excerpt", widget: "text", required: true, hint: "VISIBLE - Short summary shown in blog listing cards"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false, hint: "NOT VISIBLE - Controls placement in blog listing (featured posts shown first)"}
+      - {label: "Featured Image", name: "image", widget: "image", required: true, hint: "VISIBLE - Large image shown at top of blog post"}
 
-      - label: "SEO Metadata"
+      - label: "SEO Metadata (Not visible on page - for search engines only)"
         name: "seo"
         widget: "object"
         collapsed: false
         fields:
-          - {label: "Page Title", name: "title", widget: "string", required: true, hint: "Title shown in browser tab and search results"}
-          - {label: "Meta Description", name: "description", widget: "text", required: true, hint: "Description for search engines (150-160 characters)"}
-          - {label: "Keywords", name: "keywords", widget: "string", required: true, hint: "Comma-separated keywords"}
-          - {label: "OG Image", name: "ogImage", widget: "image", required: true, hint: "Image for social media sharing"}
+          - {label: "Page Title", name: "title", widget: "string", required: true, hint: "NOT VISIBLE - Title shown in browser tab and Google search results"}
+          - {label: "Meta Description", name: "description", widget: "text", required: true, hint: "NOT VISIBLE - Description shown in Google search results (150-160 characters)"}
+          - {label: "Keywords", name: "keywords", widget: "string", required: true, hint: "NOT VISIBLE - Keywords for search engines (comma-separated)"}
+          - {label: "OG Image", name: "ogImage", widget: "image", required: true, hint: "NOT VISIBLE - Image shown when shared on Facebook/Twitter/LinkedIn"}
           - {label: "OG Type", name: "ogType", widget: "hidden", default: "article"}
 
-      - label: "Content"
+      - label: "Content (Visible on page)"
         name: "content"
         widget: "object"
         fields:
           - label: "Sections"
             name: "sections"
             widget: "list"
-            hint: "Add multiple sections to structure your blog post"
+            hint: "VISIBLE - Main content sections of your blog post"
             fields:
-              - {label: "Section Title", name: "title", widget: "string", required: false, hint: "Leave empty for intro section"}
-              - {label: "Introduction Text", name: "intro", widget: "markdown", required: false, hint: "Main text for this section (supports **bold** and formatting)"}
+              - {label: "Section Title", name: "title", widget: "string", required: false, hint: "VISIBLE - Heading for this section (leave empty for intro)"}
+              - {label: "Introduction Text", name: "intro", widget: "markdown", required: false, hint: "VISIBLE - Main text for this section (supports **bold**)"}
               - label: "Bullet Points"
                 name: "items"
                 widget: "list"
                 required: false
-                hint: "Optional list of items"
+                hint: "VISIBLE - Optional bulleted list"
                 field: {label: "Item", name: "item", widget: "string"}
-              - {label: "Closing Text", name: "closing", widget: "markdown", required: false, hint: "Concluding paragraph for section"}
+              - {label: "Closing Text", name: "closing", widget: "markdown", required: false, hint: "VISIBLE - Concluding paragraph for section"}
 
-          - {label: "Conclusion", name: "conclusion", widget: "markdown", required: false, hint: "Final concluding remarks"}
-          - {label: "Call to Action", name: "cta", widget: "string", required: false, hint: "Optional CTA text at end"}
+          - {label: "Conclusion", name: "conclusion", widget: "markdown", required: false, hint: "VISIBLE - Final concluding remarks"}
+          - {label: "Call to Action", name: "cta", widget: "string", required: false, hint: "VISIBLE - Optional CTA button text at end"}
 
       - label: "Tags"
         name: "tags"
         widget: "list"
         required: false
-        hint: "Add tags for categorization"
+        hint: "VISIBLE - Tags shown at bottom of post for categorization"
         field: {label: "Tag", name: "tag", widget: "string"}
 
   # ============================================
@@ -95,115 +95,122 @@ collections:
     slug: "{{slug}}"
     preview_path: "{{slug}}"
     fields:
-      - {label: "ID", name: "id", widget: "string", required: true, hint: "Used for image paths (e.g., 'adult', 'teams', 'kids', 'teen')"}
-      - {label: "Slug", name: "slug", widget: "string", hint: "URL path (e.g., 'vaemptiness-program')", required: true}
-      - {label: "Name", name: "name", widget: "string", required: true}
-      - {label: "Age Range", name: "ageRange", widget: "string", required: true, hint: "e.g., 'Adultos', '5-8 años'"}
-      - {label: "Short Description", name: "shortDescription", widget: "text", required: true, hint: "Brief description for program card"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: true}
-      - {label: "SEO Keywords", name: "seoKeywords", widget: "string", hint: "Comma-separated keywords"}
+      - {label: "ID", name: "id", widget: "string", required: true, hint: "NOT VISIBLE - Used internally for image file paths (e.g., 'adult', 'teams', 'kids', 'teen')"}
+      - {label: "Slug", name: "slug", widget: "string", hint: "NOT VISIBLE - Used in URL only (e.g., 'vaemptiness-program' → /vaemptiness-program/)", required: true}
+      - {label: "Name", name: "name", widget: "string", required: true, hint: "VISIBLE - Program name shown in cards and page title"}
+      - {label: "Age Range", name: "ageRange", widget: "string", required: true, hint: "VISIBLE - Age group shown in program card (e.g., 'Adultos', '5-8 años')"}
+      - {label: "Short Description", name: "shortDescription", widget: "text", required: true, hint: "VISIBLE - Brief description shown on program cards in homepage"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: true, hint: "NOT VISIBLE - Controls if program appears on homepage"}
+      - {label: "SEO Keywords", name: "seoKeywords", widget: "string", hint: "NOT VISIBLE - Keywords for search engines"}
 
-      - label: "SEO Metadata"
+      - label: "SEO Metadata (Not visible on page - for search engines only)"
         name: "seo"
         widget: "object"
         collapsed: true
         fields:
-          - {label: "Title", name: "title", widget: "string", required: true}
-          - {label: "Description", name: "description", widget: "text", required: true}
-          - {label: "Keywords", name: "keywords", widget: "string", required: true}
-          - {label: "OG Image", name: "ogImage", widget: "image", required: true}
-          - {label: "OG Type", name: "ogType", widget: "string", default: "article"}
+          - {label: "Title", name: "title", widget: "string", required: true, hint: "NOT VISIBLE - Browser tab and search results title"}
+          - {label: "Description", name: "description", widget: "text", required: true, hint: "NOT VISIBLE - Search results description"}
+          - {label: "Keywords", name: "keywords", widget: "string", required: true, hint: "NOT VISIBLE - Search engine keywords"}
+          - {label: "OG Image", name: "ogImage", widget: "image", required: true, hint: "NOT VISIBLE - Social media share image"}
+          - {label: "OG Type", name: "ogType", widget: "string", default: "article", hint: "NOT VISIBLE - Social media metadata"}
 
-      - label: "Audience"
+      - label: "Audience (Not visible - for schema markup)"
         name: "audience"
         widget: "object"
         collapsed: true
         fields:
-          - {label: "Type", name: "type", widget: "string", default: "PeopleAudience"}
-          - {label: "Min Age", name: "minAge", widget: "number", required: false}
-          - {label: "Label", name: "label", widget: "string"}
+          - {label: "Type", name: "type", widget: "string", default: "PeopleAudience", hint: "NOT VISIBLE - Schema.org metadata"}
+          - {label: "Min Age", name: "minAge", widget: "number", required: false, hint: "NOT VISIBLE - Schema.org metadata"}
+          - {label: "Label", name: "label", widget: "string", hint: "NOT VISIBLE - Schema.org metadata"}
 
-      - label: "Hero Section"
+      - label: "Hero Section (Visible - top of page)"
         name: "hero"
         widget: "object"
         collapsed: true
         fields:
-          - {label: "Title", name: "title", widget: "string", required: true}
-          - {label: "Subtitle", name: "subtitle", widget: "string", required: true}
-          - {label: "Description", name: "description", widget: "text", required: true}
+          - {label: "Title", name: "title", widget: "string", required: true, hint: "VISIBLE - Large title at top of program page"}
+          - {label: "Subtitle", name: "subtitle", widget: "string", required: true, hint: "VISIBLE - Subtitle below main title"}
+          - {label: "Description", name: "description", widget: "text", required: true, hint: "VISIBLE - Description text in hero section"}
 
-      - label: "What Is Section"
+      - label: "What Is Section (Visible on page)"
         name: "whatIs"
         widget: "object"
         collapsed: true
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Title", name: "title", widget: "string", hint: "VISIBLE - Section heading"}
           - label: "Intro Paragraphs"
             name: "intro"
             widget: "list"
+            hint: "VISIBLE - Opening paragraphs"
             field: {label: "Paragraph", name: "paragraph", widget: "text"}
-          - {label: "Quote 1", name: "quote1", widget: "text"}
+          - {label: "Quote 1", name: "quote1", widget: "text", hint: "VISIBLE - First highlight quote"}
           - label: "What It Helps With"
             name: "helps"
             widget: "object"
+            hint: "VISIBLE - Benefits subsection"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Title", name: "title", widget: "string", hint: "VISIBLE - Subsection title"}
               - label: "Items"
                 name: "items"
                 widget: "list"
+                hint: "VISIBLE - Bulleted list of benefits"
                 field: {label: "Item", name: "item", widget: "string"}
-          - {label: "Quote 2", name: "quote2", widget: "text"}
+          - {label: "Quote 2", name: "quote2", widget: "text", hint: "VISIBLE - Second highlight quote"}
           - label: "Training Items"
             name: "trainingItems"
             widget: "list"
+            hint: "VISIBLE - List of training topics"
             field: {label: "Item", name: "item", widget: "string"}
 
-      - {label: "Pillars Subtitle", name: "pillarsSubtitle", widget: "text", required: false}
+      - {label: "Pillars Subtitle", name: "pillarsSubtitle", widget: "text", required: false, hint: "VISIBLE - Introduction text before pillars section"}
 
-      - label: "Pillars"
+      - label: "Pillars (Visible on page)"
         name: "pillars"
         widget: "list"
         collapsed: true
+        hint: "VISIBLE - Key program pillars with icons"
         fields:
-          - {label: "Title", name: "title", widget: "string", required: true}
-          - {label: "Description", name: "description", widget: "text", required: true}
-          - {label: "Icon", name: "icon", widget: "string", hint: "Font Awesome class (e.g., fa-solid fa-eye)"}
+          - {label: "Title", name: "title", widget: "string", required: true, hint: "VISIBLE - Pillar name"}
+          - {label: "Description", name: "description", widget: "text", required: true, hint: "VISIBLE - Pillar description"}
+          - {label: "Icon", name: "icon", widget: "string", hint: "VISIBLE - Font Awesome icon (e.g., fa-solid fa-eye)"}
 
-      - label: "Session Structure"
+      - label: "Session Structure (Visible on page)"
         name: "sessionStructure"
         widget: "object"
         collapsed: true
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Duration", name: "duration", widget: "string", hint: "e.g., '60 minutos'"}
+          - {label: "Title", name: "title", widget: "string", hint: "VISIBLE - Section heading"}
+          - {label: "Duration", name: "duration", widget: "string", hint: "VISIBLE - Session length (e.g., '60 minutos')"}
           - label: "Activities"
             name: "activities"
             widget: "list"
+            hint: "VISIBLE - List of session activities"
             field: {label: "Activity", name: "activity", widget: "string"}
 
-      - label: "Outcomes"
+      - label: "Outcomes (Visible on page)"
         name: "outcomes"
         widget: "object"
         collapsed: true
         fields:
-          - {label: "Intro", name: "intro", widget: "text"}
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Intro", name: "intro", widget: "text", hint: "VISIBLE - Introduction paragraph"}
+          - {label: "Title", name: "title", widget: "string", hint: "VISIBLE - Section heading"}
           - label: "Items"
             name: "items"
             widget: "list"
+            hint: "VISIBLE - List of learning outcomes"
             field: {label: "Outcome", name: "outcome", widget: "string"}
 
-      - {label: "Philosophy", name: "philosophy", widget: "text", required: false, hint: "Closing philosophical statement"}
+      - {label: "Philosophy", name: "philosophy", widget: "text", required: false, hint: "VISIBLE - Closing philosophical statement at bottom of page"}
 
-      - label: "Testimonials"
+      - label: "Testimonials (Visible on page)"
         name: "testimonials"
         widget: "list"
         required: false
         collapsed: true
-        hint: "Client testimonials for this program"
+        hint: "VISIBLE - Client testimonial quotes shown on page"
         fields:
-          - {label: "Quote", name: "quote", widget: "text", required: true}
-          - {label: "Author", name: "author", widget: "string", required: true}
+          - {label: "Quote", name: "quote", widget: "text", required: true, hint: "VISIBLE - Testimonial text"}
+          - {label: "Author", name: "author", widget: "string", required: true, hint: "VISIBLE - Person's name"}
 
   # ============================================
   # PAGES (Homepage, About, etc.)
@@ -218,7 +225,7 @@ collections:
         file: "src/data/pages/home.json"
         preview_path: "/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -236,7 +243,7 @@ collections:
                   - {label: "OG Image", name: "ogImage", widget: "image"}
                   - {label: "OG Type", name: "ogType", widget: "string", default: "website"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
@@ -330,7 +337,7 @@ collections:
         file: "src/data/pages/sobre-nosotros.json"
         preview_path: "/sobre-nosotros/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -349,7 +356,7 @@ collections:
                   - {label: "Keywords", name: "keywords", widget: "string"}
                   - {label: "OG Image", name: "ogImage", widget: "image"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
@@ -440,7 +447,7 @@ collections:
         file: "src/data/pages/contacto.json"
         preview_path: "/contacto/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -459,7 +466,7 @@ collections:
                   - {label: "Keywords", name: "keywords", widget: "string"}
                   - {label: "OG Image", name: "ogImage", widget: "image"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
@@ -487,7 +494,7 @@ collections:
         file: "src/data/pages/faq.json"
         preview_path: "/faq/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -506,7 +513,7 @@ collections:
                   - {label: "Keywords", name: "keywords", widget: "string"}
                   - {label: "OG Image", name: "ogImage", widget: "image"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
@@ -537,7 +544,7 @@ collections:
         file: "src/data/pages/aprendizaje-y-metodologia.json"
         preview_path: "/aprendizaje-y-metodologia/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -556,7 +563,7 @@ collections:
                   - {label: "Keywords", name: "keywords", widget: "string"}
                   - {label: "OG Image", name: "ogImage", widget: "image"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
@@ -601,7 +608,7 @@ collections:
         file: "src/data/pages/on-off.json"
         preview_path: "/on-off/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -620,7 +627,7 @@ collections:
                   - {label: "Keywords", name: "keywords", widget: "string"}
                   - {label: "OG Image", name: "ogImage", widget: "image"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
@@ -671,7 +678,7 @@ collections:
         file: "src/data/pages/reset.json"
         preview_path: "/reset/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -690,7 +697,7 @@ collections:
                   - {label: "Keywords", name: "keywords", widget: "string"}
                   - {label: "OG Image", name: "ogImage", widget: "image"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
@@ -734,7 +741,7 @@ collections:
         file: "src/data/pages/politica-privacidad.json"
         preview_path: "/politica-privacidad/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -752,7 +759,7 @@ collections:
                   - {label: "Description", name: "description", widget: "text"}
                   - {label: "Robots", name: "robots", widget: "string", default: "noindex, follow"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
@@ -784,7 +791,7 @@ collections:
         file: "src/data/pages/terminos-condiciones.json"
         preview_path: "/terminos-condiciones/"
         fields:
-          - label: "Meta"
+          - label: "Meta (Not visible - SEO & technical)"
             name: "meta"
             widget: "object"
             collapsed: true
@@ -802,7 +809,7 @@ collections:
                   - {label: "Description", name: "description", widget: "text"}
                   - {label: "Robots", name: "robots", widget: "string", default: "noindex, follow"}
 
-          - label: "Content"
+          - label: "Content (Visible on page)"
             name: "content"
             widget: "object"
             fields:
