@@ -98,11 +98,10 @@ collections:
       - {label: "ID", name: "id", widget: "string", required: true, hint: "Used for image paths (e.g., 'adult', 'teams', 'kids', 'teen')"}
       - {label: "Slug", name: "slug", widget: "string", hint: "URL path (e.g., 'vaemptiness-program')", required: true}
       - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Age Range", name: "ageRange", widget: "string", required: true, hint: "e.g., 'Adultos', '5-8 años'"}
       - {label: "Short Description", name: "shortDescription", widget: "text", required: true, hint: "Brief description for program card"}
-      - {label: "Display Order", name: "order", widget: "number", default: 1, hint: "Order on programs page (1 = first)"}
-      - {label: "Card Image", name: "image", widget: "image", required: true, hint: "Image shown on programs grid"}
-      - {label: "Hero Image", name: "heroImage", widget: "image", required: true, hint: "Large image at top of program page"}
-      - {label: "CTA Button Text", name: "ctaButtonText", widget: "string", default: "Más información"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: true}
+      - {label: "SEO Keywords", name: "seoKeywords", widget: "string", hint: "Comma-separated keywords"}
 
       - label: "SEO Metadata"
         name: "seo"
@@ -113,22 +112,88 @@ collections:
           - {label: "Description", name: "description", widget: "text", required: true}
           - {label: "Keywords", name: "keywords", widget: "string", required: true}
           - {label: "OG Image", name: "ogImage", widget: "image", required: true}
+          - {label: "OG Type", name: "ogType", widget: "string", default: "article"}
+
+      - label: "Audience"
+        name: "audience"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "Type", name: "type", widget: "string", default: "PeopleAudience"}
+          - {label: "Min Age", name: "minAge", widget: "number", required: false}
+          - {label: "Label", name: "label", widget: "string"}
 
       - label: "Hero Section"
         name: "hero"
         widget: "object"
+        collapsed: true
         fields:
           - {label: "Title", name: "title", widget: "string", required: true}
-          - {label: "Subtitle", name: "subtitle", widget: "text", required: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", required: true}
+          - {label: "Description", name: "description", widget: "text", required: true}
 
-      - label: "What Is It"
-        name: "whatIsIt"
+      - label: "What Is Section"
+        name: "whatIs"
         widget: "object"
-        required: false
         collapsed: true
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - label: "Intro Paragraphs"
+            name: "intro"
+            widget: "list"
+            field: {label: "Paragraph", name: "paragraph", widget: "text"}
+          - {label: "Quote 1", name: "quote1", widget: "text"}
+          - label: "What It Helps With"
+            name: "helps"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "string"}
+          - {label: "Quote 2", name: "quote2", widget: "text"}
+          - label: "Training Items"
+            name: "trainingItems"
+            widget: "list"
+            field: {label: "Item", name: "item", widget: "string"}
+
+      - {label: "Pillars Subtitle", name: "pillarsSubtitle", widget: "text", required: false}
+
+      - label: "Pillars"
+        name: "pillars"
+        widget: "list"
+        collapsed: true
+        fields:
+          - {label: "Title", name: "title", widget: "string", required: true}
+          - {label: "Description", name: "description", widget: "text", required: true}
+          - {label: "Icon", name: "icon", widget: "string", hint: "Font Awesome class (e.g., fa-solid fa-eye)"}
+
+      - label: "Session Structure"
+        name: "sessionStructure"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Duration", name: "duration", widget: "string", hint: "e.g., '60 minutos'"}
+          - label: "Activities"
+            name: "activities"
+            widget: "list"
+            field: {label: "Activity", name: "activity", widget: "string"}
+
+      - label: "Outcomes"
+        name: "outcomes"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "Intro", name: "intro", widget: "text"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            field: {label: "Outcome", name: "outcome", widget: "string"}
+
+      - {label: "Philosophy", name: "philosophy", widget: "text", required: false, hint: "Closing philosophical statement"}
 
       - label: "Testimonials"
         name: "testimonials"
@@ -139,9 +204,6 @@ collections:
         fields:
           - {label: "Quote", name: "quote", widget: "text", required: true}
           - {label: "Author", name: "author", widget: "string", required: true}
-          - {label: "Title/Context", name: "title", widget: "string", required: false}
-
-      - {label: "Philosophy Quote", name: "philosophy", widget: "text", required: false, hint: "Closing philosophical statement"}
 
   # ============================================
   # PAGES (Homepage, About, etc.)
