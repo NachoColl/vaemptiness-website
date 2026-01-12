@@ -70,8 +70,18 @@ module.exports = function(eleventyConfig) {
     });
 
     // Step 3: Bold all remaining instances of vaemptîness/vaemptiness
-    // Only match word boundaries to avoid partial matches
-    result = result.replace(/\b(vaempt[îi]ness)\b/gi, '<strong>$1</strong>');
+    // CRITICAL FIX: Split by HTML tags and only process text content (not attributes)
+    result = result.replace(/(<[^>]+>)|(\b(?:vaempt[îi]ness)\b)/gi, (match, htmlTag, textMatch) => {
+      // If this is an HTML tag (including attributes), leave it untouched
+      if (htmlTag) {
+        return htmlTag;
+      }
+      // If this is text content (not inside a tag), bold it
+      if (textMatch) {
+        return `<strong>${textMatch}</strong>`;
+      }
+      return match;
+    });
 
     // Step 4: Restore already-bold instances (prevent double-bolding)
     alreadyBoldInstances.forEach((bold, index) => {
