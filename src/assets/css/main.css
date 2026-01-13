@@ -474,7 +474,7 @@ main {
     padding-left: calc(var(--space-md) + var(--space-md)) !important;
     padding-top: calc(var(--space-xs) * 0.75) !important;
     padding-bottom: calc(var(--space-xs) * 0.75) !important;
-    line-height: 1.2 !important;
+    line-height: 1.5 !important;
   }
 
   .dropdown-menu a::before,
