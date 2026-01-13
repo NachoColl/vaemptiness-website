@@ -24,7 +24,7 @@
             <a href="#" class="dropdown-toggle{% if isDropdownActive %} active{% endif %}">{{ item.text }}</a>
             <ul class="dropdown-menu">
               {% for subItem in item.dropdown %}
-              <li><a href="{{ subItem.url | url }}" {% if page.url | startsWith(subItem.matchUrl) %}class="active"{% endif %}>{{ subItem.text }}</a></li>
+              <li{% if subItem.isChild %} class="menu-child"{% endif %}><a href="{{ subItem.url | url }}" {% if page.url | startsWith(subItem.matchUrl) %}class="active"{% endif %}>{{ subItem.text }}</a></li>
               {% endfor %}
             </ul>
           </li>

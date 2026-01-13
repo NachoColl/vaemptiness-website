@@ -19,27 +19,32 @@
         {
           "text": "vaemptîness program",
           "url": "/vaemptiness-program/",
-          "matchUrl": "/vaemptiness-program/"
+          "matchUrl": "/vaemptiness-program/",
+          "isParent": true
         },
         {
           "text": "vaemptîness adultos",
           "url": "/vaemptiness-adultos/",
-          "matchUrl": "/vaemptiness-adultos/"
+          "matchUrl": "/vaemptiness-adultos/",
+          "isChild": true
         },
         {
           "text": "vaemptîness equipos",
           "url": "/vaemptiness-equipos/",
-          "matchUrl": "/vaemptiness-equipos/"
+          "matchUrl": "/vaemptiness-equipos/",
+          "isChild": true
         },
         {
           "text": "vaemptîness teen",
           "url": "/vaemptiness-teen/",
-          "matchUrl": "/vaemptiness-teen/"
+          "matchUrl": "/vaemptiness-teen/",
+          "isChild": true
         },
         {
           "text": "vaemptîness kids",
           "url": "/vaemptiness-kids/",
-          "matchUrl": "/vaemptiness-kids/"
+          "matchUrl": "/vaemptiness-kids/",
+          "isChild": true
         }
       ]
     },

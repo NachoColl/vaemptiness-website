@@ -386,6 +386,11 @@ main {
   color: var(--color-accent-rust);
 }
 
+/* Menu hierarchy - child items indentation */
+.menu-child a {
+  padding-left: calc(var(--space-md) + var(--space-sm)) !important;
+}
+
 /* Desktop - ensure dropdown is hidden by default */
 @media (min-width: 769px) {
   .dropdown-menu {
@@ -459,6 +464,11 @@ main {
     transform: none !important;
     display: block !important;
     position: static !important;
+  }
+
+  /* Mobile menu hierarchy - child items indentation */
+  .menu-child a {
+    padding-left: calc(var(--space-md) + var(--space-md)) !important;
   }
 
   .dropdown-menu a::before,
