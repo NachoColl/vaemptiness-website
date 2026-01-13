@@ -2236,7 +2236,7 @@ main {
   margin-right: auto;
 }
 
-.expandable-content p {
+.expandable-content p:not(.quote-large) {
   font-size: var(--text-body);
   line-height: 1.7;
   margin-bottom: var(--space-md);
