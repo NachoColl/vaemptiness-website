@@ -1774,7 +1774,7 @@ main {
 /* Program Pages
    ========================================================================== */
 .program-hero {
-  padding: calc(var(--space-3xl) + var(--space-2xl)) 0 calc(var(--space-3xl) + var(--space-2xl));
+  padding: calc(4rem + var(--space-3xl)) 0 var(--space-2xl);
   text-align: center;
   background: var(--color-accent-cream);
 }
