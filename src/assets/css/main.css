@@ -2218,16 +2218,19 @@ main {
 .expandable-toggle .toggle-icon {
   font-size: 1.25rem;
   line-height: 1;
-  transition: transform var(--transition-base);
 }
 
-.expandable-toggle[aria-expanded="true"] .toggle-icon {
-  transform: rotate(45deg);
+.expandable-toggle .toggle-icon::before {
+  content: '+';
+}
+
+.expandable-toggle[aria-expanded="true"] .toggle-icon::before {
+  content: '−';
 }
 
 .expandable-content {
   margin-top: var(--space-md);
-  text-align: left;
+  text-align: center;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;

@@ -47,8 +47,8 @@ title: "{{ program.name }} - vaemptîness"
       {% if program.whatIs.detail %}
       <div class="expandable-detail">
         <button class="expandable-toggle" aria-expanded="false">
-          <span class="toggle-text">{{ program.whatIs.detailTitle if program.whatIs.detailTitle else "+ detalle" }}</span>
-          <span class="toggle-icon" aria-hidden="true">+</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+          <span class="toggle-text">{{ program.whatIs.detailTitle if program.whatIs.detailTitle else "detalle" }}</span>
         </button>
         <div class="expandable-content" hidden>
           <p>{{ program.whatIs.detail | replace('\n\n', '</p><p>') | safe }}</p>
