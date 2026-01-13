@@ -389,6 +389,9 @@ main {
 /* Menu hierarchy - child items indentation */
 .menu-child a {
   padding-left: calc(var(--space-md) + var(--space-sm)) !important;
+  padding-top: calc(var(--space-sm) * 0.75) !important;
+  padding-bottom: calc(var(--space-sm) * 0.75) !important;
+  line-height: 1.2 !important;
 }
 
 /* Desktop - ensure dropdown is hidden by default */
@@ -469,6 +472,9 @@ main {
   /* Mobile menu hierarchy - child items indentation */
   .menu-child a {
     padding-left: calc(var(--space-md) + var(--space-md)) !important;
+    padding-top: calc(var(--space-xs) * 0.75) !important;
+    padding-bottom: calc(var(--space-xs) * 0.75) !important;
+    line-height: 1.2 !important;
   }
 
   .dropdown-menu a::before,
