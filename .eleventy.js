@@ -60,6 +60,12 @@ module.exports = function(eleventyConfig) {
       return `<!--PRESERVED_BLOCK_${blockIndex++}-->`;
     });
 
+    // Preserve title tags (HTML document title - cannot contain other elements)
+    result = result.replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, (match) => {
+      preservedBlocks.push(match);
+      return `<!--PRESERVED_BLOCK_${blockIndex++}-->`;
+    });
+
     // Step 2: Temporarily replace already-bold instances with placeholder
     const alreadyBoldInstances = [];
     let boldIndex = 0;
