@@ -2243,9 +2243,13 @@ main {
   color: var(--color-hover);
 }
 
-.expandable-content .quote-large {
+.expandable-content .detail-highlight {
   margin-top: var(--space-lg);
   margin-bottom: var(--space-md);
+  font-size: var(--text-body);
+  font-style: italic;
+  color: var(--color-hover);
+  line-height: 1.7;
 }
 
 .expandable-content[hidden] {
