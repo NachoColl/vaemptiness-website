@@ -2192,6 +2192,58 @@ main {
   margin-bottom: var(--space-lg);
 }
 
+/* Expandable detail section */
+.expandable-detail {
+  margin: var(--space-xl) 0;
+}
+
+.expandable-toggle {
+  background: none;
+  border: none;
+  color: var(--color-accent-rust);
+  font-size: var(--text-body);
+  font-weight: 500;
+  cursor: pointer;
+  padding: var(--space-sm) 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: opacity var(--transition-base);
+}
+
+.expandable-toggle:hover {
+  opacity: 0.7;
+}
+
+.expandable-toggle .toggle-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform var(--transition-base);
+}
+
+.expandable-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(45deg);
+}
+
+.expandable-content {
+  margin-top: var(--space-md);
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.expandable-content p {
+  font-size: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+  color: var(--color-hover);
+}
+
+.expandable-content[hidden] {
+  display: none;
+}
+
 .what-is-section {
   margin: var(--space-3xl) 0;
 }

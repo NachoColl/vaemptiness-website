@@ -182,6 +182,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
+
+  // Expandable detail toggle
+  const expandableToggles = document.querySelectorAll('.expandable-toggle');
+  expandableToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      const content = toggle.nextElementSibling;
+
+      toggle.setAttribute('aria-expanded', !isExpanded);
+
+      if (isExpanded) {
+        content.setAttribute('hidden', '');
+      } else {
+        content.removeAttribute('hidden');
+      }
+    });
+  });
 });
 
 // Blog Filters
