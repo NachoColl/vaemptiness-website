@@ -1800,6 +1800,30 @@ main {
   font-size: var(--text-body-lg);
 }
 
+/* Program hero circle animation */
+.program-hero-brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.program-hero-circle-animation {
+  width: 200px;
+  height: 200px;
+  color: var(--color-primary-text);
+  opacity: 0.6;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.program-hero-circle-animation circle {
+  stroke-dasharray: 596;
+  stroke-dashoffset: 596;
+  animation: drawCircle 2.5s ease-out forwards;
+}
+
 .program-pillars,
 .program-session,
 .program-outcomes {
@@ -1884,6 +1908,16 @@ main {
 }
 
 @media (max-width: 768px) {
+  .program-hero-circle-animation {
+    width: 150px;
+    height: 150px;
+    opacity: 0.4;
+  }
+
+  .program-hero-brand-block {
+    gap: var(--space-lg);
+  }
+
   .session-grid {
     grid-template-columns: 1fr;
   }
