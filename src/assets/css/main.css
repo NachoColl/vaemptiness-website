@@ -1132,6 +1132,10 @@ main {
 }
 
 @media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
   .programs-grid {
     grid-template-columns: 1fr;
   }
@@ -1785,7 +1789,7 @@ main {
 }
 
 .program-hero-title {
-  margin-bottom: 0;
+  margin-bottom: var(--space-lg);
 }
 
 .program-hero-subtitle {
@@ -1798,6 +1802,19 @@ main {
 .program-hero-description {
   color: var(--color-hover);
   font-size: var(--text-body-lg);
+}
+
+@media (max-width: 768px) {
+  .program-hero {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .program-hero-title {
+    margin-bottom: var(--space-sm);
+  }
 }
 
 .program-pillars,
@@ -1823,8 +1840,13 @@ main {
 
 .program-session h2,
 .program-outcomes h2 {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
   text-align: center;
+}
+
+.program-session .program-hero-subtitle {
+  text-align: center;
+  margin-bottom: var(--space-xl);
 }
 
 .program-outcomes .quote-large {
@@ -1853,16 +1875,20 @@ main {
   background: white;
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
+  text-align: center;
 }
 
 .session-duration {
   margin-bottom: var(--space-lg);
   font-size: var(--text-body-lg);
+  text-align: center;
 }
 
 .session-activities {
   list-style: none;
   padding: 0;
+  display: inline-block;
+  text-align: left;
 }
 
 .session-activities li {
@@ -1879,8 +1905,66 @@ main {
   font-weight: bold;
 }
 
-.session-philosophy {
-  padding: var(--space-xl) 0;
+.session-timeline {
+  background: white;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.timeline-intro {
+  font-size: var(--text-body);
+  margin-bottom: var(--space-lg);
+  color: var(--color-hover);
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: var(--space-lg);
+  padding-bottom: var(--space-md);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--color-accent-rust);
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-accent-rust);
+}
+
+.timeline-title {
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.timeline-description {
+  display: block;
+  color: var(--color-hover);
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
@@ -1888,8 +1972,8 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .session-philosophy {
-    text-align: center;
+  .session-timeline {
+    text-align: left;
   }
 }
 
@@ -2189,18 +2273,18 @@ main {
 .what-is-intro p {
   font-size: var(--text-body-lg);
   line-height: 1.8;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xs);
 }
 
 .what-is-intro-text {
   font-size: var(--text-body-lg);
   line-height: 1.8;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xs);
 }
 
 /* Expandable detail section */
 .expandable-detail {
-  margin: var(--space-sm) 0 var(--space-xl) 0;
+  margin: var(--space-xs) 0 var(--space-xl) 0;
 }
 
 .expandable-toggle {
@@ -2222,16 +2306,7 @@ main {
 }
 
 .expandable-toggle .toggle-icon {
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
-.expandable-toggle .toggle-icon::before {
-  content: '+';
-}
-
-.expandable-toggle[aria-expanded="true"] .toggle-icon::before {
-  content: '−';
+  display: none;
 }
 
 .expandable-content {
@@ -2255,8 +2330,37 @@ main {
   font-size: var(--text-h3);
 }
 
+.expandable-list {
+  list-style: disc;
+  text-align: left;
+  display: inline-block;
+  padding-left: var(--space-xl);
+}
+
+.expandable-list li {
+  font-size: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+  color: var(--color-hover);
+}
+
 .expandable-content[hidden] {
   display: none;
+}
+
+/* Desktop: Show expandable content by default, hide toggle */
+@media (min-width: 769px) {
+  .expandable-toggle {
+    display: none;
+  }
+
+  .expandable-content[hidden] {
+    display: block !important;
+  }
+
+  .expandable-detail {
+    margin: 0;
+  }
 }
 
 .what-is-section {

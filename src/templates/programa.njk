@@ -48,7 +48,7 @@ title: "{{ program.name }} - vaemptîness"
       <div class="expandable-detail">
         <button class="expandable-toggle" aria-expanded="false">
           <span class="toggle-icon" aria-hidden="true"></span>
-          <span class="toggle-text">{{ program.whatIs.detailTitle if program.whatIs.detailTitle else "detalle" }}</span>
+          <span class="toggle-text">{{ program.whatIs.detailTitle if program.whatIs.detailTitle else "ampliar" }}</span>
         </button>
         <div class="expandable-content" hidden>
           <p>{{ program.whatIs.detail | replace('\n\n', '</p><p>') | safe }}</p>
@@ -66,22 +66,51 @@ title: "{{ program.name }} - vaemptîness"
       {% if program.whatIs.helps %}
       <div class="what-is-section">
         {% if program.whatIs.helps.title %}
-        <h3>{{ program.whatIs.helps.title }}</h3>
+        <h2 class="section-title">{{ program.whatIs.helps.title }}</h2>
         {% endif %}
         {% if program.whatIs.helps.intro %}
         <p class="what-is-intro-text">{{ program.whatIs.helps.intro }}</p>
         {% endif %}
-        {% if program.whatIs.helps.subtitle %}
-        <p class="what-is-subtitle">{{ program.whatIs.helps.subtitle }}</p>
+
+        {% if program.whatIs.helps.detailIntro or program.whatIs.helps.items %}
+        <div class="expandable-detail">
+          <button class="expandable-toggle" aria-expanded="false">
+            <span class="toggle-icon" aria-hidden="true"></span>
+            <span class="toggle-text">{{ program.whatIs.helps.detailTitle if program.whatIs.helps.detailTitle else "detalle" }}</span>
+          </button>
+          <div class="expandable-content" hidden>
+            {% if program.whatIs.helps.detailIntro %}
+            <p>{{ program.whatIs.helps.detailIntro }}</p>
+            {% endif %}
+            {% if program.whatIs.helps.items %}
+            <ul class="expandable-list">
+              {% for item in program.whatIs.helps.items %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </div>
         {% endif %}
-        {% if program.whatIs.helps.items %}
+      </div>
+      {% endif %}
+
+      {% if program.whyItWorks %}
+      <div class="what-is-section">
+        {% if program.whyItWorks.title %}
+        <h2 class="section-title">{{ program.whyItWorks.title }}</h2>
+        {% endif %}
+        {% if program.whyItWorks.items %}
         <div class="card-items-grid">
-          {% for item in program.whatIs.helps.items %}
+          {% for item in program.whyItWorks.items %}
           <div class="card-item">
             <p>{{ item }}</p>
           </div>
           {% endfor %}
         </div>
+        {% endif %}
+        {% if program.whyItWorks.quote %}
+        <p class="quote-large">{{ program.whyItWorks.quote }}</p>
         {% endif %}
       </div>
       {% endif %}
@@ -146,6 +175,9 @@ title: "{{ program.name }} - vaemptîness"
     {% if program.sessionStructure.title %}
     <h2>{{ program.sessionStructure.title }}</h2>
     {% endif %}
+    {% if program.sessionStructure.intro %}
+    <p class="program-hero-subtitle">{{ program.sessionStructure.intro }}</p>
+    {% endif %}
     <div class="session-grid">
       <div class="session-details">
         {% if program.sessionStructure.duration %}
@@ -159,9 +191,17 @@ title: "{{ program.name }} - vaemptîness"
         </ul>
         {% endif %}
       </div>
-      {% if program.philosophy %}
-      <div class="session-philosophy">
-        <p class="quote-medium">{{ program.philosophy }}</p>
+      {% if program.sessionStructure.timeline %}
+      <div class="session-timeline">
+        <p class="session-duration"><strong>Estructura de las sesiones</strong></p>
+        <ul class="timeline-list">
+          {% for item in program.sessionStructure.timeline %}
+          <li class="timeline-item">
+            <span class="timeline-title">{{ item.title }}</span>
+            <span class="timeline-description">{{ item.description }}</span>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
       {% endif %}
     </div>
@@ -189,28 +229,6 @@ title: "{{ program.name }} - vaemptîness"
       <li class="outcome-item">{{ outcome }}</li>
       {% endfor %}
     </ul>
-    {% endif %}
-  </div>
-</section>
-{% endif %}
-
-{% if program.whyItWorks %}
-<section class="why-it-works">
-  <div class="container">
-    {% if program.whyItWorks.title %}
-    <h2 class="section-title">{{ program.whyItWorks.title }}</h2>
-    {% endif %}
-    {% if program.whyItWorks.intro %}
-    <p class="why-intro">{{ program.whyItWorks.intro }}</p>
-    {% endif %}
-    {% if program.whyItWorks.approach %}
-    <p class="why-approach">{{ program.whyItWorks.approach }}</p>
-    {% endif %}
-    {% if program.whyItWorks.conclusion %}
-    <p class="why-conclusion">{{ program.whyItWorks.conclusion }}</p>
-    {% endif %}
-    {% if program.whyItWorks.impact %}
-    <p class="why-impact">{{ program.whyItWorks.impact }}</p>
     {% endif %}
   </div>
 </section>
@@ -253,7 +271,7 @@ title: "{{ program.name }} - vaemptîness"
 <section class="cta-section">
   <div class="container">
     <div class="cta-content">
-      <h2 class="cta-title">¿Interesado en este programa?</h2>
+      <h2 class="cta-title">¿Te interesa?</h2>
       <p class="cta-description">Contacta con nosotros para más información</p>
       <a href="{{ '/contacto/' | url }}" class="button button-primary">Contáctanos</a>
     </div>

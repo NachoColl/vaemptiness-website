@@ -189,13 +189,16 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
       const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
       const content = toggle.nextElementSibling;
+      const toggleText = toggle.querySelector('.toggle-text');
 
       toggle.setAttribute('aria-expanded', !isExpanded);
 
       if (isExpanded) {
         content.setAttribute('hidden', '');
+        if (toggleText) toggleText.textContent = 'ampliar';
       } else {
         content.removeAttribute('hidden');
+        if (toggleText) toggleText.textContent = 'reducir';
       }
     });
   });

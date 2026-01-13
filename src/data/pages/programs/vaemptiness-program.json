@@ -19,34 +19,29 @@
     "label": "Adultos"
   },
   "hero": {
-    "title": "vaemptîness program"
+    "title": "vaemptîness program",
+    "subtitle": "Introducción"
   },
   "whatIs": {
     "title": "¿Qué es vaemptîness program?",
     "intro": [
       "Es un programa de entrenamiento mental estructurado en 8 sesiones."
     ],
-    "detailTitle": "detalle",
+    "detailTitle": "ampliar",
     "detail": "Un proceso gradual para reconocer cómo funciona la mente en tiempo real y reducir interferencias que generan inestabilidad. No es teoría, ni motivación es técnica y aprendizaje.\n\nDirigido a personas que buscan mejorar su capacidad de concentración y calma. No se trata de relajación pasiva ni de escapar de los problemas interiorizando \"frases bonitas\" de autoayuda. vaemptîness desactiva patrones automáticos para responder en lo cotidiano con mayor claridad y foco.",
     "detailQuote": "La rumiación no resuelve problemas. Solo los repite.",
     "helps": {
       "title": "¿Para qué sirve vaemptîness program?",
-      "intro": "Para sacarle el máximo partido a nuestro 'sistema operativo' (la mente), mediante técnicas especificas de entrenamiento progresivo.",
+      "intro": "Para sacarle el máximo partido a nuestro 'sistema operativo' (la mente).",
+      "detailTitle": "ampliar",
+      "detailIntro": "Vaemptiness program utiliza técnicas especificas de entrenamiento progresivo para:",
       "items": [
         "Reducir la sobrecarga mental y el pensamiento repetitivo",
         "Mejorar la capacidad de concentración y enfoque sostenido",
         "Desarrollar claridad en la toma de decisiones",
         "Regular emociones sin suprimirlas ni intensificarlas"
       ]
-    },
-    "quote2": "Entre el estímulo y la respuesta hay un espacio. En ese espacio está tu libertad.",
-    "trainingItems": [
-      "Observar pensamientos sin identificarse con ellos",
-      "Reducir patrones de rumiación mediante técnicas específicas",
-      "Integrar cuerpo y mente para mayor estabilidad emocional",
-      "Desarrollar presencia sostenida en actividades cotidianas",
-      "Gestionar la reactividad mental en situaciones de estrés"
-    ]
+    }
   },
   "pillarsSubtitle": "El programa se apoya en cuatro pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
   "pillars": [
@@ -73,18 +68,39 @@
   ],
   "sessionStructure": {
     "title": "¿Cómo son las sesiones?",
+    "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
     "duration": "60 minutos",
     "activities": [
-      "Práctica de observación corporal (body scan)",
-      "Técnicas de respiración para reducir rumiación",
-      "Ejercicio de observación de pensamientos sin juicio",
-      "Integración somática mediante movimiento consciente",
-      "Ejercicios de claridad cognitiva y toma de decisiones",
-      "Cierre con integración de aprendizajes"
+      "Técnicas de respiración como ancla al presente.",
+      "Práctica de observación (mental & body scan)",
+      "Ejercicios de cognición válida.",
+      "Cierre con integración de aprendizajes",
+      "Tarea semanal"
+    ],
+    "timeline": [
+      {
+        "title": "Sesiones 1–2",
+        "description": "Conocer la base de la mente."
+      },
+      {
+        "title": "Sesiones 3–5",
+        "description": "Reconocer herramientas y obstáculos."
+      },
+      {
+        "title": "Sesión 6",
+        "description": "Transformar lo neutro."
+      },
+      {
+        "title": "Sesión 7",
+        "description": "Aprender a elegir conscientemente."
+      },
+      {
+        "title": "Sesión 8",
+        "description": "Integrar todo el aprendizaje en la vida diaria."
+      }
     ]
   },
   "outcomes": {
-    "intro": "vaemptîness program ofrece herramientas concretas para gestionar la mente en un contexto de alta demanda cognitiva y emocional.",
     "title": "¿Qué aprenden los participantes?",
     "items": [
       "Reducir el ruido mental y la sobrecarga cognitiva",
@@ -95,11 +111,91 @@
       "Responder en lugar de reaccionar automáticamente"
     ]
   },
-  "philosophy": "vaemptîness program no busca eliminar los pensamientos ni controlar las emociones. Busca entrenar la capacidad de observar, pausar y responder con claridad. Una mente entrenada no es una mente vacía, es una mente que sabe dónde poner su atención.",
-  "testimonials": [
+  "whyItWorks": {
+    "title": "¿Por qué funciona?",
+    "items": [
+      "La mente no es caótica.",
+      "Opera a través de factores mentales identificables.",
+      "Aprendemos a identificarlos.",
+      "Reconocerlos modifica su impacto."
+    ]
+  },
+  "pillarsTitle": "Pilares del programa",
+  "pillarsSubtitle": "El programa se apoya en cuatro pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
+  "pillars": [
     {
-      "quote": "Llegué con mucho ruido mental y la sensación de estar siempre reaccionando ante cualquier situación.\n\nvaemptîness no intentó cambiar nada. Aprendí a observar a través de las herramientas que propone el programa.\n\nHoy la mente sigue activa, pero ya no me arrastra.\nEse espacio para la observación, ha cambiado mi forma de estar en el día a día.",
-      "author": "Participante del programa"
+      "title": "Observación de Pensamientos",
+      "description": "Aprender a ver los pensamientos como eventos mentales en lugar de realidades absolutas. Desarrollar distancia cognitiva.",
+      "icon": "fa-solid fa-eye"
+    },
+    {
+      "title": "Reducción de Rumiación",
+      "description": "Identificar y desactivar patrones de pensamiento repetitivo que consumen energía sin aportar soluciones.",
+      "icon": "fa-solid fa-compress"
+    },
+    {
+      "title": "Claridad Cognitiva",
+      "description": "Mejorar la capacidad de tomar decisiones, priorizar efectivamente y mantener enfoque en lo importante.",
+      "icon": "fa-solid fa-lightbulb"
+    },
+    {
+      "title": "Integración Somática",
+      "description": "Conectar mente y cuerpo para una regulación emocional más efectiva. El cuerpo como ancla de presencia.",
+      "icon": "fa-solid fa-person"
     }
-  ]
+  ],
+  "sessionStructure": {
+    "title": "¿Cómo son las sesiones?",
+    "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
+    "duration": "60 minutos",
+    "activities": [
+      "Técnicas de respiración como ancla al presente.",
+      "Práctica de observación (mental & body scan)",
+      "Ejercicios de cognición válida.",
+      "Cierre con integración de aprendizajes",
+      "Tarea semanal"
+    ],
+    "timeline": [
+      {
+        "title": "Sesiones 1–2",
+        "description": "Conocer la base de la mente."
+      },
+      {
+        "title": "Sesiones 3–5",
+        "description": "Reconocer herramientas y obstáculos."
+      },
+      {
+        "title": "Sesión 6",
+        "description": "Transformar lo neutro."
+      },
+      {
+        "title": "Sesión 7",
+        "description": "Aprender a elegir conscientemente."
+      },
+      {
+        "title": "Sesión 8",
+        "description": "Integrar todo el aprendizaje en la vida diaria."
+      }
+    ]
+  },
+  "outcomes": {
+    "title": "¿Qué aprenden los participantes?",
+    "items": [
+      "Reducir el ruido mental y la sobrecarga cognitiva",
+      "Mejorar la concentración y el enfoque sostenido",
+      "Desarrollar mayor equilibrio emocional",
+      "Optimizar el rendimiento sin agotamiento",
+      "Crear patrones de pensamiento más estables y funcionales",
+      "Responder en lugar de reaccionar automáticamente"
+    ]
+  },
+  "whyItWorks": {
+    "title": "¿Por qué funciona?",
+    "items": [
+      "La mente no es caótica.",
+      "Opera a través de factores mentales identificables.",
+      "Aprendemos a identificarlos.",
+      "Reconocerlos modifica su impacto."
+    ]
+  }
 }
