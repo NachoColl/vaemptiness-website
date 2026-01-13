@@ -2194,7 +2194,7 @@ main {
 
 /* Expandable detail section */
 .expandable-detail {
-  margin: var(--space-xl) 0;
+  margin: var(--space-sm) 0 var(--space-xl) 0;
 }
 
 .expandable-toggle {
