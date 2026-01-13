@@ -641,7 +641,7 @@ collections:
                 name: "intro"
                 widget: "object"
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string", required: false, hint: "VISIBLE - Optional section heading (e.g., 'Patrones automáticos')"}
                   - label: "First Paragraphs"
                     name: "firstParagraphs"
                     widget: "list"
