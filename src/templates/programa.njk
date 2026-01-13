@@ -9,37 +9,53 @@ permalink: /{{ program.slug }}/
 title: "{{ program.name }} - vaemptîness"
 ---
 
+{% if program.hero %}
 <section class="program-hero">
   <div class="container">
     <div class="program-hero-content">
+      {% if program.hero.title %}
       <h1 class="program-hero-title">{{ program.hero.title }}</h1>
+      {% endif %}
+      {% if program.hero.subtitle %}
       <p class="program-hero-subtitle">{{ program.hero.subtitle }}</p>
+      {% endif %}
+      {% if program.hero.description %}
       <p class="program-hero-description">{{ program.hero.description }}</p>
+      {% endif %}
     </div>
   </div>
 </section>
+{% endif %}
 
 {% if program.whatIs %}
 <section class="program-what-is">
   <div class="container">
     <div class="what-is-content centered">
+      {% if program.whatIs.title %}
       <h2 class="section-title">{{ program.whatIs.title }}</h2>
+      {% endif %}
 
+      {% if program.whatIs.intro %}
       <div class="what-is-intro">
         {% for paragraph in program.whatIs.intro %}
         <p>{{ paragraph }}</p>
         {% endfor %}
       </div>
+      {% endif %}
 
       {% if program.whatIs.quote1 %}
       <p class="quote-large">{{ program.whatIs.quote1 }}</p>
       {% endif %}
 
+      {% if program.whatIs.helps %}
       <div class="what-is-section">
+        {% if program.whatIs.helps.title %}
         <h3>{{ program.whatIs.helps.title }}</h3>
+        {% endif %}
         {% if program.whatIs.helps.subtitle %}
         <p class="what-is-subtitle">{{ program.whatIs.helps.subtitle }}</p>
         {% endif %}
+        {% if program.whatIs.helps.items %}
         <div class="card-items-grid">
           {% for item in program.whatIs.helps.items %}
           <div class="card-item">
@@ -47,7 +63,9 @@ title: "{{ program.name }} - vaemptîness"
           </div>
           {% endfor %}
         </div>
+        {% endif %}
       </div>
+      {% endif %}
 
       {% if program.whatIs.quote2 %}
       <p class="quote-large">{{ program.whatIs.quote2 }}</p>
@@ -76,18 +94,26 @@ title: "{{ program.name }} - vaemptîness"
 {% if program.pillars %}
 <section class="program-pillars">
   <div class="container">
-    <h2 class="section-title">Pilares del Programa</h2>
+    {% if program.pillarsTitle %}
+    <h2 class="section-title">{{ program.pillarsTitle }}</h2>
+    {% endif %}
     {% if program.pillarsSubtitle %}
     <p class="program-hero-subtitle">{{ program.pillarsSubtitle }}</p>
     {% endif %}
     <div class="pillars-grid">
       {% for pillar in program.pillars %}
       <div class="pillar-card">
+        {% if pillar.icon %}
         <div class="pillar-icon">
           <i class="{{ pillar.icon }}" aria-hidden="true"></i>
         </div>
+        {% endif %}
+        {% if pillar.title %}
         <h3 class="pillar-title">{{ pillar.title }}</h3>
+        {% endif %}
+        {% if pillar.description %}
         <p class="pillar-description">{{ pillar.description }}</p>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
@@ -98,15 +124,21 @@ title: "{{ program.name }} - vaemptîness"
 {% if program.sessionStructure %}
 <section class="program-session">
   <div class="container">
+    {% if program.sessionStructure.title %}
     <h2>{{ program.sessionStructure.title }}</h2>
+    {% endif %}
     <div class="session-grid">
       <div class="session-details">
+        {% if program.sessionStructure.duration %}
         <p class="session-duration"><strong>Duración:</strong> {{ program.sessionStructure.duration }}</p>
+        {% endif %}
+        {% if program.sessionStructure.activities %}
         <ul class="session-activities">
           {% for activity in program.sessionStructure.activities %}
           <li>{{ activity }}</li>
           {% endfor %}
         </ul>
+        {% endif %}
       </div>
       {% if program.philosophy %}
       <div class="session-philosophy">
@@ -129,12 +161,16 @@ title: "{{ program.name }} - vaemptîness"
     <p class="outcomes-intro">{{ program.outcomes.intro }}</p>
     {% endif %}
 
+    {% if program.outcomes.title %}
     <h2>{{ program.outcomes.title }}</h2>
+    {% endif %}
+    {% if program.outcomes.items %}
     <ul class="outcomes-list">
       {% for outcome in program.outcomes.items %}
       <li class="outcome-item">{{ outcome }}</li>
       {% endfor %}
     </ul>
+    {% endif %}
   </div>
 </section>
 {% endif %}
@@ -142,11 +178,21 @@ title: "{{ program.name }} - vaemptîness"
 {% if program.whyItWorks %}
 <section class="why-it-works">
   <div class="container">
+    {% if program.whyItWorks.title %}
     <h2 class="section-title">{{ program.whyItWorks.title }}</h2>
+    {% endif %}
+    {% if program.whyItWorks.intro %}
     <p class="why-intro">{{ program.whyItWorks.intro }}</p>
+    {% endif %}
+    {% if program.whyItWorks.approach %}
     <p class="why-approach">{{ program.whyItWorks.approach }}</p>
+    {% endif %}
+    {% if program.whyItWorks.conclusion %}
     <p class="why-conclusion">{{ program.whyItWorks.conclusion }}</p>
+    {% endif %}
+    {% if program.whyItWorks.impact %}
     <p class="why-impact">{{ program.whyItWorks.impact }}</p>
+    {% endif %}
   </div>
 </section>
 {% endif %}
@@ -160,10 +206,14 @@ title: "{{ program.name }} - vaemptîness"
         <div class="testimonial-slide">
           <div class="testimonial-content">
             <i class="fa-solid fa-quote-left testimonial-quote-icon" aria-hidden="true"></i>
+            {% if testimonial.quote %}
             <blockquote class="testimonial-quote">
               <p>{{ testimonial.quote | safe | replace('\n', '</p><p>') }}</p>
             </blockquote>
+            {% endif %}
+            {% if testimonial.author %}
             <cite class="testimonial-author">— {{ testimonial.author }}</cite>
+            {% endif %}
           </div>
         </div>
         {% endfor %}
