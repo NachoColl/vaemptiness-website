@@ -251,10 +251,12 @@ collections:
                 name: "hero"
                 widget: "object"
                 fields:
-                  - {label: "Title", name: "title", widget: "string", required: true}
-                  - {label: "Tagline", name: "tagline", widget: "string"}
-                  - {label: "Subtitle", name: "subtitle", widget: "string", required: true, hint: "HTML allowed"}
-                  - {label: "Scroll Text", name: "scrollText", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string", required: true, hint: "VISIBLE - Main brand title"}
+                  - {label: "Tagline", name: "tagline", widget: "string", hint: "VISIBLE - Tagline below title"}
+                  - {label: "Subtitle", name: "subtitle", widget: "string", required: true, hint: "VISIBLE - Subtitle text (HTML allowed)"}
+                  - {label: "Button Text", name: "buttonText", widget: "string", hint: "VISIBLE - CTA button text (e.g., 'vaemptîness Program')"}
+                  - {label: "Button URL", name: "buttonUrl", widget: "string", hint: "VISIBLE - CTA button link (e.g., '/vaemptiness-program/')"}
+                  - {label: "Scroll Text", name: "scrollText", widget: "string", hint: "VISIBLE - Text for scroll indicator"}
                   - label: "Principles"
                     name: "principles"
                     widget: "list"

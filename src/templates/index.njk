@@ -27,6 +27,12 @@ layout: base.njk
       </div>
 
       <p class="hero-subtitle">{{ pages.home.content.hero.subtitle | safe }}</p>
+
+      {% if pages.home.content.hero.buttonText and pages.home.content.hero.buttonUrl %}
+      <a href="{{ pages.home.content.hero.buttonUrl | url }}" class="button button-primary hero-cta-button">
+        {{ pages.home.content.hero.buttonText }}
+      </a>
+      {% endif %}
     </div>
 
     <div class="scroll-indicator" aria-label="Scroll down">

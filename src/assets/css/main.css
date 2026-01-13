@@ -801,9 +801,15 @@ main {
   font-size: var(--text-h3);
   font-weight: 400;
   color: var(--color-hover);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
+}
+
+.hero-cta-button {
+  margin-top: var(--space-xl);
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.8s forwards;
 }
 
 @keyframes fadeInUp {
