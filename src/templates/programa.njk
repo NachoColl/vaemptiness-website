@@ -52,6 +52,9 @@ title: "{{ program.name }} - vaemptîness"
         </button>
         <div class="expandable-content" hidden>
           <p>{{ program.whatIs.detail | replace('\n\n', '</p><p>') | safe }}</p>
+          {% if program.whatIs.detailQuote %}
+          <p class="quote-large">{{ program.whatIs.detailQuote }}</p>
+          {% endif %}
         </div>
       </div>
       {% endif %}

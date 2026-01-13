@@ -2243,6 +2243,11 @@ main {
   color: var(--color-hover);
 }
 
+.expandable-content .quote-large {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
 .expandable-content[hidden] {
   display: none;
 }
