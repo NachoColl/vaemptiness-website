@@ -68,6 +68,9 @@ title: "{{ program.name }} - vaemptîness"
         {% if program.whatIs.helps.title %}
         <h3>{{ program.whatIs.helps.title }}</h3>
         {% endif %}
+        {% if program.whatIs.helps.intro %}
+        <p class="what-is-intro-text">{{ program.whatIs.helps.intro }}</p>
+        {% endif %}
         {% if program.whatIs.helps.subtitle %}
         <p class="what-is-subtitle">{{ program.whatIs.helps.subtitle }}</p>
         {% endif %}

@@ -2192,6 +2192,12 @@ main {
   margin-bottom: var(--space-lg);
 }
 
+.what-is-intro-text {
+  font-size: var(--text-body-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-lg);
+}
+
 /* Expandable detail section */
 .expandable-detail {
   margin: var(--space-sm) 0 var(--space-xl) 0;
