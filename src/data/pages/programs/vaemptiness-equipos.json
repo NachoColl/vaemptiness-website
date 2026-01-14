@@ -25,7 +25,7 @@
     },
     {
       "title": "Claridad Colectiva",
-      "description": "Reducir el ruido mental individual, mejora la calidad de las decisiones y el rendimiento grupal.",
+      "description": "Reducir el ruido mental individual mejora la calidad de las decisiones y el rendimiento grupal.",
       "icon": "fa-solid fa-people-group"
     },
     {
@@ -43,9 +43,9 @@
   "slug": "vaemptiness-equipos",
   "featured": true,
   "whatIs": {
-    "title": "¿Que es vaemptîness equipos?",
+    "title": "¿Qué es vaemptîness equipos?",
     "intro": [
-      "Entrenamiento mental para equipos de trabajo que buscan amplificar la concentración y el foco sostenido. ",
+      "Entrenamiento mental para equipos de trabajo que buscan amplificar la concentración y el foco sostenido.",
       "vaemptîness transforma de forma gradual la dinámica grupal desde la conciencia individual hacia el rendimiento compartido, mejorando la productividad."
     ],
     "quote1": "No se trata de hacer más. Se trata de crear espacio para la creatividad y el bienestar colectivo.",
@@ -62,7 +62,6 @@
     "trainingItems": [
       "Habitar el momento con mayor concentración y calma (Equipos más enfocados)",
       "Regular el estrés laboral en tiempo real (Menor ausentismo)",
-      "Comunicar con más empatía y menos fricción",
       "Comunicar con más empatía (Menor fricción)",
       "Ambiente de trabajo más equilibrado (Ecuanimidad)"
     ]
@@ -71,12 +70,12 @@
   "testimonials": [
     {
       "title": "En equipos creativos, la exigencia y la reactividad afectan directamente a la calidad del trabajo.\nvaemptîness ofrece un entrenamiento mental que favorece la atención y la colaboración del equipo en pro a una productividad que no añade carga.",
-      "quote": "vaemptîness no propone técnicas de motivación ni control mental.\nEntrena la capacidad de observar y crear espacio para la concentración, la calma mental y la antención plena.\n\nEse cambio ha tenido un impacto directo en la claridad, la toma de decisiones, la creatividad y la gestión de la presión y el estrés permanente en el trabajo.\n\nEs un proceso riguroso, silencioso y sostenido.",
+      "quote": "vaemptîness no propone técnicas de motivación ni control mental.\nEntrena la capacidad de observar y crear espacio para la concentración, la calma mental y la atención plena.\n\nEse cambio ha tenido un impacto directo en la claridad, la toma de decisiones, la creatividad y la gestión de la presión y el estrés permanente en el trabajo.\n\nEs un proceso riguroso, silencioso y sostenido.",
       "author": "Directivo, sector creativo"
     },
     {
       "title": "Para entornos de alta exigencia vaemptîness se implementa en contextos donde la claridad, la calidad de respuesta y la estabilidad mental son factores estratégicos.\nEl programa se integra sin interferir en los procesos existentes de la organización, aportando profundidad sin ruido.",
-      "quote": "vaemptîness ofrece un marco de entrenamiento mental sólido y coherente con entornos de alta exigencia.\n\nEl programa aporta claridad, estabilidad y una mejora tangible en la calidad de la respuesta grupal, ahora el equipo rema en la misma dirección y sostiene un mismo objetivo. Menos ficción, menos conflicto, mayor foco",
+      "quote": "vaemptîness ofrece un marco de entrenamiento mental sólido y coherente con entornos de alta exigencia.\n\nEl programa aporta claridad, estabilidad y una mejora tangible en la calidad de la respuesta grupal, ahora el equipo rema en la misma dirección y sostiene un mismo objetivo. Menos ficción, menos conflicto, mayor foco.",
       "author": "Dirección ejecutiva"
     }
   ],

@@ -28,13 +28,13 @@
       "Es un programa de entrenamiento mental estructurado en 8 sesiones."
     ],
     "detailTitle": "ampliar",
-    "detail": "Un proceso gradual para reconocer cómo funciona la mente en tiempo real y reducir interferencias que generan inestabilidad. No es teoría, ni motivación es técnica y aprendizaje.\n\nDirigido a personas que buscan mejorar su capacidad de concentración y calma. No se trata de relajación pasiva ni de escapar de los problemas interiorizando \"frases bonitas\" de autoayuda. vaemptîness desactiva patrones automáticos para responder en lo cotidiano con mayor claridad y foco.",
+    "detail": "Un proceso gradual para reconocer cómo funciona la mente en tiempo real y reducir interferencias que generan inestabilidad. No es teoría ni motivación, es técnica y aprendizaje.\n\nDirigido a personas que buscan mejorar su capacidad de concentración y calma. No se trata de relajación pasiva ni de escapar de los problemas interiorizando \"frases bonitas\" de autoayuda. vaemptîness desactiva patrones automáticos para responder en lo cotidiano con mayor claridad y foco.",
     "detailQuote": "La rumiación no resuelve problemas. Solo los repite.",
     "helps": {
       "title": "¿Para qué sirve vaemptîness program?",
       "intro": "Para sacarle el máximo partido a nuestro 'sistema operativo' (la mente).",
       "detailTitle": "ampliar",
-      "detailIntro": "Vaemptiness program utiliza técnicas especificas de entrenamiento progresivo para:",
+      "detailIntro": "vaemptiness program utiliza técnicas específicas de entrenamiento progresivo para:",
       "items": [
         "Reducir la sobrecarga mental y el pensamiento repetitivo",
         "Mejorar la capacidad de concentración y enfoque sostenido",
@@ -42,83 +42,6 @@
         "Regular emociones sin suprimirlas ni intensificarlas"
       ]
     }
-  },
-  "pillarsSubtitle": "El programa se apoya en cuatro pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
-  "pillars": [
-    {
-      "title": "Observación de Pensamientos",
-      "description": "Aprender a ver los pensamientos como eventos mentales en lugar de realidades absolutas. Desarrollar distancia cognitiva.",
-      "icon": "fa-solid fa-eye"
-    },
-    {
-      "title": "Reducción de Rumiación",
-      "description": "Identificar y desactivar patrones de pensamiento repetitivo que consumen energía sin aportar soluciones.",
-      "icon": "fa-solid fa-compress"
-    },
-    {
-      "title": "Claridad Cognitiva",
-      "description": "Mejorar la capacidad de tomar decisiones, priorizar efectivamente y mantener enfoque en lo importante.",
-      "icon": "fa-solid fa-lightbulb"
-    },
-    {
-      "title": "Integración Somática",
-      "description": "Conectar mente y cuerpo para una regulación emocional más efectiva. El cuerpo como ancla de presencia.",
-      "icon": "fa-solid fa-person"
-    }
-  ],
-  "sessionStructure": {
-    "title": "¿Cómo son las sesiones?",
-    "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
-    "duration": "60 minutos",
-    "activities": [
-      "Técnicas de respiración como ancla al presente.",
-      "Práctica de observación (mental & body scan)",
-      "Ejercicios de cognición válida.",
-      "Cierre con integración de aprendizajes",
-      "Tarea semanal"
-    ],
-    "timeline": [
-      {
-        "title": "Sesiones 1–2",
-        "description": "Conocer la base de la mente."
-      },
-      {
-        "title": "Sesiones 3–5",
-        "description": "Reconocer herramientas y obstáculos."
-      },
-      {
-        "title": "Sesión 6",
-        "description": "Transformar lo neutro."
-      },
-      {
-        "title": "Sesión 7",
-        "description": "Aprender a elegir conscientemente."
-      },
-      {
-        "title": "Sesión 8",
-        "description": "Integrar todo el aprendizaje en la vida diaria."
-      }
-    ]
-  },
-  "outcomes": {
-    "title": "¿Qué aprenden los participantes?",
-    "items": [
-      "Reducir el ruido mental y la sobrecarga cognitiva",
-      "Mejorar la concentración y el enfoque sostenido",
-      "Desarrollar mayor equilibrio emocional",
-      "Optimizar el rendimiento sin agotamiento",
-      "Crear patrones de pensamiento más estables y funcionales",
-      "Responder en lugar de reaccionar automáticamente"
-    ]
-  },
-  "whyItWorks": {
-    "title": "¿Por qué funciona?",
-    "items": [
-      "La mente no es caótica.",
-      "Opera a través de factores mentales identificables.",
-      "Aprendemos a identificarlos.",
-      "Reconocerlos modifica su impacto."
-    ]
   },
   "pillarsTitle": "Pilares del programa",
   "pillarsSubtitle": "El programa se apoya en cuatro pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
@@ -150,10 +73,10 @@
     "duration": "60 minutos",
     "activities": [
       "Técnicas de respiración como ancla al presente.",
-      "Práctica de observación (mental & body scan)",
+      "Práctica de observación (mental & body scan).",
       "Ejercicios de cognición válida.",
-      "Cierre con integración de aprendizajes",
-      "Tarea semanal"
+      "Cierre con integración de aprendizajes.",
+      "Tarea semanal."
     ],
     "timeline": [
       {
