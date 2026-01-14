@@ -63,6 +63,29 @@ title: "{{ program.name }} - vaemptîness"
       <p class="quote-large">{{ program.whatIs.quote1 }}</p>
       {% endif %}
 
+      {% if program.whatIs.forWhom %}
+      <div class="what-is-section">
+        {% if program.whatIs.forWhom.title %}
+        <h2 class="section-title">{{ program.whatIs.forWhom.title }}</h2>
+        {% endif %}
+        {% if program.whatIs.forWhom.intro %}
+        <p class="what-is-intro-text">{{ program.whatIs.forWhom.intro }}</p>
+        {% endif %}
+
+        {% if program.whatIs.forWhom.detail %}
+        <div class="expandable-detail">
+          <button class="expandable-toggle" aria-expanded="false">
+            <span class="toggle-icon" aria-hidden="true"></span>
+            <span class="toggle-text">{{ program.whatIs.forWhom.detailTitle if program.whatIs.forWhom.detailTitle else "ampliar" }}</span>
+          </button>
+          <div class="expandable-content" hidden>
+            <p>{{ program.whatIs.forWhom.detail }}</p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
       {% if program.whatIs.helps %}
       <div class="what-is-section">
         {% if program.whatIs.helps.title %}
