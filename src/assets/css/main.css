@@ -386,6 +386,12 @@ main {
   color: var(--color-accent-rust);
 }
 
+/* Menu hierarchy - parent item (top level) always highlighted */
+.dropdown-menu a.menu-parent {
+  background: var(--color-accent-cream);
+  color: var(--color-accent-rust);
+}
+
 /* Menu hierarchy - child items indentation */
 .menu-child a {
   padding-left: calc(var(--space-md) + var(--space-sm)) !important;
