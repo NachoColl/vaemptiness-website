@@ -1725,6 +1725,25 @@ main {
   color: var(--color-accent-rust);
   font-weight: 500;
   font-size: var(--text-base);
+  margin-bottom: var(--space-sm);
+}
+
+.founder-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-hover);
+  font-size: var(--text-body);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.founder-linkedin:hover {
+  color: var(--color-accent-rust);
+}
+
+.founder-linkedin i {
+  font-size: 1.25rem;
 }
 
 .team-members {

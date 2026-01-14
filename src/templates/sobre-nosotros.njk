@@ -70,6 +70,12 @@ layout: base.njk
         <div class="founder-info">
           <h3 class="founder-name">{{ pageData.team.founder.name }}</h3>
           <p class="founder-role">{{ pageData.team.founder.role }}</p>
+          {% if pageData.team.founder.linkedin %}
+          <a href="{{ pageData.team.founder.linkedin }}" class="founder-linkedin" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          {% endif %}
         </div>
       </div>
     </div>
