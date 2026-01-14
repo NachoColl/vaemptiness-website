@@ -875,6 +875,14 @@ main {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-bottom: calc(var(--space-3xl) * 2);
+  }
+
+  .hero-cta-button {
+    margin-top: var(--space-md);
+  }
+
   .scroll-indicator {
     left: 50% !important;
     right: auto !important;
@@ -1820,10 +1828,6 @@ main {
 
   .program-hero-title {
     margin-bottom: var(--space-sm);
-  }
-
-  .program-hero .hero-cta-button {
-    margin-top: var(--space-md);
   }
 }
 
