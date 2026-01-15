@@ -2437,7 +2437,8 @@ main {
   text-align: left;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: var(--space-xl);
+  column-gap: var(--space-xl);
+  row-gap: var(--space-xs);
   justify-content: center;
   padding-left: var(--space-xl);
   max-width: fit-content;

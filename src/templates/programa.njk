@@ -141,13 +141,19 @@ title: "{{ program.name }} - vaemptîness"
             <span class="toggle-text">{{ program.whyItWorks.detailTitle if program.whyItWorks.detailTitle else "ampliar" }}</span>
           </button>
           <div class="expandable-content" hidden>
-            <p>{% if program.whyItWorks.detail %}{{ program.whyItWorks.detail }} {% endif %}{{ program.whyItWorks.detailIntro }}</p>
+            {% if program.whyItWorks.detail %}
+            <p>{{ program.whyItWorks.detail }}</p>
+            {% endif %}
+            <p>{{ program.whyItWorks.detailIntro }}</p>
             {% if program.whyItWorks.items %}
             <ul class="expandable-list">
               {% for item in program.whyItWorks.items %}
               <li>{{ item }}</li>
               {% endfor %}
             </ul>
+            {% endif %}
+            {% if program.whyItWorks.quote %}
+            <p class="quote-large">{{ program.whyItWorks.quote }}</p>
             {% endif %}
           </div>
         </div>
@@ -177,7 +183,7 @@ title: "{{ program.name }} - vaemptîness"
         {% if program.whyItWorks.impact %}
         <p class="quote-large">{{ program.whyItWorks.impact }}</p>
         {% endif %}
-        {% if program.whyItWorks.quote %}
+        {% if program.whyItWorks.quote and not program.whyItWorks.detailIntro %}
         <p class="quote-large">{{ program.whyItWorks.quote }}</p>
         {% endif %}
       </div>
