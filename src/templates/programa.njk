@@ -210,6 +210,28 @@ title: "{{ program.name }} - vaemptîness"
 </section>
 {% endif %}
 
+{% if program.howItWorks %}
+<section class="program-what-is">
+  <div class="container">
+    <div class="what-is-content centered">
+      {% if program.howItWorks.title %}
+      <h2 class="section-title">{{ program.howItWorks.title }}</h2>
+      {% endif %}
+
+      {% if program.howItWorks.items %}
+      <div class="card-items-grid">
+        {% for item in program.howItWorks.items %}
+        <div class="card-item">
+          <p>{{ item }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if program.pillars %}
 <section class="program-pillars">
   <div class="container">
