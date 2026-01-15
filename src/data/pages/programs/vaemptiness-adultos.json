@@ -20,8 +20,7 @@
   },
   "hero": {
     "title": "vaemptîness adultos",
-    "subtitle": "Programa para adultos",
-    "description": "Método de entrenamiento mental diseñado para crear claridad, reducir carga cognitiva y eliminar patrones de pensamiento automático."
+    "subtitle": "Programa para adultos"
   },
   "whatIs": {
     "title": "¿Qué es vaemptîness adultos?",
@@ -48,6 +47,7 @@
       "Gestionar la reactividad mental en situaciones de estrés"
     ]
   },
+  "pillarsTitle": "Pilares del programa",
   "pillarsSubtitle": "El programa se apoya en cuatro pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
   "pillars": [
     {
@@ -73,7 +73,8 @@
   ],
   "sessionStructure": {
     "title": "¿Cómo son las sesiones?",
-    "duration": "60 minutos",
+    "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
+    "duration": "Duración: 60 minutos",
     "activities": [
       "Práctica de observación corporal (body scan)",
       "Técnicas de respiración para reducir rumiación",
@@ -81,6 +82,28 @@
       "Integración somática mediante movimiento consciente",
       "Ejercicios de claridad cognitiva y toma de decisiones",
       "Cierre con integración de aprendizajes"
+    ],
+    "timeline": [
+      {
+        "title": "Sesiones 1–2",
+        "description": "Conocer la base de la mente."
+      },
+      {
+        "title": "Sesiones 3–5",
+        "description": "Reconocer obstáculos. Aplicar herramientas."
+      },
+      {
+        "title": "Sesión 6",
+        "description": "Transformar lo neutro."
+      },
+      {
+        "title": "Sesión 7",
+        "description": "Aprender a elegir conscientemente."
+      },
+      {
+        "title": "Sesión 8",
+        "description": "Integrar todo el aprendizaje en la vida diaria."
+      }
     ]
   },
   "outcomes": {

@@ -17,6 +17,8 @@
     "label": "Equipos de trabajo"
   },
   "seoKeywords": "mindfulness empresas Barcelona, entrenamiento mental equipos, reducir estrés laboral, bienestar corporativo, formación mindfulness",
+  "pillarsTitle": "Pilares del programa",
+  "pillarsSubtitle": "El programa se apoya en cuatro pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
   "pillars": [
     {
       "title": "Comunicación Consciente",
@@ -81,8 +83,7 @@
   ],
   "hero": {
     "title": "vaemptîness equipos",
-    "subtitle": "Programa para equipos de trabajo",
-    "description": "En entornos de alta exigencia, no siempre falta talento. Sobra ruido."
+    "subtitle": "Programa para equipos de trabajo"
   },
   "id": "teams",
   "seo": {
@@ -94,7 +95,8 @@
   },
   "sessionStructure": {
     "title": "¿Cómo son las sesiones?",
-    "duration": "60 minutos",
+    "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
+    "duration": "Duración: 60 minutos",
     "activities": [
       "Check-in grupal (Apertura)",
       "Técnicas de respiración como ancla al presente (mindfulness)",
@@ -102,6 +104,28 @@
       "Práctica de observación (mental & body scan)",
       "Síntesis de aprendizaje (integración final reflexiva)",
       "Tarea semanal con ejercicios individuales (cierre)"
+    ],
+    "timeline": [
+      {
+        "title": "Sesiones 1–2",
+        "description": "Conocer la base de la mente."
+      },
+      {
+        "title": "Sesiones 3–5",
+        "description": "Reconocer obstáculos. Aplicar herramientas."
+      },
+      {
+        "title": "Sesión 6",
+        "description": "Transformar lo neutro."
+      },
+      {
+        "title": "Sesión 7",
+        "description": "Aprender a elegir conscientemente."
+      },
+      {
+        "title": "Sesión 8",
+        "description": "Integrar todo el aprendizaje en la vida diaria."
+      }
     ]
   },
   "ageRange": "Equipos de trabajo"
