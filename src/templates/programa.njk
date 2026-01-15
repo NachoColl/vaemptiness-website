@@ -106,7 +106,7 @@ title: "{{ program.name }} - vaemptîness"
             <p>{{ program.whatIs.helps.detailIntro }}</p>
             {% endif %}
             {% if program.whatIs.helps.items %}
-            <ul class="expandable-list">
+            <ul class="expandable-list expandable-list-single">
               {% for item in program.whatIs.helps.items %}
               <li>{{ item }}</li>
               {% endfor %}

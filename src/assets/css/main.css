@@ -2456,6 +2456,10 @@ main {
   }
 }
 
+.expandable-list-single {
+  grid-template-columns: 1fr !important;
+}
+
 .expandable-content[hidden] {
   display: none;
 }
