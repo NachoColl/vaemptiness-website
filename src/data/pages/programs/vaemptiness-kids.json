@@ -24,7 +24,7 @@
     "subtitle": "Edades 5-8 años"
   },
   "pillarsTitle": "Pilares del programa",
-  "pillarsSubtitle": "El programa se apoya en cuatro pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
+  "pillarsSubtitle": "El programa se apoya en cinco pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
   "pillars": [
     {
       "title": "Calma en el cuerpo",
@@ -64,7 +64,28 @@
       "Actividad creativa (colorear emociones, pegar stickers, dibujar \"la casita tranquila\").",
       "Cierre con un gesto de amabilidad hacia sí mismos/as o hacia un compañero/a."
     ],
-    "highlight": "vaemptîness Kids, no busca que los niños/as \"sean buenos/as\" o \"se porten bien\": busca que entiendan su mundo interior y lo gestionen con herramientas simples y orgánicas, desde la naturalidad."
+    "timeline": [
+      {
+        "title": "Sesiones 1–2",
+        "description": "Exploradores del mapa del tesoro. Descubrimos cómo funciona nuestra mente jugando."
+      },
+      {
+        "title": "Sesiones 3–5",
+        "description": "El club de las emociones. Aprendemos a reconocer al Monstruo del enfado, la Nube Triste y la Mariposa Nerviosa. Usamos juegos mágicos para sentirnos mejor."
+      },
+      {
+        "title": "Sesión 6",
+        "description": "El hechizo del pensamiento positivo. Convertimos pensamientos normales en pensamientos felices y valientes."
+      },
+      {
+        "title": "Sesión 7",
+        "description": "Elegimos ser héroes. Aprendemos a elegir buenas acciones y palabras amables."
+      },
+      {
+        "title": "Sesión 8",
+        "description": "La misión final. Usamos nuestros superpoderes en casa, en la escuela y con amigos."
+      }
+    ]
   },
   "outcomes": {
     "title": "¿Qué aprenden los niños/as?",
