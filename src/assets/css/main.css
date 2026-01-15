@@ -2044,16 +2044,12 @@ main {
 }
 
 .session-highlight {
-  background: white;
-  padding: var(--space-xl);
-  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 
-.session-highlight .quote-emphasis {
+.session-highlight .quote-medium {
   margin: 0;
 }
 

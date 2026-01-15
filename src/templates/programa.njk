@@ -221,7 +221,7 @@ title: "{{ program.name }} - vaemptîness"
     <div class="session-grid">
       <div class="session-details">
         {% if program.sessionStructure.duration %}
-        <p class="session-duration"><strong>Duración:</strong> {{ program.sessionStructure.duration }}</p>
+        <p class="session-duration">{{ program.sessionStructure.duration }}</p>
         {% endif %}
         {% if program.sessionStructure.activities %}
         <ul class="session-activities">
@@ -245,7 +245,7 @@ title: "{{ program.name }} - vaemptîness"
       </div>
       {% elif program.sessionStructure.highlight %}
       <div class="session-highlight">
-        <p class="quote-emphasis">{{ program.sessionStructure.highlight }}</p>
+        <p class="quote-medium">{{ program.sessionStructure.highlight }}</p>
       </div>
       {% endif %}
     </div>
