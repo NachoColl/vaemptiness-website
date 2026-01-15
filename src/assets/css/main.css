@@ -2437,7 +2437,7 @@ main {
   text-align: left;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: var(--space-md);
+  gap: var(--space-xl);
   justify-content: center;
   padding-left: var(--space-xl);
   max-width: fit-content;
@@ -2446,8 +2446,8 @@ main {
 
 .expandable-list li {
   font-size: var(--text-body);
-  line-height: 1.7;
-  margin-bottom: var(--space-sm);
+  line-height: 1.4;
+  margin-bottom: var(--space-xs);
   color: var(--color-hover);
 }
 
