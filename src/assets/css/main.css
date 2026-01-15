@@ -2435,7 +2435,8 @@ main {
 .expandable-list {
   list-style: disc;
   text-align: left;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   padding-left: var(--space-xl);
 }
 
