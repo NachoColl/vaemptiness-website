@@ -2045,8 +2045,9 @@ main {
 
 .session-highlight {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: var(--space-md);
 }
 
 .session-highlight .quote-medium {
