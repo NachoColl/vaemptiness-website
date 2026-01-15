@@ -134,7 +134,27 @@ title: "{{ program.name }} - vaemptîness"
         {% if program.whyItWorks.intro %}
         <p class="what-is-intro-text">{{ program.whyItWorks.intro }}</p>
         {% endif %}
-        {% if program.whyItWorks.items %}
+        {% if program.whyItWorks.detailIntro %}
+        <div class="expandable-detail">
+          <button class="expandable-toggle" aria-expanded="false">
+            <span class="toggle-icon" aria-hidden="true"></span>
+            <span class="toggle-text">{{ program.whyItWorks.detailTitle if program.whyItWorks.detailTitle else "ampliar" }}</span>
+          </button>
+          <div class="expandable-content" hidden>
+            <p>{{ program.whyItWorks.detailIntro }}</p>
+            {% if program.whyItWorks.items %}
+            <ul class="expandable-list">
+              {% for item in program.whyItWorks.items %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% if program.whyItWorks.detail %}
+            <p>{{ program.whyItWorks.detail }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% elif program.whyItWorks.items %}
         <div class="card-items-grid">
           {% for item in program.whyItWorks.items %}
           <div class="card-item">
@@ -143,7 +163,7 @@ title: "{{ program.name }} - vaemptîness"
           {% endfor %}
         </div>
         {% endif %}
-        {% if program.whyItWorks.detail %}
+        {% if program.whyItWorks.detail and not program.whyItWorks.detailIntro %}
         <div class="expandable-detail">
           <button class="expandable-toggle" aria-expanded="false">
             <span class="toggle-icon" aria-hidden="true"></span>
