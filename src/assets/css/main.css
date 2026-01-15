@@ -2080,10 +2080,6 @@ main {
   .pillars-grid {
     grid-template-columns: 1fr;
   }
-
-  .pillar-card:nth-child(5):last-child {
-    grid-column: auto;
-  }
 }
 
 .pillar-card {
@@ -2098,8 +2094,10 @@ main {
   transform: translateY(-4px);
 }
 
-.pillar-card:nth-child(5):last-child {
-  grid-column: span 2;
+@media (min-width: 769px) {
+  .pillar-card:nth-child(5):last-child {
+    grid-column: span 2;
+  }
 }
 
 .pillar-icon {
