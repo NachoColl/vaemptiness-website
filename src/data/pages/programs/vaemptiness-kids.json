@@ -23,15 +23,16 @@
     "title": "vaemptîness kids",
     "subtitle": "Edades 5-8 años"
   },
+  "pillarsTitle": "Pilares del programa",
   "pillars": [
     {
       "title": "Calma en el cuerpo",
-      "description": "Ejercicios de respiración y movimiento que ayudan al niño/a a notar cuando está tenso/a, inquieto/a o cansado/a.",
+      "description": "Ejercicios de respiración y movimiento que ayudan al niño/a a notar cuando está tenso/a inquieto/a o cansado/a.",
       "icon": "fa-solid fa-child"
     },
     {
       "title": "Calma en la mente",
-      "description": "Prácticas de atención: \"Mirar como un búho\", \"Escuchar como un koala\", \"Sentir como un gatito\". El niño/a aprende que puede concentrarse por momentos breves y que eso le hace sentir bien.",
+      "description": "Prácticas de atención. \"Mirar como un búho\", \"Escuchar como un koala\", \"Sentir como un gatito\". El niño/a aprende que puede concentrarse por momentos breves y que eso le hace sentir bien.",
       "icon": "fa-solid fa-brain"
     },
     {
@@ -41,7 +42,7 @@
     },
     {
       "title": "El espacio interior",
-      "description": "\"Dentro de ti hay un lugar tranquilo donde puedes descansar por un momento, como si fuera una casita secreta.\" El núcleo de vaemptîness kids explicado a su nivel.",
+      "description": "\"Dentro de ti hay un lugar tranquilo donde puedes descansar por un momento, como si fuera una casita secreta.\" El núcleo de vaemptîness kids explicado a su nivel:",
       "icon": "fa-solid fa-home"
     },
     {
@@ -52,18 +53,18 @@
   ],
   "sessionStructure": {
     "title": "¿Cómo son las sesiones?",
-    "duration": "20-30 minutos",
+    "intro": "Cada sesión dura entre 20 y 30 minutos e incluye:",
     "activities": [
-      "Un cuento breve con personajes que sienten y aprenden",
-      "Ejercicios de respiración sencilla (3 soplidos, soplar burbujas, inflar un globo imaginario, etc.)",
-      "Movimiento consciente (caminar despacio, sacudir tensiones)",
-      "Silencio guiado de 20–40 segundos",
-      "Actividad creativa (colorear emociones, pegar stickers, dibujar \"la casita tranquila\")",
-      "Cierre con un gesto de amabilidad hacia sí mismos/as o hacia un compañero/a"
-    ]
+      "Un cuento breve con personajes que sienten y aprenden.",
+      "Ejercicios de respiración sencilla (3 soplidos, soplar burbujas, inflar un globo imaginario, etc.).",
+      "Movimiento consciente (caminar despacio, sacudir tensiones).",
+      "Silencio guiado de 20–40 segundos.",
+      "Actividad creativa (colorear emociones, pegar stickers, dibujar \"la casita tranquila\").",
+      "Cierre con un gesto de amabilidad hacia sí mismos/as o hacia un compañero/a."
+    ],
+    "highlight": "vaemptîness Kids, no busca que los niños/as \"sean buenos/as\" o \"se porten bien\": busca que entiendan su mundo interior y lo gestionen con herramientas simples y orgánicas, desde la naturalidad."
   },
   "outcomes": {
-    "intro": "vaemptîness Kids les enseña de manera lúdica, visual y corporal como si fueran exploradores/as descubriendo un superpoder que siempre estuvo dentro de ellos/as.",
     "title": "¿Qué aprenden los niños/as?",
     "items": [
       "Reconocer sus emociones sin asustarse",
@@ -78,20 +79,26 @@
   "whyItWorks": {
     "title": "¿Por qué funciona?",
     "intro": "El cerebro infantil responde mejor a:",
-    "approach": "El juego, la imaginación, el movimiento y las historias.",
+    "items": [
+      "El juego",
+      "La imaginación",
+      "El movimiento",
+      "Las historias"
+    ],
     "conclusion": "Desde estos canales el niño/a experimenta calma, no como una obligación, sino como refugio. Los acompañamos para que experimenten seguridad en sí mismos, a reconocer lo que sienten y a relacionarse desde la empatía.",
     "impact": "Una semilla de autocuidado que se planta ahora…y acompañará al niño/a toda su vida."
   },
   "whatIs": {
     "title": "El poder de la calma jugando",
     "intro": [
-      "vaemptîness Kids es la versión infantil del programa, adaptada a una etapa en la que la imaginación, el movimiento y la sensibilidad emocional están en pleno desarrollo.",
-      "El objetivo no es que los niños/as \"mediten\", sino que descubran su espacio de calma interior a través de juegos, cuentos, movimiento y respiraciones sencillas."
+      "vaemptîness Kids es la versión infantil del programa, adaptada a una etapa en la que la imaginación, el movimiento y la sensibilidad emocional están en pleno desarrollo."
     ],
+    "detailTitle": "ampliar",
+    "detail": "El objetivo no es que los niños/as \"mediten\", sino que descubran su espacio de calma interior a través de juegos, cuentos, movimiento y respiraciones sencillas.",
     "quote1": "La calma no es quedarse quieto. Es aprender a sentir sin miedo.",
     "helps": {
       "title": "¿Para qué sirve vaemptîness Kids?",
-      "subtitle": "A esta edad, el niño/a está aprendiendo a:",
+      "intro": "A esta edad, el niño/a está aprendiendo a:",
       "items": [
         "Reconocer lo que sienten",
         "Poner nombre a sus emociones",

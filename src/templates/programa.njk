@@ -95,7 +95,7 @@ title: "{{ program.name }} - vaemptîness"
         <p class="what-is-intro-text">{{ program.whatIs.helps.intro }}</p>
         {% endif %}
 
-        {% if program.whatIs.helps.detailIntro or program.whatIs.helps.items %}
+        {% if program.whatIs.helps.detailIntro %}
         <div class="expandable-detail">
           <button class="expandable-toggle" aria-expanded="false">
             <span class="toggle-icon" aria-hidden="true"></span>
@@ -114,6 +114,14 @@ title: "{{ program.name }} - vaemptîness"
             {% endif %}
           </div>
         </div>
+        {% elif program.whatIs.helps.items %}
+        <div class="card-items-grid">
+          {% for item in program.whatIs.helps.items %}
+          <div class="card-item">
+            <p>{{ item }}</p>
+          </div>
+          {% endfor %}
+        </div>
         {% endif %}
       </div>
       {% endif %}
@@ -123,6 +131,9 @@ title: "{{ program.name }} - vaemptîness"
         {% if program.whyItWorks.title %}
         <h2 class="section-title">{{ program.whyItWorks.title }}</h2>
         {% endif %}
+        {% if program.whyItWorks.intro %}
+        <p class="what-is-intro-text">{{ program.whyItWorks.intro }}</p>
+        {% endif %}
         {% if program.whyItWorks.items %}
         <div class="card-items-grid">
           {% for item in program.whyItWorks.items %}
@@ -131,6 +142,12 @@ title: "{{ program.name }} - vaemptîness"
           </div>
           {% endfor %}
         </div>
+        {% endif %}
+        {% if program.whyItWorks.conclusion %}
+        <p>{{ program.whyItWorks.conclusion }}</p>
+        {% endif %}
+        {% if program.whyItWorks.impact %}
+        <p class="quote-large">{{ program.whyItWorks.impact }}</p>
         {% endif %}
         {% if program.whyItWorks.quote %}
         <p class="quote-large">{{ program.whyItWorks.quote }}</p>
@@ -225,6 +242,10 @@ title: "{{ program.name }} - vaemptîness"
           </li>
           {% endfor %}
         </ul>
+      </div>
+      {% elif program.sessionStructure.highlight %}
+      <div class="session-highlight">
+        <p class="quote-emphasis">{{ program.sessionStructure.highlight }}</p>
       </div>
       {% endif %}
     </div>
