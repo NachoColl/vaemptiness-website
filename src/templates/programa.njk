@@ -141,10 +141,7 @@ title: "{{ program.name }} - vaemptîness"
             <span class="toggle-text">{{ program.whyItWorks.detailTitle if program.whyItWorks.detailTitle else "ampliar" }}</span>
           </button>
           <div class="expandable-content" hidden>
-            {% if program.whyItWorks.detail %}
-            <p>{{ program.whyItWorks.detail }}</p>
-            {% endif %}
-            <p>{{ program.whyItWorks.detailIntro }}</p>
+            <p>{% if program.whyItWorks.detail %}{{ program.whyItWorks.detail }} {% endif %}{{ program.whyItWorks.detailIntro }}</p>
             {% if program.whyItWorks.items %}
             <ul class="expandable-list">
               {% for item in program.whyItWorks.items %}
