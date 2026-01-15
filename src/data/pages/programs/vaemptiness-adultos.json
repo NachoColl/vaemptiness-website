@@ -77,12 +77,11 @@
     "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
     "duration": "Duración: 60 minutos",
     "activities": [
-      "Práctica de observación corporal (body scan)",
-      "Técnicas de respiración para reducir rumiación",
-      "Ejercicio de observación de pensamientos sin juicio",
-      "Integración somática mediante movimiento consciente",
-      "Ejercicios de claridad cognitiva y toma de decisiones",
-      "Cierre con integración de aprendizajes"
+      "Técnicas de respiración como ancla al presente.",
+      "Práctica de observación (mental & body scan)",
+      "Ejercicios de claridad cognitiva",
+      "Cierre con integración del aprendizaje (reflexión)",
+      "Tarea semanal"
     ],
     "timeline": [
       {
@@ -108,8 +107,7 @@
     ]
   },
   "outcomes": {
-    "intro": "vaemptîness adultos ofrece herramientas concretas para gestionar la mente en un contexto de alta demanda cognitiva y emocional.",
-    "title": "¿Qué aprenden los participantes?",
+    "title": "Beneficios",
     "items": [
       "Reducir el ruido mental y la sobrecarga cognitiva",
       "Mejorar la concentración y el enfoque sostenido",

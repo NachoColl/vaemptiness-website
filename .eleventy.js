@@ -8,9 +8,6 @@ module.exports = function(eleventyConfig) {
   // Copy CNAME file for custom domain
   eleventyConfig.addPassthroughCopy("CNAME");
 
-  // Copy admin folder for Decap CMS
-  eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
-
   // Watch for changes
   eleventyConfig.addWatchTarget("src/assets/");
 
