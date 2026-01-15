@@ -50,6 +50,8 @@
       "Integración del cuerpo como base de estabilidad"
     ]
   },
+  "pillarsTitle": "Pilares del programa",
+  "pillarsSubtitle": "El programa se apoya en seis pilares prácticos que se entrenan progresivamente a lo largo de las semanas.",
   "pillars": [
     {
       "title": "Las emociones no son enemigas",
@@ -58,7 +60,7 @@
     },
     {
       "title": "Los pensamientos no son órdenes",
-      "description": "Que no son \"sus emociones\", que pueden parar antes de explotar o cerrarse, que los pensamientos vienen y van.",
+      "description": "El adolescente aprende que sus emociones no lo definen, que puede parar antes de estallar o colapsar y que los pensamientos son pasajeros.",
       "icon": "fa-solid fa-brain"
     },
     {
