@@ -53,6 +53,7 @@
   ],
   "sessionStructure": {
     "title": "¿Cómo son las sesiones?",
+    "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
     "duration": "Cada sesión dura entre 20 y 30 minutos e incluye:",
     "activities": [
       "Un cuento breve con personajes que sienten y aprenden.",
