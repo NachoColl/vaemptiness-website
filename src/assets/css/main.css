@@ -2047,7 +2047,7 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: var(--space-md);
+  padding-top: var(--space-xl);
 }
 
 .session-highlight .quote-medium {
