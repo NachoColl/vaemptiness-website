@@ -86,14 +86,37 @@
   ],
   "sessionStructure": {
     "title": "¿Cómo son las sesiones?",
-    "duration": "60 minutos",
+    "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
+    "duration": "Duración: 60 minutos",
     "activities": [
-      "Prácticas de observación guiada",
       "Respiración consciente como regulación real, no \"técnica\"",
+      "Prácticas de observación guiada",
       "Exploración del espacio entre pensamientos",
       "Reconocimiento de patrones mentales reactivos",
       "Integración del cuerpo como base de estabilidad",
       "Espacios de reflexión personal (no moralizante)"
+    ],
+    "timeline": [
+      {
+        "title": "Sesiones 1–2",
+        "description": "Conocer la base de la mente."
+      },
+      {
+        "title": "Sesiones 3–5",
+        "description": "Reconocer obstáculos. Aplicar herramientas."
+      },
+      {
+        "title": "Sesión 6",
+        "description": "Transformar lo neutro."
+      },
+      {
+        "title": "Sesión 7",
+        "description": "Aprender a elegir conscientemente."
+      },
+      {
+        "title": "Sesión 8",
+        "description": "Integrar todo el aprendizaje en la vida diaria."
+      }
     ]
   },
   "outcomes": {
