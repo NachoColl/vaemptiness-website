@@ -2144,6 +2144,7 @@ main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: var(--space-lg);
+  margin-top: var(--space-lg);
   list-style: none;
 }
 
