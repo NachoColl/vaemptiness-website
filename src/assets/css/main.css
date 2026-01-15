@@ -2450,6 +2450,12 @@ main {
   color: var(--color-hover);
 }
 
+@media (max-width: 768px) {
+  .expandable-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .expandable-content[hidden] {
   display: none;
 }
