@@ -47,10 +47,11 @@
   "whatIs": {
     "title": "¿Qué es vaemptîness equipos?",
     "intro": [
-      "Entrenamiento mental para equipos de trabajo que buscan amplificar la concentración y el foco sostenido.",
-      "vaemptîness transforma de forma gradual la dinámica grupal desde la conciencia individual hacia el rendimiento compartido, mejorando la productividad."
+      "Entrenamiento mental para equipos de trabajo que buscan amplificar la concentración y el foco sostenido."
     ],
-    "quote1": "No se trata de hacer más. Se trata de crear espacio para la creatividad y el bienestar colectivo.",
+    "detailTitle": "ampliar",
+    "detail": "vaemptîness transforma de forma gradual la dinámica grupal desde la conciencia individual hacia el rendimiento compartido, mejorando la productividad.",
+    "detailQuote": "No se trata de hacer más. Se trata de crear espacio para la creatividad y el bienestar colectivo.",
     "helps": {
       "title": "Ayuda a los equipos a:",
       "items": [
