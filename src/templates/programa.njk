@@ -80,6 +80,9 @@ title: "{{ program.name }} - vaemptîness"
           </button>
           <div class="expandable-content" hidden>
             <p>{{ program.whatIs.forWhom.detail }}</p>
+            {% if program.whatIs.forWhom.detailQuote %}
+            <p class="quote-large">{{ program.whatIs.forWhom.detailQuote }}</p>
+            {% endif %}
           </div>
         </div>
         {% endif %}
