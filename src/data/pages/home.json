@@ -23,7 +23,7 @@
         {
           "icon": "fa-solid fa-layer-group",
           "title": "Fusiona",
-          "description": "Learning + metodología"
+          "description": "Método + aprendizaje"
         },
         {
           "icon": "fa-solid fa-filter",
@@ -33,7 +33,7 @@
         {
           "icon": "fa-solid fa-crosshairs",
           "title": "Identifica",
-          "description": "saboteadores mentales"
+          "description": "Saboteadores mentales"
         }
       ],
       "principlesAction": {
