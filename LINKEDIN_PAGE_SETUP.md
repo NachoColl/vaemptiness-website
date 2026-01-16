@@ -58,7 +58,7 @@
 ### Short Description (120 characters max)
 Entrenamiento mental basado en mindfulness y filosofía budista. Barcelona. Crea espacio mental, libérate del ruido.
 
-### Medium Description (900 characters) - Professional-Oriented
+### Medium Description (900 characters) - Professional-Oriented2
 
 vaemptîness ofrece entrenamiento mental estructurado en Barcelona para profesionales y equipos en entornos de alta exigencia.
 
