@@ -2517,6 +2517,10 @@ main {
   .card-items-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .card-item:nth-child(5):last-child {
+    grid-column: span 2;
+  }
 }
 
 .card-item {
