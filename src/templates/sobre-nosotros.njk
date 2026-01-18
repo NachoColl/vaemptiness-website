@@ -109,10 +109,16 @@ layout: base.njk
       <div class="teachers-list">
         {% for teacher in pageData.trajectory.teachers %}
         <div class="teacher-item">
-          <img src="{{ teacher.image | url }}" alt="{{ teacher.name }}" class="teacher-avatar">
+          <img src="{{ teacher.image | url }}" alt="{{ teacher.name }}" class="teacher-avatar teacher-avatar-clickable" data-fullsize="{{ teacher.image | url }}">
           <span class="teacher-name">{{ teacher.name }}</span>
         </div>
         {% endfor %}
+      </div>
+
+      <!-- Image lightbox -->
+      <div id="image-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="">
       </div>
 
       <p>{{ pageData.trajectory.paragraphs[1] }}</p>
@@ -126,11 +132,49 @@ layout: base.njk
       </div>
 
       <p>{{ pageData.trajectory.paragraphs[3] }}</p>
-
-      <p>{{ pageData.trajectory.paragraphs[4] }}</p>
     </div>
   </div>
 </section>
+
+<script>
+  // Teacher avatar lightbox functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const clickableAvatars = document.querySelectorAll('.teacher-avatar-clickable');
+
+    // Open lightbox on avatar click
+    clickableAvatars.forEach(function(avatar) {
+      avatar.addEventListener('click', function() {
+        lightbox.style.display = 'block';
+        lightboxImg.src = this.getAttribute('data-fullsize');
+        lightboxImg.alt = this.alt;
+      });
+    });
+
+    // Close lightbox on X button click
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+      });
+    }
+
+    // Close lightbox on background click
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+
+    // Close lightbox on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.style.display === 'block') {
+        lightbox.style.display = 'none';
+      }
+    });
+  });
+</script>
 
 {% block schema %}
   {% include "schemas/person.njk" %}

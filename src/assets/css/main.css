@@ -1910,6 +1910,55 @@ main {
   text-align: center;
 }
 
+.teacher-avatar-clickable {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.teacher-avatar-clickable:hover {
+  opacity: 0.8;
+}
+
+/* Image Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .observations-text {
   color: var(--color-accent-rust);
   margin: var(--space-md) 0 var(--space-lg);
