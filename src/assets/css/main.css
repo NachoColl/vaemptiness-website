@@ -1864,6 +1864,10 @@ main {
 }
 
 /* Trajectory Section */
+.about-trajectory .content-section p:last-of-type {
+  margin-bottom: 0;
+}
+
 .teachers-list,
 .observations-list {
   list-style: none;
