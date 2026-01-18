@@ -44,10 +44,18 @@
       },
       "philosophy": "No se trata de pensar más, sino mejor"
     },
-    "learningIntro": {
+    "intro": {
       "title": "¿Qué es vaemptîness?",
-      "text": "vaemptîness es un programa de entrenamiento mental orientado a potenciar la flexibilidad cognitiva.",
-      "callToAction": "Apaga el piloto automático.",
+      "paragraphs": [
+        "vaemptîness es un programa de entrenamiento mental.",
+        "Sus herramientas permiten observar los procesos mentales sin identificarse con ellos, optimizando la autorregulación emocional y el rendimiento personal."
+      ]
+    },
+    "learningIntro": {
+      "icon": "fa-solid fa-toolbox",
+      "title": "Implementa herramientas",
+      "text": "Identifica a los \"<strong>saboteadores</strong>\" que distorsionan la calma mental.",
+      "highlight": "Apaga el piloto automático.",
       "buttonText": "on-off",
       "buttonUrl": "/on-off/"
     },
