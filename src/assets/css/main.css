@@ -1424,10 +1424,8 @@ main {
 
 .learning-intro .intro-highlight {
   order: 3;
-  font-size: var(--text-h4);
-  font-weight: 600;
-  color: var(--color-accent-rust);
-  font-style: italic;
+  font-size: var(--text-body);
+  color: var(--color-hover);
   margin-bottom: var(--space-lg);
 }
 
@@ -1435,7 +1433,8 @@ main {
   order: 4;
   font-size: var(--text-h4);
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-accent-rust);
+  font-style: italic;
   margin-bottom: var(--space-xl);
 }
 
