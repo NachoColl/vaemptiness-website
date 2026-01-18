@@ -47,7 +47,10 @@ layout: base.njk
 <section class="home-intro-section">
   <div class="container">
     <div class="home-intro-content">
-      <p class="home-intro-text">{{ pages.home.content.intro.text }}</p>
+      <h2 class="home-intro-title">{{ pages.home.content.intro.title }}</h2>
+      {% for paragraph in pages.home.content.intro.paragraphs %}
+      <p class="home-intro-text">{{ paragraph }}</p>
+      {% endfor %}
     </div>
   </div>
 </section>
