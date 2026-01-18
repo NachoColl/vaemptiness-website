@@ -1409,6 +1409,7 @@ main {
 }
 
 .home-intro-text-secondary {
+  font-size: var(--text-body);
   color: var(--color-hover);
 }
 
