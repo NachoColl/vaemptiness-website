@@ -1420,6 +1420,9 @@ main {
   font-size: var(--text-body-lg);
   line-height: 1.6;
   margin-bottom: var(--space-md);
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .learning-intro .intro-highlight {
