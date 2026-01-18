@@ -90,8 +90,14 @@
         "No buscamos \"arreglar\" nada, sino comprender lo que sucede internamente para responder frente a las experiencias vitales con mayor calma y nitidez mental."
       ],
       "teachers": [
-        "S.E. Nyari Tritul Rimpoché",
-        "Venerable Geshe Tenzing Tamding"
+        {
+          "name": "S.E. Nyari Tritul Rimpoché",
+          "image": "/assets/images/teachers/avatar-rimpoche.jpeg"
+        },
+        {
+          "name": "Venerable Geshe Tenzing Tamding",
+          "image": "/assets/images/teachers/avatar-geshe.jpeg"
+        }
       ],
       "observations": [
         "cómo pensamos,",

@@ -106,11 +106,14 @@ layout: base.njk
       <h2>{{ pageData.trajectory.title }}</h2>
 
       <p>{{ pageData.trajectory.paragraphs[0] }}</p>
-      <ul class="teachers-list">
+      <div class="teachers-list">
         {% for teacher in pageData.trajectory.teachers %}
-        <li>{{ teacher }}</li>
+        <div class="teacher-item">
+          <img src="{{ teacher.image | url }}" alt="{{ teacher.name }}" class="teacher-avatar">
+          <span class="teacher-name">{{ teacher.name }}</span>
+        </div>
         {% endfor %}
-      </ul>
+      </div>
 
       <p>{{ pageData.trajectory.paragraphs[1] }}</p>
 

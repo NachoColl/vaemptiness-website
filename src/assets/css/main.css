@@ -1881,15 +1881,31 @@ main {
 }
 
 .teachers-list {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
   margin: var(--space-md) 0 var(--space-lg);
   padding: 0;
+  align-items: center;
 }
 
-.teachers-list li {
+.teacher-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.teacher-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.teacher-name {
   color: var(--color-accent-rust);
   font-weight: 500;
-  margin-bottom: var(--space-xs);
+  font-size: var(--text-body-lg);
 }
 
 .observations-text {
