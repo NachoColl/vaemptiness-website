@@ -930,7 +930,6 @@ main {
   /* Reduce section padding on mobile - unified for all colored-background sections */
   .principles-section,
   .philosophy-section,
-  .home-intro-section,
   .learning-intro-section,
   .programs-section,
   .cta-section,
@@ -1381,40 +1380,6 @@ main {
 .learning-content {
   padding: var(--section-spacing) 0;
   background: var(--color-accent-cream);
-}
-
-.home-intro-section {
-  padding: var(--space-3xl) 0;
-  background: #faf9f7;
-}
-
-.home-intro-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.home-intro-title {
-  font-size: var(--text-h2);
-  font-weight: 400;
-  color: var(--color-text);
-  margin-bottom: var(--space-lg);
-}
-
-.home-intro-text {
-  font-size: var(--text-body-lg);
-  line-height: 1.8;
-  color: var(--color-text);
-  margin-bottom: var(--space-md);
-}
-
-.home-intro-text-secondary {
-  font-size: var(--text-body);
-  color: var(--color-hover);
-}
-
-.home-intro-text:last-of-type {
-  margin-bottom: 0;
 }
 
 .learning-intro-section {

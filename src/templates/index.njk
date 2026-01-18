@@ -44,27 +44,12 @@ layout: base.njk
   </div>
 </section>
 
-<section class="home-intro-section">
-  <div class="container">
-    <div class="home-intro-content">
-      <h2 class="home-intro-title">{{ pages.home.content.intro.title }}</h2>
-      {% for paragraph in pages.home.content.intro.paragraphs %}
-      <p class="home-intro-text{% if loop.index == 2 %} home-intro-text-secondary{% endif %}">{{ paragraph }}</p>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <section class="learning-intro-section">
   <div class="container">
     <div class="learning-intro">
-      <div class="intro-icon">
-        <i class="{{ pages.home.content.learningIntro.icon }}" aria-hidden="true"></i>
-      </div>
       <h3 class="intro-title">{{ pages.home.content.learningIntro.title }}</h3>
       <p class="intro-text">{{ pages.home.content.learningIntro.text | safe }}</p>
       <p class="intro-highlight">{{ pages.home.content.learningIntro.highlight }}</p>
-      <a href="{{ pages.home.content.learningIntro.buttonUrl | url }}" class="button button-primary">{{ pages.home.content.learningIntro.buttonText }}</a>
     </div>
   </div>
 </section>
