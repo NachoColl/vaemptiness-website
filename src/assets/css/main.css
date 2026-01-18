@@ -1880,6 +1880,12 @@ main {
   margin-bottom: var(--space-xs);
 }
 
+.observations-text {
+  color: var(--color-accent-rust);
+  margin: var(--space-md) 0 var(--space-lg);
+  line-height: 1.8;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

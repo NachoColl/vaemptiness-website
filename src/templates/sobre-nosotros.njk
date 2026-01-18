@@ -116,11 +116,15 @@ layout: base.njk
 
       <p>{{ pageData.trajectory.paragraphs[2] }}</p>
 
+      <div class="observations-text">
+        {% for observation in pageData.trajectory.observations %}
+        {{ observation }}<br>
+        {% endfor %}
+      </div>
+
       <p>{{ pageData.trajectory.paragraphs[3] }}</p>
 
       <p>{{ pageData.trajectory.paragraphs[4] }}</p>
-
-      <p>{{ pageData.trajectory.paragraphs[5] }}</p>
     </div>
   </div>
 </section>
