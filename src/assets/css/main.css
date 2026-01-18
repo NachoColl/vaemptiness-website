@@ -930,6 +930,7 @@ main {
   /* Reduce section padding on mobile - unified for all colored-background sections */
   .principles-section,
   .philosophy-section,
+  .home-intro-section,
   .learning-intro-section,
   .programs-section,
   .cta-section,
@@ -1427,8 +1428,10 @@ main {
 
 .learning-intro .intro-highlight {
   order: 3;
-  font-size: var(--text-body);
-  color: var(--color-hover);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--color-accent-rust);
+  font-style: italic;
   margin-bottom: var(--space-lg);
 }
 
