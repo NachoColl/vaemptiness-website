@@ -1868,8 +1868,7 @@ main {
   margin-bottom: 0;
 }
 
-.teachers-list,
-.observations-list {
+.teachers-list {
   list-style: none;
   margin: var(--space-md) 0 var(--space-lg);
   padding: 0;
@@ -1878,11 +1877,6 @@ main {
 .teachers-list li {
   color: var(--color-accent-rust);
   font-weight: 500;
-  margin-bottom: var(--space-xs);
-}
-
-.observations-list li {
-  color: var(--color-accent-rust);
   margin-bottom: var(--space-xs);
 }
 
