@@ -47,7 +47,10 @@
     "learningIntro": {
       "title": "¿Qué es vaemptîness?",
       "text": "vaemptîness es un programa de entrenamiento mental orientado a potenciar la flexibilidad cognitiva.",
-      "highlight": "Sus herramientas permiten observar los procesos mentales sin identificarse con ellos, optimizando la autorregulación emocional y el rendimiento personal."
+      "highlight": "Sus herramientas permiten observar los procesos mentales sin identificarse con ellos, optimizando la autorregulación emocional y el rendimiento personal.",
+      "callToAction": "Apaga el piloto automático.",
+      "buttonText": "on-off",
+      "buttonUrl": "/on-off/"
     },
     "philosophy": {
       "title": "Interrumpe el ciclo",

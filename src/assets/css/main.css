@@ -1404,7 +1404,7 @@ main {
   order: 0;
   font-size: var(--text-h3);
   margin-bottom: var(--space-md);
-  color: var(--color-accent-rust);
+  color: var(--color-primary-text);
   font-weight: 700;
 }
 
@@ -1428,6 +1428,14 @@ main {
   font-weight: 600;
   color: var(--color-accent-rust);
   font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.learning-intro .intro-call-to-action {
+  order: 4;
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--color-text);
   margin-bottom: var(--space-xl);
 }
 
@@ -1436,7 +1444,7 @@ main {
 }
 
 .learning-intro .button {
-  order: 4;
+  order: 5;
   align-self: center;
   opacity: 0;
   animation: fadeInUpSlow 2s ease-out 0.8s forwards;
