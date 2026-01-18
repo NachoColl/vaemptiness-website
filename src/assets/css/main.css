@@ -1408,6 +1408,10 @@ main {
   margin-bottom: var(--space-md);
 }
 
+.home-intro-text-secondary {
+  color: var(--color-hover);
+}
+
 .home-intro-text:last-of-type {
   margin-bottom: 0;
 }

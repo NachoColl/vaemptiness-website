@@ -49,7 +49,7 @@ layout: base.njk
     <div class="home-intro-content">
       <h2 class="home-intro-title">{{ pages.home.content.intro.title }}</h2>
       {% for paragraph in pages.home.content.intro.paragraphs %}
-      <p class="home-intro-text">{{ paragraph }}</p>
+      <p class="home-intro-text{% if loop.index == 2 %} home-intro-text-secondary{% endif %}">{{ paragraph }}</p>
       {% endfor %}
     </div>
   </div>
