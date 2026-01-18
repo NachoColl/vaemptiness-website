@@ -1664,10 +1664,6 @@ main {
   padding: var(--section-spacing) 0;
 }
 
-.about-vision-mission {
-  background: var(--color-accent-cream);
-}
-
 .vm-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1868,10 +1864,6 @@ main {
 }
 
 /* Trajectory Section */
-.about-trajectory {
-  background: var(--color-accent-cream);
-}
-
 .teachers-list,
 .observations-list {
   list-style: none;
@@ -1883,30 +1875,11 @@ main {
   color: var(--color-accent-rust);
   font-weight: 500;
   margin-bottom: var(--space-xs);
-  padding-left: var(--space-md);
-  position: relative;
-}
-
-.teachers-list li:before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--color-accent-rust);
 }
 
 .observations-list li {
-  color: var(--color-text);
-  margin-bottom: var(--space-xs);
-  padding-left: var(--space-md);
-  position: relative;
-}
-
-.observations-list li:before {
-  content: "•";
-  position: absolute;
-  left: 0;
   color: var(--color-accent-rust);
-  font-weight: bold;
+  margin-bottom: var(--space-xs);
 }
 
 .services-grid {
