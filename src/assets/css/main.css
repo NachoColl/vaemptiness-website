@@ -1658,6 +1658,7 @@ main {
 .about-philosophy,
 .about-vision-mission,
 .about-team,
+.about-trajectory,
 .about-services,
 .about-brand-philosophy {
   padding: var(--section-spacing) 0;
@@ -1864,6 +1865,48 @@ main {
 .member-bio {
   color: var(--color-hover);
   font-size: var(--text-small);
+}
+
+/* Trajectory Section */
+.about-trajectory {
+  background: var(--color-accent-cream);
+}
+
+.teachers-list,
+.observations-list {
+  list-style: none;
+  margin: var(--space-md) 0 var(--space-lg);
+  padding: 0;
+}
+
+.teachers-list li {
+  color: var(--color-accent-rust);
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.teachers-list li:before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-rust);
+}
+
+.observations-list li {
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.observations-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-rust);
+  font-weight: bold;
 }
 
 .services-grid {

@@ -100,6 +100,38 @@ layout: base.njk
   </div>
 </section>
 
+<section class="about-trajectory">
+  <div class="container">
+    <div class="content-section centered">
+      <h2>{{ pageData.trajectory.title }}</h2>
+
+      <p>{{ pageData.trajectory.paragraphs[0] }}</p>
+
+      <p>{{ pageData.trajectory.paragraphs[1] }}</p>
+      <ul class="teachers-list">
+        {% for teacher in pageData.trajectory.teachers %}
+        <li>{{ teacher }}</li>
+        {% endfor %}
+      </ul>
+
+      <p>{{ pageData.trajectory.paragraphs[2] }}</p>
+
+      <p>{{ pageData.trajectory.paragraphs[3] }}</p>
+
+      <p>{{ pageData.trajectory.paragraphs[4] }}</p>
+      <ul class="observations-list">
+        {% for observation in pageData.trajectory.observations %}
+        <li>{{ observation }}</li>
+        {% endfor %}
+      </ul>
+
+      <p>{{ pageData.trajectory.paragraphs[5] }}</p>
+
+      <p>{{ pageData.trajectory.paragraphs[6] }}</p>
+    </div>
+  </div>
+</section>
+
 {% block schema %}
   {% include "schemas/person.njk" %}
 {% endblock %}
