@@ -119,12 +119,12 @@
     "cta": ""
   },
   "id": 6,
-  "image": "/assets/images/crear-espacio.jpeg",
+  "image": "/assets/images/blog/crear-espacio-estimulo-respuesta.jpeg",
   "seo": {
     "title": "Crear espacio entre estímulo y respuesta | Blog vaemptîness",
     "description": "Entre lo que ocurre y lo que hacemos existe un instante breve. Ese espacio es donde se abre la posibilidad de elegir. Crear ese espacio es una capacidad central del entrenamiento mental.",
     "keywords": "estímulo y respuesta, observación, reacción automática, entrenamiento mental, espacio mental",
-    "ogImage": "/assets/images/blog/espacio-estimulo-respuesta.jpg",
+    "ogImage": "/assets/images/blog/crear-espacio-estimulo-respuesta.jpeg",
     "ogType": "article"
   }
 }
