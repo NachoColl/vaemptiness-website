@@ -1891,8 +1891,9 @@ main {
 
 .teacher-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
 .teacher-avatar {
@@ -1905,7 +1906,8 @@ main {
 .teacher-name {
   color: var(--color-accent-rust);
   font-weight: 500;
-  font-size: var(--text-body-lg);
+  font-size: var(--text-body);
+  text-align: center;
 }
 
 .observations-text {
