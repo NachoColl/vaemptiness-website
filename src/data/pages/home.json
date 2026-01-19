@@ -53,8 +53,8 @@
     },
     "learningIntro": {
       "icon": "fa-solid fa-toolbox",
-      "title": "Nuestro método",
-      "text": "Herramientas simples, aplicables y transformadoras para optimizar el rendimiento de la mente.",
+      "title": "Implementa herramientas",
+      "text": "Identifica a los \"<strong>saboteadores</strong>\" que distorsionan la calma mental.",
       "highlight": "Apaga el piloto automático.",
       "buttonText": "on-off",
       "buttonUrl": "/on-off/"
