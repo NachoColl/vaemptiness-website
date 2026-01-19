@@ -1435,6 +1435,13 @@ main {
   flex-direction: column;
 }
 
+.learning-intro .intro-lead {
+  order: -1;
+  font-size: var(--text-body-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+}
+
 .learning-intro .intro-title {
   order: 0;
   font-size: var(--text-h3);
