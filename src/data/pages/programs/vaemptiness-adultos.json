@@ -77,7 +77,7 @@
     "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
     "duration": "Duración: 60 minutos",
     "activities": [
-      "Técnicas de respiración como ancla al presente.",
+      "Técnicas de respiración como ancla al presente",
       "Práctica de observación (mental & body scan)",
       "Ejercicios de claridad cognitiva",
       "Cierre con integración del aprendizaje (reflexión)",
@@ -86,23 +86,23 @@
     "timeline": [
       {
         "title": "Sesiones 1–2",
-        "description": "Conocer la base de la mente."
+        "description": "Conocer la base de la mente"
       },
       {
         "title": "Sesiones 3–5",
-        "description": "Reconocer obstáculos. Aplicar herramientas."
+        "description": "Reconocer obstáculos. Aplicar herramientas"
       },
       {
         "title": "Sesión 6",
-        "description": "Transformar lo neutro."
+        "description": "Transformar lo neutro"
       },
       {
         "title": "Sesión 7",
-        "description": "Aprender a elegir conscientemente."
+        "description": "Aprender a elegir conscientemente"
       },
       {
         "title": "Sesión 8",
-        "description": "Integrar todo el aprendizaje en la vida diaria."
+        "description": "Integrar todo el aprendizaje en la vida diaria"
       }
     ]
   },

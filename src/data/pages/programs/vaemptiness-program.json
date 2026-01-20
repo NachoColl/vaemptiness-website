@@ -79,32 +79,32 @@
     "intro": "El programa consta de 8 sesiones estructuradas de la siguiente forma:",
     "duration": "Duración: 60 minutos",
     "activities": [
-      "Técnicas de respiración como ancla al presente.",
-      "Práctica de observación (mental & body scan).",
-      "Ejercicios de cognición válida.",
-      "Cierre con integración de aprendizajes.",
-      "Tarea semanal."
+      "Técnicas de respiración como ancla al presente",
+      "Práctica de observación (mental & body scan)",
+      "Ejercicios de cognición válida",
+      "Cierre con integración de aprendizajes",
+      "Tarea semanal"
     ],
     "timeline": [
       {
         "title": "Sesiones 1–2",
-        "description": "Conocer la base de la mente."
+        "description": "Conocer la base de la mente"
       },
       {
         "title": "Sesiones 3–5",
-        "description": "Reconocer obstáculos. Aplicar herramientas."
+        "description": "Reconocer obstáculos. Aplicar herramientas"
       },
       {
         "title": "Sesión 6",
-        "description": "Transformar lo neutro."
+        "description": "Transformar lo neutro"
       },
       {
         "title": "Sesión 7",
-        "description": "Aprender a elegir conscientemente."
+        "description": "Aprender a elegir conscientemente"
       },
       {
         "title": "Sesión 8",
-        "description": "Integrar todo el aprendizaje en la vida diaria."
+        "description": "Integrar todo el aprendizaje en la vida diaria"
       }
     ]
   },
@@ -122,10 +122,10 @@
   "whyItWorks": {
     "title": "¿Por qué funciona?",
     "items": [
-      "La mente no es caótica.",
-      "Opera a través de factores mentales identificables.",
-      "Aprendemos a identificarlos.",
-      "Reconocerlos modifica su impacto."
+      "La mente no es caótica",
+      "Opera a través de factores mentales identificables",
+      "Aprendemos a identificarlos",
+      "Reconocerlos modifica su impacto"
     ]
   }
 }
