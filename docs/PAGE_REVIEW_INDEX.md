@@ -42,7 +42,7 @@ A continuación se muestra todo el texto visible en la página. Por favor, revis
 
 **Título principal:**
 - vaemptîness
-- brain training
+- mental training
 
 **Subtítulo:**
 - Crea espacio mental, libérate del ruido.

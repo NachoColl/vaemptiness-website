@@ -1,7 +1,7 @@
 # vaemptîness Website Migration & Redesign Proposal
 
 **Date:** December 19, 2025
-**Project:** Migration from portfolio site to vaemptîness brain training platform
+**Project:** Migration from portfolio site to vaemptîness mental training platform
 **Source:** https://vaemptiness.com/ (current WordPress site)
 **Target:** Eleventy static site with improved design and modern features
 
@@ -155,7 +155,7 @@ src/
 // src/data/site.json
 {
   "title": "vaemptîness",
-  "tagline": "brain training",
+  "tagline": "mental training",
   "description": "Crea espacio mental, libérate del ruido",
   "email": "program@vaemptiness.com",
   "language": "es"
@@ -165,7 +165,7 @@ src/
 {
   "title": "vaemptîness",
   "subtitle": "Crea espacio mental, libérate del ruido",
-  "tagline": "brain training",
+  "tagline": "mental training",
   "principles": [
     {
       "title": "Fusiona",
@@ -496,7 +496,7 @@ src/
 ┌─────────────────────────────────────┐
 │                                     │
 │        vaemptîness                  │
-│        brain training               │
+│        mental training               │
 │                                     │
 │   Crea espacio mental,              │
 │   libérate del ruido                │

@@ -32,7 +32,7 @@ This document provides a detailed comparison between the text content from the o
 **Hero Section (from hero.json):**
 - Title: "vaemptîness"
 - Subtitle: "Crea espacio mental, libérate del ruido"
-- Tagline: "brain training"
+- Tagline: "mental training"
 
 **Principles Section:**
 1. "01 - Fusiona: Learning + metodología"

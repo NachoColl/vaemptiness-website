@@ -139,7 +139,7 @@ vaemptiness-content/
   "content": {
     "hero": {
       "title": "vaemptîness",
-      "tagline": "brain training",  ← Edit this
+      "tagline": "mental training",  ← Edit this
       "subtitle": "Your new subtitle here"  ← Edit this
     }
   }

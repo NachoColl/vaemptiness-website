@@ -13,7 +13,7 @@ test.describe('vaemptîness Website Tests', () => {
 
     // Verify hero section with content from JSON
     await expect(page.locator('.hero-brand')).toContainText('vaemptîness');
-    await expect(page.locator('.hero-tagline')).toContainText('brain training');
+    await expect(page.locator('.hero-tagline')).toContainText('mental training');
     await expect(page.locator('.hero-subtitle')).toContainText('Crea espacio mental');
 
     // Verify principles section
