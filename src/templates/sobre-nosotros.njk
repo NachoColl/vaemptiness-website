@@ -35,15 +35,9 @@ layout: base.njk
       <h2>{{ pageData.mission.title }}</h2>
       <p>{{ pageData.mission.content }}</p>
     </div>
-  </div>
-</section>
-
-<section class="about-services">
-  <div class="container">
-    <h2 class="section-title centered">{{ pageData.services.title }}</h2>
     <ul class="services-grid-list">
-      {% for service in pageData.services.items %}
-      <li class="service-grid-item">{{ service }}</li>
+      {% for item in pageData.mission.items %}
+      <li class="service-grid-item">{{ item }}</li>
       {% endfor %}
     </ul>
   </div>
