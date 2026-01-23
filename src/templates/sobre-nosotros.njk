@@ -30,11 +30,7 @@ layout: base.njk
 
       {% if pageData.brandPhilosophy.extended %}
       <p>{{ pageData.brandPhilosophy.extended.text }}</p>
-      <ul class="name-origins-list">
-        {% for item in pageData.brandPhilosophy.extended.listItems %}
-        <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
+      <p class="name-origins-text">{{ pageData.brandPhilosophy.extended.origins }}</p>
       <p>{{ pageData.brandPhilosophy.extended.continuation }}</p>
       {% endif %}
 

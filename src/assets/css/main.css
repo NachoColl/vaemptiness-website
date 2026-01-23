@@ -1683,16 +1683,9 @@ main {
   padding: var(--section-spacing) 0;
 }
 
-.name-origins-list {
-  list-style: none;
-  margin: var(--space-md) 0 var(--space-lg);
-  padding: 0;
-}
-
-.name-origins-list li {
+.name-origins-text {
   color: var(--color-accent-rust);
   font-weight: 500;
-  margin-bottom: var(--space-xs);
 }
 
 .vm-grid {
