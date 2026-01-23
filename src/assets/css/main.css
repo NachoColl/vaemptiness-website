@@ -1913,6 +1913,10 @@ main {
   color: var(--color-accent-rust);
 }
 
+.observations-inline {
+  color: var(--color-accent-rust);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
