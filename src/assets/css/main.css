@@ -1685,21 +1685,14 @@ main {
 
 .name-origins-list {
   list-style: none;
-  padding-left: var(--space-md);
+  margin: var(--space-md) 0 var(--space-lg);
+  padding: 0;
 }
 
 .name-origins-list li {
-  position: relative;
-  padding-left: var(--space-md);
-  line-height: 1.6;
-}
-
-.name-origins-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
   color: var(--color-accent-rust);
-  font-weight: bold;
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
 }
 
 .vm-grid {
