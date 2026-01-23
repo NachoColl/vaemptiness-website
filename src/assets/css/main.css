@@ -3008,6 +3008,14 @@ main {
   padding-bottom: var(--space-md);
 }
 
+.contact-highlight {
+  color: var(--color-accent-rust);
+  font-weight: 600;
+  font-size: var(--text-body-lg);
+  margin-top: var(--space-md);
+  text-align: center;
+}
+
 .contact-section {
   padding: var(--space-2xl) 0 var(--section-spacing);
 }
