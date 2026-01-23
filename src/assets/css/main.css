@@ -1685,7 +1685,6 @@ main {
 
 .name-origins-text {
   color: var(--color-accent-rust);
-  font-weight: 500;
 }
 
 .vm-grid {

@@ -29,8 +29,7 @@ layout: base.njk
       <p>{{ pageData.brandPhilosophy.content }}</p>
 
       {% if pageData.brandPhilosophy.extended %}
-      <p>{{ pageData.brandPhilosophy.extended.text }}</p>
-      <p class="name-origins-text">{{ pageData.brandPhilosophy.extended.origins }}</p>
+      <p>{{ pageData.brandPhilosophy.extended.text }} {{ pageData.brandPhilosophy.extended.originsIntro }} <span class="name-origins-text">{{ pageData.brandPhilosophy.extended.origins }}</span></p>
       <p>{{ pageData.brandPhilosophy.extended.continuation }}</p>
       {% endif %}
 
