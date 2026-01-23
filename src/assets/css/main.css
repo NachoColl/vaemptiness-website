@@ -1683,6 +1683,37 @@ main {
   padding: var(--section-spacing) 0;
 }
 
+.brand-name-explanation {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.name-list-intro {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.name-origins-list {
+  list-style: none;
+  margin: var(--space-sm) 0 var(--space-lg);
+  padding-left: var(--space-md);
+}
+
+.name-origins-list li {
+  position: relative;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-xs);
+  line-height: 1.6;
+}
+
+.name-origins-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-rust);
+  font-weight: bold;
+}
+
 .vm-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

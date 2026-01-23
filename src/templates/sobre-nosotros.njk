@@ -27,6 +27,26 @@ layout: base.njk
     <div class="content-section centered">
       <h2>{{ pageData.brandPhilosophy.title }}</h2>
       <p>{{ pageData.brandPhilosophy.content }}</p>
+
+      {% if pageData.brandPhilosophy.extended %}
+      <div class="brand-name-explanation">
+        {% for paragraph in pageData.brandPhilosophy.extended.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+
+        <p class="name-list-intro">{{ pageData.brandPhilosophy.extended.listIntro }}</p>
+        <ul class="name-origins-list">
+          {% for item in pageData.brandPhilosophy.extended.listItems %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+
+        <p>{{ pageData.brandPhilosophy.extended.symbolism }}</p>
+        <p>{{ pageData.brandPhilosophy.extended.symbolismDetail }}</p>
+        <p class="quote-emphasis">"{{ pageData.brandPhilosophy.extended.conclusion }}"</p>
+      </div>
+      {% endif %}
+
       <blockquote class="philosophy-quote">
         <p>"{{ pageData.brandPhilosophy.quote }}"</p>
         <cite>— {{ pageData.brandPhilosophy.author }}</cite>
