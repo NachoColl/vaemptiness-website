@@ -1683,26 +1683,14 @@ main {
   padding: var(--section-spacing) 0;
 }
 
-.brand-name-explanation {
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-xl);
-}
-
-.name-list-intro {
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-sm);
-}
-
 .name-origins-list {
   list-style: none;
-  margin: var(--space-sm) 0 var(--space-lg);
   padding-left: var(--space-md);
 }
 
 .name-origins-list li {
   position: relative;
   padding-left: var(--space-md);
-  margin-bottom: var(--space-xs);
   line-height: 1.6;
 }
 

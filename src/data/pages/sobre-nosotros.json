@@ -53,11 +53,7 @@
       "quote": "El vacío no es ausencia de pensamientos, sino estabilidad en medio de ellos",
       "author": "S.E. Nyari Tritul Rimpoché",
       "extended": {
-        "paragraphs": [
-          "El nombre asusta a algunos. Suena extraño. Parece complicado.",
-          "Pero su esencia es hermosamente simple."
-        ],
-        "listIntro": "vaemptîness viene de:",
+        "text": "El nombre asusta a algunos. Suena extraño. Parece complicado. Pero su esencia es hermosamente simple. vaemptîness viene de:",
         "listItems": [
           "vacío (emptiness)",
           "espacio",
@@ -65,9 +61,7 @@
           "no identificación",
           "amplitud interna y verdad"
         ],
-        "symbolism": "El acento circunflejo \"î\" no es decorativo. Simboliza lo que ocurre cuando una mente se expande:",
-        "symbolismDetail": "se abre un pequeño espacio, justo entre tú y lo que piensas. Ese milímetro interno es el inicio de la libertad mental.",
-        "conclusion": "vaemptîness no significa \"no pensar\", significa: \"Ya no estoy atrapado en lo que pienso.\""
+        "continuation": "El acento circunflejo \"î\" no es decorativo. Simboliza lo que ocurre cuando una mente se expande: se abre un pequeño espacio, justo entre tú y lo que piensas. Ese milímetro interno es el inicio de la libertad mental. vaemptîness no significa \"no pensar\", significa: \"Ya no estoy atrapado en lo que pienso.\""
       }
     },
     "team": {

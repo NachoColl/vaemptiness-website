@@ -29,22 +29,13 @@ layout: base.njk
       <p>{{ pageData.brandPhilosophy.content }}</p>
 
       {% if pageData.brandPhilosophy.extended %}
-      <div class="brand-name-explanation">
-        {% for paragraph in pageData.brandPhilosophy.extended.paragraphs %}
-        <p>{{ paragraph }}</p>
+      <p>{{ pageData.brandPhilosophy.extended.text }}</p>
+      <ul class="name-origins-list">
+        {% for item in pageData.brandPhilosophy.extended.listItems %}
+        <li>{{ item }}</li>
         {% endfor %}
-
-        <p class="name-list-intro">{{ pageData.brandPhilosophy.extended.listIntro }}</p>
-        <ul class="name-origins-list">
-          {% for item in pageData.brandPhilosophy.extended.listItems %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-
-        <p>{{ pageData.brandPhilosophy.extended.symbolism }}</p>
-        <p>{{ pageData.brandPhilosophy.extended.symbolismDetail }}</p>
-        <p class="quote-emphasis">"{{ pageData.brandPhilosophy.extended.conclusion }}"</p>
-      </div>
+      </ul>
+      <p>{{ pageData.brandPhilosophy.extended.continuation }}</p>
       {% endif %}
 
       <blockquote class="philosophy-quote">
