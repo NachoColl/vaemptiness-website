@@ -1,0 +1,632 @@
+---
+layout: null
+permalink: /taller-empresas/
+---
+{% import "icons-empresas.njk" as icons %}
+{% set data = pages.empresas %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ data.meta.seo.title }}</title>
+  <meta name="description" content="{{ data.meta.seo.description }}">
+
+  {# Open Graph #}
+  <meta property="og:title" content="{{ data.meta.seo.title }}">
+  <meta property="og:description" content="{{ data.meta.seo.description }}">
+  <meta property="og:image" content="{{ site.url }}{{ data.meta.seo.ogImage }}">
+  <meta property="og:url" content="{{ site.url }}/taller-empresas/">
+  <meta property="og:type" content="website">
+
+  {# Twitter Card #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ data.meta.seo.title }}">
+  <meta name="twitter:description" content="{{ data.meta.seo.description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ data.meta.seo.ogImage }}">
+
+  {# Styles #}
+  <link rel="stylesheet" href="/assets/css/empresas-landing.css">
+
+  <style>
+    /* Tailwind-style utility classes */
+    .fixed { position: fixed; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .top-0 { top: 0; }
+    .left-0 { left: 0; }
+    .right-0 { right: 0; }
+    .bottom-0 { bottom: 0; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .z-10 { z-index: 10; }
+    .z-50 { z-index: 50; }
+
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .grid { display: grid; }
+    .hidden { display: none; }
+    .block { display: block; }
+    .inline-block { display: inline-block; }
+
+    .flex-col { flex-direction: column; }
+    .flex-row { flex-direction: row; }
+    .flex-shrink-0 { flex-shrink: 0; }
+    .flex-row-reverse { flex-direction: row-reverse; }
+
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+
+    .gap-1 { gap: 0.25rem; }
+    .gap-2 { gap: 0.5rem; }
+    .gap-3 { gap: 0.75rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    .gap-12 { gap: 3rem; }
+    .gap-16 { gap: 4rem; }
+
+    .space-y-4 > * + * { margin-top: 1rem; }
+    .space-y-6 > * + * { margin-top: 1.5rem; }
+    .space-y-8 > * + * { margin-top: 2rem; }
+
+    .w-full { width: 100%; }
+    .w-px { width: 1px; }
+    .w-3\.5 { width: 0.875rem; }
+    .w-4 { width: 1rem; }
+    .w-5 { width: 1.25rem; }
+    .w-6 { width: 1.5rem; }
+    .w-7 { width: 1.75rem; }
+    .w-10 { width: 2.5rem; }
+    .w-12 { width: 3rem; }
+    .w-14 { width: 3.5rem; }
+    .w-20 { width: 5rem; }
+    .w-24 { width: 6rem; }
+    .w-32 { width: 8rem; }
+    .w-1\/2 { width: 50%; }
+
+    .h-4 { height: 1rem; }
+    .h-5 { height: 1.25rem; }
+    .h-6 { height: 1.5rem; }
+    .h-7 { height: 1.75rem; }
+    .h-10 { height: 2.5rem; }
+    .h-12 { height: 3rem; }
+    .h-14 { height: 3.5rem; }
+    .h-20 { height: 5rem; }
+    .h-24 { height: 6rem; }
+    .h-32 { height: 8rem; }
+    .min-h-24 { min-height: 6rem; }
+
+    .max-w-xs { max-width: 20rem; }
+    .max-w-2xl { max-width: 42rem; }
+    .max-w-3xl { max-width: 48rem; }
+    .max-w-4xl { max-width: 56rem; }
+    .max-w-6xl { max-width: 72rem; }
+
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .ml-16 { margin-left: 4rem; }
+    .mt-0\.5 { margin-top: 0.125rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .mt-10 { margin-top: 2.5rem; }
+    .mt-12 { margin-top: 3rem; }
+    .mt-16 { margin-top: 4rem; }
+    .mt-20 { margin-top: 5rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-3 { margin-bottom: 0.75rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .mb-12 { margin-bottom: 3rem; }
+    .mb-16 { margin-bottom: 4rem; }
+
+    .p-8 { padding: 2rem; }
+    .p-10 { padding: 2.5rem; }
+    .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+    .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+    .pt-6 { padding-top: 1.5rem; }
+    .pt-32 { padding-top: 8rem; }
+    .pb-24 { padding-bottom: 6rem; }
+
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
+    .text-left { text-align: left; }
+
+    .text-xs { font-size: 0.75rem; line-height: 1rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .text-5xl { font-size: 3rem; line-height: 1; }
+    .text-7xl { font-size: 4.5rem; line-height: 1; }
+
+    .font-light { font-weight: 300; }
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+
+    .uppercase { text-transform: uppercase; }
+    .tracking-wide { letter-spacing: 0.025em; }
+    .tracking-widest { letter-spacing: 0.1em; }
+
+    .leading-relaxed { line-height: 1.625; }
+
+    .border { border-width: 1px; }
+    .border-2 { border-width: 2px; }
+    .border-4 { border-width: 4px; }
+    .border-t { border-top-width: 1px; }
+    .border-b { border-bottom-width: 1px; }
+
+    .rounded-md { border-radius: 0.375rem; }
+    .rounded-xl { border-radius: 0.75rem; }
+    .rounded-2xl { border-radius: 1rem; }
+    .rounded-3xl { border-radius: 1.5rem; }
+    .rounded-full { border-radius: 9999px; }
+
+    .aspect-square { aspect-ratio: 1 / 1; }
+
+    .resize-none { resize: none; }
+
+    .cursor-pointer { cursor: pointer; }
+
+    .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+    .transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+    .duration-300 { transition-duration: 300ms; }
+
+    .overflow-hidden { overflow: hidden; }
+
+    @media (min-width: 640px) {
+      .sm\:flex-row { flex-direction: row; }
+      .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sm\:gap-4 { gap: 1rem; }
+    }
+
+    @media (min-width: 768px) {
+      .md\:flex { display: flex; }
+      .md\:hidden { display: none; }
+      .md\:flex-row { flex-direction: row; }
+      .md\:flex-row-reverse { flex-direction: row-reverse; }
+      .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .md\:text-5xl { font-size: 3rem; line-height: 1; }
+      .md\:text-7xl { font-size: 4.5rem; line-height: 1; }
+      .md\:w-1\/2 { width: 50%; }
+      .md\:pr-12 { padding-right: 3rem; }
+      .md\:pl-12 { padding-left: 3rem; }
+      .md\:text-right { text-align: right; }
+      .md\:p-10 { padding: 2.5rem; }
+      .md\:gap-12 { gap: 3rem; }
+      .md\:ml-0 { margin-left: 0; }
+      .md\:-translate-x-px { transform: translateX(-1px); }
+      .md\:-translate-x-1\/2 { transform: translateX(-50%); }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .lg\:gap-16 { gap: 4rem; }
+      .lg\:left-1\/2 { left: 50%; }
+    }
+
+    .fill-primary { fill: hsl(var(--primary)); }
+  </style>
+</head>
+<body>
+
+  {# Empty first section to match original structure (section index offset fix) #}
+  <section class="hidden" aria-hidden="true"></section>
+
+  {# Header / Navigation #}
+  <header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full border-2 border-primary/30 flex items-center justify-center">
+          <span class="font-display text-xl font-semibold text-foreground">va</span>
+        </div>
+        <span class="font-display text-xl tracking-wide text-foreground">
+          <span class="font-bold">va</span>emptîness
+        </span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#beneficios" class="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Beneficios</a>
+        <a href="#programa" class="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Programa</a>
+        <a href="#testimonios" class="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Testimonios</a>
+      </div>
+
+      <a href="#contacto" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 font-body gradient-cta text-primary-foreground shadow-soft hover:shadow-elevated hover:scale-[1.01] active:scale-[0.99] h-9 rounded-md px-3">
+        Solicitar Demo
+      </a>
+    </nav>
+  </header>
+
+  {# Hero Section #}
+  <section class="min-h-screen gradient-hero flex flex-col items-center justify-center relative px-6 pt-20">
+    {# Floating decorative circle #}
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full border border-primary/10 animate-float opacity-50"></div>
+
+    {# Main content #}
+    <div class="max-w-4xl mx-auto text-center z-10">
+
+      {# Badge with pulse dot #}
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-up">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="text-sm font-body text-muted-foreground">{{ data.hero.eyebrow }}</span>
+      </div>
+
+      {# Logo graphic + Title #}
+      <div class="mb-6 animate-fade-up animation-delay-100">
+        <div class="w-24 h-24 mx-auto mb-6 rounded-full border-2 border-primary/20 flex items-center justify-center">
+          <span class="font-display text-3xl font-light text-foreground">va</span>
+        </div>
+        <h1 class="font-display text-5xl md:text-7xl font-light tracking-tight mb-2">
+          <span class="font-bold">va</span>emptîness
+        </h1>
+        <p class="font-display text-xl text-primary/80 italic">mental training</p>
+      </div>
+
+      {# Subtitle #}
+      <h2 class="font-display text-3xl md:text-5xl font-light text-foreground mb-6 animate-fade-up animation-delay-200">
+        {{ data.hero.headline }}<br>
+        <span class="text-primary">{{ data.hero.headlineEmphasis }}</span>
+      </h2>
+
+      {# Description #}
+      <p class="font-body text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up animation-delay-300">
+        {{ data.hero.subheadline }}
+      </p>
+
+      {# CTAs #}
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animation-delay-400">
+        <a href="{{ data.hero.ctaPrimary.href }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 font-body gradient-cta text-primary-foreground shadow-elevated hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] h-14 rounded-lg px-10 text-lg">
+          {{ data.hero.ctaPrimary.text }}
+        </a>
+        <a href="{{ data.hero.ctaSecondary.href }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 font-body border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground h-14 rounded-lg px-10 text-lg">
+          {{ data.hero.ctaSecondary.text }}
+        </a>
+      </div>
+
+      {# Stats - Simple text, no cards #}
+      <div class="mt-16 grid grid-cols-3 gap-8 max-w-xl mx-auto animate-fade-up animation-delay-500">
+        {% for stat in data.hero.stats %}
+        <div class="text-center">
+          <p class="font-display text-4xl font-semibold text-primary">{{ stat.value }}</p>
+          <p class="font-body text-sm text-muted-foreground mt-1">{{ stat.label }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {# Scroll indicator #}
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground animate-fade-in animation-delay-500">
+      <span class="text-sm font-body">Descubre más</span>
+      {{ icons.icon("arrow-down", "w-4 h-4 animate-bounce") }}
+    </div>
+  </section>
+
+  {# Benefits / Challenge Section #}
+  <section id="beneficios" class="py-24 px-6 bg-card">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <p class="font-body text-sm uppercase tracking-widest text-primary mb-4">{{ data.challenges.eyebrow }}</p>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+          {{ data.challenges.headline }}<br>
+          <span class="text-primary font-semibold">{{ data.challenges.headlineEmphasis }}</span>
+        </h2>
+        <p class="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+          {{ data.challenges.intro }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {% for item in data.challenges.items %}
+        <div class="group p-8 rounded-2xl bg-background border border-border hover:shadow-elevated transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+            {{ icons.icon(item.icon, "w-5 h-5") }}
+          </div>
+          <h3 class="font-display text-2xl font-semibold text-foreground mb-3">{{ item.title }}</h3>
+          <p class="font-body text-muted-foreground">{{ item.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {# Solution Section #}
+  <section class="py-24 px-6 gradient-warm">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="font-body text-sm uppercase tracking-widest text-primary mb-4">{{ data.solution.eyebrow }}</p>
+          <h2 class="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+            {{ data.solution.headline }}<br>
+            <span class="text-primary font-semibold">{{ data.solution.headlineEmphasis }}</span>
+          </h2>
+          <p class="font-body text-lg text-muted-foreground mb-8">
+            {{ data.solution.intro }}
+          </p>
+
+          <div class="space-y-4">
+            {% for feature in data.solution.features %}
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                {{ icons.icon("check", "w-3.5 h-3.5 text-primary") }}
+              </div>
+              <p class="font-body text-foreground">{{ feature }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="aspect-square rounded-3xl bg-gradient-to-br from-secondary to-background border border-border shadow-elevated flex items-center justify-center">
+            <div class="text-center p-8">
+              <div class="w-32 h-32 mx-auto mb-8 rounded-full border-2 border-primary/20 flex items-center justify-center relative">
+                {{ icons.icon("sparkles", "w-12 h-12 text-primary") }}
+                <div class="absolute inset-0 rounded-full border border-primary/10 animate-ping"></div>
+              </div>
+              <p class="font-display text-3xl font-light text-foreground mb-2">{{ data.solution.visual.title }}</p>
+              <p class="font-display text-xl text-primary">{{ data.solution.visual.subtitle }}</p>
+              <p class="font-body text-sm text-muted-foreground mt-4 max-w-xs mx-auto">
+                {{ data.solution.visual.description }}
+              </p>
+            </div>
+          </div>
+
+          <div class="solution-badge-top-right w-24 h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center animate-float hidden md:flex">
+            <span class="font-display text-2xl text-primary">{{ data.solution.visual.badge1 }}</span>
+          </div>
+
+          <div class="solution-badge-bottom-left w-20 h-20 rounded-2xl bg-secondary border border-border flex items-center justify-center animate-float animation-delay-200 hidden md:flex">
+            <span class="font-display text-lg text-foreground">{{ data.solution.visual.badge2 }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# Program Schedule Section #}
+  <section id="programa" class="py-24 px-6 bg-background">
+    <div class="container mx-auto max-w-4xl">
+      <div class="text-center mb-16">
+        <p class="font-body text-sm uppercase tracking-widest text-primary mb-4">{{ data.program.eyebrow }}</p>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+          {{ data.program.headline }}<br>
+          <span class="text-primary font-semibold">{{ data.program.headlineEmphasis }}</span>
+        </h2>
+        <p class="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+          {{ data.program.intro }}
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute left-8 top-0 bottom-0 w-px bg-border lg:left-1/2 lg:md:-translate-x-px"></div>
+
+        <div class="space-y-8">
+          {% for session in data.program.schedule %}
+          {% set isEven = loop.index % 2 == 0 %}
+          <div class="relative flex items-start gap-6 md:gap-12 {% if isEven %}md:flex-row-reverse{% endif %}">
+            <div class="absolute left-8 w-4 h-4 rounded-full bg-primary timeline-dot shadow-soft -translate-x-1/2 z-10 lg:left-1/2 lg:md:-translate-x-1/2"></div>
+
+            <div class="ml-16 md:ml-0 md:w-1/2 {% if not isEven %}md:pr-12 md:text-right{% else %}md:pl-12{% endif %}">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-sm font-body text-muted-foreground mb-3 {% if not isEven %}md:flex-row-reverse{% endif %}">
+                {{ icons.icon("clock", "w-3.5 h-3.5") }}
+                {{ session.time }}
+              </div>
+
+              <div class="flex items-start gap-4 {% if not isEven %}md:flex-row-reverse{% endif %}">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  {{ icons.icon(session.icon, "w-5 h-5 text-primary") }}
+                </div>
+                <div>
+                  <h3 class="font-display text-xl font-semibold text-foreground mb-2">{{ session.title }}</h3>
+                  <p class="font-body text-muted-foreground">{{ session.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# Testimonials Section #}
+  <section id="testimonios" class="py-24 px-6 bg-card">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <p class="font-body text-sm uppercase tracking-widest text-primary mb-4">{{ data.testimonials.eyebrow }}</p>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+          {{ data.testimonials.headline }}<br>
+          <span class="text-primary font-semibold">{{ data.testimonials.headlineEmphasis }}</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {% for testimonial in data.testimonials.items %}
+        <div class="group p-8 rounded-2xl bg-background border border-border hover:shadow-elevated transition-all duration-300">
+          {{ icons.icon("quote", "w-10 h-10 text-primary/20 mb-6") }}
+
+          <div class="flex gap-1 mb-4">
+            {% for i in range(testimonial.rating) %}
+              {{ icons.icon("star", "w-4 h-4 fill-primary text-primary") }}
+            {% endfor %}
+          </div>
+
+          <p class="font-body text-foreground mb-8 leading-relaxed">
+            "{{ testimonial.quote }}"
+          </p>
+
+          <div class="border-t border-border pt-6">
+            <p class="font-display text-lg font-semibold text-foreground">{{ testimonial.name }}</p>
+            <p class="font-body text-sm text-muted-foreground">{{ testimonial.title }}</p>
+            <p class="font-body text-sm text-primary">{{ testimonial.company }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {# Metrics / ROI Section #}
+  <section class="py-24 px-6 gradient-warm">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <p class="font-body text-sm uppercase tracking-widest text-primary mb-4">{{ data.metrics.eyebrow }}</p>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+          {{ data.metrics.headline }}<br>
+          <span class="text-primary font-semibold">{{ data.metrics.headlineEmphasis }}</span>
+        </h2>
+        <p class="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+          {{ data.metrics.intro }}
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {% for metric in data.metrics.items %}
+        <div class="p-8 rounded-2xl bg-background border border-border shadow-soft text-center hover:shadow-elevated transition-all duration-300">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-secondary flex items-center justify-center mb-6">
+            {{ icons.icon(metric.icon, "w-7 h-7 " + ("text-green-600" if metric.color == "green" else "text-primary")) }}
+          </div>
+          <p class="font-display text-5xl font-bold mb-2 {{ 'text-green-600' if metric.color == 'green' else 'text-primary' }}">{{ metric.value }}</p>
+          <p class="font-display text-lg font-semibold text-foreground mb-2">{{ metric.title }}</p>
+          <p class="font-body text-sm text-muted-foreground">{{ metric.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {# Contact Form Section #}
+  <section id="contacto" class="py-24 px-6 bg-background">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <p class="font-body text-sm uppercase tracking-widest text-primary mb-4">{{ data.contact.eyebrow }}</p>
+          <h2 class="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+            {{ data.contact.headline }}<br>
+            <span class="text-primary font-semibold">{{ data.contact.headlineEmphasis }}</span>
+          </h2>
+          <p class="font-body text-lg text-muted-foreground mb-10">
+            {{ data.contact.intro }}
+          </p>
+
+          <div class="space-y-6">
+            {% for card in data.contact.infoCards %}
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0">
+                {{ icons.icon(card.icon, "w-5 h-5 text-primary") }}
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold text-foreground">{{ card.title }}</h3>
+                <p class="font-body text-muted-foreground">{{ card.description }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="bg-card rounded-3xl p-8 md:p-10 border border-border shadow-soft">
+          <form id="contact-form" action="{{ data.contact.form.action }}" method="POST" class="space-y-6">
+            <div class="grid sm:grid-cols-2 sm:gap-4">
+              {% for field in data.contact.form.fields %}
+                {% if field.halfWidth %}
+                  <div>
+                    <label class="font-body text-sm text-foreground mb-2 block">{{ field.label }}</label>
+                    <input
+                      type="{{ field.type }}"
+                      name="{{ field.name }}"
+                      {% if field.required %}required{% endif %}
+                      placeholder="{{ field.placeholder }}"
+                      class="h-12 bg-background w-full rounded-md border border-input px-3"
+                    >
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+
+            {% for field in data.contact.form.fields %}
+              {% if not field.halfWidth %}
+                <div>
+                  <label class="font-body text-sm text-foreground mb-2 block">{{ field.label }}</label>
+                  {% if field.type == "textarea" %}
+                    <textarea
+                      name="{{ field.name }}"
+                      {% if field.required %}required{% endif %}
+                      placeholder="{{ field.placeholder }}"
+                      class="min-h-24 bg-background w-full rounded-md border border-input px-3 py-2 resize-none"
+                    ></textarea>
+                  {% else %}
+                    <input
+                      type="{{ field.type }}"
+                      name="{{ field.name }}"
+                      {% if field.required %}required{% endif %}
+                      placeholder="{{ field.placeholder }}"
+                      class="h-12 bg-background w-full rounded-md border border-input px-3"
+                    >
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+
+            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 font-body gradient-cta text-primary-foreground shadow-elevated hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] h-14 rounded-lg px-10 text-lg">
+              {{ icons.icon("send", "w-5 h-5") }}
+              {{ data.contact.form.submitText }}
+            </button>
+
+            <p class="font-body text-xs text-muted-foreground text-center">
+              {{ data.contact.form.disclaimer }}
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# Footer #}
+  <footer class="py-12 px-6 bg-foreground">
+    <div class="container mx-auto max-w-6xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full border-2 border-background/30 flex items-center justify-center">
+            <span class="font-display text-xl font-semibold text-background">va</span>
+          </div>
+          <span class="font-display text-xl tracking-wide text-background">
+            <span class="font-bold">va</span>emptîness
+          </span>
+        </div>
+
+        <nav class="flex items-center gap-8">
+          {% for link in data.footer.links %}
+          <a href="{{ link.href }}" {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %} class="font-body text-sm text-background/60 hover:text-background transition-colors">
+            {{ link.text }}
+          </a>
+          {% endfor %}
+        </nav>
+
+        <p class="font-body text-sm text-background/40">
+          © <span id="copyright-year"></span> vaemptîness. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  {# JavaScript #}
+  <script>
+    // Set current year in copyright
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+  <script src="/assets/js/empresas-landing.js"></script>
+
+</body>
+</html>

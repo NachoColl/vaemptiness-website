@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "slug": "empresas",
+    "permalink": "/empresas/",
+    "layout": null,
+    "seo": {
+      "title": "vaemptîness - Entrenamiento Mental Corporativo",
+      "description": "Taller de 1 día para equipos de alto rendimiento. Reduce el estrés laboral, aumenta la concentración y mejora el bienestar de tus colaboradores.",
+      "ogImage": "/assets/images/empresas/og-image.png"
+    }
+  },
+  "hero": {
+    "eyebrow": "Programa Corporativo de 1 Día",
+    "headline": "Taller de Entrenamiento Mental",
+    "headlineEmphasis": "para Equipos de Alto Rendimiento",
+    "subheadline": "Reduce el estrés laboral, aumenta la concentración y mejora el bienestar de tus colaboradores en una sesión intensiva de un día.",
+    "ctaPrimary": {
+      "text": "Agenda una Demo Gratuita",
+      "href": "#contacto"
+    },
+    "ctaSecondary": {
+      "text": "Ver Programa Completo",
+      "href": "https://vaemptiness.com/vaemptiness-program/"
+    },
+    "stats": [
+      {
+        "value": "87%",
+        "label": "Reducción de estrés"
+      },
+      {
+        "value": "+40%",
+        "label": "Mejora en enfoque"
+      },
+      {
+        "value": "500+",
+        "label": "Profesionales entrenados"
+      }
+    ]
+  },
+  "challenges": {
+    "eyebrow": "El Desafío",
+    "headline": "¿Tu equipo sufre de",
+    "headlineEmphasis": "ruido mental?",
+    "intro": "Las exigencias del trabajo moderno generan una carga cognitiva que impacta directamente en el rendimiento y bienestar de tus colaboradores.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Sobrecarga Mental",
+        "description": "El 76% de los empleados experimenta agotamiento mental que afecta su productividad y creatividad."
+      },
+      {
+        "icon": "zap",
+        "title": "Falta de Concentración",
+        "description": "Los trabajadores pierden en promedio 2.1 horas diarias por distracciones y falta de enfoque."
+      },
+      {
+        "icon": "heart",
+        "title": "Estrés Crónico",
+        "description": "El estrés laboral cuesta a las empresas hasta un 40% de la rotación de personal."
+      },
+      {
+        "icon": "users",
+        "title": "Baja Colaboración",
+        "description": "Equipos mentalmente agotados tienen 50% menos capacidad para la resolución creativa de problemas."
+      }
+    ]
+  },
+  "solution": {
+    "eyebrow": "La Solución",
+    "headline": "Un día para",
+    "headlineEmphasis": "transformar mentes",
+    "intro": "Nuestro taller de entrenamiento mental combina neurociencia, técnicas de atención plena y metodologías experienciales para crear un cambio real y medible en tus equipos.",
+    "features": [
+      "Técnicas prácticas de gestión mental aplicables desde el día 1",
+      "Identificación y neutralización de 'saboteadores mentales'",
+      "Herramientas para reset y restart cognitivo",
+      "Metodología experiencial: se vive, no se memoriza",
+      "Material de seguimiento para reforzar el aprendizaje",
+      "Certificado de participación para cada asistente"
+    ],
+    "visual": {
+      "title": "Fusiona",
+      "subtitle": "Método + Experiencia",
+      "description": "No memorizas conceptos, los experimentas en tiempo real.",
+      "badge1": "8h",
+      "badge2": "1 día"
+    }
+  },
+  "program": {
+    "eyebrow": "El Programa",
+    "headline": "Un día completo de",
+    "headlineEmphasis": "transformación mental",
+    "intro": "Estructura diseñada para maximizar el aprendizaje experiencial y la aplicación práctica inmediata.",
+    "schedule": [
+      {
+        "time": "09:00 - 10:30",
+        "icon": "lightbulb",
+        "title": "Apertura y Diagnóstico",
+        "description": "Identificación de patrones mentales y saboteadores personales"
+      },
+      {
+        "time": "10:30 - 11:00",
+        "icon": "heart",
+        "title": "Pausa Consciente",
+        "description": "Primera práctica de técnicas de reset mental"
+      },
+      {
+        "time": "11:00 - 13:00",
+        "icon": "brain",
+        "title": "Herramientas de Enfoque",
+        "description": "Técnicas prácticas para mejorar la concentración y gestión de atención"
+      },
+      {
+        "time": "13:00 - 14:30",
+        "icon": "coffee",
+        "title": "Almuerzo Mindful",
+        "description": "Experiencia de alimentación consciente y networking"
+      },
+      {
+        "time": "14:30 - 16:30",
+        "icon": "zap",
+        "title": "Gestión del Estrés",
+        "description": "Protocolos de regulación emocional y manejo de presión"
+      },
+      {
+        "time": "16:30 - 18:00",
+        "icon": "check",
+        "title": "Integración y Compromiso",
+        "description": "Plan de acción personal y cierre del programa"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonios",
+    "headline": "Lo que dicen los",
+    "headlineEmphasis": "líderes de RRHH",
+    "items": [
+      {
+        "quote": "El taller transformó la dinámica de nuestro equipo. Vimos mejoras en productividad y bienestar en las primeras semanas.",
+        "name": "María García",
+        "title": "Directora de RRHH",
+        "company": "TechCorp México",
+        "rating": 5
+      },
+      {
+        "quote": "Por primera vez encontramos una metodología que realmente funciona. Los colaboradores siguen aplicando las técnicas meses después.",
+        "name": "Carlos Rodríguez",
+        "title": "Gerente de Talento",
+        "company": "Grupo Financiero Atlas",
+        "rating": 5
+      },
+      {
+        "quote": "La inversión en el bienestar mental de nuestro equipo se reflejó directamente en los indicadores de rotación y satisfacción.",
+        "name": "Ana Martínez",
+        "title": "VP de Personas",
+        "company": "StartUp Hub",
+        "rating": 5
+      }
+    ]
+  },
+  "metrics": {
+    "eyebrow": "Impacto Medible",
+    "headline": "El ROI del",
+    "headlineEmphasis": "bienestar mental",
+    "intro": "Resultados promedio reportados por empresas que han implementado nuestro programa de entrenamiento mental.",
+    "items": [
+      {
+        "icon": "trending-down",
+        "value": "-35%",
+        "title": "Reducción de ausentismo",
+        "description": "Menos días perdidos por estrés y burnout",
+        "color": "green"
+      },
+      {
+        "icon": "trending-up",
+        "value": "+28%",
+        "title": "Aumento en productividad",
+        "description": "Mayor capacidad de enfoque y concentración",
+        "color": "primary"
+      },
+      {
+        "icon": "users",
+        "value": "-42%",
+        "title": "Reducción de rotación",
+        "description": "Mayor retención de talento clave",
+        "color": "green"
+      },
+      {
+        "icon": "dollar-sign",
+        "value": "6x",
+        "title": "Retorno de inversión",
+        "description": "Por cada peso invertido en bienestar mental",
+        "color": "primary"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contáctanos",
+    "headline": "Agenda una",
+    "headlineEmphasis": "demo gratuita",
+    "intro": "Descubre cómo nuestro taller de entrenamiento mental puede transformar el bienestar y rendimiento de tu equipo. Sin compromiso.",
+    "infoCards": [
+      {
+        "icon": "calendar",
+        "title": "Demo Personalizada",
+        "description": "30 minutos para conocer tu situación y mostrarte cómo podemos ayudar."
+      },
+      {
+        "icon": "file-text",
+        "title": "Propuesta a Medida",
+        "description": "Adaptamos el programa a las necesidades específicas de tu organización."
+      },
+      {
+        "icon": "mail",
+        "title": "contacto@vaemptiness.com",
+        "description": "Respuesta en menos de 24 horas."
+      }
+    ],
+    "form": {
+      "action": "https://formspree.io/f/YOUR_FORM_ID",
+      "submitText": "Solicitar Demo Gratuita",
+      "disclaimer": "Al enviar este formulario, aceptas que nos comuniquemos contigo respecto a nuestros servicios.",
+      "successMessage": "¡Mensaje enviado! Nos pondremos en contacto contigo pronto.",
+      "fields": [
+        {
+          "name": "nombre",
+          "type": "text",
+          "label": "Nombre",
+          "placeholder": "Tu nombre",
+          "required": true,
+          "halfWidth": true
+        },
+        {
+          "name": "apellido",
+          "type": "text",
+          "label": "Apellido",
+          "placeholder": "Tu apellido",
+          "required": true,
+          "halfWidth": true
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "label": "Email corporativo",
+          "placeholder": "tu@empresa.com",
+          "required": true
+        },
+        {
+          "name": "empresa",
+          "type": "text",
+          "label": "Empresa",
+          "placeholder": "Nombre de tu empresa",
+          "required": true
+        },
+        {
+          "name": "tamanoEquipo",
+          "type": "text",
+          "label": "Tamaño del equipo",
+          "placeholder": "Ej: 50-100 colaboradores",
+          "required": true
+        },
+        {
+          "name": "mensaje",
+          "type": "textarea",
+          "label": "Mensaje (opcional)",
+          "placeholder": "Cuéntanos sobre los desafíos de tu equipo...",
+          "required": false
+        }
+      ]
+    }
+  },
+  "footer": {
+    "links": [
+      {
+        "text": "Sitio Principal",
+        "href": "https://vaemptiness.com",
+        "external": true
+      },
+      {
+        "text": "Programa Individual",
+        "href": "https://vaemptiness.com/vaemptiness-program/",
+        "external": true
+      },
+      {
+        "text": "Contacto",
+        "href": "#contacto",
+        "external": false
+      }
+    ],
+    "copyright": "© 2024 vaemptîness. Todos los derechos reservados."
+  }
+}
