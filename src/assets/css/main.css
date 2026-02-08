@@ -1840,9 +1840,16 @@ main {
 
 .team-members {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr; /* Mobile & tablet: single column */
   gap: var(--space-xl);
   margin-top: var(--space-3xl);
+}
+
+/* Desktop: 3 columns for all three collaborators */
+@media (min-width: 1024px) {
+  .team-members {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .member-card {
