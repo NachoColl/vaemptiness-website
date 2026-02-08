@@ -71,17 +71,17 @@
       "programs": [
         {
           "id": "adult",
-          "name": "vaemptîness program",
-          "ageRange": "Adultos",
+          "name": "vaemptîness adultos",
+          "ageRange": "",
           "shortDescription": "Entrenamiento mental para adultos buscando mejor concentración y enfoque",
-          "slug": "vaemptiness-program",
+          "slug": "vaemptiness-adultos",
           "featured": true,
           "linkText": "Conocer más →"
         },
         {
           "id": "teams",
           "name": "vaemptîness equipos",
-          "ageRange": "Equipos de trabajo",
+          "ageRange": "",
           "shortDescription": "Entrenamiento mental para equipos de trabajo buscando mejor rendimiento y colaboración",
           "slug": "vaemptiness-equipos",
           "featured": true,
@@ -90,7 +90,7 @@
         {
           "id": "teen",
           "name": "vaemptîness teen",
-          "ageRange": "Pre-adolescencia a adolescencia",
+          "ageRange": "",
           "shortDescription": "Programa enfocado en adolescentes para desarrollar claridad mental y regulación emocional",
           "slug": "vaemptiness-teen",
           "featured": true,
@@ -99,7 +99,7 @@
         {
           "id": "kids",
           "name": "vaemptîness kids",
-          "ageRange": "5-8 años",
+          "ageRange": "",
           "shortDescription": "Entrenamiento emocional y mental a través del juego",
           "slug": "vaemptiness-kids",
           "featured": true,
