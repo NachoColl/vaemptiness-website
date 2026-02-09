@@ -68,8 +68,8 @@
   "solution": {
     "eyebrow": "La Solución",
     "headline": "Un día para",
-    "headlineEmphasis": "transformar mentes",
-    "intro": "Nuestro taller de entrenamiento mental combina neurociencia, técnicas de atención plena y metodologías experienciales para crear un cambio real y medible en tus equipos.",
+    "headlineEmphasis": "oxigenar la mente",
+    "intro": "Nuestro taller de entrenamiento mental combina neurociencia, técnicas de atención plena y metodologías experienciales para facilitar un cambio real y medible en tus equipos.",
     "features": [
       "Técnicas prácticas de gestión mental aplicables desde el día 1",
       "Identificación y neutralización de 'saboteadores mentales'",
@@ -89,14 +89,14 @@
   "program": {
     "eyebrow": "El Programa",
     "headline": "Un día completo de",
-    "headlineEmphasis": "transformación mental",
+    "headlineEmphasis": "entrenamiento mental",
     "intro": "Estructura diseñada para maximizar el aprendizaje experiencial y la aplicación práctica inmediata.",
     "schedule": [
       {
         "time": "09:00 - 10:30",
         "icon": "lightbulb",
-        "title": "Apertura y Diagnóstico",
-        "description": "Identificación de patrones mentales y saboteadores personales"
+        "title": "Apertura del ciclo",
+        "description": "Identificación de patrones y saboteadores mentales"
       },
       {
         "time": "10:30 - 11:00",
@@ -109,24 +109,6 @@
         "icon": "brain",
         "title": "Herramientas de Enfoque",
         "description": "Técnicas prácticas para mejorar la concentración y gestión de atención"
-      },
-      {
-        "time": "13:00 - 14:30",
-        "icon": "coffee",
-        "title": "Almuerzo Mindful",
-        "description": "Experiencia de alimentación consciente y networking"
-      },
-      {
-        "time": "14:30 - 16:30",
-        "icon": "zap",
-        "title": "Gestión del Estrés",
-        "description": "Protocolos de regulación emocional y manejo de presión"
-      },
-      {
-        "time": "16:30 - 18:00",
-        "icon": "check",
-        "title": "Integración y Compromiso",
-        "description": "Plan de acción personal y cierre del programa"
       }
     ]
   },
@@ -166,30 +148,30 @@
     "items": [
       {
         "icon": "trending-down",
-        "value": "-35%",
+        "value": "",
         "title": "Reducción de ausentismo",
         "description": "Menos días perdidos por estrés y burnout",
         "color": "green"
       },
       {
         "icon": "trending-up",
-        "value": "+28%",
+        "value": "",
         "title": "Aumento en productividad",
         "description": "Mayor capacidad de enfoque y concentración",
         "color": "primary"
       },
       {
         "icon": "users",
-        "value": "-42%",
+        "value": "",
         "title": "Reducción de rotación",
         "description": "Mayor retención de talento clave",
         "color": "green"
       },
       {
         "icon": "dollar-sign",
-        "value": "6x",
+        "value": "",
         "title": "Retorno de inversión",
-        "description": "Por cada peso invertido en bienestar mental",
+        "description": "Por cada euro invertido en bienestar mental",
         "color": "primary"
       }
     ]
@@ -212,7 +194,7 @@
       },
       {
         "icon": "mail",
-        "title": "contacto@vaemptiness.com",
+        "title": "program@vaemptiness.com",
         "description": "Respuesta en menos de 24 horas."
       }
     ],
