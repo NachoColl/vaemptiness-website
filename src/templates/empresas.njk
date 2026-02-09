@@ -311,9 +311,11 @@ permalink: /taller-empresas/
     </div>
 
     {# Scroll indicator #}
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground animate-fade-in animation-delay-500">
-      <span class="text-sm font-body">Descubre más</span>
-      {{ icons.icon("arrow-down", "w-4 h-4 animate-bounce") }}
+    <div class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground animate-fade-in animation-delay-500" aria-label="Scroll down">
+      <span class="scroll-text text-sm font-body">Descubre más</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L12 20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </div>
   </section>
 
@@ -600,6 +602,7 @@ permalink: /taller-empresas/
   {% include "footer.njk" %}
 
   {# JavaScript #}
+  <script src="/assets/js/main.js"></script>
   <script src="/assets/js/empresas-landing.js"></script>
 
 </body>
