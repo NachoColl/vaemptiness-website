@@ -45,6 +45,12 @@
           "url": "/vaemptiness-kids/",
           "matchUrl": "/vaemptiness-kids/",
           "isChild": true
+        },
+        {
+          "text": "Taller Empresas",
+          "url": "/taller-empresas/",
+          "matchUrl": "/taller-empresas/",
+          "isParent": true
         }
       ]
     },
