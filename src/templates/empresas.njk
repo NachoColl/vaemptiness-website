@@ -299,12 +299,20 @@ permalink: /taller-empresas/
         </a>
       </div>
 
-      {# Stats - Simple text, no cards #}
-      <div class="mt-16 grid grid-cols-3 gap-8 max-w-xl mx-auto animate-fade-up animation-delay-500">
-        {% for stat in data.hero.stats %}
-        <div class="text-center">
-          <p class="font-display text-4xl font-semibold text-primary">{{ stat.value }}</p>
-          <p class="font-body text-sm text-muted-foreground mt-1">{{ stat.label }}</p>
+      {# Key Benefits - Icon-based #}
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-up animation-delay-500">
+        {% for benefit in data.hero.benefits %}
+        <div class="text-center flex flex-col items-center gap-3">
+          {# Icon #}
+          <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            {{ icons.icon(benefit.icon, "w-6 h-6 text-primary") }}
+          </div>
+
+          {# Title #}
+          <h3 class="font-display text-xl font-semibold text-foreground">{{ benefit.title }}</h3>
+
+          {# Description #}
+          <p class="font-body text-sm text-muted-foreground">{{ benefit.description }}</p>
         </div>
         {% endfor %}
       </div>

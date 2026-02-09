@@ -22,18 +22,21 @@
       "text": "Ver Programa Completo",
       "href": "https://vaemptiness.com/vaemptiness-program/"
     },
-    "stats": [
+    "benefits": [
       {
-        "value": "87%",
-        "label": "Reducción de estrés"
+        "icon": "shield-check",
+        "title": "Menos estrés",
+        "description": "Gestiona mejor las presiones laborales"
       },
       {
-        "value": "+40%",
-        "label": "Mejora en enfoque"
+        "icon": "target",
+        "title": "Más enfoque",
+        "description": "Mantén la concentración en lo importante"
       },
       {
-        "value": "500+",
-        "label": "Profesionales entrenados"
+        "icon": "users-check",
+        "title": "Equipos cohesionados",
+        "description": "Fortalece la colaboración y el bienestar"
       }
     ]
   },
@@ -101,7 +104,7 @@
       {
         "time": "10:30 - 11:00",
         "icon": "heart",
-        "title": "Pausa Consciente",
+        "title": "Coffe & tea",
         "description": "Primera práctica de técnicas de reset mental"
       },
       {
