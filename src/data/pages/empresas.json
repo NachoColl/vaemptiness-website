@@ -217,55 +217,15 @@
       }
     ],
     "form": {
-      "action": "https://formspree.io/f/YOUR_FORM_ID",
-      "submitText": "Solicitar Demo Gratuita",
-      "disclaimer": "Al enviar este formulario, aceptas que nos comuniquemos contigo respecto a nuestros servicios.",
-      "successMessage": "¡Mensaje enviado! Nos pondremos en contacto contigo pronto.",
-      "fields": [
-        {
-          "name": "nombre",
-          "type": "text",
-          "label": "Nombre",
-          "placeholder": "Tu nombre",
-          "required": true,
-          "halfWidth": true
-        },
-        {
-          "name": "apellido",
-          "type": "text",
-          "label": "Apellido",
-          "placeholder": "Tu apellido",
-          "required": true,
-          "halfWidth": true
-        },
-        {
-          "name": "email",
-          "type": "email",
-          "label": "Email corporativo",
-          "placeholder": "tu@empresa.com",
-          "required": true
-        },
-        {
-          "name": "empresa",
-          "type": "text",
-          "label": "Empresa",
-          "placeholder": "Nombre de tu empresa",
-          "required": true
-        },
-        {
-          "name": "tamanoEquipo",
-          "type": "text",
-          "label": "Tamaño del equipo",
-          "placeholder": "Ej: 50-100 colaboradores",
-          "required": true
-        },
-        {
-          "name": "mensaje",
-          "type": "textarea",
-          "label": "Mensaje (opcional)",
-          "placeholder": "Cuéntanos sobre los desafíos de tu equipo...",
-          "required": false
-        }
+      "getformEndpoint": "https://getform.io/f/bgdvpgpa",
+      "submitText": "Enviar mensaje",
+      "topics": [
+        "vaemptîness program",
+        "vaemptîness equipos",
+        "vaemptîness teen",
+        "vaemptîness kids",
+        "Taller Empresas",
+        "Consulta General"
       ]
     }
   },

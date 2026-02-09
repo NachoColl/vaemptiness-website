@@ -564,56 +564,59 @@ permalink: /taller-empresas/
         </div>
 
         <div class="bg-card rounded-3xl p-8 md:p-10 border border-border shadow-soft">
-          <form id="contact-form" action="{{ data.contact.form.action }}" method="POST" class="space-y-6">
-            <div class="grid sm:grid-cols-2 sm:gap-4">
-              {% for field in data.contact.form.fields %}
-                {% if field.halfWidth %}
-                  <div>
-                    <label class="font-body text-sm text-foreground mb-2 block">{{ field.label }}</label>
-                    <input
-                      type="{{ field.type }}"
-                      name="{{ field.name }}"
-                      {% if field.required %}required{% endif %}
-                      placeholder="{{ field.placeholder }}"
-                      class="h-12 bg-background w-full rounded-md border border-input px-3"
-                    >
-                  </div>
-                {% endif %}
-              {% endfor %}
+          <form id="contact-form" action="{{ data.contact.form.getformEndpoint }}" method="POST" class="space-y-6">
+            <div>
+              <label class="font-body text-sm text-foreground mb-2 block">Nombre <span class="text-primary">*</span></label>
+              <input
+                type="text"
+                name="name"
+                required
+                class="h-12 bg-background w-full rounded-md border border-input px-3"
+              >
             </div>
 
-            {% for field in data.contact.form.fields %}
-              {% if not field.halfWidth %}
-                <div>
-                  <label class="font-body text-sm text-foreground mb-2 block">{{ field.label }}</label>
-                  {% if field.type == "textarea" %}
-                    <textarea
-                      name="{{ field.name }}"
-                      {% if field.required %}required{% endif %}
-                      placeholder="{{ field.placeholder }}"
-                      class="min-h-24 bg-background w-full rounded-md border border-input px-3 py-2 resize-none"
-                    ></textarea>
-                  {% else %}
-                    <input
-                      type="{{ field.type }}"
-                      name="{{ field.name }}"
-                      {% if field.required %}required{% endif %}
-                      placeholder="{{ field.placeholder }}"
-                      class="h-12 bg-background w-full rounded-md border border-input px-3"
-                    >
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
+            <div>
+              <label class="font-body text-sm text-foreground mb-2 block">Email <span class="text-primary">*</span></label>
+              <input
+                type="email"
+                name="email"
+                required
+                class="h-12 bg-background w-full rounded-md border border-input px-3"
+              >
+            </div>
+
+            <div>
+              <label class="font-body text-sm text-foreground mb-2 block">Teléfono</label>
+              <input
+                type="tel"
+                name="phone"
+                class="h-12 bg-background w-full rounded-md border border-input px-3"
+              >
+            </div>
+
+            <div>
+              <label class="font-body text-sm text-foreground mb-2 block">Tema <span class="text-primary">*</span></label>
+              <select name="topic" required class="h-12 bg-background w-full rounded-md border border-input px-3">
+                <option value="Taller Empresas" selected>Taller Empresas</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="font-body text-sm text-foreground mb-2 block">Mensaje <span class="text-primary">*</span></label>
+              <textarea
+                name="message"
+                rows="6"
+                required
+                class="bg-background w-full rounded-md border border-input px-3 py-2 resize-none"
+              ></textarea>
+            </div>
 
             <button type="submit" class="w-full inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 font-body gradient-cta text-primary-foreground shadow-elevated hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] h-14 rounded-lg px-10 text-lg">
               {{ icons.icon("send", "w-5 h-5") }}
               {{ data.contact.form.submitText }}
             </button>
 
-            <p class="font-body text-xs text-muted-foreground text-center">
-              {{ data.contact.form.disclaimer }}
-            </p>
+            <div id="form-status"></div>
           </form>
         </div>
       </div>
