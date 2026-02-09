@@ -115,31 +115,40 @@
       }
     ]
   },
-  "testimonials": {
-    "eyebrow": "Testimonios",
-    "headline": "Lo que dicen los",
-    "headlineEmphasis": "líderes de RRHH",
+  "learningOutcomes": {
+    "eyebrow": "Aprendizaje",
+    "headline": "Qué aprenderás",
+    "headlineEmphasis": "en el taller",
     "items": [
       {
-        "quote": "El taller transformó la dinámica de nuestro equipo. Vimos mejoras en productividad y bienestar en las primeras semanas.",
-        "name": "María García",
-        "title": "Directora de RRHH",
-        "company": "TechCorp México",
-        "rating": 5
+        "icon": "brain",
+        "title": "Gestión del Estrés",
+        "description": "Técnicas validadas para identificar y gestionar el estrés laboral",
+        "skills": [
+          "Reconocer señales tempranas de agotamiento",
+          "Aplicar técnicas de regulación emocional",
+          "Crear rutinas de recuperación mental"
+        ]
       },
       {
-        "quote": "Por primera vez encontramos una metodología que realmente funciona. Los colaboradores siguen aplicando las técnicas meses después.",
-        "name": "Carlos Rodríguez",
-        "title": "Gerente de Talento",
-        "company": "Grupo Financiero Atlas",
-        "rating": 5
+        "icon": "target",
+        "title": "Concentración Profunda",
+        "description": "Herramientas prácticas para mejorar el enfoque y la productividad",
+        "skills": [
+          "Técnicas de atención plena en el trabajo",
+          "Gestión efectiva de interrupciones",
+          "Métodos para mantener el foco sostenido"
+        ]
       },
       {
-        "quote": "La inversión en el bienestar mental de nuestro equipo se reflejó directamente en los indicadores de rotación y satisfacción.",
-        "name": "Ana Martínez",
-        "title": "VP de Personas",
-        "company": "StartUp Hub",
-        "rating": 5
+        "icon": "users",
+        "title": "Cohesión de Equipo",
+        "description": "Prácticas para fortalecer la colaboración y el bienestar colectivo",
+        "skills": [
+          "Comunicación consciente en equipo",
+          "Gestión de conflictos con claridad mental",
+          "Construcción de cultura de bienestar"
+        ]
       }
     ]
   },
