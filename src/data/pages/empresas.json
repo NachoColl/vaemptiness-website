@@ -49,22 +49,22 @@
       {
         "icon": "brain",
         "title": "Sobrecarga Mental",
-        "description": "El 76% de los empleados experimenta agotamiento mental que afecta su productividad y creatividad."
+        "description": "El agotamiento mental afecta directamente la productividad y la creatividad de los profesionales."
       },
       {
         "icon": "zap",
         "title": "Falta de Concentración",
-        "description": "Los trabajadores pierden en promedio 2.1 horas diarias por distracciones y falta de enfoque."
+        "description": "Las interrupciones frecuentes y la falta de concentración impactan el rendimiento diario del equipo."
       },
       {
         "icon": "heart",
         "title": "Estrés Crónico",
-        "description": "El estrés laboral cuesta a las empresas hasta un 40% de la rotación de personal."
+        "description": "El estrés laboral no gestionado es una causa importante de rotación de talento y ausentismo."
       },
       {
         "icon": "users",
         "title": "Baja Colaboración",
-        "description": "Equipos mentalmente agotados tienen 50% menos capacidad para la resolución creativa de problemas."
+        "description": "El agotamiento mental limita la capacidad de innovación y resolución creativa de problemas en equipo."
       }
     ]
   },
