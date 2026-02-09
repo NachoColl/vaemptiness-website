@@ -30,8 +30,12 @@ permalink: /taller-empresas/
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
 
+  {# Font Awesome #}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+
   {# Styles #}
   <link rel="stylesheet" href="/assets/css/empresas-landing.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
 
   <style>
     /* Tailwind-style utility classes */
@@ -592,39 +596,10 @@ permalink: /taller-empresas/
     </div>
   </section>
 
-  {# Footer #}
-  <footer class="py-12 px-6 bg-foreground">
-    <div class="container mx-auto max-w-6xl">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full border-2 border-background/30 flex items-center justify-center">
-            <span class="font-display text-xl font-semibold text-background">va</span>
-          </div>
-          <span class="font-display text-xl tracking-wide text-background">
-            <span class="font-bold">va</span>emptîness
-          </span>
-        </div>
-
-        <nav class="flex items-center gap-8">
-          {% for link in data.footer.links %}
-          <a href="{{ link.href }}" {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %} class="font-body text-sm text-background/60 hover:text-background transition-colors">
-            {{ link.text }}
-          </a>
-          {% endfor %}
-        </nav>
-
-        <p class="font-body text-sm text-background/40">
-          © <span id="copyright-year"></span> vaemptîness. Todos los derechos reservados.
-        </p>
-      </div>
-    </div>
-  </footer>
+  {# Footer - Use standard site footer #}
+  {% include "footer.njk" %}
 
   {# JavaScript #}
-  <script>
-    // Set current year in copyright
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-  </script>
   <script src="/assets/js/empresas-landing.js"></script>
 
 </body>
