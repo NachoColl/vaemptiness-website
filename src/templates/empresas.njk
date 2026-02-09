@@ -245,7 +245,7 @@ permalink: /taller-empresas/
       <div class="hidden md:flex items-center gap-8">
         <a href="#beneficios" class="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Beneficios</a>
         <a href="#programa" class="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Programa</a>
-        <a href="#testimonios" class="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Testimonios</a>
+        <a href="#aprendizaje" class="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Aprendizaje</a>
       </div>
 
       <a href="#contacto" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 font-body gradient-cta text-primary-foreground shadow-soft hover:shadow-elevated hover:scale-[1.01] active:scale-[0.99] h-9 rounded-md px-3">
@@ -472,30 +472,30 @@ permalink: /taller-empresas/
       {# Learning Cards #}
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {% for item in data.learningOutcomes.items %}
-        <div class="bg-background rounded-2xl p-8 shadow-soft border border-border hover:shadow-elevated transition-all duration-300">
-          {# Icon #}
-          <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-            {{ icons.icon(item.icon, "w-8 h-8 text-primary") }}
+        <div class="bg-background rounded-2xl p-8 shadow-soft border border-border hover:shadow-elevated transition-all duration-300 flex flex-col">
+          {# Icon - Smaller and more professional #}
+          <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-5">
+            {{ icons.icon(item.icon, "w-5 h-5 text-primary") }}
           </div>
 
-          {# Title #}
-          <h3 class="font-display text-2xl font-semibold text-foreground mb-3">
+          {# Title - Fixed height for alignment #}
+          <h3 class="font-display text-xl font-semibold text-foreground mb-3 min-h-[3.5rem] flex items-center">
             {{ item.title }}
           </h3>
 
-          {# Description #}
-          <p class="font-body text-muted-foreground mb-6">
+          {# Description - Fixed height for alignment #}
+          <p class="font-body text-sm text-muted-foreground mb-6 min-h-[4rem]">
             {{ item.description }}
           </p>
 
-          {# Skills List #}
-          <ul class="space-y-3">
+          {# Skills List - Aligned at same starting point #}
+          <ul class="space-y-2.5 mt-auto">
             {% for skill in item.skills %}
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
               </svg>
-              <span class="font-body text-sm text-foreground">{{ skill }}</span>
+              <span class="font-body text-sm text-foreground leading-relaxed">{{ skill }}</span>
             </li>
             {% endfor %}
           </ul>
