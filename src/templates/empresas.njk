@@ -555,7 +555,13 @@ permalink: /taller-empresas/
                 {{ icons.icon(card.icon, "w-5 h-5 text-primary") }}
               </div>
               <div>
-                <h3 class="font-display text-lg font-semibold text-foreground leading-tight mb-0">{{ card.title }}</h3>
+                <h3 class="font-display text-lg font-semibold text-foreground leading-tight mb-0">
+                  {% if "@" in card.title %}
+                    <a href="mailto:{{ card.title }}" class="text-primary hover:underline">{{ card.title }}</a>
+                  {% else %}
+                    {{ card.title }}
+                  {% endif %}
+                </h3>
                 <p class="font-body text-muted-foreground mt-1">{{ card.description }}</p>
               </div>
             </div>
@@ -595,10 +601,11 @@ permalink: /taller-empresas/
             </div>
 
             <div>
-              <label class="font-body text-sm text-foreground mb-2 block">Tema <span class="text-primary">*</span></label>
-              <select name="topic" required class="h-12 bg-background w-full rounded-md border border-input px-3">
-                <option value="Taller Empresas" selected>Taller Empresas</option>
-              </select>
+              <label class="font-body text-sm text-foreground mb-2 block">Tema</label>
+              <div class="h-12 bg-background w-full rounded-md border border-input px-3 flex items-center">
+                <span class="font-body text-foreground">Taller Empresas</span>
+              </div>
+              <input type="hidden" name="topic" value="Taller Empresas">
             </div>
 
             <div>

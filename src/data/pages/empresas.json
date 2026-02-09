@@ -104,17 +104,17 @@
       {
         "time": "10:30 - 11:00",
         "icon": "heart",
-        "title": "Coffe & tea",
+        "title": "Pausa - Coffee & tea",
         "description": "Primera práctica de técnicas de reset mental"
       },
       {
-        "time": "11:00 - 13:00",
+        "time": "11:00 - 12:30",
         "icon": "brain",
         "title": "Herramientas de Enfoque",
         "description": "Técnicas prácticas para mejorar la concentración y gestión de atención"
       },
       {
-        "time": "13:00 - 13:10",
+        "time": "12:30 - 13:00",
         "icon": "compass",
         "title": "Cierre y Próximos Pasos",
         "description": "Guía para continuar tu práctica y recursos de seguimiento"
