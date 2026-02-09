@@ -74,7 +74,7 @@
     "headlineEmphasis": "oxigenar la mente",
     "intro": "Nuestro taller de entrenamiento mental combina neurociencia, técnicas de atención plena y metodologías experienciales para facilitar un cambio real y medible en tus equipos.",
     "features": [
-      "Técnicas prácticas de gestión mental aplicables desde el día 1",
+      "Técnicas prácticas aplicables desde el día 1",
       "Identificación y neutralización de 'saboteadores mentales'",
       "Herramientas para reset y restart cognitivo",
       "Metodología experiencial: se vive, no se memoriza",
@@ -85,7 +85,7 @@
       "title": "Fusiona",
       "subtitle": "Método + Experiencia",
       "description": "No memorizas conceptos, los experimentas en tiempo real.",
-      "badge1": "8h",
+      "badge1": "4h",
       "badge2": "1 día"
     }
   },
@@ -112,6 +112,12 @@
         "icon": "brain",
         "title": "Herramientas de Enfoque",
         "description": "Técnicas prácticas para mejorar la concentración y gestión de atención"
+      },
+      {
+        "time": "13:00 - 13:10",
+        "icon": "compass",
+        "title": "Cierre y Próximos Pasos",
+        "description": "Guía para continuar tu práctica y recursos de seguimiento"
       }
     ]
   },

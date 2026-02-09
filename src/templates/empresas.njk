@@ -302,14 +302,14 @@ permalink: /taller-empresas/
       {# Key Benefits - Icon-based #}
       <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-up animation-delay-500">
         {% for benefit in data.hero.benefits %}
-        <div class="text-center flex flex-col items-center gap-3">
+        <div class="text-center flex flex-col items-center">
           {# Icon #}
-          <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+          <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
             {{ icons.icon(benefit.icon, "w-6 h-6 text-primary") }}
           </div>
 
           {# Title #}
-          <h3 class="font-display text-xl font-semibold text-foreground">{{ benefit.title }}</h3>
+          <h3 class="font-display text-xl font-semibold text-foreground mb-1.5">{{ benefit.title }}</h3>
 
           {# Description #}
           <p class="font-body text-sm text-muted-foreground">{{ benefit.description }}</p>
@@ -369,7 +369,7 @@ permalink: /taller-empresas/
             {{ data.solution.intro }}
           </p>
 
-          <div class="space-y-4">
+          <div class="space-y-2.5">
             {% for feature in data.solution.features %}
             <div class="flex items-start gap-3">
               <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -548,15 +548,15 @@ permalink: /taller-empresas/
             {{ data.contact.intro }}
           </p>
 
-          <div class="space-y-6">
+          <div class="space-y-4">
             {% for card in data.contact.infoCards %}
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0">
                 {{ icons.icon(card.icon, "w-5 h-5 text-primary") }}
               </div>
               <div>
-                <h3 class="font-display text-lg font-semibold text-foreground">{{ card.title }}</h3>
-                <p class="font-body text-muted-foreground">{{ card.description }}</p>
+                <h3 class="font-display text-lg font-semibold text-foreground leading-tight mb-0">{{ card.title }}</h3>
+                <p class="font-body text-muted-foreground mt-1">{{ card.description }}</p>
               </div>
             </div>
             {% endfor %}

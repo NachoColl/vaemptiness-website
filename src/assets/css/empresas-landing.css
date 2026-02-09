@@ -208,6 +208,10 @@ a {
   background: var(--gradient-cta);
 }
 
+.gradient-cta:hover {
+  background: linear-gradient(135deg, hsl(35 40% 40%) 0%, hsl(30 35% 33%) 100%);
+}
+
 /* Shadow Utilities */
 .shadow-soft {
   box-shadow: var(--shadow-soft);
