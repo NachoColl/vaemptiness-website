@@ -3,15 +3,6 @@
  * Extracted from https://vaemptiness.lovable.app/
  */
 
-/* Font Face */
-@font-face {
-  font-family: 'CameraPlainVariable';
-  src: url('/assets/fonts/CameraPlainVariable.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* CSS Variables - Theme System */
 :root {
   /* Colors - Light Mode (Warm rust/bronze theme from external CSS) */
@@ -36,9 +27,19 @@
   --ring: 35 40% 45%;
   --radius: 0.5rem;
 
-  /* Typography */
-  --font-display: "Cormorant Garamond", serif;
-  --font-body: "Inter", sans-serif;
+  /* Typography - Match General Site */
+  --font-display: 'Cardo', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Font Sizing - Responsive with clamp() */
+  --text-hero: clamp(2.5rem, 6vw, 4.5rem);
+  --text-h1: clamp(2rem, 4vw, 3.5rem);
+  --text-h2: clamp(1.5rem, 3vw, 2.5rem);
+  --text-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --text-h4: clamp(1rem, 1.5vw, 1.125rem);
+  --text-body-lg: clamp(1.125rem, 1.5vw, 1.25rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
 
   /* Gradients (from external CSS) */
   --gradient-warm: linear-gradient(135deg, hsl(35 30% 95%) 0%, hsl(40 20% 98%) 100%);
@@ -88,6 +89,47 @@ a {
 
 .font-body {
   font-family: var(--font-body);
+}
+
+/* Hero Brand Styling - Match Home Page Structure */
+.hero-brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-title {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.hero-brand {
+  display: block;
+  font-size: var(--text-hero);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.hero-brand-va {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.hero-brand-emptiness {
+  font-weight: 300;
+}
+
+.hero-tagline {
+  display: block;
+  font-size: var(--text-body-lg);
+  font-weight: 300;
+  font-style: italic;
+  font-family: var(--font-display);
+  color: hsl(var(--primary) / 0.8);
 }
 
 /* Color Utilities */

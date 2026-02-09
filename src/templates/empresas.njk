@@ -25,6 +25,11 @@ permalink: /taller-empresas/
   <meta name="twitter:description" content="{{ data.meta.seo.description }}">
   <meta name="twitter:image" content="{{ site.url }}{{ data.meta.seo.ogImage }}">
 
+  {# Fonts #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
   {# Styles #}
   <link rel="stylesheet" href="/assets/css/empresas-landing.css">
 
@@ -229,14 +234,9 @@ permalink: /taller-empresas/
   {# Header / Navigation #}
   <header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
     <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full border-2 border-primary/30 flex items-center justify-center">
-          <span class="font-display text-xl font-semibold text-foreground">va</span>
-        </div>
-        <span class="font-display text-xl tracking-wide text-foreground">
-          <span class="font-bold">va</span>emptîness
-        </span>
-      </div>
+      <a href="/" class="logo">
+        <img src="/assets/images/logo.png" alt="vaemptîness" class="logo-image">
+      </a>
 
       <div class="hidden md:flex items-center gap-8">
         <a href="#beneficios" class="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Beneficios</a>
@@ -264,15 +264,14 @@ permalink: /taller-empresas/
         <span class="text-sm font-body text-muted-foreground">{{ data.hero.eyebrow }}</span>
       </div>
 
-      {# Logo graphic + Title #}
-      <div class="mb-6 animate-fade-up animation-delay-100">
-        <div class="w-24 h-24 mx-auto mb-6 rounded-full border-2 border-primary/20 flex items-center justify-center">
-          <span class="font-display text-3xl font-light text-foreground">va</span>
-        </div>
-        <h1 class="font-display text-5xl md:text-7xl font-light tracking-tight mb-2">
-          <span class="font-bold">va</span>emptîness
+      {# Logo graphic + Title - Match Home Page Structure #}
+      <div class="hero-brand-block animate-fade-up animation-delay-100">
+        <h1 class="hero-title">
+          <span class="hero-brand">
+            <span class="hero-brand-va">va</span><span class="hero-brand-emptiness">emptîness</span>
+          </span>
+          <span class="hero-tagline">mental training</span>
         </h1>
-        <p class="font-display text-xl text-primary/80 italic">mental training</p>
       </div>
 
       {# Subtitle #}
