@@ -143,9 +143,7 @@ a {
   display: block;
   font-size: var(--text-body-lg);
   font-weight: 300;
-  font-style: italic;
-  font-family: var(--font-display);
-  color: hsl(var(--primary) / 0.8);
+  color: hsl(var(--muted-foreground));
 }
 
 /* Color Utilities */
