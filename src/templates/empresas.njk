@@ -472,14 +472,14 @@ permalink: /taller-empresas/
       {# Learning Cards #}
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {% for item in data.learningOutcomes.items %}
-        <div class="bg-background rounded-2xl p-8 shadow-soft border border-border hover:shadow-elevated transition-all duration-300 flex flex-col">
+        <div class="bg-background rounded-2xl p-8 shadow-soft border border-border hover:shadow-elevated transition-all duration-300 flex flex-col text-center">
           {# Icon - Smaller and more professional #}
-          <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-5">
+          <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-8 mx-auto">
             {{ icons.icon(item.icon, "w-5 h-5 text-primary") }}
           </div>
 
           {# Title - Fixed height for alignment #}
-          <h3 class="font-display text-xl font-semibold text-foreground mb-3 min-h-[3.5rem] flex items-center">
+          <h3 class="font-display text-xl font-semibold text-foreground mb-3 min-h-[3.5rem] flex items-center justify-center">
             {{ item.title }}
           </h3>
 
@@ -489,9 +489,9 @@ permalink: /taller-empresas/
           </p>
 
           {# Skills List - Aligned at same starting point #}
-          <ul class="space-y-2.5 mt-auto">
+          <ul class="space-y-2.5 mt-auto text-left">
             {% for skill in item.skills %}
-            <li class="flex items-start gap-2.5">
+            <li class="flex items-start gap-2">
               <svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
               </svg>
