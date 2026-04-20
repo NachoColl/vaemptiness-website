@@ -4,37 +4,68 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a portfolio website for Mateo Coll, a film editor. It's built with Eleventy (11ty) using Nunjucks templates, deployed to GitHub Pages.
+Website for **vaemptîness** (mental training / mindfulness, author Rosa Cano) — Eleventy (11ty) + Nunjucks, Spanish-language, deployed to GitHub Pages with a custom domain (`vaemptiness.com`, `CNAME` file is passed through on build).
 
 ## Commands
 
 ```bash
 # Development
-npm run dev          # Start dev server on localhost:8080
+npm run dev                      # Eleventy --serve on localhost:8080
 
 # Build
-npm run build        # Build site to _site/
+npm run build                    # Build site to _site/
+npm run preview                  # Build then serve _site/ via http-server
 
-# Visual regression testing
-npm run build                    # Build first (tests require built site)
-npm run test:visual              # Run Playwright visual tests
-npm run test:visual:update       # Update snapshots
+# Visual regression (Playwright)
+npm run build && npm run test:visual    # Tests require a built _site/
+npm run test:visual:update              # Refresh snapshots
+
+# Google Drive content sync (see docs/DRIVE_SYNC_SETUP.md)
+npm run drive:authorize | drive:init | drive:sync | drive:upload | drive:status
+
+# Git worktrees (parallel feature dev — see docs/worktrees/WORKTREES.md)
+npm run worktree:create <branch>  | worktree:list | worktree:merge <branch> | worktree:remove <branch>
 ```
+
+Run a single Playwright spec: `npx playwright test tests/visual/<file>.spec.ts`.
 
 ## Architecture
 
-### Eleventy Structure
-- **Templates**: `src/templates/` - Nunjucks templates (`.njk`)
-- **Includes**: `src/templates/_includes/` - `base.njk`, `header.njk`, `footer.njk`
-- **Data**: `src/data/` - JSON data files (`site.json`, `projects.json`, etc.)
-- **Assets**: `src/assets/` - CSS, JS, images (copied to `_site/assets/`)
-- **Output**: `_site/` - Built site
+### Eleventy layout
+- Input: `src/templates/` (Nunjucks `.njk` — one file per page, plus `programa.njk` / `blog-post.njk` used by pagination).
+- Includes: `src/templates/_includes/` — `base.njk`, `header.njk`, `footer.njk`, plus `-en`/`-fr` variants and `schemas/` for JSON-LD.
+- Data: `src/data/` — `site.json`, `navigation.json`, and `pages.js` (a loader, see below).
+- Assets: `src/assets/{css,js,images}` passed through to `_site/assets`.
+- Config: `.eleventy.js`. `pathPrefix` comes from `ELEVENTY_PATH_PREFIX` (set by GitHub Actions; empty for the custom domain).
 
-### Data Flow
-Templates access data via Eleventy's data cascade. For example, `{{ site.title }}` pulls from `src/data/site.json`.
+### Page data loader (`src/data/pages.js`)
+Rather than Eleventy's default filename-based data cascade, page content lives in `src/data/pages/*.json` and is loaded into a single `pages` global. Templates then pick their slice via an `11tydata.js` sibling file, e.g.:
+```js
+// src/templates/index.11tydata.js
+module.exports = {
+  eleventyComputed: {
+    seo: (data) => data.pages.home.meta.seo,
+    bodyClass: (data) => data.pages.home.meta.bodyClass
+  }
+};
+```
+When adding a page, create **both** the `.njk` template and its matching `pages/<slug>.json`, and usually an `.11tydata.js` for SEO/body class wiring.
 
-### Visual Testing
-Playwright tests in `tests/visual/` capture screenshots of key pages and compare against reference snapshots in `tests/visual/snapshots/`.
+### Dynamic collections
+`.eleventy.js` exposes two collections built from per-item JSON files:
+- `programsFromFiles` — reads `src/data/pages/programs/*.json`, sorted by `order`, renders via `programa.njk`.
+- `blogFromFiles` — reads `src/data/pages/blog/*.json`, sorted by `date` desc, renders via `blog-post.njk`.
+
+To add a program or blog post, drop a JSON file into the right folder — no template changes required.
+
+### Auto-bold transform
+`.eleventy.js` registers an `autoBoldVaemptiness` HTML transform that wraps every text occurrence of `vaemptîness` / `vaemptiness` in `<strong>`, while preserving `<script>`, `<style>`, `<code>`, `<pre>`, `<title>`, headings (`h1`–`h6`), and already-bold instances. **Do not manually bold the brand name in templates or JSON content** — it will be double-wrapped or need undoing. If you see odd bolding inside attributes or headings, check this transform first.
+
+### Visual testing
+Playwright config (`playwright.config.ts`) auto-starts `http-server _site -p 8080` and runs Desktop Chrome (1920×1080) + Mobile Chrome (Pixel 5) projects. Snapshots live in `tests/visual/snapshots/`. Always `npm run build` first.
+
+### Deployment
+Pushes to `master` trigger `.github/workflows/deploy.yml` which builds and deploys to GitHub Pages. `ELEVENTY_PATH_PREFIX` is set there when needed for subdirectory deployment.
 
 ## CSS Typography System
 
@@ -148,22 +179,6 @@ All typography CSS variables use `clamp()` for built-in responsive scaling:
 4. Only deviate for justified special cases (hero, footer)
 5. Do NOT create custom padding values
 
-## Deployment
+## Note on `CLAUDE_INSTRUCTIONS.md`
 
-Pushes to `master` trigger GitHub Actions (`.github/workflows/deploy.yml`) which builds and deploys to GitHub Pages. The `ELEVENTY_PATH_PREFIX` env var is set for the subdirectory deployment.
-
-## Git Worktrees
-
-For parallel feature development, use worktree scripts:
-
-```bash
-npm run worktree:create <branch-name>   # Create worktree in .trees/<branch-name>/
-npm run worktree:list                   # Show all worktrees
-npm run worktree:merge <branch-name>    # Merge worktree into current branch
-npm run worktree:remove <branch-name>   # Clean up worktree
-```
-
-See `docs/worktrees/WORKTREES.md` for detailed workflow documentation.
-
-
-⚠️ **IMPORTANT**: Read `CLAUDE_INSTRUCTIONS.md` for context before making changes in this repository.
+This file is **only generated inside worktrees** by `npm run worktree:create`. If you are working inside `.trees/<branch>/`, read it for feature-specific context and the git workflow. It does not exist at the repository root.

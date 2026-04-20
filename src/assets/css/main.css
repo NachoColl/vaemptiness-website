@@ -936,6 +936,7 @@ main {
   .cta-section,
   .learning-pathways-section,
   .program-session,
+  .about-team,
   .about-services,
   .about-brand-philosophy {
     padding: var(--space-2xl) 0;
@@ -1680,7 +1681,7 @@ main {
 .about-trajectory,
 .about-services,
 .about-brand-philosophy {
-  padding: var(--section-spacing) 0;
+  padding: var(--space-3xl) 0;
 }
 
 .name-origins-text {

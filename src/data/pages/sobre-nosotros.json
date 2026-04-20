@@ -15,7 +15,7 @@
   "content": {
     "hero": {
       "title": "Sobre Nosotros",
-      "subtitle": "Conoce nuestro proyecto y el equipo que hay detrás"
+      "subtitle": "Propósito, mirada y origen"
     },
     "vision": {
       "title": "Nuestra visión",
@@ -23,18 +23,6 @@
       "highlight": "Los pensamientos automatizados, aunque en apariencia se agolpan y se solapan robándonos la calma con diálogos internos en bucle, tienen su propia estructura. Conocerla, nos permite desactivarla.",
       "quote": "No se trata de pensar más, sino mejor.",
       "additional": "El programa se enfoca en acompañar por un recorrido gradual que permite reorganizar prioridades y fortalecer la capacidad de atención, con regulación cognitiva y emocional."
-    },
-    "mission": {
-      "title": "Nuestra misión",
-      "content": "Acompañar a personas y equipos a recuperar su espacio mental, optimizar su funcionamiento y desarrollar una forma de pensar más estable y consciente.",
-      "items": [
-        "Entrenamiento mental gradual",
-        "Reducción de ruido interno y carga cognitiva",
-        "Regulación emocional y atencional",
-        "Reorganización de prioridades mentales",
-        "Integración cuerpo–mente",
-        "Implementación del recorrido como hábito."
-      ]
     },
     "brandPhilosophy": {
       "title": "¿Por qué vaemptîness?",
@@ -50,46 +38,21 @@
     },
     "team": {
       "title": "¿Quién está detrás?",
-      "description": "Rosa Cano, creadora de vaemptîness program. Con la colaboración de María Saiz, Lola Saavedra y Rosa Rodríguez. El equipo, liderado por mujeres, ha contribuido al desarrollo del programa con años de estudio, investigación personal y diseño de protocolos de regulación cognitiva.",
       "founder": {
         "name": "Rosa Cano",
         "role": "creadora de vaemptîness program",
         "image": "/assets/images/team/avatar-rosa-cano.jpg",
         "linkedin": "https://www.linkedin.com/in/rosacanolaafit/"
-      },
-      "members": [
-        {
-          "name": "María Saiz",
-          "role": "Colaboradora",
-          "image": "/assets/images/team/avatar-maria.jpg"
-        },
-        {
-          "name": "Lola Saavedra",
-          "role": "Colaboradora",
-          "image": "/assets/images/team/avatar-lola.jpg"
-        },
-        {
-          "name": "Rosa Rodríguez",
-          "role": "Colaboradora",
-          "image": "/assets/images/team/avatar-rosa.jpg"
-        }
-      ]
+      }
     },
     "trajectory": {
-      "title": "Nuestra trayectoria",
       "paragraphs": [
-        "Nuestra formación en Psicología y Filosofía Budista tibetana, cuenta con 27 años de estudio y práctica continua en esta disciplina.",
-        "Siempre bajo la supervisión de nuestros maestros:",
+        "Mi formación en Psicología y Filosofía Budista tibetana cuenta con 27 años de estudio y práctica continua en esta disciplina.",
         "Para quienes practicamos el budismo, es importante aclarar algo desde el inicio: no se trata de una religión ni de un sistema de creencias. El budismo, es la ciencia que estudia el comportamiento mental, las emociones y los patrones de sufrimiento humano desde la experiencia directa, sin dogmas.",
         "El programa vaemptîness, es un entrenamiento mental progresivo. Así como entrenamos el cuerpo, podemos entrenar la mente: <span class=\"observations-inline\">cómo pensamos, cómo reaccionamos ante el conflicto, cómo gestionamos el dolor emocional y cómo podemos transformar esos patrones para vivir con mayor equilibrio.</span>",
         "No buscamos \"arreglar\" nada, sino comprender lo que sucede internamente para responder frente a las experiencias vitales con mayor calma y nitidez mental.",
         "Un modo más saludable de habitar lo cotidiano y por extensión que nuestro trayecto sea significativo."
-      ],
-      "teachers": [
-        "S.E. Nyari Tritul Rimpoché",
-        "Venerable Geshe Tenzing Tamding"
-      ],
-      "tradition": "De la Tradición Guelugpa fundada por el Maestro Tibetano <span class=\"teacher-name\">Venerable Lama Tsong Khapa</span> en el siglo XV, a ella han pertenecido todos los Dalai Lamas. Nuestro estudio parte de esta tradición según el Linaje que nos ha mostrado el <span class=\"teacher-name\">Ven. Lama Kyabje Khensur Tamding Gyatso Rimpoche</span> y su sucesor <span class=\"teacher-name\">Ven. Gueshe Tenzing Tamding</span>."
+      ]
     }
   }
 }

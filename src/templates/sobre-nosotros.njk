@@ -29,25 +29,10 @@ layout: base.njk
   </div>
 </section>
 
-<section class="about-mission">
-  <div class="container">
-    <div class="content-section centered">
-      <h2>{{ pageData.mission.title }}</h2>
-      <p>{{ pageData.mission.content }}</p>
-    </div>
-    <ul class="services-grid-list">
-      {% for item in pageData.mission.items %}
-      <li class="service-grid-item">{{ item }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
 <section class="about-team">
   <div class="container">
     <div class="content-section centered">
       <h2>{{ pageData.team.title }}</h2>
-      <p class="team-description">{{ pageData.team.description }}</p>
     </div>
 
     <div class="team-founder">
@@ -68,45 +53,16 @@ layout: base.njk
       </div>
     </div>
 
-    <div class="team-members">
-      {% for member in pageData.team.members %}
-      <div class="member-card">
-        <div class="member-image">
-          <img src="{{ member.image | url }}" alt="{{ member.name }}">
-        </div>
-        <div class="member-info">
-          <h4 class="member-name">{{ member.name }}</h4>
-          <p class="member-role">{{ member.role }}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="about-trajectory">
-  <div class="container">
     <div class="content-section centered">
-      <h2>{{ pageData.trajectory.title }}</h2>
-
       <p>{{ pageData.trajectory.paragraphs[0] }}</p>
 
       <p>{{ pageData.trajectory.paragraphs[1] }}</p>
-      <ul class="teachers-list">
-        {% for teacher in pageData.trajectory.teachers %}
-        <li>{{ teacher }}</li>
-        {% endfor %}
-      </ul>
 
-      <p>{{ pageData.trajectory.tradition | safe }}</p>
+      <p>{{ pageData.trajectory.paragraphs[2] | safe }}</p>
 
-      <p>{{ pageData.trajectory.paragraphs[2] }}</p>
-
-      <p>{{ pageData.trajectory.paragraphs[3] | safe }}</p>
+      <p>{{ pageData.trajectory.paragraphs[3] }}</p>
 
       <p>{{ pageData.trajectory.paragraphs[4] }}</p>
-
-      <p>{{ pageData.trajectory.paragraphs[5] }}</p>
     </div>
   </div>
 </section>
