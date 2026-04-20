@@ -1,5 +1,14 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+
+const siteVersion = (() => {
+  try {
+    return execSync('git rev-parse --short HEAD', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+  } catch (e) {
+    return Date.now().toString(36);
+  }
+})();
 
 module.exports = function(eleventyConfig) {
   // Pass through assets - copy src/assets to _site/assets
@@ -13,6 +22,9 @@ module.exports = function(eleventyConfig) {
 
   // Add current year shortcode for dynamic copyright
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // Build-time site version used by the base.njk cache buster
+  eleventyConfig.addShortcode("siteVersion", () => siteVersion);
 
   // Add custom filter for startsWith check
   eleventyConfig.addFilter("startsWith", function(str, prefix) {

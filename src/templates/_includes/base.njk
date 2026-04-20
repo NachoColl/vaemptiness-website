@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- One-shot cache buster: force a fresh reload once per browser after the site-version bump. Bump SITE_VERSION to trigger again. -->
+  <!-- One-shot cache buster: SITE_VERSION is the build commit SHA, so every deploy forces a single fresh reload per browser on first visit. -->
   <script>
     (function() {
       var KEY = 'vaSiteVer';
-      var SITE_VERSION = '2026-04-20-restore';
+      var SITE_VERSION = '{% siteVersion %}';
       var marker = '_v=' + SITE_VERSION;
       try {
         // URL already carries the marker — we just reloaded. Record it and bail.
