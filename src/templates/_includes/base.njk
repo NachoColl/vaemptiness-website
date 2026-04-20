@@ -56,17 +56,6 @@
 
   {% block head %}{% endblock %}
 
-  <!-- Temporary suspension: redirect all pages to home -->
-  <script>
-    (function() {
-      var home = "{{ '/' | url }}";
-      var p = window.location.pathname;
-      if (p !== home && p !== home + 'index.html') {
-        window.location.replace(home);
-      }
-    })();
-  </script>
-
   <!-- Netlify Identity Widget - Required for CMS authentication -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
