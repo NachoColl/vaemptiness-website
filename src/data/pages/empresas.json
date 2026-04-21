@@ -15,7 +15,7 @@
     "headlineEmphasis": "para Equipos de Alto Rendimiento",
     "subheadline": "Reduce el estrés laboral, aumenta la concentración y mejora el bienestar de tus colaboradores en una sesión intensiva de un día.",
     "ctaPrimary": {
-      "text": "Agenda una Demo Gratuita",
+      "text": "Diseñemos tu taller",
       "href": "#contacto"
     },
     "ctaSecondary": {
@@ -196,14 +196,14 @@
   },
   "contact": {
     "eyebrow": "Contáctanos",
-    "headline": "Agenda una",
-    "headlineEmphasis": "demo gratuita",
-    "intro": "Descubre cómo nuestro taller de entrenamiento mental puede transformar el bienestar y rendimiento de tu equipo. Sin compromiso.",
+    "headline": "Cuéntanos sobre",
+    "headlineEmphasis": "tu equipo",
+    "intro": "Cuéntanos cómo es tu equipo y sus retos. Diseñaremos un taller adaptado a vosotros. Sin compromiso.",
     "infoCards": [
       {
         "icon": "calendar",
-        "title": "Demo Personalizada",
-        "description": "30 minutos para conocer tu situación y mostrarte cómo podemos ayudar."
+        "title": "Llamada inicial",
+        "description": "30 minutos sin compromiso para escuchar tus retos y diseñar una propuesta adaptada."
       },
       {
         "icon": "file-text",

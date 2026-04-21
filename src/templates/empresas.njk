@@ -249,7 +249,7 @@ permalink: /taller-empresas/
       </div>
 
       <a href="#contacto" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 font-body gradient-cta text-primary-foreground shadow-soft hover:shadow-elevated hover:scale-[1.01] active:scale-[0.99] h-9 rounded-md px-3">
-        Solicitar Demo
+        Diseñemos tu taller
       </a>
     </nav>
   </header>
@@ -263,13 +263,13 @@ permalink: /taller-empresas/
     <div class="max-w-4xl mx-auto text-center z-10">
 
       {# Badge with pulse dot #}
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-up">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8">
         <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
         <span class="text-sm font-body text-muted-foreground">{{ data.hero.eyebrow }}</span>
       </div>
 
       {# Logo graphic + Title - Match Home Page Structure #}
-      <div class="hero-brand-block animate-fade-up animation-delay-100">
+      <div class="hero-brand-block">
         <h1 class="hero-title">
           <span class="hero-brand">
             <span class="hero-brand-va">va</span><span class="hero-brand-emptiness">emptîness</span>
@@ -279,18 +279,18 @@ permalink: /taller-empresas/
       </div>
 
       {# Subtitle #}
-      <h2 class="font-display text-3xl md:text-5xl font-light text-foreground mb-6 animate-fade-up animation-delay-200">
+      <h2 class="font-display text-3xl md:text-5xl font-light text-foreground mb-6">
         {{ data.hero.headline }}<br>
         <span class="text-primary">{{ data.hero.headlineEmphasis }}</span>
       </h2>
 
       {# Description #}
-      <p class="font-body text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up animation-delay-300">
+      <p class="font-body text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
         {{ data.hero.subheadline }}
       </p>
 
       {# CTAs #}
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animation-delay-400">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="{{ data.hero.ctaPrimary.href }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 font-body gradient-cta text-primary-foreground shadow-elevated hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] h-14 rounded-lg px-10 text-lg">
           {{ data.hero.ctaPrimary.text }}
         </a>
@@ -300,7 +300,7 @@ permalink: /taller-empresas/
       </div>
 
       {# Key Benefits - Icon-based #}
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-up animation-delay-500">
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         {% for benefit in data.hero.benefits %}
         <div class="text-center flex flex-col items-center">
           {# Icon #}
