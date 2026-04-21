@@ -2356,6 +2356,22 @@ main {
   font-weight: 500;
 }
 
+.testimonial-linkedin {
+  margin-left: var(--space-xs);
+  color: var(--color-hover);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.testimonial-linkedin:hover {
+  color: var(--color-accent-rust);
+}
+
+.testimonial-linkedin i {
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
 /* Carousel Dots */
 .carousel-dots {
   display: flex;

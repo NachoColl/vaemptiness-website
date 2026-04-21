@@ -349,7 +349,7 @@ title: "{{ program.name }} - vaemptîness"
             </blockquote>
             {% endif %}
             {% if testimonial.author %}
-            <cite class="testimonial-author">— {{ testimonial.author }}</cite>
+            <cite class="testimonial-author">— {{ testimonial.author }}{% if testimonial.linkedin %} <a href="{{ testimonial.linkedin }}" target="_blank" rel="noopener noreferrer" class="testimonial-linkedin" aria-label="LinkedIn de {{ testimonial.author }}"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>{% endif %}</cite>
             {% endif %}
           </div>
         </div>
