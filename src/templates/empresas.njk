@@ -9,6 +9,17 @@ permalink: /taller-empresas/
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Temporary suspension: redirect to home. This page bypasses base.njk, so it carries its own copy. -->
+  <script>
+    (function() {
+      var home = "{{ '/' | url }}";
+      if (window.location.pathname !== home) {
+        window.location.replace(home);
+      }
+    })();
+  </script>
+
   <title>{{ data.meta.seo.title }}</title>
   <meta name="description" content="{{ data.meta.seo.description }}">
 

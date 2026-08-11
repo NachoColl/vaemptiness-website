@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  <!-- Temporary suspension: redirect all pages to home. Runs before the cache buster so we redirect in one hop. -->
+  <script>
+    (function() {
+      var home = "{{ '/' | url }}";
+      var p = window.location.pathname;
+      if (p !== home && p !== home + 'index.html') {
+        window.location.replace(home);
+      }
+    })();
+  </script>
+
   <!-- One-shot cache buster: SITE_VERSION is the build commit SHA, so every deploy forces a single fresh reload per browser on first visit. -->
   <script>
     (function() {
