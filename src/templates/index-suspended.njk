@@ -1,0 +1,81 @@
+---
+permalink: false
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vaemptîness</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      font-family: Georgia, serif;
+      font-size: clamp(1.0625rem, 3.6vw, 1.25rem);
+      line-height: 1.6;
+      color: #111111;
+    }
+
+    main {
+      max-width: 40rem;
+      text-align: center;
+    }
+
+    .verse {
+      line-height: 1.8;
+    }
+
+    /* Below this width the four verse lines wrap anyway, and a wrap is
+       indistinguishable from a real line break. Let it read as prose instead. */
+    @media (max-width: 42rem) {
+      .verse br { display: none; }
+    }
+
+    .source {
+      margin-top: 2.5rem;
+      font-size: 0.875rem;
+      color: #666666;
+    }
+
+    /* Underlined by default, not only on hover: touch devices have no hover,
+       so the affordance has to be visible at rest. */
+    .source a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: #bbbbbb;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.3em;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+
+    .source a:hover {
+      color: #111111;
+      text-decoration-color: #111111;
+    }
+
+    .source a:focus-visible {
+      outline: 2px solid #111111;
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="verse">
+      De la generosidad surge la riqueza; de la disciplina, la felicidad;<br>
+      de la paciencia, la belleza; del esfuerzo, el esplendor;<br>
+      de la concentración, la paz; de la sabiduría, la liberación;<br>
+      de la compasión se realizan todos los fines.
+    </p>
+    <p class="source"><a href="{{ '/ratnavali/' | url }}">Nāgārjuna, <em>Ratnāvalī</em>, V.38</a></p>
+  </main>
+</body>
+</html>
